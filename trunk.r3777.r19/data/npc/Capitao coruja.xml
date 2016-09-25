@@ -1,0 +1,8 @@
+<npc name="Captain Owl" script="data/npc/scripts/coruja.lua" walkinterval="0" floorchange="0" access="5" level="1" maglevel="1">
+	<health now="150" max="150"/>
+	<look type="129" head="114" body="119" legs="114" feet="114" corpse="2212"/>
+	<parameters>
+		<parameter key="message_greet" value="Hello |PLAYERNAME|. ! I can take you to {Dorion}, {Yalahar}, {Alfon}, {Venonh}, {Anknor}, {Smallville} and {Goroma}. Where you would like to go?" />
+		<parameter key="message_decline" value="It's gonna cost |TOTALCOST| gold coins. Are you traveling? You can go in other cities going to carpet my cousin!"/>
+	</parameters>
+</npc>

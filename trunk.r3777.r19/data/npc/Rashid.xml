@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<npc name="Rashid" script="data/npc/scripts/rashid.lua" walkinterval="2000" floorchange="0">
+    <health now="185" max="185"/>
+    <look type="146" head="0" body="120" legs="120" feet="132" addons="2"/>
+    <parameters>
+        <parameter key="module_shop" value="1"/>
+        <parameter key="message_greet" value="I sell items... Want some? Say {trade}."/>
+        <parameter key="message_farewall" value="hehe"/>
+        <parameter key="message_walkaway" value="Hehe"/>
+	</parameters>
+</npc>

@@ -1,0 +1,8 @@
+<npc name="Izac" script="data/npc/scripts/izac.lua" walkinterval="0" floorchange="0" access="5" level="1" maglevel="1">
+	<health now="150" max="150"/>
+	<look type="128" head="114" body="119" legs="114" feet="114" corpse="2212"/>
+	<parameters>
+		<parameter key="message_greet" value="Hi |PLAYERNAME|. ! You can go to {Infernium}, {Flam}, {Saari}, {Mirand Theraan}, {Mistyc} and {Dorion}.Where you want to fly?" />
+		<parameter key="message_decline" value="It will cost |TOTALCOST| gold coins. Going to travel?"/>
+	</parameters>
+</npc>

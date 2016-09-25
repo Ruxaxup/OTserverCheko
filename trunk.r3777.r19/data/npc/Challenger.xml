@@ -1,0 +1,11 @@
+<npc name="Challenger" script="data/npc/scripts/challenger.lua" walkinterval="0" floorchange="0" access="5" level="1" maglevel="1">
+	<health now="150" max="150"/>
+	<look type="300" head="114" body="119" legs="114" feet="114" corpse="2212"/>
+	<parameters>
+		<parameter key="message_greet" value="I am the organizer of the challenger event, and you can {take} Now for the challenge in exchange for a {golden falcon}, but pay attention, if you die lost everything!" />
+        <parameter key="module_keywords" value="1" />
+        <parameter key="keywords" value="hi;golden falcon" />
+        <parameter key="keyword_reply1" value="I am the organizer of the challenger event, and I can take you now to the challenge in exchange for a {golden falcon}, but pay attention, if you die lost everything!" />
+        <parameter key="keyword_reply2" value="Put golden falcon on green background and use it to start." />
+	</parameters>
+</npc>

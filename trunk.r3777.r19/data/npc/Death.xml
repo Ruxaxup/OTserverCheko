@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<npc name="Death" script="data/npc/scripts/death.lua" walkinterval="0" floorchange="0">
+    <health now="100" max="100"/>
+    <look type="9" head="114" body="114" legs="91" feet="91" addons="3"/>
+    <parameters>
+		<parameter key="message_greet" value="You'll need for a {quest}. Can I {pay} you  well." />
+        <parameter key="module_keywords" value="1" />
+        <parameter key="keywords" value="hi;pay" />
+        <parameter key="keyword_reply1" value="You'll need for a {quest}. Can I {pay} you well." />
+        <parameter key="keyword_reply2" value="I will not tell you what I'll give you in return, but I can guarantee that eh good thing. So you have to trust me." />
+
+        <parameter key="module_shop" value="1"/>
+        <parameter key="shop_buyable" value="aol,2173,10000"/> 
+        <parameter key="shop_sellable" value="aol,2173,5000"/> 
+    </parameters>
+</npc>
