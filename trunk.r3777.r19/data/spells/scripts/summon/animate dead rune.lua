@@ -1,26 +1,29 @@
-local function doTargetCorpse(cid, position)
-	position.stackpos = 255
-	local corpse = getThingFromPos(position)
+local function doTargetCorpse(cid, pos)
+	local getPos = pos
+	getPos.stackpos = STACKPOS_TOP_MOVEABLE_ITEM_OR_CREATURE
+
+	local corpse = getThingFromPos(getPos)
 	if(corpse.uid > 0 and isCorpse(corpse.uid) and isMoveable(corpse.uid) and getCreatureSkullType(cid) ~= SKULL_BLACK) then
 		doRemoveItem(corpse.uid)
-		doConvinceCreature(cid, doCreateMonster("Skeleton", position))
+		local creature = doCreateMonster(cid, "Skeleton", pos)
+		doConvinceCreature(cid, creature)
 
-		doSendMagicEffect(position, CONST_ME_MAGIC_BLUE)
+		doSendMagicEffect(pos, CONST_ME_MAGIC_BLUE)
 		return true
 	end
 
-	doSendMagicEffect(getThingPosition(cid), CONST_ME_POFF)
+	doSendMagicEffect(getPlayerPosition(cid), CONST_ME_POFF)
 	doPlayerSendDefaultCancel(cid, RETURNVALUE_NOTPOSSIBLE)
 	return false
 end
 
 function onCastSpell(cid, var)
-	local position = variantToPosition(var)
-	if(position.x ~= 0 and position.y ~= 0) then
-		return doTargetCorpse(cid, position)
+	local pos = variantToPosition(var)
+	if(pos.x ~= 0 and pos.y ~= 0) then
+		return doTargetCorpse(cid, pos)
 	end
 
-	doSendMagicEffect(getThingPosition(cid), CONST_ME_POFF)
+	doSendMagicEffect(getPlayerPosition(cid), CONST_ME_POFF)
 	doPlayerSendDefaultCancel(cid, RETURNVALUE_NOTPOSSIBLE)
 	return false
 end

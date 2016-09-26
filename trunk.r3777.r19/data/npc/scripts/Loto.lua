@@ -17,36 +17,36 @@ function creatureSayCallback(cid, type, msg)
         destino = {x=320,y=558,z=7} 
         local pos = {x=320,y=558,z=7,stackpos=1}    
         local getstorage = getPlayerStorageValue(cid, storage)
-        local sorrymessage = "Sorry, you do not have all Crystal Of Power NEEDED to complete missions..."
+        local sorrymessage = "Desculpe, voce nao tem todos os Crystal Of Power necessarios para completar as missoes..."
         local talkUser = NPCHANDLER_CONVBEHAVIOR == CONVERSATION_DEFAULT and 0 or cid
         if msgcontains(msg, 'crystal of power') then
                 if getstorage == 6 then
-                        npcHandler:say("You completed the Jah quest", cid)
+                        npcHandler:say("Voce jah completou a quest", cid)
                 elseif getstorage < 6 then
-                        npcHandler:say("Do you have all the Crystal of Power NEEDED?", cid)
+                        npcHandler:say("Voce tem todos os Crystal of power necessarios?", cid)
                         talkState[talkUser] = 1
                 end
         elseif msgcontains(msg, 'quest') then
                 if getstorage < 1 then
-                       npcHandler:say("You need 1 {crystal of power} to start.", cid)
+                        npcHandler:say("Voce precisa de 1 {crystal of power} para comecar.", cid)
                 elseif getstorage == 1 then
-                        npcHandler:say("You are in the second mission and need 5 more Crystal of Power to continue.", cid)
+                        npcHandler:say("Voce esta na segunda missao e precisa de mais 5 Crystal of power para continuar.", cid)
                 elseif getstorage == 2 then
-                        npcHandler:say("You are in the third mission and need 7 Crystal of power para continuar.", cid)
+                        npcHandler:say("Voce esta na terceira missao e precisa de mais 7 Crystal of power para continuar.", cid)
                 elseif getstorage == 3 then
-                        npcHandler:say("You are in fourth mission and need more 10 Crystal of power to continue.", cid)
+                        npcHandler:say("Voce esta na quarta missao e precisa de mais 10 Crystal of power para continuar.", cid)
                 elseif getstorage == 4 then
-                        npcHandler:say("You are in the fifth mission and needs more 15 Crystal of power to continue.", cid)
+                        npcHandler:say("Voce esta na quinta missao e precisa de mais 15 Crystal of power para continuar.", cid)
                 elseif getstorage == 5 then
-                        npcHandler:say("You are in the sixth and last mission and needs more 50 Crystal of power to continue.", cid)
+                        npcHandler:say("Voce esta na sexta e ultima missao e precisa de mais 50 Crystal of power para continuar.", cid)
                 elseif getstorage == 6 then
-                        npcHandler:say("You completed all missions.", cid)
+                        npcHandler:say("Voce completou todas as missoes.", cid)
                 end
         elseif msgcontains(msg, 'yes') then
                 if talkState[talkUser] == 1 then
                         if getstorage < 0 then
                                 if doPlayerRemoveItem(cid, crystalid, 1) == TRUE then
-                                        npcHandler:say("You gave me jah 1 crystal of power. Now I will need more {5}.", cid)
+                                        npcHandler:say("Voce jah me deu 1 crystal of power. Agora irei precisar de mais {5}.", cid)
                                         setPlayerStorageValue(cid, storage, 1)
                                         doPlayerAddExp(cid, 1000)
                                         talkState[talkUser] = 0
@@ -56,7 +56,7 @@ function creatureSayCallback(cid, type, msg)
                                 end
                         elseif getstorage == 1 then
                                 if doPlayerRemoveItem(cid, crystalid, 5) == TRUE then
-                                        npcHandler:say("You gave me jah 5 crystal of power. Now I will need more {7}.", cid)
+                                        npcHandler:say("Voce jah me deu 5 crystal of power. Agora irei precisar de mais {7}.", cid)
                                         setPlayerStorageValue(cid, storage, 2)
                                         doPlayerAddExp(cid, 5000)
                                         talkState[talkUser] = 0
@@ -66,7 +66,7 @@ function creatureSayCallback(cid, type, msg)
                                 end
                         elseif getstorage == 2 then
                                 if doPlayerRemoveItem(cid, crystalid, 7) == TRUE then
-                                        npcHandler:say("You gave me jah 7 crystal of power. Now I will need more {10}.", cid)
+                                        npcHandler:say("Voce jah me deu 7 crystal of power. Agora irei precisar de mais {10}.", cid)
                                         setPlayerStorageValue(cid, storage, 3)
                                         doPlayerAddExp(cid, 7000)
                                         talkState[talkUser] = 0
@@ -76,7 +76,7 @@ function creatureSayCallback(cid, type, msg)
                                 end
                         elseif getstorage == 3 then
                                 if doPlayerRemoveItem(cid, crystalid, 10) == TRUE then
-                                        npcHandler:say("You gave me jah 10 crystal of power. Now I will need more {15}.", cid)
+                                        npcHandler:say("Voce jah me deu 10 crystal of power. Agora irei precisar de mais {15}.", cid)
                                         setPlayerStorageValue(cid, storage, 4)
                                         doPlayerAddExp(cid, 10000)
                                         talkState[talkUser] = 0
@@ -86,7 +86,7 @@ function creatureSayCallback(cid, type, msg)
                                 end
                         elseif getstorage == 4 then
                                 if doPlayerRemoveItem(cid, crystalid, 15) == TRUE then
-                                        npcHandler:say("You gave me jah 15 crystal of power. Now I will need more {50}.", cid)
+                                        npcHandler:say("Voce jah me deu 15 crystal of power. E por ultimo, irei precisar de mais {50}.", cid)
                                         setPlayerStorageValue(cid, storage, 5)
                                         doPlayerAddExp(cid, 15000)
                                         talkState[talkUser] = 0
@@ -96,7 +96,7 @@ function creatureSayCallback(cid, type, msg)
                                 end
                         elseif getstorage == 5 then
                                 if doPlayerRemoveItem(cid, crystalid, 50) == TRUE then
-                                        npcHandler:say("Parabens hehehehehehe, you completed all missions. I will give you a {Golden Falcon} and some experience.", cid)
+                                        npcHandler:say("Parabens HehEhehehehe, voce completou todas as missoes. Irei te dar um {Golden Falcon} e alguma experiencia.", cid)
                                         setPlayerStorageValue(cid, storage, 6)
                                         doPlayerAddExp(cid, 900000)
                                         doPlayerAddItem(cid, 8976, 1)
@@ -113,7 +113,7 @@ function creatureSayCallback(cid, type, msg)
                         end
                 end
         elseif(msgcontains(msg, 'no') and talkState[talkUser] == 1) then
-                npcHandler:say("OK, Come back when you're ready.", cid)
+                npcHandler:say("OK, Volte quando estiver pronto.", cid)
                 talkState[talkUser] = 0
         end
 return TRUE

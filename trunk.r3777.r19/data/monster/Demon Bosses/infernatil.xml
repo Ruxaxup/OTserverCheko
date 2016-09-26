@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<monster name="Infernatil" nameDescription="Infernatil" race="fire" experience="85000" speed="605" manacost="0">
+<monster name="Infernatil" nameDescription="Infernatil" race="fire" experience="200000" speed="605" manacost="0">
 	<health now="270000" max="270000"/>
 	<look type="35" head="0" body="0" legs="0" feet="0" corpse="2916"/>
 	<targetchange interval="2000" chance="15"/>
@@ -43,12 +43,7 @@
 		</attack>
 	</attacks>
 	<defenses armor="165" defense="150">
-		<defense name="healing" interval="1000" chance="15" min="5000" max="10000">
-			<attribute key="areaEffect" value="blueshimmer"/>
-		</defense>
-		<defense name="healing" interval="1000" chance="25" min="2000" max="3000">
-			<attribute key="areaEffect" value="blueshimmer"/>
-		</defense>
+		
 		<defense name="speed" interval="1000" chance="10" speedchange="1800" duration="4000">
 			<attribute key="areaEffect" value="redshimmer"/>
 		</defense>

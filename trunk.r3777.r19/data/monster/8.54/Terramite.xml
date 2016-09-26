@@ -18,7 +18,7 @@
 <flag runonhealth="0"/>
 </flags>
 <attacks>
-<attack name="melee" interval="2000" skill="30" attack="36"/>
+<attack name="melee" interval="2000" min="-0" max="-50"/>
 <attack name="poison" interval="1000" chance="12" range="1" radius="1" target="1" min="-5" max="-15">
 <attribute key="areaEffect" value="poison"/>
 </attack>
@@ -40,9 +40,9 @@
 <voice sentence="Zrp zrp!"/>
 </voices>
 <loot>
-<item id="2148" countmax="25" chance="36500"/><!-- gold coin -->
-<item id="11365" chance="5000"/><!-- terramite legs -->
-<item id="11364" chance="5000"/><!-- terramite eggs -->
-<item id="11363" chance="1000"/><!-- terramite shell -->
+<item id="2148" countmax="20" chance="10000"/>
+<item id="11364" chance="900"/>
+<item id="11363" chance="900"/>
+<item id="11362" chance="900"/>
 </loot>
 </monster>

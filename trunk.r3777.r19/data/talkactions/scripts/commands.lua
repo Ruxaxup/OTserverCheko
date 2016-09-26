@@ -1,16 +1,13 @@
 local config = {
-	ingameGuilds = getBooleanFromString(getConfigValue('ingameGuildManagement'))
+	guildTalksEnabled = getBooleanFromString(getConfigValue('ingameGuildManagement'))
 }
 
 function onSay(cid, words, param, channel)
-	if(not checkExhausted(cid, 666, 10)) then
-		return false
-	end
-
 	local playerAccess, t = getPlayerAccess(cid), {}
 	for i, talk in ipairs(getTalkActionList()) do
-		if(not talk.hidden and playerAccess >= talk.access) then
-			if(config.ingameGuilds or (talk.functionName ~= "guildjoin" and talk.functionName ~= "guildcreate")) then
+		if(not talk.hide and playerAccess >= talk.access) then
+			local tmp = talk.words:sub(1, 1):trim()
+			if((guildTalksEnabled or (talk.words ~= "!joinguild" and talk.words ~= "!createguild")) and (tmp == "!" or tmp == "/")) then
 				table.insert(t, talk)
 			end
 		end

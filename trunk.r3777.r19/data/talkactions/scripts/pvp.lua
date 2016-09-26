@@ -1,14 +1,10 @@
 local worlds = {
-	[WORLDTYPE_OPTIONAL] = "Optional PvP",
-	[WORLDTYPE_OPEN] = "Open PvP",
-	[WORLDTYPE_HARDCORE] = "Hardcore PvP"
+	[WORLD_TYPE_NO_PVP] = "No-PVP",
+	[WORLD_TYPE_PVP] = "PVP",
+	[WORLD_TYPE_PVP_ENFORCED] = "PVP-Enforced"
 }
 
 function onSay(cid, words, param, channel)
-	if(not checkExhausted(cid, 666, 10)) then
-		return false
-	end
-
 	local world = worlds[getWorldType()]
 	if(not world) then
 		return true

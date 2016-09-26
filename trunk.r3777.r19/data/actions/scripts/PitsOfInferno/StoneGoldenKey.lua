@@ -1,6 +1,8 @@
+local gatepos = {x=952, y=1325, z=11, stackpos=1}
+
 function onUse(cid, item, frompos, item2, topos)
-gatepos = {x=466, y=1379, z=10, stackpos=1}
-getgate = getThingfromPos(gatepos)
+
+local getgate = getThingfromPos(gatepos)
 
 if item.uid == 10256 and item.itemid == 1945 and getgate.itemid == 1304 then
 doRemoveItem(getgate.uid,1)

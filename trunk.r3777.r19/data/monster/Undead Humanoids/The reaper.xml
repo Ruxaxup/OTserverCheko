@@ -21,7 +21,7 @@
 	
 	<attacks>
 		<attack name="melee" interval="2000" skill="175" attack="205"/>
-		<attack name="death" interval="3000" chance="15" range="7" target="1" min="-300" max="-600">
+		<attack name="death" interval="3000" chance="20" range="7" target="1" min="-300" max="-600">
 			<attribute key="shootEffect" value="suddendeath"/>
 			<attribute key="areaEffect" value="mortarea"/>
 		</attack>
@@ -31,7 +31,7 @@
 		<attack name="lifedrain" interval="2000" chance="10" radius="6" target="0" min="0" max="-795">
 			<attribute key="areaEffect" value="whitenote"/>
 		</attack>
-		<attack name="death" interval="1000" chance="8" length="3" spread="7" min="-450" max="-550">
+		<attack name="death" interval="1000" chance="15" length="3" spread="7" min="-450" max="-550">
 			<attribute key="areaEffect" value="mortarea"/>
 		</attack>
 		<attack name="speed" interval="2000" chance="12" range="5" target="1" speedchange="-700">
@@ -62,7 +62,7 @@
 	</immunities>
 	
 	<summons maxSummons="3">
-		<summon name="Grim reaper" interval="5000" chance="35"/>
+		<summon name="Grim reaper" interval="5000" chance="50"/>
 	</summons>
   
 	<voices interval="5000" chance="12">
@@ -80,7 +80,6 @@
 		<item id="6500" countmax="4" chance1="12500"/>	-- demonic essence'
 		<item id="8852" chance="10500"/>			-- Devileye
 		<item id="8865" chance="8500"/> --Dark lord cape
-		<item id="8927" chance="50000"/> --Dark trinity mace
 		<item id="2148" countmax="90" chance1="100000"/>	-- gold coin
 		<item id="2148" countmax="90" chance1="80000"/>	-- gold coin
 		<item id="2152" countmax="40" chance1="45000"/>	-- Platinum Coin

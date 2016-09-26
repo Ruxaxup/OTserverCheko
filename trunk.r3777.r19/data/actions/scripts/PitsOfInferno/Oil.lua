@@ -1,17 +1,19 @@
 function onUse(cid, item, frompos, item2, topos)
-wall1 = {x=409, y=1389, z=10, stackpos=1}
-getwall1 = getThingfromPos(wall1) 
-splash = {x=402, y=1390, z=10, stackpos=1}
-oil = getThingfromPos(splash)
-
-if item.uid == 10203 and item.itemid == 1945 and oil.itemid == 2025 and oil.type == 11 and getwall1.uid > 0 then
-   doRemoveItem(oil.uid,1)
-   doRemoveItem(getwall1.uid,1)
-   doSendMagicEffect(splash,13)
+wall = {x=894, y=1335, z=11, stackpos=0}
+local getwall = getThingfromPos(wall) 
+if item.uid == 10203 and item.itemid == 1945 then
    doTransformItem(item.uid,item.itemid+1)
+   doTransformItem(getwall.uid,5770)
 elseif item.uid == 10203 and item.itemid == 1946 then
+
+
    doTransformItem(item.uid,item.itemid-1)
-else
-doPlayerSendTextMessage(cid, 22, 'The lever is creaking and rusty.')
+   doTransformItem(getwall.uid,493)
+bplayer = {x=894, y=1335, z=11, stackpos=253}
+bplayer2 = getThingfromPos(bplayer)
+if isCreature(bplayer2.uid) == TRUE then
+   doMoveCreature(bplayer2.uid,WEST)
 end
+	end
+   return 1
 end

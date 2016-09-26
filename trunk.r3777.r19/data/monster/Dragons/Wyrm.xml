@@ -12,54 +12,95 @@
 		<flag convinceable="0"/>
 		<flag pushable="0"/>
 		<flag canpushitems="1"/>
-		<flag staticattack="50"/>
+		<flag staticattack="90"/>
 		<flag lightlevel="0"/>
 		<flag lightcolor="0"/>
 		<flag targetdistance="1"/>
-		<flag runonhealth="1"/>
+		<flag runonhealth="350"/>
 	</flags>
 	<attacks>
-		<attack name="melee" interval="2000" min="-0" max="-214"/>
-		<attack name="physical" interval="2000" chance="25" range="7" radius="4" target="1" min="-70" max="-170">
-			<attribute key="shootEffect" value="energy"/>
-			<attribute key="areaEffect" value="blackspark"/>
+		<attack name="melee" interval="2000" skill="30" attack="110"/>
+		<attack name="energy" interval="2000" chance="7" length="5" spread="2" min="-130" max="-200">
+			<attribute key="areaEffect" value="purpleenergy"/>
 		</attack>
-		<attack name="energycondition" interval="2000" chance="36" radius="3" target="0" min="-100" max="-220">
+		<attack name="energy" interval="2000" chance="8" radius="3" min="-100" max="-220">
+			<attribute key="areaEffect" value="yellowenergy"/>
+		</attack>
+		<attack name="energy" interval="2000" chance="10" range="7" target="1" min="-100" max="-125">
+			<attribute key="shootEffect" value="energyball"/>
 			<attribute key="areaEffect" value="energy"/>
-		</attack>
-		<attack name="physical" interval="3000" chance="50" length="7" spread="3" min="-10" max="-144">
+		</attack>	
+		<attack name="lifedrain" interval="2000" chance="9" length="4" spread="0" min="-98" max="-145">
 			<attribute key="areaEffect" value="poff"/>
+		</attack>		
+		<attack name="physical" interval="2000" chance="10" radius="1" target="0">
+			<attribute key="areaEffect" value="yellownote"/>
 		</attack>
 	</attacks>
 	<defenses armor="30" defense="31">
-		<defense name="healing" interval="6000" chance="65" min="25" max="75">
+		<defense name="healing" interval="2000" chance="10" min="160" max="200">
 			<attribute key="areaEffect" value="blueshimmer"/>
 		</defense>
 	</defenses>
+	<elements>
+		<element firePercent="20"/>
+		<element earthPercent="75"/>
+		<element icePercent="-5"/>
+		<element deathPercent="-5"/>
+	</elements>
 	<immunities>
 		<immunity energy="1"/>
 		<immunity paralyze="1"/>
 		<immunity invisible="1"/>
+		<immunity lifedrain="1"/>
 	</immunities>
 	<voices interval="2000" chance="5">
 		<voice sentence="GRRR!"/>
 		<voice sentence="GROOOOAAAAAAAAR!"/>
 	</voices>
 	<loot>
-		<item id="2672" countmax="3" chance="9000"/><!-- dragon ham -->
-		<item id="2148" countmax="200" chance="6000"/><!-- gold coin -->
-		<item id="2647" chance="1222"/><!-- plate legs -->
-		<item id="8871" chance="1990"/><!-- focus cape -->
-		<item id="2546" countmax="10" chance="6000"/><!-- burst arrow -->
-		<item id="1987" chance="10000"><!-- bag -->
-			<inside>
-				<item id="2148" countmax="200" chance="100000"/><!-- gold coin -->
-				<item id="7430" chance="1554"/><!-- dragonbone staff -->
-				<item id="7588" chance="5332"/><!-- strong health potion -->
-				<item id="8921" chance="3999"/><!-- wand of draconia -->
-				<item id="8871" chance="1000"/><!-- focus cape -->
-				<item id="7430" chance="1200"/><!-- dragonbone staff -->
-			</inside>
-		</item>
-	</loot>
+    <item id="2148" countmax="100" chance="30700" /><!-- gold coin -->
+    <item id="2148" countmax="100" chance="30700" /><!-- gold coin -->
+    <item id="2148" countmax="32" chance="30700" /><!-- gold coin -->
+    <item id="2672" chance="35700" /><!-- dragon ham -->
+    <item id="7588" chance="20350" /><!-- strong health potion -->
+    <item id="10581" chance="15125" /><!-- wyrm scale -->
+    <item id="2546" countmax="10" chance="4975" /><!-- burst arrow -->
+    <item id="7589" chance="15300" /><!-- strong mana potion -->
+    <item id="2455" chance="6350" /><!-- crossbow -->
+    <item id="8873" chance="775" /><!-- hibiscus dress -->
+    <item id="8871" chance="2500" /><!-- focus cape -->
+    <item id="8921" chance="3000" /><!-- wand of draconia -->
+    <item id="1987" chance="100000"><!-- bag -->
+        <inside>
+            <item id="8920" chance="1925" /><!-- wand of starstorm -->
+            <item id="7889" chance="2300" /><!-- lightning pendant -->
+            <item id="2145" countmax="3" chance="1025" /><!-- small diamond -->
+            <item id="7430" chance="2600" /><!-- dragonbone staff -->
+            <item id="10221" chance="1625" /><!-- shockwave amulet -->
+            <item id="8855" chance="2550" /><!-- composite hornbow -->
+        </inside>
+    </item>
+</loot>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 </monster>

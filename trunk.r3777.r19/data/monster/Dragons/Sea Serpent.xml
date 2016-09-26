@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
-<monster name="Sea Serpent" nameDescription="a sea serpent" race="blood" experience="2300" speed="350" manacost="390">
-	<health now="3200" max="3200"/>
+<monster name="Sea Serpent" nameDescription="a sea serpent" race="blood" experience="4500" speed="350" manacost="390">
+	<health now="4000" max="4000"/>
 	<look type="275" head="0" body="0" legs="0" feet="0" corpse="8307"/>
 	<targetchange interval="2000" chance="50"/>
 	<strategy attack="100" defense="0"/>
@@ -15,14 +15,14 @@
 		<flag staticattack="85"/>
 		<flag canpushcreatures="1"/>
 		<flag targetdistance="0"/>
-		<flag runonhealth="300"/>
+		<flag runonhealth="0"/>
 	</flags>
 	<attacks>
 		<attack name="melee" interval="2000" skill="75" attack="70"/>
-		<attack name="earth" interval="1000" chance="5" length="9" spread="3" min="-60" max="-305">
+		<attack name="earth" interval="1000" chance="5" length="9" spread="3" min="-150" max="-450">
 			<attribute key="areaEffect" value="bigplants"/>
 		</attack>
-		<attack name="ice" interval="1000" chance="7" length="9" spread="3" min="-120" max="-300">
+		<attack name="ice" interval="1000" chance="7" length="9" spread="3" min="-200" max="-300">
 			<attribute key="areaEffect" value="icearea"/>
 		</attack>
 		<attack name="drowncondition" interval="1000" chance="8" radius="4" target="1" max="-200">
@@ -50,17 +50,21 @@
 		<element deathPercent="-10"/>
 	</elements>
   <loot>
-    <item id="2148" countmax="71" chance="40000"/>	-- gold coin
-    <item id="2146" countmax="1" chance="10000"/>	-- small saphire
-    <item id="2666" countmax="4" chance="20000"/>	-- meat
+    <item id="2152" countmax="10" chance="40000"/>	-- gold coin
+    <item id="2146" countmax="5" chance="10000"/>	-- small saphire
+    <item id="2666" countmax="10" chance="20000"/>	-- meat
     <item id="2214" chance="10000"/>			-- ring of healing
     <item id="7391" chance="1200"/>			-- Thaian Sword
+    <item id="10220" chance="2000"/>			-- leviathan amulet
     <item id="1987" chance="100000">
       <inside>
-        <item id="2672" countmax="3" chance="20000"/>	-- dragon ham
+        <item id="2672" countmax="5" chance="20000"/>	-- dragon ham
 		<item id="7888" chance="3100"/>	        -- Glacier amulet
-		<item id="8887" chance="1500"/>			-- Frozen Plate
-		<item id="7424" chance="2600"/>			-- Lunar Staff
+		<item id="8887" chance="50"/>			-- Frozen Plate
+		<item id="8878" chance="2000"/>			-- crystalline armor
+		<item id="8871" chance="2600"/>			-- focus cape 
+		<item id="7896" chance="2000"/>			-- glacier kilt
+		<item id="8870" chance="3500"/>			-- spirit cloak
       </inside>
     </item>
   </loot>

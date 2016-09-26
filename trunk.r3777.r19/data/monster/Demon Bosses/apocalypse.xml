@@ -28,20 +28,20 @@
     <attack name="strength" interval="1000" chance="10" radius="5" target="0" min="-600" max="-1450">
       <attribute key="areaEffect" value="blackspark"/>
     </attack>
-    <attack name="fire" interval="3000" chance="13" range="7" radius="7" target="1" min="-300" max="-800">
+    <attack name="fire" interval="1000" chance="13" range="7" radius="7" target="1" min="-800" max="-1400">
       <attribute key="shootEffect" value="fire"/>
       <attribute key="areaEffect" value="firearea"/>
     </attack>
-    <attack name="manadrain" interval="3000" chance="8" radius="10" target="0" min="-600" max="-700">
+    <attack name="manadrain" interval="1000" chance="8" radius="10" target="0" min="-900" max="-1200">
       <attribute key="areaEffect" value="energyarea"/>
     </attack>
-    <attack name="energy" interval="2000" chance="9" length="8" spread="0" min="-400" max="-800">
+    <attack name="energy" interval="1000" chance="9" length="8" spread="0" min="-400" max="-1600">
       <attribute key="areaEffect" value="redshimmer"/>
     </attack>
-    <attack name="poisoncondition" interval="5000" chance="18" length="0" spread="0" min="-800" max="-1000">
+    <attack name="poisoncondition" interval="1000" chance="18" length="0" spread="0" min="-800" max="-1000">
       <attribute key="areaEffect" value="greenspark"/>
     </attack>
-    <attack name="lifedrain" interval="2000" chance="6" radius="14" target="0" min="-600" max="-1200">
+    <attack name="lifedrain" interval="1000" chance="6" radius="14" target="0" min="-600" max="-1200">
       <attribute key="areaEffect" value="greenshimmer"/>
     </attack>
   </attacks>

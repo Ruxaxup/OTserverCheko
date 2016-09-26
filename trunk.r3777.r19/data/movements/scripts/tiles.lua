@@ -2,8 +2,8 @@ local config = {
 	maxLevel = getConfigInfo('maximumDoorLevel')
 }
 
-local increasingItems = {[416] = 417, [426] = 425, [446] = 447, [3216] = 3217, [3202] = 3215, [11062] = 11063}
-local decreasingItems = {[417] = 416, [425] = 426, [447] = 446, [3217] = 3216, [3215] = 3202, [11063] = 11062}
+local increasingItems = {[416] = 417, [426] = 425, [446] = 447, [3216] = 3217, [3202] = 3215, [11059] = 11060}
+local decreasingItems = {[417] = 416, [425] = 426, [447] = 446, [3217] = 3216, [3215] = 3202, [11060] = 11059}
 local depots = {2589, 2590, 2591, 2592}
 
 local checkCreature = {isPlayer, isMonster, isNpc}
@@ -88,7 +88,7 @@ function onStepIn(cid, item, position, fromPosition)
 		return true
 	end
 
-	if(item.actionid >= 1000 and item.actionid - 1000 <= config.maxLevel) then
+	if(item.actionid >= 1000 and item.actionid <= config.maxLevel) then
 		if(getPlayerLevel(cid) < item.actionid - 1000) then
 			pushBack(cid, position, fromPosition, true)
 		end

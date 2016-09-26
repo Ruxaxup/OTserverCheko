@@ -2,7 +2,7 @@ function onUse(cid, item, frompos, item2, topos)
 if item.uid == 10272 then
 if item.itemid == 1746 then
 
-  nplayer1pos = {x=406, y=1523, z=13}
+  local nplayer1pos = {x=840, y=1393, z=14}
   doTeleportThing(cid,nplayer1pos)
   doSendMagicEffect(nplayer1pos,10)
   doSendMagicEffect(topos,6)

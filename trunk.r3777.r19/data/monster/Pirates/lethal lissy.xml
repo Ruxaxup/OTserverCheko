@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<monster name="Lethal Lissy" nameDescription="Lethal Lissy" race="blood" experience="2700" speed="300" manacost="0">
-  <health now="3000" max="3000"/>
+<monster name="Lethal Lissy" nameDescription="Lethal Lissy" race="blood" experience="6700" speed="300" manacost="0">
+  <health now="10000" max="10000"/>
   <look type="155" head="114" body="0" legs="57" feet="114" addons="3" corpse="6081"/>
   <targetchange interval="5000" chance="8"/>
   <strategy attack="100" defense="25"/>
@@ -19,10 +19,10 @@
   </flags>
 <attacks>
     <attack name="melee" interval="2000" skill="80" attack="60"/>
-    <attack name="physical" interval="2000" chance="17" range="7" min="-100" max="-130">
+    <attack name="physical" interval="2000" chance="17" range="7" min="-500" max="-630">
       <attribute key="shootEffect" value="throwingknife"/>
     </attack>
-    <attack name="holy" interval="1000" chance="14" radius="8" target="0" min="-120" max="-250">
+    <attack name="holy" interval="1000" chance="14" radius="8" target="0" min="-620" max="-750">
       <attribute key="areaEffect" value="rednote"/>
 	</attack>
 </attacks>

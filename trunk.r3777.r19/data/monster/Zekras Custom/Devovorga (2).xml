@@ -1,0 +1,72 @@
+<monster name="Devovorga" nameDescription="Devovorga" race="venom" experience="5000000" speed="350" manacost="0">
+<health now="500000" max="500000" />
+<look type="354" corpse="6068"/>
+<targetchange interval="2000" chance="15" />
+<strategy attack="100" defense="20" />
+<flags>
+<flag summonable="0" />
+<flag attackable="1" />
+<flag hostile="1" />
+<flag illusionable="0" />
+<flag convinceable="0" />
+<flag pushable="0" />
+<flag canpushitems="1" />
+<flag canpushcreatures="1" />
+<flag targetdistance="1" />
+<flag runonhealth="0" />
+</flags>
+<attacks>
+<attack name="melee" interval="2000" min="-800" max="-2500"/>
+<attack name="lifedrain" interval="2000" chance="7" length="8" spread="0" min="-700" max="-1110">
+<attribute key="areaEffect" value="redspark"/>
+</attack>
+<attack name="earth" interval="2000" chance="5" radius="6" target="0" min="-1000" max="-1500">
+<attribute key="areaEffect" value="bigplants"/>
+</attack>
+<attack name="poisoncondition" interval="3000" chance="28" radius="7" target="400" max="-950">
+<attribute key="areaEffect" value="carniphila"/>
+</attack>
+<attack name="cursecondition" interval="4000" chance="35" radius="7" target="400" max="-1200">
+<attribute key="areaEffect" value="smallclouds"/>
+</attack>
+</attacks>
+<defenses armor="40" defense="39">
+<defense name="healing" interval="3000" chance="20" min="2000" max="3000">
+<attribute key="areaEffect" value="blueshimmer"/>
+</defense>
+</defenses>
+<immunities>
+<immunity paralyze="1" />
+<immunity invisible="1" />
+</immunities>
+<voices interval="3000" chance="10">
+<voice sentence="My mansion!"/>
+<voice sentence="You're dead"/>
+<voice sentence="Die you inferior being!"/>
+<voice sentence="I can't control myself"/>
+<voice sentence="What's happening to me?!"/>
+</voices>
+<loot>
+	<item id="2160" count="50" chance="1000000"/> --Gold
+	<item id="2160" count="50" chance="1000000"/> -- Gold
+	<item id="2160" countmax="50" chance1="800000" chancemax="100000"/> --crystal
+	<item id="2147" countmax="100" chance1="7777777777"/> --ruby
+	<item id="6132" chance="1000"/> --soft boots
+	<item id="2514" chance="45000000"/> --mastermind shield
+	<item id="9778" chance="12222"/> --yalahari mask
+	<item id="2365" chance="100000000">
+		<inside>
+			<item id="2151" countmax="100" chance1="6500000" chancemax="5000000"/> --Talons
+			<item id="2493" chance="1000000"/> --demon helmet
+			<item id="6391" chance="1000000"/> --nightmare shield
+			<item id="11138" chance="1000000"/> --nightmare doll
+			<item id="2361" chance="1000000"/> --frozen starlight
+			<item id="8918" chance="1000000"/> --spellbook
+			<item id="12596" chance="1000000"/> --trophy
+			<item id="2469" chance="50"/> --dragonlegs
+			<item id="2353" chance="5000"/> --burning heart
+		</inside>
+	</item>
+</loot>
+</monster>
+

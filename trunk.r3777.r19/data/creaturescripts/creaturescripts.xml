@@ -1,9 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <creaturescripts>
-	
-<event type="login" name="PlayerLogin" event="script" value="login.lua"/>
 
-	
+
+<event type="login" name="PlayerLogin" event="script" value="login.lua"/>
+<event type="login" name="TrainingStatues" event="script" value="training_statues.lua"/>
+
+
 <event type="joinchannel" name="GuildMotd" event="script" value="guildmotd.lua"/>
 	
 <event type="receivemail" name="Mail" event="script" value="mail.lua"/>
@@ -11,11 +13,23 @@
 <event type="reportbug" name="SaveReportBug" script="reportbug.lua"/>
 
 <event type="advance" name="AdvanceSave" event="script" value="advancesave.lua"/>
+<event type="advance" name="AdvanceStats" event="script" value="advanceStats.lua"/>
 
-	
+
 <event type="think" name="Idle" event="script" value="idle.lua"/>
 	
 <event type="think" name="SkullCheck" event="script" value="skullcheck.lua"/>
-<event type="kill" name="InquisitionBosses" event="script" value="InquisitionBosses.lua"/>
-      
-        </creaturescripts>
+
+<event type="logout" name="demonOakLogout" event="script" value="demonOakLogout.lua"/>
+<event type="death" name="demonOakDeath" event="script" value="demonOakDeath.lua"/>
+<event type="attack" name="demonOakAttack" event="script" value="demonOakAttack.lua"/>
+<event type="preparedeath" name="crash" event="script" value="crash.lua"/>
+
+<event type="kill" name="PlayerKill" event="script" value="arenakill.lua"/>
+<event type="death" name="Azerus" event="script" value="azerus.lua"/>
+<event type="kill" name="KillingInTheNameOf" event="script" value="tasks deaths.lua"/>
+<event type="combat" name="CombatTactics" event="script" value="combatTactics.lua" />
+
+<event type="kill" name="BrigandQuest" event="script" value="brigand.lua"/>
+
+</creaturescripts>

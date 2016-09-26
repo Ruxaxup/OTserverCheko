@@ -11,7 +11,7 @@ function onThink()                        npcHandler:onThink()                  
 function thinkCallback(cid)
 local rand = math.random(1,100)
 if rand == 1 then
-selfSay('Selling ammo and utilities for paladins at a great price.')
+selfSay('Vendo munição e utilitários para paladinos em um ótimo preço, aproveite que está em promoção.')
 end
 return true
 end

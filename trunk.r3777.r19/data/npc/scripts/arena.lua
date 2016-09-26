@@ -14,7 +14,7 @@ function enterArena(cid, message, keywords, parameters, node)
 	local cost = 0
 	local levelname = ''
 	if getPlayerStorageValue(cid, 42355) < 1 then
-		cost = 1000
+		cost = 2000
 		levelname = 'greenshore'
 		levelneeded = 30
 	elseif getPlayerStorageValue(cid, 42355) == 1 then
@@ -22,7 +22,7 @@ function enterArena(cid, message, keywords, parameters, node)
 		levelname = 'scrapper'
 		levelneeded = 50
 	elseif getPlayerStorageValue(cid, 42355) == 2 then
-		cost = 10000
+		cost = 8000
 		levelname = 'warlord'
 		levelneeded = 80
 	end

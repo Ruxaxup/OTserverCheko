@@ -1,6 +1,6 @@
 function onUse(cid, item, frompos, item2, topos)
 playerpos = getPlayerPosition(cid)
-nplayer1pos = {x=368, y=1386, z=12}
+nplayer1pos = {x=856, y=1364, z=13}
 
 playerpos = getPlayerPosition(cid)
 

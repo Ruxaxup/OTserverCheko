@@ -16,19 +16,19 @@ function creatureSayCallback(cid, type, msg)
     end
 
         if msgcontains(msg, 'beggar') then
-            npcHandler:say('You want to hear that story now. Loooonga and sad.', cid)
+            npcHandler:say('Voce quer escutar essa historia agora. Loooonga e triste.', cid)
                         talk_state = 1
                         elseif msgcontains(msg, 'yes') and talk_state == 1 then
                                 if getPlayerItemCount(cid,2160) >= 1 then
                                         doPlayerTakeItem(cid,2160,2)
-                                        npcHandler:say('Oh, shit! I hate mosquitoes ... What did you say?', cid)
+                                        npcHandler:say('Ah, droga! Odeio mosquitos... O que voce disse?', cid)
                                         talk_state = 0
                                         else
-                                                npcHandler:say('Oh, sorry. I remembered that I need to do something. Thanks for your ... for your ... for your kindness.', cid)
+                                                npcHandler:say('Oh, me desculpe. Me lembrei que preciso fazer algo. Obrigado pelas suas... por seu... pela sua gentileza.', cid)
                                                 talk_state = 0
                                         end
                                 elseif msgcontains(msg, 'no') and talk_state == 1 then
-                                        npcHandler:say('Ok, bye!', cid)
+                                        npcHandler:say('Ok Adeus!', cid)
                                         talk_state = 0
                                 end
                                 return true

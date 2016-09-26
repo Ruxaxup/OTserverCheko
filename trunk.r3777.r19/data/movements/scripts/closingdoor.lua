@@ -1,8 +1,4 @@
 function onStepOut(cid, item, position, fromPosition)
-	if(getTileInfo(position).creatures > 0) then
-		return true
-	end
-
 	local newPosition = {x = position.x, y = position.y, z = position.z}
 	if(isInArray(verticalOpenDoors, item.itemid)) then
 		newPosition.x = newPosition.x + 1
@@ -11,10 +7,11 @@ function onStepOut(cid, item, position, fromPosition)
 	end
 
 	doRelocate(position, newPosition)
-	local tmpPos = position
-	tmpPos.stackpos = -1
+	local tmpPos = {x = position.x, y = position.y, z = position.z, stackpos = -1}
+	local tileCount = getTileThingByPos(tmpPos)
 
-	local i, tmpItem, tileCount = 1, {uid = 1}, getTileThingByPos(tmpPos)
+	local i = 1
+	local tmpItem = {uid = 1}
 	while(tmpItem.uid ~= 0 and i < tileCount) do
 		tmpPos.stackpos = i
 		tmpItem = getTileThingByPos(tmpPos)

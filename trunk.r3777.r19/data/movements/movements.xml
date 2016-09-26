@@ -1,5 +1,46 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <movements>
+
+   <movevent type="StepOut" uniqueid="32193" event="script" value="demonOakTree.lua" />
+	<movevent type="StepIn" itemid="8292" event="script" value="demonOakArea.lua" />
+	<movevent type="StepIn" uniqueid="13901-13905" event="script" value="demonOakSquares.lua" />
+<movevent type="StepIn" uniqueid="7672" event="script" value="script.lua" />
+
+
+<movevent type="StepIn" actionid="153100" event="script" value="mapmarks.lua"/>
+<movevent type="AddItem" tileitem="1" fromaid="23300" toaid="23400" event="script" value="football.lua"/>
+    <movevent type="StepIn" fromaid="23300" toaid="23400" event="script" value="football.lua"/>
+
+<movevent type="StepIn" fromaid="1001" toaid="1006" event="script" value="inq.lua"/>
+<movevent type="StepIn" fromaid="2001" toaid="2005" event="script" value="inq.lua"/>
+<movevent type="StepIn" fromaid="3000" toaid="3010" event="script" value="inq.lua"/>
+
+	<!-- Yalahar 10th -->
+	<movement type="StepIn" actionid="1973" event="script" value="azerus.lua" />
+	<movement type="StepIn" actionid="1974" event="script" value="azerus.lua" />
+
+
+
+	<!-- blue legs quest-->
+	<movevent type="StepIn" actionid="21190" event="script" value="Koshei the Deathless.lua"/>
+	<movevent type="StepIn" actionid="21191" event="script" value="Koshei the Deathless.lua"/>
+
+<!-- Arena -->
+<movevent type="StepIn" actionid="42360" event="script" value="arena/arenagoblet.lua"/>
+<movevent type="StepIn" actionid="42370" event="script" value="arena/arenagoblet.lua"/>
+<movevent type="StepIn" actionid="42380" event="script" value="arena/arenagoblet.lua"/>
+<movevent type="StepOut" actionid="42360" event="script" value="arena/arenagoblet.lua"/>
+<movevent type="StepOut" actionid="42370" event="script" value="arena/arenagoblet.lua"/>
+<movevent type="StepOut" actionid="42380" event="script" value="arena/arenagoblet.lua"/>
+<movevent type="StepIn" fromaid="42300" toaid="42309" event="script" value="arena/arenaroom.lua"/>
+<movevent type="StepIn" actionid="42310" event="script" value="arena/didarenalevel.lua"/>
+<movevent type="StepIn" fromaid="42321" toaid="42330" event="script" value="arena/leavearena.lua"/> 
+
+	<!-- Zao -->
+<movevent type="StepIn" actionid="62325" event="script" value="stair.lua" />
+	<!-- Dicas -->
+	<movevent type="StepIn" actionid="15460" event="script" value="information.lua"/>
+	<movevent type="StepIn" actionid="15462" event="script" value="information3.lua"/>
 	<!-- Decaying tiles -->
 	<movevent type="StepIn" itemid="293" event="script" value="decay.lua"/>
 	<movevent type="StepIn" itemid="461" event="script" value="decay.lua"/>
@@ -23,8 +64,8 @@
 	<movevent type="StepOut" itemid="3217" event="script" value="tiles.lua"/>
 	<movevent type="StepIn" itemid="3202" event="script" value="tiles.lua"/>
 	<movevent type="StepOut" itemid="3215" event="script" value="tiles.lua"/>
-	<movevent type="StepIn" itemid="11062" event="script" value="tiles.lua"/>
-	<movevent type="StepOut" itemid="11063" event="script" value="tiles.lua"/>
+	<movevent type="StepIn" itemid="11059" event="script" value="tiles.lua"/>
+	<movevent type="StepOut" itemid="11060" event="script" value="tiles.lua"/>
 	<!-- <movevent type="StepIn" itemid="8714" event="script" value="tiles.lua"/> -->
 
 	<!-- Traps -->
@@ -194,6 +235,12 @@
 	<movevent type="AddItem" tileitem="1" itemid="1788" event="script" value="dough.lua"/>
 	<movevent type="AddItem" tileitem="1" itemid="1790" event="script" value="dough.lua"/>
 	<movevent type="AddItem" tileitem="1" itemid="1792" event="script" value="dough.lua"/>
+	<movevent type="AddItem" tileitem="1" itemid="6356" event="script" value="dough.lua"/>
+	<movevent type="AddItem" tileitem="1" itemid="6358" event="script" value="dough.lua"/>
+	<movevent type="AddItem" tileitem="1" itemid="6360" event="script" value="dough.lua"/>
+	<movevent type="AddItem" tileitem="1" itemid="6362" event="script" value="dough.lua"/>
+	<movevent type="AddItem" tileitem="1" itemid="6278" event="script" value="partycake.lua"/>
+	<movevent type="AddItem" tileitem="1" itemid="6279" event="script" value="velacake.lua"/>
 
 	<!-- Campfires -->
 	<movevent type="StepIn" itemid="1423" event="function" value="onStepInField"/>
@@ -202,9 +249,6 @@
 	<movevent type="AddItem" itemid="1424" event="function" value="onAddField"/>
 	<movevent type="StepIn" itemid="1425" event="function" value="onStepInField"/>
 	<movevent type="AddItem" itemid="1425" event="function" value="onAddField"/>
-
-	<!-- Others -->
-	<movevent type="StepIn" itemid="8072" event="script" value="yellowpillow.lua"/>
 
 	<!-- Fields -->
 	<movevent type="StepIn" itemid="1487" event="function" value="onStepInField"/>
@@ -283,6 +327,10 @@
 		<vocation id="5" showInDescription="0"/>
 		<vocation id="2"/>
 		<vocation id="6" showInDescription="0"/>
+	</movevent>
+	<movevent type="Equip" itemid="2852" slot="feet" level="80" event="function" value="onEquipItem">
+		<vocation id="4"/>
+		<vocation id="8" showInDescription="0"/>
 	</movevent>
 	<movevent type="DeEquip" itemid="7892" slot="feet" event="function" value="onDeEquipItem"/>
 	<movevent type="Equip" itemid="7891" slot="feet" event="function" value="onEquipItem">
@@ -416,6 +464,10 @@
 		<vocation id="2"/>
 		<vocation id="6" showInDescription="0"/>
 	</movevent>
+	<movevent type="Equip" itemid="12606" slot="head" level="100" event="function" value="onEquipItem">
+		<vocation id="3"/>
+		<vocation id="7" showInDescription="0"/>
+	</movevent>
 	<movevent type="DeEquip" itemid="2323" slot="head" event="function" value="onDeEquipItem"/>
 	<movevent type="Equip" itemid="2343" slot="head" event="function" value="onEquipItem"/>
 	<movevent type="DeEquip" itemid="2343" slot="head" event="function" value="onDeEquipItem"/>
@@ -423,6 +475,8 @@
 	<movevent type="DeEquip" itemid="2474" slot="head" event="function" value="onDeEquipItem"/>
 	<movevent type="Equip" itemid="2502" slot="head" event="function" value="onEquipItem"/>
 	<movevent type="DeEquip" itemid="2502" slot="head" event="function" value="onDeEquipItem"/>
+	<movevent type="Equip" itemid="5461" slot="head" event="function" value="onEquipItem"/>
+	<movevent type="DeEquip" itemid="5461" slot="head" event="function" value="onDeEquipItem"/>
 	<movevent type="Equip" itemid="7459" slot="head" event="function" value="onEquipItem"/>
 	<movevent type="DeEquip" itemid="7459" slot="head" event="function" value="onDeEquipItem"/>
 	<movevent type="Equip" itemid="7900" slot="head" event="function" value="onEquipItem">
@@ -502,6 +556,23 @@
 		<vocation id="8" showInDescription="0"/>
 		<vocation id="3"/>
 		<vocation id="7" showInDescription="0"/>
+	</movevent>
+	<movevent type="DeEquip" itemid="12603" slot="armor" event="function" value="onDeEquipItem"/>
+	<movevent type="Equip" itemid="12603" slot="armor" level="100" event="function" value="onEquipItem">
+		<vocation id="4"/>
+		<vocation id="8" showInDescription="0"/>
+	</movevent>
+	<movevent type="DeEquip" itemid="12568" slot="armor" event="function" value="onDeEquipItem"/>
+	<movevent type="Equip" itemid="12568" slot="armor" level="100" event="function" value="onEquipItem">
+		<vocation id="4"/>
+		<vocation id="8" showInDescription="0"/>
+	</movevent>
+	<movevent type="DeEquip" itemid="12604" slot="armor" event="function" value="onDeEquipItem"/>
+	<movevent type="Equip" itemid="12604" slot="armor" level="100" event="function" value="onEquipItem">
+		<vocation id="1"/>
+		<vocation id="5" showInDescription="0"/>
+		<vocation id="2"/>
+		<vocation id="6" showInDescription="0"/>
 	</movevent>
 	<movevent type="DeEquip" itemid="2472" slot="armor" event="function" value="onDeEquipItem"/>
 	<movevent type="Equip" itemid="2487" slot="armor" event="function" value="onEquipItem">
@@ -799,14 +870,19 @@
 		<vocation id="7" showInDescription="0"/>
 	</movevent>
 	<movevent type="DeEquip" itemid="9777" slot="legs" event="function" value="onDeEquipItem"/>
-	<movevent type="Equip" itemid="11298" slot="legs" event="function" value="onEquipItem"/>
-	<movevent type="DeEquip" itemid="11298" slot="legs" event="function" value="onDeEquipItem"/>
+	<movevent type="Equip" itemid="11297" slot="legs" event="function" value="onEquipItem"/>
+	<movevent type="DeEquip" itemid="11297" slot="legs" event="function" value="onDeEquipItem"/>
 
 	<!-- Shields -->
 	<movevent type="Equip" fromid="8905" toid="8909" slot="shield" level="100" event="function" value="onEquipItem">
 		<vocation id="4"/>
 		<vocation id="8" showInDescription="0"/>
 	</movevent>
+	<movevent type="DeEquip" fromid="12605" toid="12605" slot="shield" event="function" value="onDeEquipItem"/>
+ 	<movevent type="Equip" itemid="12605" slot="shield" level="80" event="function" value="onEquipItem">
+	  	<vocation id="4"/>
+	  	<vocation id="8" showInDescription="0"/>
+ 	</movevent>
 	<movevent type="DeEquip" fromid="8905" toid="8909" slot="shield" event="function" value="onDeEquipItem"/>
 	<movevent type="Equip" itemid="8900" slot="shield" level="30" event="function" value="onEquipItem">
 		<vocation id="1"/>
@@ -854,24 +930,75 @@
 	<!-- Other -->
 	<movevent type="Equip" itemid="9956" slot="pickupable" event="function" value="onEquipItem"/>
 	<movevent type="DeEquip" itemid="9956" slot="pickupable" event="function" value="onDeEquipItem"/>
+	<movevent event="StepIn" itemid="1801" script="south.lua"/>
+	<movevent event="StepIn" itemid="1795" script="north.lua"/>
+	<movevent event="StepIn" itemid="1797" script="west.lua"/>
+	<movevent event="StepIn" itemid="1799" script="east.lua"/>
+	<movevent event="StepIn" itemid="1796" script="northeast.lua"/>
+	<movevent event="StepIn" itemid="1802" script="southeast.lua"/>
+	<movevent event="StepIn" itemid="1794" script="northwest.lua"/>
+	<movevent event="StepIn" itemid="1800" script="southwest.lua"/>
 
-	<!-- Helmet of the Deep -->
-	
-<movevent type="Equip" itemid="5461" slot="head" event="script" value="hotd.lua"/>
-	
-<movevent type="DeEquip" itemid="5461" slot="head" event="function" value="onDeEquipItem"/>
 
-<movevent type="Equip" itemid="12541" slot="head" event="script" value="hotd.lua"/>
-	
-<movevent type="DeEquip" itemid="12541" slot="head" event="function" value="onDeEquipItem"/>
 
-<movevent type="AddItem" tileitem="1" fromaid="23300" toaid="23400" event="script" value="football.lua"/>
-<movevent type="StepIn" fromaid="23300" toaid="23400" event="script" value="football.lua"/>
 
-<!-- Zao -->
-<movevent type="StepIn" actionid="62325" event="script" value="stair.lua" />
 
-<!--INQ -->
-<movevent type="StepIn" itemid="1387" event="script" value="Inquisition.lua"/>
+
+	<!-- Pits Of Inferno -->
+	<movement type="StepIn" uniqueid="10200" event="script" value="PitsOfInferno/GraveEntrance.lua" />
+	<movement type="StepIn" actionid="10201" event="script" value="PitsOfInferno/MagicWallEntrance.lua" />
+	<movement type="StepIn" uniqueid="10202" event="script" value="PitsOfInferno/MagicWallExit.lua" />
+	<movement type="StepIn" actionid="10208" event="script" value="PitsOfInferno/FireKnightNorth1.lua" />
+	<movement type="StepIn" actionid="10209" event="script" value="PitsOfInferno/FireKnightNorth2.lua" />
+	<movement type="StepIn" actionid="10210" event="script" value="PitsOfInferno/FireKnightNorth3.lua" />
+	<movement type="StepIn" actionid="10211" event="script" value="PitsOfInferno/FireDruidNorthEast1.lua" />
+	<movement type="StepIn" actionid="10212" event="script" value="PitsOfInferno/FireDruidNorthEast2.lua" />
+	<movement type="StepIn" actionid="10213" event="script" value="PitsOfInferno/FireDruidNorthEast3.lua" />
+	<movement type="StepIn" actionid="10214" event="script" value="PitsOfInferno/FirePaladinSouthEast1.lua" />
+	<movement type="StepIn" actionid="10215" event="script" value="PitsOfInferno/FirePaladinSouthEast2.lua" />
+	<movement type="StepIn" actionid="10216" event="script" value="PitsOfInferno/FirePaladinSouthEast3.lua" />
+	<movement type="StepIn" actionid="10217" event="script" value="PitsOfInferno/FireSorcererSouth1.lua" />
+	<movement type="StepIn" actionid="10218" event="script" value="PitsOfInferno/FireSorcererSouth2.lua" />
+	<movement type="StepIn" actionid="10219" event="script" value="PitsOfInferno/FireSorcererSouth3.lua" />
+	<movement type="StepIn" actionid="10220" event="script" value="PitsOfInferno/FireKnightDeath.lua" />
+	<movement type="StepIn" actionid="10221" event="script" value="PitsOfInferno/FireDruidDeath.lua" />
+	<movement type="StepIn" actionid="10222" event="script" value="PitsOfInferno/FirePaladinDeath.lua" />
+    <movement type="StepIn" actionid="10223" event="script" value="PitsOfInferno/FireSorcererDeath.lua" />
+    <movement type="StepIn" uniqueid="10225" event="script" value="PitsOfInferno/CreateLadder.lua" />
+    <movement type="StepOut" uniqueid="10225" event="script" value="PitsOfInferno/CreateLadder.lua" />
+    <movement type="StepIn" uniqueid="10226" event="script" value="PitsOfInferno/TP1.lua" />
+    <movement type="StepIn" uniqueid="10227" event="script" value="PitsOfInferno/TP2.lua" />
+    <movement type="StepIn" uniqueid="10228" event="script" value="PitsOfInferno/TP3.lua" />
+    <movement type="StepIn" uniqueid="10229" event="script" value="PitsOfInferno/TP4.lua" />
+    <movement type="StepIn" uniqueid="10230" event="script" value="PitsOfInferno/TP5.lua" />
+    <movement type="StepIn" uniqueid="10231" event="script" value="PitsOfInferno/TP6.lua" />
+    <movement type="StepIn" uniqueid="10232" event="script" value="PitsOfInferno/TP7.lua" />
+    <movement type="StepIn" uniqueid="10233" event="script" value="PitsOfInferno/TP8.lua" />
+    <movement type="StepIn" uniqueid="10234" event="script" value="PitsOfInferno/TP9.lua" />
+    <movement type="StepIn" uniqueid="10235" event="script" value="PitsOfInferno/TP10.lua" />
+    <movement type="StepIn" uniqueid="10236" event="script" value="PitsOfInferno/TP11.lua" />
+    <movement type="StepIn" uniqueid="10237" event="script" value="PitsOfInferno/TP12.lua" />
+    <movement type="StepIn" uniqueid="10238" event="script" value="PitsOfInferno/TP13.lua" />
+    <movement type="StepIn" uniqueid="10239" event="script" value="PitsOfInferno/TP14.lua" />
+    <movement type="StepIn" uniqueid="10240" event="script" value="PitsOfInferno/TPBack1.lua" />
+    <movement type="StepIn" uniqueid="10241" event="script" value="PitsOfInferno/TPBack2.lua" />
+    <movement type="StepIn" uniqueid="10242" event="script" value="PitsOfInferno/TPBack3.lua" />
+    <movement type="StepIn" uniqueid="10243" event="script" value="PitsOfInferno/TPBack4.lua" />
+    <movement type="StepIn" uniqueid="10244" event="script" value="PitsOfInferno/TPBack5.lua" />
+    <movement type="StepIn" uniqueid="10245" event="script" value="PitsOfInferno/TPBack6.lua" />
+    <movement type="StepIn" uniqueid="10246" event="script" value="PitsOfInferno/TPBack7.lua" />
+    <movement type="StepIn" uniqueid="10247" event="script" value="PitsOfInferno/TPBack8.lua" />
+    <movement type="StepIn" uniqueid="10248" event="script" value="PitsOfInferno/TPBack9.lua" />
+    <movement type="StepIn" uniqueid="10249" event="script" value="PitsOfInferno/TPBack10.lua" />
+    <movement type="StepIn" uniqueid="10250" event="script" value="PitsOfInferno/TPBack11.lua" />
+    <movement type="StepIn" uniqueid="10251" event="script" value="PitsOfInferno/TPMiddle1.lua" />
+    <movement type="StepIn" uniqueid="10252" event="script" value="PitsOfInferno/TPMiddle2.lua" />
+    <movement type="StepIn" uniqueid="10253" event="script" value="PitsOfInferno/TPMiddle3.lua" />
+    <movement type="StepIn" uniqueid="10257" event="script" value="PitsOfInferno/CreateStone.lua" />
+    <movement type="StepIn" uniqueid="10271" event="script" value="PitsOfInferno/BazirPlatinumCoins.lua" />
+    <movement type="StepIn" itemid="5915" event="script" value="PitsOfInferno/AllThrones.lua" />
+    <movement type="StepIn" itemid="5916" event="script" value="PitsOfInferno/AllThrones.lua" />
+ 
+    <movement type="StepIn" actionid="1000" event="script" value="Special Raid/Brigand.lua" />
 
 </movements>

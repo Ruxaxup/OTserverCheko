@@ -1,65 +1,58 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<monster name="orshabaal" nameDescription="a orshabaal" race="fire" experience="10000" speed="350" manacost="0">
-  <health now="20500" max="20500"/>
-  <look type="201" corpse="5995"/>
-  <targetchange interval="5000" chance="8"/>
-  <strategy attack="100" defense="0"/>
-  <flags>
-    <flag summonable="0"/>
-    <flag attackable="1"/>
-    <flag hostile="1"/>
-    <flag illusionable="0"/>
-    <flag convinceable="0"/>
-    <flag pushable="0"/>
-    <flag canpushitems="1"/>
-    <flag canpushcreatures="1"/>
-    <flag targetdistance="1"/>
-    <flag staticattack="90"/>
-    <flag runonhealth="2500"/>
-  </flags>
+<monster name="Orshabaal" nameDescription="Orshabaal" race="fire" experience="100000" speed="380" manacost="0">
+	<health now="105000" max="105000"/>
+	<look type="201" corpse="2916"/>
+	<targetchange interval="2000" chance="10"/>
+	<strategy attack="70" defense="10"/>
+	<flags>
+		<flag summonable="0"/>
+		<flag attackable="1"/>
+		<flag hostile="1"/>
+		<flag illusionable="0"/>
+		<flag convinceable="0"/>
+		<flag pushable="0"/>
+		<flag canpushitems="1"/>
+		<flag canpushcreatures="1"/>
+		<flag targetdistance="1"/>
+		<flag runonhealth="2500"/>
+	</flags>
 	<attacks>
-		<attack name="melee" interval="2000" skill="180" attack="180"/>
-		<attack name="physical" interval="3000" chance="15" radius="5" target="0" min="-320" max="-910">
+		<attack name="melee" interval="2000" skill="190" attack="180"/>
+		<attack name="physical" interval="2000" chance="5" length="6" spread="1" target="0" min="-1100" max="-2000">
+			<attribute key="areaEffect" value="energy"/>
+		</attack>
+		<attack name="physical" interval="2000" chance="15" radius="5" min="-200" max="-850">
 			<attribute key="areaEffect" value="blackspark"/>
 		</attack>
-		<attack name="fire" interval="2000" chance="16" range="7" radius="7" target="1" min="-310" max="-740">
+		<attack name="fire" interval="2000" chance="20" range="7" radius="5" target="1" min="-500" max="-850">
 			<attribute key="shootEffect" value="fire"/>
 			<attribute key="areaEffect" value="firearea"/>
 		</attack>
-		<attack name="firefield" interval="1000" chance="10" range="7" radius="4" target="1">
-			<attribute key="shootEffect" value="fire"/>
-		</attack>
-		<attack name="lifedrain" interval="4000" chance="19" length="8" spread="0" min="-500" max="-1300">
-			<attribute key="areaEffect" value="purpleenergy"/>
-		</attack>
 	</attacks>
-	<defenses armor="50" defense="48">
-		<defense name="healing" interval="1000" chance="9" min="200" max="500">
+	<defenses armor="90" defense="111">
+		<defense name="healing" interval="2000" chance="10" min="575" max="2250">
 			<attribute key="areaEffect" value="blueshimmer"/>
 		</defense>
-		<defense name="healing" interval="1000" chance="12" min="100" max="200">
-			<attribute key="areaEffect" value="blueshimmer"/>
-		</defense>
-		<defense name="speed" interval="1000" chance="5" speedchange="400" duration="7000">
+		<defense name="speed" interval="2000" chance="15" speedchange="700" duration="7000">
 			<attribute key="areaEffect" value="redshimmer"/>
 		</defense>
 	</defenses>
 	<elements>
-		<element icePercent="-15"/>
-		<element deathPercent="35"/>
-		<element holyPercent="-25"/>
+		<element deathPercent="50"/>
+		<element icePercent="-1"/>
+		<element holyPercent="-1"/>
 	</elements>
 	<immunities>
-		<immunity earth="1"/>
-		<immunity fire="1"/>
 		<immunity lifedrain="1"/>
 		<immunity paralyze="1"/>
 		<immunity invisible="1"/>
+		<immunity fire="1"/>
+		<immunity earth="1"/>
 	</immunities>
 	<summons maxSummons="4">
-		<summon name="demon" interval="2500" chance="25"/>
+		<summon name="demon" interval="2000" chance="10" max="4"/>
 	</summons>
-	<voices interval="5000" chance="10">
+	<voices interval="2000" chance="10">
 		<voice sentence="PRAISED BE MY MASTERS, THE RUTHLESS SEVEN!" yell="1"/>
 		<voice sentence="YOU ARE DOOMED!" yell="1"/>
 		<voice sentence="ORSHABAAL IS BACK!" yell="1"/>
@@ -67,32 +60,85 @@
 		<voice sentence="SOULS FOR ORSHABAAL!" yell="1"/>
 	</voices>
 	<loot>
-		<item id="2148" countmax="100" chance1="100000" chancemax="0"/>
-		<item id="2148" countmax="25" chance1="100000" chancemax="0"/>
-		<item id="2377" chance="3333"/>
-		<item id="2188" chance="1000" /> -- wand of plague
-		<item id="2393" chance="10059"/>
-		<item id="2432" chance="3000"/>
-		<item id="2472" chance="6000"/>
-		<item id="3976" countmax="10" chance1="50000" chancemax="0"/>
-		<item id="5906" countmax="1" chance1="1000" chancemax="0"/>
-		<item id="5954" countmax="1" chance1="1000" chancemax="0"/>
-		<item id="2182" chance="1333" /> -- snakebite rod
-		<item id="1987" chance="100000">
-			<inside>
-				<item id="2421" chance="1000"/>
-				<item id="2678" countmax="3" chance1="10000" chancemax="0"/>
-				<item id="2148" countmax="100" chance1="100000" chancemax="0"/>
-				<item id="2144" countmax="4" chance1="4000" chancemax="0"/>
-				<item id="2462" chance="9700"/>
-				<item id="2149" countmax="3" chance1="1428" chancemax="0"/>
-				<item id="2171" chance="2333"/>
-				<item id="2387" chance="6666"/>
-				<item id="2470" chance="6500"/>
-				<item id="2520" chance="7050"/>
-				<item id="2418" chance="833"/>
-				<item id="5884" chance="4000"/>
-			</inside>
-		</item>
-	</loot>
+    <item id="2152" countmax="75" chance="43500" /><!-- platinum coin -->
+    <item id="5954" countmax="2" chance="20875" /><!-- demon horn -->
+    <item id="2164" chance="15300" /><!-- might ring -->
+    <item id="2192" chance="15300" /><!-- crystal ball -->
+    <item id="2149" countmax="10" chance="15500" /><!-- small emerald -->
+    <item id="2112" chance="13450" /><!-- teddy bear -->
+    <item id="6300" chance="30125" /><!-- death ring -->
+    <item id="2151" countmax="7" chance="8700" /><!-- talon -->
+    <item id="2145" countmax="5" chance="13825" /><!-- small diamond -->
+    <item id="2171" chance="17175" /><!-- platinum amulet -->
+    <item id="2462" chance="15300" /><!-- devil helmet -->
+    <item id="2142" chance="4200" /><!-- ancient amulet -->
+    <item id="1988" chance="100000"><!-- bag -->
+        <inside>
+            <item id="2472" chance="4200" /><!-- magic plate armor -->
+            <item id="2176" chance="20875" /><!-- orb -->
+            <item id="2470" chance="6050" /><!-- golden legs -->
+            <item id="8890" chance="2350" /><!-- robe of the underworld -->
+            <item id="2434" chance="9750" /><!-- dragon hammer -->
+            <item id="2178" chance="7900" /><!-- mind stone -->
+            <item id="2195" chance="30125" /><!-- boots of haste -->
+            <item id="2421" chance="2350" /><!-- thunder hammer -->
+            <item id="2170" chance="11600" /><!-- silver amulet -->
+            <item id="2124" chance="7900" /><!-- crystal ring -->
+            <item id="2123" chance="6050" /><!-- ring of the sky -->
+            <item id="2125" chance="20875" /><!-- crystal necklace -->
+            <item id="2158" chance="13450" /><!-- blue gem -->
+            <item id="2436" chance="11600" /><!-- skull staff -->
+            <item id="2214" chance="19025" /><!-- ring of healing -->
+            <item id="1982" chance="13450" /><!-- purple tome -->
+            <item id="2197" chance="15300" /><!-- stone skin amulet -->
+            <item id="7590" chance="22725" /><!-- great mana potion -->
+            <item id="2514" chance="7900" /><!-- mastermind shield -->
+            <item id="2393" chance="7900" /><!-- giant sword -->
+            <item id="2174" chance="6050" /><!-- strange symbol -->
+            <item id="2146" countmax="10" chance="12350" /><!-- small sapphire -->
+            <item id="2155" chance="19025" /><!-- green gem -->
+            <item id="2387" chance="7900" /><!-- double axe -->
+            <item id="2177" chance="11600" /><!-- life crystal -->
+            <item id="2182" chance="6050" /><!-- snakebite rod -->
+            <item id="2167" chance="6050" /><!-- energy ring -->
+            <item id="2377" chance="4200" /><!-- two handed sword -->
+            <item id="2148" countmax="100" chance="4225" /><!-- gold coin -->
+            <item id="2148" countmax="84" chance="4225" /><!-- gold coin -->
+            <item id="2432" chance="7900" /><!-- fire axe -->
+            <item id="2033" chance="13450" /><!-- golden mug -->
+            <item id="7591" chance="33825" /><!-- great health potion -->
+            <item id="2418" chance="9750" /><!-- golden sickle -->
+            <item id="2520" chance="30125" /><!-- demon shield -->
+            <item id="2150" countmax="19" chance="16675" /><!-- small amethyst -->
+            <item id="2179" chance="15300" /><!-- gold ring -->
+            <item id="2144" countmax="15" chance="10375" /><!-- black pearl -->
+            <item id="2162" chance="9750" /><!-- magic light wand -->
+            <item id="2165" chance="15300" /><!-- stealth ring -->
+            <item id="2200" chance="17175" /><!-- protection amulet -->
+            <item id="2185" chance="7900" /><!-- necrotic rod -->
+            <item id="5808" chance="24575" /><!-- orshabaal's brain -->
+            <item id="7368" countmax="20" chance="2350" /><!-- assassin star -->
+            <item id="2322" chance="2350" /><!-- voodoo doll -->
+        </inside>
+    </item>
+</loot>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 </monster>

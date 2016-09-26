@@ -37,7 +37,9 @@
 <immunities>
 	<immunity fire="1"/>
 </immunities>
-
+<script> 
+	<event name="inquisitionPortals"/> 
+</script>
 <voices interval="5000" chance="10">
 	<voice sentence="I might reward you for killing my brother ~ with a swift dead!" yell="1"/>
 </voices>

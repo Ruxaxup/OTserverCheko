@@ -29,6 +29,5 @@ function onUse(cid, item, fromPosition, itemEx, toPosition)
 		doPlayerAddItem(cid, coin.from, ITEMCOUNT_MAX)
 		doSendAnimatedText(fromPosition, "$$$", coins[coin.from].effect)
 	end
-
 	return true
 end

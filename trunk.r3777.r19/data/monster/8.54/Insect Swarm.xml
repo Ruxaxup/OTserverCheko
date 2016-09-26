@@ -18,13 +18,18 @@
 <flag runonhealth="0"/>
 </flags>
 <attacks>
-	<attack name="melee" interval="2000" skill="10" attack="13" poison="20"/>
+	<attack name="melee" interval="2000" skill="10" attack="10"/>
 </attacks>
 <defenses armor="10" defense="10"/>
 <immunities>
-<immunity earth="1"/>
+		<immunity earth="1"/>
 </immunities>
 <elements>
+<element physicalPercent="0"/>
+<element holyPercent="0"/>
+<element deathPercent="0"/>
+<element energyPercent="0"/>
+<element icePercent="0"/>
 <element firePercent="-1"/>
 </elements>
 </monster>

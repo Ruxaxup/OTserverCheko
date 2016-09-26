@@ -53,7 +53,7 @@
 		<item id="2465" chance="4000"/> --brass armor
 		<item id="2666" countmax="2" chance1="10000" /> -- meat
 		<item id="8872" chance="1500"/> --belted cape
-		<item id="5885" chance="500"/> --warrior's sweat
+		<item id="5885" chance="10000"/> --warrior's sweat
 		<item id="2497" chance="300"/> --crusader helmet
 		<item id="1987" chance="100000"> -- Bag
 			<inside>
@@ -69,7 +69,6 @@
 				<item id="3962" chance="500"/> --beastslayer axe
 				<item id="7454" chance="300"/> --glorius axe
 				<item id="7389" chance="200"/> --mercenary sword
-				<item id="5924" chance="2000"/> --damaged steel helmet
 			</inside>
 		</item>
 	</loot>

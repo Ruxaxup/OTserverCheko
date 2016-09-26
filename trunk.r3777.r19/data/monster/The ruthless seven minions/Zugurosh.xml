@@ -56,7 +56,9 @@
 	<immunity paralyze="1"/>
 	<immunity invisible="1"/>
 </immunities>
-
+<script> 
+	<event name="inquisitionPortals"/> 
+</script>
 <voices interval="5000" chance="10">
 	<voice sentence="You will run out of resources soon enough!!" yell="1"/>
 	<voice sentence="One little mistake and your all are mine!"/>

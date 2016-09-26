@@ -4,7 +4,7 @@
 	<look type="75" head="114" body="0" legs="114" feet="0" addons="2"/>
 	<parameters>
 		<parameter key="module_shop" value="1"/>
-		<parameter key="message_greet" value="Hi |PLAYERNAME|. I sell special decoration items. Just say {trade}."/>
+		<parameter key="message_greet" value="Ola |PLAYERNAME|. Eu vendo itens de decoration especiais. Diga {trade}."/>
 		<parameter key="shop_buyable" value="crystal table box,9974,7000"/>
 	</parameters>
 </npc>

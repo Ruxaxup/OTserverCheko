@@ -18,7 +18,7 @@
 <flag runonhealth="0"/>
 </flags>
 <attacks>
-<attack name="melee" interval="2000" skill="10" attack="3"/>
+<attack name="melee" interval="2000" min="-0" max="-3"/>
 </attacks>
 <defenses armor="16" defense="19"/>
 <elements>
@@ -28,7 +28,7 @@
 <voice sentence="Chrk chrk!"/>
 </voices>
 <loot>
-<item id="2148" countmax="6" chance="20000"/><!-- gold coin -->
-<item id="11367" chance="1500"/><!-- sandcrawler shell -->
+<item id="2148" countmax="6" chance="10000"/>
+<item id="11366" chance="600"/>
 </loot>
 </monster>

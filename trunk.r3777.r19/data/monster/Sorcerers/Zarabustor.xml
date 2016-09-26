@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<monster name="Zarabustor" nameDescription="zarabustor" race="blood" experience="8000" speed="265" manacost="0">
-  <health now="5100" max="5100"/>
+<monster name="Zarabustor" nameDescription="zarabustor" race="blood" experience="80000" speed="265" manacost="0">
+  <health now="50000" max="50000"/>
   <look type="130" head="19" body="71" legs="128" feet="128" addons="1" corpse="6080"/>
   <targetchange interval="5000" chance="30"/>
   <strategy attack="90" defense="10"/>
@@ -19,11 +19,11 @@
   </flags>
   <attacks>
     <attack name="melee" interval="2000" skill="55" attack="50"/>
-    <attack name="ice" interval="1000" chance="12" range="7" target="1" min="-120" attack="-190">
+    <attack name="ice" interval="1000" chance="12" range="7" target="1" min="-500" attack="-1090">
       <attribute key="shootEffect" value="ice"/>
 	  <attribute key="areaEffect" value="iceattack"/>
     </attack>
-	<attack name="energy" interval="2000" chance="20" range="7" target="1" min="-180" max="-250">
+	<attack name="energy" interval="2000" chance="20" range="7" target="1" min="-1080" max="-2050">
 	  <attribute key="shootEffect" value="energyball"/>
 	  <attribute key="areaEffect" value="energy"/>
 	  </attack>
@@ -34,20 +34,20 @@
 	  <attribute key="shootEffect" value="smallice"/>
       <attribute key="areaEffect" value="blueshimmer"/>
     </attack>
-    <attack name="fire" interval="3000" chance="23" range="7" radius="3" target="1" min="160" max="-250">
+    <attack name="fire" interval="3000" chance="23" range="7" radius="3" target="1" min="560" max="-850">
       <attribute key="shootEffect" value="burstarrow"/>
       <attribute key="areaEffect" value="firearea"/>
     </attack>
-    <attack name="firefield" interval="2000" chance="14" range="7" radius="2" target="1">
+    <attack name="firefield" interval="2000" chance="14" range="7" radius="8" target="1">
       <attribute key="shootEffect" value="fire"/>
     </attack>
-    <attack name="energy" interval="3000" chance="15" length="8" spread="0" min="-180" max="-350">
+    <attack name="energy" interval="3000" chance="15" length="8" spread="0" min="-480" max="-950">
       <attribute key="areaEffect" value="bigclouds"/>
     </attack>
 
   </attacks>
   <defenses armor="25" defense="20">
-    <defense name="healing" interval="1000" chance="15" min="200" max="400">
+    <defense name="healing" interval="1000" chance="15" min="200" max="700">
       <attribute key="areaEffect" value="blueshimmer"/>
     </defense>
     <defense name="invisible" interval="2000" chance="10" duration="4000">
@@ -64,7 +64,7 @@
     <immunity physical="0"/>
     <immunity energy="1"/>
     <immunity fire="1"/>
-    <immunity ice="1"/>
+    <immunity ice="0"/>
     <immunity lifedrain="0"/>
     <immunity paralyze="1"/>
     <immunity outfit="1"/>

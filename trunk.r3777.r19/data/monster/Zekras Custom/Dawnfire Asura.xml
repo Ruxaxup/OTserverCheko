@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<monster name="Dawnfire Asura" nameDescription="a dawnfire asura" race="blood" experience="4100" speed="410" manacost="0">
+  <health now="2900" max="2900"/>
+  <look type="150" head="114" body="94" legs="21" feet="79" addons="1" corpse="6081"/>
+  <targetchange interval="5000" chance="8"/>
+  <strategy attack="100" defense="0"/>
+  <flags>
+    <flag summonable="0"/>
+    <flag attackable="1"/>
+    <flag hostile="1"/>
+    <flag illusionable="1"/>
+    <flag convinceable="0"/>
+    <flag pushable="0"/>
+    <flag canpushitems="1"/>
+    <flag canpushcreatures="1"/>
+    <flag targetdistance="1"/>
+    <flag staticattack="90"/>
+    <flag runonhealth="0"/>
+  </flags>
+  <attacks>
+    <attack name="melee" interval="2000" skill="100" attack="95"/>
+    <attack name="death" interval="2000" chance="17" range="7" target="1" min="0" max="-250">
+		<attribute key="shootEffect" value="suddendeath"/>
+	</attack>
+	<attack name="melee" interval="2000" chance="10" radius="3" target="0" min="-115" max="-300">
+		<attribute key="areaEffect" value="blackspark"/>
+	</attack>
+	<attack name="fire" interval="1000" chance="12" length="8" spread="3" min="-200" max="-300">
+		<attribute key="areaEffect" value="smallclouds"/>
+	</attack>
+	<attack name="fire" interval="3000" chance="15" range="7" radius="4" target="1" min="0" max="-395">
+		<attribute key="shootEffect" value="fire"/>
+      	<attribute key="areaEffect" value="redspark"/>
+   	</attack>
+    <attack name="fire" interval="2000" chance="15" length="7" spread="3" min="0" max="-700">
+      <attribute key="areaEffect" value="explosionarea"/>
+    </attack>
+  </attacks>
+  <defenses armor="35" defense="35"/>
+  <elements>
+		<element physicalPercent="-20"/>
+		<element energyPercent="-5"/>
+		<element earthPercent="-5"/>
+		<element icePercent="-15"/>
+		<element holyPercent="30"/>
+		<element deathPercent="20"/>
+	</elements>              
+  <immunities>
+    <immunity physical="0"/>
+    <immunity energy="0"/>
+    <immunity fire="1"/>
+    <immunity poison="0"/>
+    <immunity lifedrain="1"/>
+    <immunity paralyze="1"/>
+    <immunity outfit="1"/>
+    <immunity drunk="1"/>
+    <immunity invisible="1"/>
+  </immunities>
+  <voices interval="3000" chance="10">
+    <voice sentence="Ahhhhrrrrr"/>
+    <voice sentence="Carnage!"/>
+  </voices>
+  <loot>
+   <item id="6500" countmax="1" chance1="6666" chancemax="0"/> --Demonic Essence
+   <item id="5944" chance="8000"/> --Soul Orb
+   <item id="5911" chance="5300"/> --Red Piece of Cloth
+   <item id="2148" countmax="100" chance1="100000" chancemax="0"/> --Gold Coin
+   <item id="2152" countmax="6" chance1="100000" chancemax="0"/> --Platinum Coin
+   <item id="1987" chance="100000"> --Bag
+       <inside>
+           <item id="8871" chance="3500"/> --Focus Cape
+           <item id="7899" chance="2500"/> --magma coat
+           <item id="8902" chance="2000"/> --spellbook of mind control
+	   <item id="6558" countmax="1" chance1="8555" chancemax="0"/> --Concentrated Demonic Blood
+	   <item id="6558" countmax="1" chance1="14555" chancemax="0"/> --Concentrated Demonic Blood
+           <item id="6558" countmax="1" chance1="11555" chancemax="0"/> --Concentrated Demonic Blood
+           <item id="7590" countmax="3" chance1="12000" chancemax="0"/> --gmp
+           <item id="2133" chance="3900"/> --ruby necklace
+           <item id="7891" chance="4900"/> --magma boots
+           <item id="6301" chance="3700"/> --death ring
+	    </inside>
+    </item>
+  </loot>
+</monster>

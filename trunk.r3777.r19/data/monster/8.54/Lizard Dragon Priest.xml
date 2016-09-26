@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<monster name="Lizard Dragon Priest" nameDescription="a lizard dragon priest" race="blood" experience="1200" speed="320" manacost="0">
+<monster name="Lizard Dragon Priest" nameDescription="a lizard dragon priest" race="blood" experience="1320" speed="320" manacost="0">
 <health now="1450" max="1450"/>
 <look type="339" corpse="11271"/>
 <targetchange interval="5000" chance="8"/>
@@ -18,13 +18,13 @@
 <flag runonhealth="50"/>
 </flags>
 <attacks>
-<attack name="melee" interval="2000" skill="30" attack="25"/>
-<attack name="fire" interval="2000" chance="20" length="8" spread="3" min="-125" max="-190">
+	<attack name="melee" interval="2000" skill="70" attack="60"/>
+<attack name="fire" interval="3000" chance="20" length="8" spread="3" min="-125" max="-190">
 <attribute key="areaEffect" value="firearea"/>
 </attack>
 </attacks>
 	<defenses armor="25" defense="25">
-		<defense name="healing" interval="2000" chance="20" min="200" max="400">
+		<defense name="healing" interval="1000" chance="28" min="200" max="300">
 			<attribute key="areaEffect" value="blueshimmer"/>
 		</defense>
 		<defense name="invisible" interval="2000" chance="15" duration="4000">
@@ -39,23 +39,19 @@
 <immunity invisible="1"/>
 </immunities>
 <summons maxSummons="2">
-<summon name="Dragon Hatchling" interval="2000" chance="20" max="2"/>
+<summon name="Dragon Hatchling" interval="2000" chance="18" max="2"/>
 </summons>
 <loot>
-<item id="2148" countmax="137" chance="15000"/><!-- gold coin -->
-<item id="2148" countmax="137" chance="15000"/><!-- gold coin -->
-<item id="11354" chance="10000"/><!-- dragon priest's wandtip -->
-<item id="7590" chance="10000"/><!-- great mana potion -->
-<item id="5876" chance="1500"/><!-- lizard leather -->
-<item id="11239" chance="9750"/><!-- bunch of ripe rice -->
-<item id="1987" chance="100000"><!-- bag -->
+<item id="2148" countmax="137" chance="10000"/>
+<item id="11354" chance="1100"/>
+<item id="2181" chance="500"/>
+<item id="2205" chance="650"/>
+<item id="5876" countmax="1" chance="800"/>
+<item id="1987" chance="100000">
 <inside>
-<item id="2168" chance="3000"/><!-- life ring -->
-<item id="2150" chance="3500"/><!-- small amethyst -->
-<item id="2181" chance="1000"/><!-- terra rod -->
-<item id="11297" chance="750"/><!-- zaoan shoes -->
-<item id="11350" chance="500"/><!-- zaoan robe -->
-<item id="2154" chance="450"/><!-- yellow gem -->
+<item id="11349" chance="600"/>
+<item id="11296" chance="633"/>
+<item id="2154" chance="533"/>
 </inside>
 </item>
 </loot>

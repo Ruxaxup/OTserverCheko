@@ -6,13 +6,13 @@
 
     <interact keywords="hi" focus="1">
       <keywords>hello</keywords>
-      <response text="Bow down stranger.">
+      <response text="Curve-se forasteiro.">
         <action name="idle" value="1"/>
       </response>
     </interact>
     <interact keywords="bye" focus="0">
-      <keywords>LONG LIVE THE KING!</keywords>
-      <response text="LONG LIVE THE KING!"/>
+      <keywords>VIDA LONGA AO REI!</keywords>
+      <response text="VIDA LONGA AO REI!"/>
     </interact>
   </interaction>
 </npc>

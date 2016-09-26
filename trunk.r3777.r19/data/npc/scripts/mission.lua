@@ -11,62 +11,62 @@ if(not npcHandler:isFocused(cid)) then
 return false
 end
 local talkUser = NPCHANDLER_CONVBEHAVIOR == CONVERSATION_DEFAULT and 0 or cid
-if(msgcontains(msg, 'Task')) then
-selfSay('Very good! Do you want to start the {first} mission?', cid)
+if(msgcontains(msg, 'trabalho')) then
+selfSay('Muito bom! Ja quer comecar a {primeira} missao?', cid)
 end
 ---------------------------------------------------------
-if(msgcontains(msg, 'First')) then
-selfSay('Oh, bring it to me 4 {Golden Armor}.', cid)
+if(msgcontains(msg, 'primeira')) then
+selfSay('Oh, traga para mim 4 {Golden Armor}.', cid)
 talkState[talkUser] = 1
 elseif(msgcontains(msg, 'golden armor') and talkState[talkUser] == 1) then
 if (getPlayerStorageValue(cid,100) > 0) then
-selfSay('Congratulations, you completed the mission!', cid)
+selfSay('Parabens, voce completou a missao!', cid)
 else
 if(doPlayerRemoveItem(cid, 2466, 4) == TRUE) then
 setPlayerStorageValue(cid,100,1)
 doPlayerAddExperience(cid,10000)
 doPlayeraddItem(cid, 2470, 1)
-selfSay('Very well! You started the {second} mission .. (you received 10000 experience points and a Golden Legs)', cid)
+selfSay('Muito bem! Voce iniciou a {segunda} missao.. (voce recebeu 10000 pontos de experiencia e uma Golden Legs)', cid)
 else
-selfSay('You need to get more items.', cid)
+selfSay('Voce precisa ter mais items.', cid)
 end
 end
 return true
 end
 ---------------------------------------------------------
-if(msgcontains(msg, 'second')) then
-selfSay('Bring it to me 20 {Demonrage Sword}.', cid)
+if(msgcontains(msg, 'segunda')) then
+selfSay('Traga-me 20 {Demonrage Sword}.', cid)
 talkState[talkUser] = 1
 elseif(msgcontains(msg, 'Demonrage Sword') and talkState[talkUser] == 1) then
 if (getPlayerStorageValue(cid,101) > 0) then
-selfSay('You completed the mission, I see that you should not underestimate more.', cid)
+selfSay('Voce completou a missao, vejo que nao devo mais te subestimar.', cid)
 else
 if(doPlayerRemoveItem(cid, 7382, 20) == TRUE) then
 setPlayerStorageValue(cid,101,1)
 doPlayerAddExperience(cid,20000)
 doPlayeraddItem(cid, 8926, 1)
-selfSay('You started {third} mission ... (You received 20,000 experience points and Demonwing Axe)', cid)
+selfSay('Voce iniciou a {terceira} missao... (Voce recebeu 20000 pontos de experiencia e um Demonwing Axe)', cid)
 else
-selfSay('You need to get more items.', cid)
+selfSay('Voce precisa de mais items.', cid)
 end
 end
 return true
 end
 ---------------------------------------------------------
-if(msgcontains(msg, 'third')) then
+if(msgcontains(msg, 'terceira')) then
 selfSay('Traga-me dois {orshabaal brain}."', cid)
 talkState[talkUser] = 1
 elseif(msgcontains(msg, 'orshabaal brain') and talkState[talkUser] == 1) then
 if (getPlayerStorageValue(cid,102) > 0) then
-selfSay('You completed!', cid)
+selfSay('Voce completou!', cid)
 else
 if(doPlayerRemoveItem(cid, 5808, 2) == TRUE) then
 setPlayerStorageValue(cid,102,1)
 doPlayerAddExperience(cid,40000)
 doPlayeraddItem(cid, 7422, 1)
-selfSay('Congratulations! You completed all the missions, now back to your Pokeball. (hehe) (You have received 40,000 experience points and Jade Hammer.)', cid)
+selfSay('Parabens! Voce completou todas as missoes, agora volte para sua pokebola. (hehe) (Voce recebeu 40000 pontos de experiencia e uma Jade Hammer.)', cid)
 else
-selfSay('You need to get more items.', cid)
+selfSay('Voce precisa de mais items.', cid)
 end
 end
 return true

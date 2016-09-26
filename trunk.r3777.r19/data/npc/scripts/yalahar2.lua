@@ -37,7 +37,7 @@ function onCreatureSay(cid, type, msg)
   	msg = string.lower(msg)
 
 	if (msgcontains(msg, 'hi') and (focus == 0)) and getDistanceToCreature(cid) < 4 then
-  		selfSay('Hiho ' .. getCreatureName(cid) .. ' I can release the yalahar Addon 2, say help for more "info".')
+  		selfSay('Hiho ' .. getCreatureName(cid) .. ' Eu posso liberar o yalahar Addon 2, diga help para mais infos.')
   		focus = cid
   		talk_start = os.clock()
 
@@ -48,19 +48,19 @@ function onCreatureSay(cid, type, msg)
 		talk_start = os.clock()
 
 	if msgcontains(msg, 'help') then
-			selfSay(I can release the yalahar Addon 2, if you are interested say: yalahar outfit 2')
+			selfSay('Eu posso liberar o yalahar Addon 2, se estiver interessado diga: yalahar outfit 2')
 
 
 	elseif msgcontains(msg, 'yalahar outfit 2') then
                  if getPlayerStorageValue(cid,9997) >= 2 then
-					selfSay('You already have this addon.')
+					selfSay('Voce ja tem esse addon.')
 
                  else if getPlayerStorageValue(cid,9997) == 1 then
-                    selfSay('You will need 100 Ferns to realese this addon, you have it?')
+                    selfSay('Precisarei de 100 ferns para liberar este Addon, voce os trouxe?')
 					addon_state = 2
 		 else
 		            setPlayerStorageValue(cid,9997,1)
-                    selfSay('You will need 100 Ferns to realese this addon, you have it?')
+                    selfSay('Precisarei de 100 ferns para liberar este Addon, voce os trouxe?')
         end
 	end
 	elseif msgcontains(msg, 'yes') and addon_state == 2 then
@@ -80,12 +80,12 @@ function onCreatureSay(cid, type, msg)
   	
 
         elseif msgcontains(msg, 'bye') and getDistanceToCreature(cid) < 4 then
-            selfSay('Adeus ' .. creatureGetName(cid) .. ', Come back soon.')
+            selfSay('Adeus ' .. creatureGetName(cid) .. ', Volte Sempre.')
             focus = 0
             talk_start = 0
 
         elseif msg ~= "" then
-            selfSay('How? I do not understand!')
+            selfSay('Como? Eu não entendi!')
             talk_state = 0
         end
     end
@@ -98,7 +98,7 @@ function onThink()
     doNpcSetCreatureFocus(focus)
     if (os.clock() - talk_start) > 30 then
         if focus > 0 then
-            selfSay('Next!!...')
+            selfSay('Proximo!!...')
         end
         focus = 0
         talk_start = 0

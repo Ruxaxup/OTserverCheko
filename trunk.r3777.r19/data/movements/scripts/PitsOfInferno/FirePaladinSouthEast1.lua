@@ -14,7 +14,7 @@ cor = 180 --cor da letra do hit 5=azul, 180=red, etc
 efeito = 3  --numero do efeito desejado
 --End Config--
 
-hp = getPlayerHealth(cid)
+hp= getCreatureHealth(cid)
 topos = getPlayerPosition(cid)
 pvoc = getPlayerVocation(cid)
 pvoc3 = getPlayerVocation(cid)
@@ -24,12 +24,12 @@ pvoc6 = getPlayerVocation(cid)
 pvoc8 = getPlayerVocation(cid)
 
 if voc == pvoc or voc2 == pvoc or voc3 == pvoc or voc5 == pvoc or voc6 == pvoc or voc8 == pvoc then
-if getPlayerHealth(cid) >= dano then
-doPlayerAddHealth(cid, -dano)
+if getCreatureHealth(cid) >= dano then
+doCreatureAddHealth(cid, -dano)
 doSendAnimatedText(topos, dano, cor)
   doSendMagicEffect(topos, efeito)
 else
-doPlayerAddHealth(cid, -hp)
+doCreatureAddHealth(cid, -hp)
 doSendAnimatedText(topos, hp, cor)
   doSendMagicEffect(topos, efeito)
 end

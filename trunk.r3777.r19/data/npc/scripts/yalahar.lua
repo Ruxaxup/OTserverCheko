@@ -37,7 +37,7 @@ function onCreatureSay(cid, type, msg)
   	msg = string.lower(msg)
 
 	if (msgcontains(msg, 'hi') and (focus == 0)) and getDistanceToCreature(cid) < 4 then
-  		selfSay('Hiho ' .. getCreatureName(cid) .. ' I can release the yalahar Addon 1, say help for more info.')
+  		selfSay('Hiho ' .. getCreatureName(cid) .. ' Eu posso liberar o yalahar Addon 1, diga help para mais infos.')
   		focus = cid
   		talk_start = os.clock()
 
@@ -47,27 +47,27 @@ function onCreatureSay(cid, type, msg)
 	elseif focus == cid then
 		talk_start = os.clock()
 
-	if msgcontains(msg, 'help') then-
-			selfSay('I can release the yalahar Addon 1, if you are interested say; yalahar outfit')
+	if msgcontains(msg, 'help') then
+			selfSay('Eu posso liberar o yalahar Addon 1, se estiver interessado diga: yalahar outfit')
 
 
 	elseif msgcontains(msg, 'yalahar outfit') then
                  if getPlayerStorageValue(cid,9996) >= 2 then
-					selfSay('You already have this addon.')
+					selfSay('Voce ja tem esse addon.')
 
                  else if getPlayerStorageValue(cid,9996) == 1 then
-                    selfSay('I will need 50 small amethyst fangs to release this addon, you brought? ')
+                    selfSay('Precisarei de 50 small amethyst fangs para liberar este Addon, voce os trouxe?')
 					addon_state = 2
 		 else
 		            setPlayerStorageValue(cid,9996,1)
-                    selfSay('I will need 50 small amethyst to release this addon, you brought?')
+                    selfSay('Precisarei de 50 small amethyst para liberar este Addon, voce os trouxe?')
         end
 	end
 	elseif msgcontains(msg, 'yes') and addon_state == 2 then
                  if doPlayerRemoveItem(cid,2150,50) == 0 then
 		  			selfSay('Sorry, you not have them.')
                  else  
-			selfSay('Thanks, addon is yours now.')
+			selfSay('Thanks, addon is your now.')
 			if getPlayerSex(cid) == 0 then
 		    doPlayerAddOutfit(cid, 324, 1)
 		    setPlayerStorageValue(cid,9996,2)
@@ -80,12 +80,12 @@ function onCreatureSay(cid, type, msg)
   	
 
         elseif msgcontains(msg, 'bye') and getDistanceToCreature(cid) < 4 then
-            selfSay('Bye ' .. creatureGetName(cid) .. ', Come back soon.')
+            selfSay('Adeus ' .. creatureGetName(cid) .. ', Volte Sempre.')
             focus = 0
             talk_start = 0
 
         elseif msg ~= "" then
-            selfSay('How? I do not understand!')
+            selfSay('Como? Eu não entendi!')
             talk_state = 0
         end
     end
@@ -98,7 +98,7 @@ function onThink()
     doNpcSetCreatureFocus(focus)
     if (os.clock() - talk_start) > 30 then
         if focus > 0 then
-            selfSay('Next!!...')
+            selfSay('Proximo!!...')
         end
         focus = 0
         talk_start = 0

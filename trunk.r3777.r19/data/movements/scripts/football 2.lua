@@ -13,7 +13,7 @@ setGlobalStorageValue(15025, wet)
 if getGlobalStorageValue(15025) ~= 3 then
 doCreateItem(2109, 1, ballpos)
 end
-doBroadcastMessage("GOOAL!!!", MESSAGE_EVENT_ADVANCE)    
+doBroadcastMessage("GOOL!!!", MESSAGE_EVENT_ADVANCE)    
     if getGlobalStorageValue(15025) == 3 then
     doBroadcastMessage("Game over! !", MESSAGE_EVENT_ADVANCE)    
     doSetItemActionId(doCreateItem(8058, 1, ballpos), 15029)

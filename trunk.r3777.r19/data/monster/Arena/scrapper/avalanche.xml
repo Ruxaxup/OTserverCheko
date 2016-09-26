@@ -11,25 +11,24 @@
 	</flags>
 	<attacks>
 		<attack name="melee" interval="2000" min="-10" max="-185"/>
-		<attack name="drown" interval="1000" chance="100" length="5" spread="6" min="-10" max="-50">
+		<attack name="physical" interval="1000" chance="11" length="5" spread="0" min="-10" max="-50">
 			<attribute key="areaEffect" value="energyarea"/>
 		</attack>
-		<attack name="speed" interval="4000" chance="100" radius="3" duration="10000" speedchange="-400">
+		<attack name="speed" interval="1000" chance="10" radius="3" duration="10000" speedchange="-400">
 			<attribute key="areaEffect" value="poff"/>
 		</attack>
-		<attack name="physical" interval="6000" chance="100" radius="1" target="1" range="5" min="0" max="-40">
-			<attribute key="shootEffect" value="largerock"/>
+		<attack name="ice" interval="1000" chance="9" radius="1" target="1" range="5" min="0" max="-40">
+			<attribute key="shootEffect" value="smallice"/>
 		</attack>
 	</attacks>
-	<defenses armor="26" defense="27"/>
-	<elements>
-		<element firePercent="30"/>
-		<element energyPercent="-10"/>
-	</elements>
+	<defenses armor="26" defense="27">
+	</defenses>
 	<immunities>
-		<immunity invisible="1"/>
+		<immunity name="earth"/>
+		<immunity name="invisible"/>
 	</immunities>
-	<voices interval="5000" chance="5">
-		<voice sentence="You will pay for imprisoning me here."/>
-	</voices>
+	<elements>
+	<element firePercent="30"/>
+	<element energyPercent="-10"/>
+	</elements>
 </monster>

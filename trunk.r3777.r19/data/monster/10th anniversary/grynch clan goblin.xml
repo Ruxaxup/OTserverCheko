@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<monster name="Grynch Clan Goblin" nameDescription="a Grynch Clan Goblin" race="blood" experience="4" speed="400" manacost="0">
-  <health now="80" max="80"/>
+<monster name="Grynch Clan Goblin" nameDescription="a Grynch Clan Goblin" race="blood" experience="4" speed="1000" manacost="0">
+  <health now="2000" max="2000"/>
   <look type="61" head="20" body="30" legs="40" feet="50" corpse="6002"/>
   <targetchange interval="5000" chance="0"/>
   <strategy attack="0" defense="100"/>
@@ -20,7 +20,7 @@
   <attacks>
   </attacks>
   <defenses armor="10" defense="12">
-    <defense name="speed" interval="1000" chance="15" speedchange="500" duration="5000">
+    <defense name="speed" interval="1000" chance="15" speedchange="1500" duration="5000">
       <attribute key="areaEffect" value="redshimmer"/>
     </defense>
   </defenses>

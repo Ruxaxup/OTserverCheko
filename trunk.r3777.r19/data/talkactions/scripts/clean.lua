@@ -6,9 +6,8 @@ function onSay(cid, words, param, channel)
 		return true
 	end
 
-	local t = string.explode(param, ",")
-	if(t[1] == 'tile') then
-		local removeLoaded = false
+	if(param == 'tile') then
+		local removeLoaded, t = false, string.explode(param, ",")
 		if(t[2]) then
 			removeLoaded = getBooleanFromString(t[2])
 		end

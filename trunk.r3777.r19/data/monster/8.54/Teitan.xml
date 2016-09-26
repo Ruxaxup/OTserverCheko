@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="UTF-8"?>
+  <monster name="Teitan" nameDescription="Teitan" race="fire" experience="30000" speed="2000" manacost="0">
+    <health now="20000" max="20000"/>
+    <look type="289" head="114" body="114" legs="76" feet="76" addons="3" corpse="6080"/>
+    <targetchange interval="60000" chance="0"/>
+    <strategy attack="65" defense="5"/>
+    <flags>
+      <flag summonable="0"/>
+      <flag attackable="1"/>
+      <flag hostile="1"/>
+      <flag illusionable="0"/>
+      <flag convinceable="1"/>
+      <flag pushable="0"/>
+      <flag canpushitems="1"/>
+      <flag canpushcreatures="1"/>
+      <flag targetdistance="1"/>
+      <flag staticattack="90"/>
+      <flag runonhealth="0"/>
+    </flags>
+    <attacks>
+      <attack name="melee" interval="2000" skill="60" attack="100" poison="666"/>
+      <attack name="lifedrain" interval="1000" chance="30" radius="8" target="0" min="-600" max="-800">
+        <attribute key="areaEffect" value="mortarea"/>
+      </attack>
+      <attack name="speed" interval="1000" chance="27" radius="6" target="0" speedchange="-5500" duration="900">
+        <attribute key="areaEffect" value="poison"/>
+      </attack>
+      <attack name="strength" interval="1000" chance="25" radius="3" target="0">
+        <attribute key="areaEffect" value="blackspark"/>
+      </attack>
+      <attack name="fire" interval="1000" chance="23" range="7" radius="7" target="1" min="-200" max="-600">
+        <attribute key="shootEffect" value="fire"/>
+        <attribute key="areaEffect" value="firearea"/>
+      </attack>
+      <attack name="manadrain" interval="1000" chance="20" length="0" spread="3" min="-700" max="-900">
+        <attribute key="areaEffect" value="energyarea"/>
+      </attack>
+    </attacks>
+    <defenses armor="188" defense="145">
+
+      <defense name="speed" interval="2000" chance="8" speedchange="1500" duration="6000">
+        <attribute key="areaEffect" value="redshimmer"/>
+      </defense>
+    </defenses>
+    <immunities>
+      <immunity physical="0"/>
+      <immunity energy="0"/>
+      <immunity fire="1"/>
+      <immunity poison="0"/>
+      <immunity lifedrain="0"/>
+      <immunity paralyze="0"/>
+      <immunity outfit="1"/>
+      <immunity drunk="1"/>
+      <immunity invisible="1"/>
+    </immunities>
+    <voices interval="5000" chance="10">
+      <voice sentence="LOL!" yell="1"/>
+      <voice sentence="WTF?" yell="1"/>
+      <voice sentence="FUCKING NOOB" yell="1"/>
+      <voice sentence="666" yell="1"/>
+    </voices>
+    <loot capacity="5000">
+      <item id="2142" countmax="1" chance="35000"/>
+      <item id="2231" countmax="1" chance="90000"/>
+      <item id="2144" countmax="15" chance="150000"/>
+      <item id="2158" countmax="1" chance="15000"/>
+      <item id="2195" countmax="1" chance="40000"/>
+      <item id="2192" countmax="1" chance="25000"/>
+      <item id="2125" countmax="1" chance="15000"/>
+      <item id="2124" countmax="1" chance="55000"/>
+      <item id="2520" countmax="1" chance="155000"/>
+      <item id="2462" countmax="1" chance="110000"/>
+      <item id="2387" countmax="1" chance="200000"/>
+      <item id="2434" countmax="1" chance="45000"/>
+      <item id="2167" countmax="1" chance="135000"/>
+      <item id="2432" countmax="1" chance="170000"/>
+      <item id="2393" countmax="1" chance="125000"/>
+      <item id="2148" countmax="100" chance="999000"/>
+      <item id="2148" countmax="100" chance="888000"/>
+      <item id="2148" countmax="100" chance="777000"/>
+      <item id="2148" countmax="100" chance="666000"/>
+      <item id="2179" countmax="1" chance="80000"/>
+      <item id="2470" countmax="1" chance="50000"/>
+      <item id="2033" countmax="1" chance="75000"/>
+      <item id="2418" countmax="1" chance="45000"/>
+      <item id="2155" countmax="1" chance="15000"/>
+      <item id="2396" countmax="1" chance="75000"/>
+      <item id="2177" countmax="1" chance="10000"/>
+      <item id="2162" countmax="1" chance="115000"/>
+      <item id="2472" countmax="1" chance="30000"/>
+      <item id="2514" countmax="1" chance="75000"/>
+      <item id="2164" countmax="1" chance="50000"/>
+      <item id="2178" countmax="1" chance="40000"/>
+      <item id="2186" countmax="1" chance="35000"/>
+      <item id="2176" countmax="1" chance="120000"/>
+      <item id="2171" countmax="1" chance="45000"/>
+      <item id="2200" countmax="1" chance="45000"/>
+      <item id="1982" countmax="1" chance="26000"/>
+      <item id="2214" countmax="1" chance="130000"/>
+      <item id="2123" countmax="1" chance="35000"/>
+      <item id="2170" countmax="1" chance="130000"/>
+      <item id="2402" countmax="1" chance="155000"/>
+      <item id="2436" countmax="1" chance="50000"/>
+      <item id="2150" countmax="20" chance="135000"/>
+      <item id="2145" countmax="5" chance="95000"/>
+      <item id="2149" countmax="10" chance="155000"/>
+      <item id="2146" countmax="10" chance="135000"/>
+      <item id="2182" countmax="1" chance="35000"/>
+      <item id="2165" countmax="1" chance="95000"/>
+      <item id="2197" countmax="1" chance="40000"/>
+      <item id="2174" countmax="1" chance="25000"/>
+      <item id="2151" countmax="7" chance="140000"/>
+      <item id="2112" countmax="1" chance="145000"/>
+      <item id="2421" countmax="1" chance="135000"/>
+      <item id="2377" countmax="1" chance="200000"/>
+      <item id="2185" countmax="1" chance="35000"/>
+      <item id="3955" countmax="1" chance="1000"/>
+      <item id="2188" countmax="1" chance="25000"/>
+      <item id="2143" countmax="15" chance="125000"/>
+    </loot>
+  </monster>

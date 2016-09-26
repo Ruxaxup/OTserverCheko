@@ -1,5 +1,5 @@
 function onUse(cid, item, frompos, item2, topos)
-gatepos = {x=440, y=1386, z=10, stackpos=1}
+gatepos = {x=930, y=1332, z=11, stackpos=1}
 getgate = getThingfromPos(gatepos)
 
 if item.uid == 10205 and item.itemid == 1945 and getgate.itemid == 6289 then

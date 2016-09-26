@@ -43,7 +43,9 @@
 	<immunity fire="1"/>
 	<immunity invisible="1"/>
 </immunities>
-
+<script> 
+	<event name="inquisitionPortals"/> 
+</script>
 <voices interval="3000" chance="5">
 	<voice sentence="I AM GOING TO PLAY WITH YOURSELF!" yell="1"/>
 </voices>

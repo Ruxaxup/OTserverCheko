@@ -42,7 +42,7 @@
     <item id="2148" countmax="50" chance1="80000" chancemax="0"/>
     <item id="2229" countmax="2" chance1="40000" chancemax="0"/>
     <item id="6099" chance="100000"/> -- Ron The Ripper sabre
-    <item id="2387" chance="9999"/>
+    <item id="6100" chance="10000"/>
     <item id="2463" chance="5555"/>
     <item id="2379" chance="100000"/>
     <item id="2476" chance="9000"/>

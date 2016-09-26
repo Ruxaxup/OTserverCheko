@@ -1,0 +1,58 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<monster name="Mini Brigand" nameDescription="a mini brigand" race="blood" experience="100" speed="350" manacost="100000000">
+  <health now="500" max="500"/>
+  <look type="296" corpse="1997"/>
+  <targetchange interval="5000" chance="8"/>
+  <strategy attack="100" defense="0"/>
+   <flags>
+    <flag summonable="0"/>
+    <flag attackable="1"/>
+    <flag hostile="1"/>
+    <flag illusionable="1"/>
+    <flag convinceable="1"/>
+    <flag pushable="0"/>
+    <flag canpushitems="1"/>
+    <flag canpushcreatures="0"/>
+    <flag targetdistance="4"/>
+    <flag staticattack="90"/>
+    <flag runonhealth="500"/>
+  </flags>
+  <attacks>
+    <attack name="melee" interval="2000" skill="10" attack="2"/>
+  </attacks>
+  <defenses armor="15" defense="10">
+    <defense name="speed" interval="2000" chance="5" speedchange="360" duration="20000">
+      <attribute key="areaEffect" value="redshimmer"/>
+    </defense>
+  </defenses>
+  <elements>
+    <element physicalPercent="20"/>
+    <element earthpercent="20"/>
+    <element energyPercent="20"/>
+    <element deathPercent="20"/>
+    <element icePercent="20"/>
+    <element holyPercent="20"/>
+  </elements>
+  <immunities>
+    <immunity physical="0"/>
+    <immunity energy="0"/>
+    <immunity fire="0"/>
+    <immunity poison="0"/>
+    <immunity lifedrain="0"/>
+    <immunity paralyze="0"/>
+    <immunity outfit="0"/>
+    <immunity drunk="0"/>
+    <immunity invisible="0"/>
+  </immunities>
+  <voices interval="5000" chance="10">
+    <voice sentence="Hide the bags guys!!!"/>
+    <voice sentence="Holy molly!! We got busted D:"/>
+    <voice sentence="An intrudeeeeeeeeeeer!!!!"/>
+  </voices>
+  <loot>
+    <item id="2152" countmax="10" chance1="10000" chancemax="0"/>
+    <item id="2152" countmax="5" chance1="30000" chancemax="0"/>
+    <item id="2152" countmax="1" chance1="10000" chancemax="0"/>
+    <item id="2160" countmax="1" chance1="100" chancemax="0"/>
+  </loot>
+</monster>

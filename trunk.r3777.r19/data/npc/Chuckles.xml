@@ -1,9 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<npc name="Chuckles" script="data/npc/scripts/runes2.lua" walkinterval="2000" floorchange="0">
+<npc name="Chuckles" script="default.lua" walkinterval="2000" floorchange="0">
 	<health now="100" max="100"/>
 	<look type="99" head="1" body="1" legs="1" feet="1"/>
 	<parameters>
 		<parameter key="message_greet" value="Hello |PLAYERNAME|. I trade with runes, potions, wands and rods. If you need something, feel free to ask me for a trade."/>
 		<parameter key="message_decline" value="Then not."/>
-	</parameters>
+	<parameter key="module_shop" value="1"/>
+        <parameter key="shop_buyable" value="terra rod,2181,10000;snakebite rod,2182,500;necrotic rod,2185,5000;moonlight rod,2186,1000;underworld rod,8910,22000;northwind rod,8911,7500;springsprout rod,8912,18000;hailstorm rod,2183,15000;wand of decay,2188,5000;wand of cosmic energy,2189,10000;wand of vortex,2190,500;wand of dragonbreath,2191,1000;wand of draconia,8921,7500;wand of starstorm,8920,18000;wand of voodoo,8922,22000;wand of inferno,2187,15000;blank rune,2260,10;spellbook,6120,150" />
+        <parameter key="shop_sellable" value="empty potion flask,7634,5;empty potion flask,7635,5;empty potion flask,7636,5;vial,2006,5;" />
+    
+</parameters>
+
 </npc>
+

@@ -1,11 +1,11 @@
 function onUse(cid, item, frompos, item2, topos)
 
 --Config-->
-local statue_pos = {x = 581, y = 566, z = 10}
-local portal_quest01_pos = {x = 581, y = 575, z = 10, stackpos = 2}
-local portal_quest02_pos = {x = 582, y = 577, z = 9, stackpos = 2}
-local new_portal_pos = {x = 581, y = 567, z = 10, stackpos = 1}
-local new_pos = {x = 576, y = 572, z = 14}
+local statue_pos = {x=2021, y=1064, z=10}
+local portal_quest01_pos = {x = 2021, y = 1073, z = 10, stackpos = 2}
+local portal_quest02_pos = {x = 2022, y = 1075, z = 9, stackpos = 2}
+local new_portal_pos = {x = 2021, y = 1065, z = 10, stackpos = 1}
+local new_pos = {x = 2016, y = 1070, z = 14}
 --End Config-->
 
 function Potwory1()

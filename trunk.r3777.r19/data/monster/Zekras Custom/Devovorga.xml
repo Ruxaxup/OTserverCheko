@@ -1,0 +1,76 @@
+<monster name="Devovorga" nameDescription="Devovorga" race="venom" experience="5000000" speed="1000" manacost="0">
+<health now="500000" max="500000" />
+<look type="354" corpse="6068"/>
+<targetchange interval="2000" chance="15" />
+<strategy attack="100" defense="20" />
+<flags>
+<flag summonable="0" />
+<flag attackable="1" />
+<flag hostile="1" />
+<flag illusionable="0" />
+<flag convinceable="0" />
+<flag pushable="0" />
+<flag canpushitems="1" />
+<flag canpushcreatures="1" />
+<flag targetdistance="1" />
+<flag runonhealth="0" />
+</flags>
+<attacks>
+<attack name="melee" interval="2000" min="-800" max="-2500"/>
+<attack name="lifedrain" interval="2000" chance="7" length="8" spread="0" min="-700" max="-1110">
+<attribute key="areaEffect" value="redspark"/>
+</attack>
+<attack name="earth" interval="2000" chance="5" radius="6" target="0" min="-1000" max="-2000">
+<attribute key="areaEffect" value="bigplants"/>
+</attack>
+<attack name="poisoncondition" interval="3000" chance="28" radius="7" target="700" max="-1150">
+<attribute key="areaEffect" value="carniphila"/>
+</attack>
+<attack name="cursecondition" interval="4000" chance="35" radius="7" target="600" max="-1200">
+<attribute key="areaEffect" value="smallclouds"/>
+</attack>
+</attacks>
+<defenses armor="40" defense="39">
+<defense name="healing" interval="3000" chance="20" min="2000" max="3000">
+<attribute key="areaEffect" value="blueshimmer"/>
+</defense>
+</defenses>
+<immunities>
+<immunity paralyze="1" />
+<immunity invisible="1" />
+</immunities>
+<summons maxSummons="1">
+<summon name="Loyal Minion" interval="2000" chance="50" max="1"/>
+</summons>
+<voices interval="3000" chance="10">
+<voice sentence="My mansion!"/>
+<voice sentence="You're dead"/>
+<voice sentence="Die you inferior being!"/>
+<voice sentence="I can't control myself"/>
+<voice sentence="What's happening to me?!"/>
+</voices>
+<loot>
+	<item id="2160" countmax="30" chance1="100000" chancemax="10000"/> --crystal
+	<item id="2149" countmax="100" chance1="100000"/> --EMERALD
+	<item id="9971" countmax="20" chance1="100000"/> --Gold Ingot
+	<item id="6132" chance="500"/> --soft boots
+	<item id="2514" chance="800"/> --mastermind shield
+	<item id="9778" chance="200"/> --yalahari mask
+	<item id="3939" chance="100000">
+		<inside>
+			<item id="12591" chance="1000000"/> --Devovorgas Crown
+			<item id="8852" chance="10000"/> --devileye
+			<item id="7881" chance="10000"/> --Cranial Basher
+			<item id="8926" chance="10000"/> --demonwing axe
+			<item id="2408" chance="10000"/> --Warlord sword
+			<item id="2472" chance="20000"/> --Magic plate armor
+			<item id="2152" countmax="100" chance1="100000" chancemax="10000"/> --crystal
+			<item id="11296" chance="20000"/> --Zaoan Helmet
+			<item id="8858" chance="2000"/> --elemental bow
+			<item id="8865" chance="2000"/> --Dark Lord's Cape
+			<item id="11113" chance="800"/> --Crystal Boots
+		</inside>
+	</item>
+</loot>
+</monster>
+

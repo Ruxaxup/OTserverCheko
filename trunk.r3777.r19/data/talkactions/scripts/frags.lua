@@ -4,10 +4,6 @@ local config = {
 }
 
 function onSay(cid, words, param, channel)
-	if(not checkExhausted(cid, 666, 10)) then
-		return false
-	end
-
 	if(not config.useFragHandler) then
 		return false
 	end

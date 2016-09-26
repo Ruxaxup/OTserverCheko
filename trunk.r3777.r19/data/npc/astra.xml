@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<npc name="Astra" script="Astra.lua" walkinterval="0" floorchange="0">
+	<health now="150" max="150"/>
+	<look type="287" corpse="2212"/>
+    <parameters>
+		<parameter key="message_greet" value="Hello |PLAYERNAME|. Come here and do my tasks."/>
+    </parameters>
+</npc>

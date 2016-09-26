@@ -18,24 +18,24 @@
 		<flag runonhealth="0"/>
 	</flags>
 	<attacks>
-		<attack name="melee" interval="2000" min="-0" max="-230"/>
-		<attack name="physical" interval="1000" chance="14" range="7" min="-0" max="-95">
+		<attack name="melee" interval="2000" skill="68" attack="68"/>
+		<attack name="physical" interval="1000" chance="5" range="7" min="-0" max="-125">
 			<attribute key="shootEffect" value="explosion"/>
 		</attack>		
 	</attacks>
-	<defenses armor="40" defense="45">
-		<defense name="healing" interval="1000" chance="20" min="100" max="220">
+	<defenses armor="50" defense="45">
+		<defense name="healing" interval="5000" chance="5" min="500" max="520">
 			<attribute key="areaEffect" value="blueshimmer"/>
 		</defense>
 	</defenses>
 	<elements>
 		<element earthPercent="50"/>
-		<element holyPercent="30"/>
+		<element holyPercent="50"/>
 		<element firePercent="-10"/>
 		<element energyPercent="-5"/>
-		<element physicalPercent="40"/>
-		<element icePercent="25"/>
-		<element deathPercent="30"/>
+		<element physicalPercent="10"/>
+		<element icePercent="10"/>
+		<element deathPercent="10"/>
 	</elements>
 	<immunities>
 		<immunity invisible="1"/>
@@ -49,26 +49,26 @@
 		<voice sentence="Secret objective complete."/>	
 	</voices>
 	<loot>
-		<item id="8309" countmax="5" chance1="1500" chancemax="0"/> <!-- nails -->
-		<item id="9690" countmax="2" chance1="700" chancemax="0"/> <!-- gear wheele -->
-		<item id="2148" countmax="75" chance1="100000" chancemax="0"/> <!-- gps -->
-		<item id="2148" countmax="75" chance1="100000" chancemax="0"/> <!-- gps -->
-		<item id="5880" chance="1500"/> <!-- iron ore -->
-		<item id="7591" chance="900"/> <!-- ghp -->
-		<item id="8472" chance="900"/> <!-- gsp -->
-		<item id="7452" chance="700"/> <!-- spiked squelcher -->
+		<item id="8309" countmax="5" chance1="1500" chancemax="0"/> -- nails 
+		<item id="9690" countmax="2" chance1="1000" chancemax="0"/> -- gear wheele 
+		<item id="2148" countmax="75" chance1="100000" chancemax="0"/> -- gps 
+		<item id="2148" countmax="75" chance1="100000" chancemax="0"/> -- gps 
+		<item id="5880" chance="2000"/> -- iron ore 
+        <item id="7591" chance="1000"/> --ghp
+        <item id="8472" chance="1000"/> --gsp
+		<item id="7452" chance="600"/> -- spiked squelcher
 		<item id="1987" chance="100000">
 			<inside>
-				<item id="2145" countmax="2" chance1="1500" chancemax="0"/> <!-- small diamond -->
-				<item id="7439" chance="700"/> <!-- berserk potion -->
-				<item id="2177" chance="800"/> <!-- life crystal -->
-				<item id="9811" chance="700"/> <!-- rusty legs -->
-				<item id="9808" chance="700"/> <!-- rusty armor -->
-				<item id="2164" chance="750"/> <!-- might ring -->
-				<item id="2391" chance="700"/> <!-- war hammer -->
-				<item id="9976" chance="700"/> <!-- crystal pedestal -->
-				<item id="7428" chance="200"/> <!-- bonebreaker -->
-				<item id="2207" chance="300"/> <!-- sword ring -->
+		        <item id="2145" countmax="2" chance1="5500" chancemax="0"/> -- small diamond 
+				<item id="7439" chance="3000"/> -- berserk potion 
+				<item id="2177" chance="2000"/> -- life crystal 
+				<item id="9812" chance="2000"/> -- rusty legs 
+				<item id="9809" chance="1000"/> -- rusty armor 
+				<item id="9976" chance="1000"/> -- crystal pedestal 			
+				<item id="2164" chance="250"/> - might ring 
+				<item id="2391" chance="500"/> -- war hammer 
+				<item id="7428" chance="250"/> -- bonebreaker 
+				<item id="2207" chance="400"/> -- sword ring 
 			</inside>
 		</item>
 	</loot>

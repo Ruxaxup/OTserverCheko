@@ -2,7 +2,7 @@
 function onStepIn(cid, item, frompos, item2, topos) 
 
 playerpos = getPlayerPosition(cid) 
-novapos = {x=398, y=1384, z=9} 
+novapos = {x=900, y=1358, z=10} 
 
 if item.uid == 10202 then
 

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<npc name="Captain Zoria" script="default.lua" walkinterval="0" floorchange="0">
+	<health now="150" max="150"/>
+	<look type="129" head="114" body="119" legs="114" feet="114" corpse="2212"/>
+    <parameters>
+        <parameter key="module_travel" value="1"/>
+		<parameter key="message_greet" value="Hello |PLAYERNAME|. If you don't know where to flow, say {travel}."/>
+        <parameter key="travel_destinations" value="forbidden,1081,1064,6,100;lost island,1518,1232,6,200;skoegul,1198,1333,6,190;thist,845,1170,6,140;kroten,2160,1785,7,190;pirate,1910,1675,6,500;stigma,741,1104,6,190;"/>
+    </parameters>
+</npc>

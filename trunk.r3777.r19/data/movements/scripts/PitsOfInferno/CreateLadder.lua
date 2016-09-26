@@ -1,19 +1,22 @@
+
 function onStepIn(cid, item, frompos, item2, topos) 
-	wall1 = {x=461, y=1374, z=10, stackpos=1}
-	getwall1 = getThingfromPos(wall1)
-
-	if item.uid == 10225 then
-		doCreateItem(1386,1,wall1)
+	ladder = {x=947, y=1320, z=11, stackpos=1} -- Where the ladder should appear
+	getladder = getThingfromPos(ladder)
+ 
+if item.uid == 10225 then  -- Unique ID of the SQM the ghoul/player has to stand on for the ladder to appear
+ 
+	doCreateItem(1386,1,ladder) -- Ladder ID, count, pos
+ 
+end 
 end
-end
-
-function onStepOut(cid, item, frompos, item2, topos)
-	wall1 = {x=461, y=1374, z=10, stackpos=1}
-	getwall1 = getThingfromPos(wall1)
-
-	if item.uid == 10225 then
-		doRemoveItem(getwall1.uid,1)
+ 
+function onStepOut(cid, item, position, fromPosition)  -- To remove the ladder on stepout
+	ladder = {x=947, y=1320, z=11, stackpos=1} -- Same as above, important!
+	getladder = getThingfromPos(ladder)
+ 
+	if item.uid == 10225 then  -- Unique ID of the SQM the ghoul/player has to stand on for the ladder to appear
+ 
+	doRemoveItem(getladder.uid,1)
+ 
 	end
-
-	return 1
-end
+	end

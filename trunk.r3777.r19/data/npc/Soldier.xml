@@ -6,13 +6,13 @@
 
     <interact keywords="hi" focus="1">
       <keywords>hello</keywords>
-      <response text="Orshabaal!!.">
+      <response text="Orshabaal! Vai levar pau!.">
         <action name="idle" value="1"/>
       </response>
     </interact>
     <interact keywords="bye" focus="0">
       <keywords>farewell</keywords>
-      <response text="Orshabaal! !."/>
+      <response text="Orshabaal! Vai levar pau!."/>
     </interact>
   </interaction>
 </npc>

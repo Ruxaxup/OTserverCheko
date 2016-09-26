@@ -116,7 +116,7 @@ AREA_CIRCLE3X3 = {
 
 -- Crosses
 AREA_CROSS1X1 = {
-	{0, 1, 0},
+	{1, 1, 1},
 	{1, 3, 1},
 	{0, 1, 0}
 }

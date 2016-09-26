@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<monster name="Stheno" nameDescription="stheno" race="blood" experience="30000" speed="240" manacost="0">
+	<health now="100000" max="100000"/>
+	<look type="141" head="101" body="0" legs="0" feet="58" addons="1" corpse="10524"/>
+	<targetchange interval="5000" chance="20"/>
+	<strategy attack="100" defense="0"/>
+	<flags>
+		<flag summonable="0"/>
+		<flag attackable="1"/>
+		<flag hostile="1"/>
+		<flag illusionable="0"/>
+		<flag convinceable="0"/>
+		<flag pushable="0"/>
+		<flag canpushitems="1"/>
+		<flag canpushcreatures="1"/>
+		<flag targetdistance="1"/>
+		<flag staticattack="90"/>
+		<flag runonhealth="275"/>
+	</flags>
+	<attacks>
+		<attack name="melee" interval="2000" skill="80" attack="100" poison="840"/>
+		<attack name="lifedrain" interval="2000" chance="15" count="5" range="7" target="1" min="-210" max="-500">
+			<attribute key="areaEffect" value="carniphila"/>
+			<attribute key="shootEffect" value="earth"/>
+		</attack>	
+		<attack name="earth" interval="2000" chance="17" length="8" spread="3" min="-1050" max="-1270">
+			<attribute key="areaEffect" value="smallplants"/>
+		</attack>	
+		<attack name="speed" interval="2000" chance="20" radius="5" target="0" speedchange="-1000">
+			<attribute key="areaEffect" value="poff"/>
+		</attack>		
+	</attacks>
+	<defenses armor="25" defense="25">
+		<defense name="healing" interval="2000" chance="20" min="400" max="1000">
+			<attribute key="areaEffect" value="blueshimmer"/>
+		</defense>
+	</defenses>
+	<elements>
+		<element icePercent="20"/>
+		<element firePercent="-10"/>
+		<element energyPercent="-10"/>
+	</elements>
+	<immunities>
+		<immunity earth="1"/>
+		<immunity paralyze="1"/>
+		<immunity invisible="1"/>
+	</immunities>
+	<summons maxSummons="1">
+		<summon name="Euryale" interval="2000" chance="10" max="2"/>
+	</summons>
+	<voices interval="5000" chance="10">
+		<voice sentence="Stone Solid"/>
+		<voice sentence="Where's my sister?"/>
+		<voice sentence="Deboraaaaa"/>
+	</voices>
+	<loot>
+    <item id="2152" countmax="70" chance="57675" /><!-- platinum coin -->
+    <item id="2152" countmax="50" chance="57675" /><!-- platinum coin -->
+    <item id="8473" countmax="15" chance="3500" /><!-- ultimate health potion -->
+    <item id="2149" countmax="50" chance="3500" /><!-- small emerald -->
+    <item id="7590" countmax="50"  chance="6300" /><!-- great mana potion -->
+    <item id="1987" chance="100000"><!-- bag -->
+        <inside>
+            <item id="10219" chance="5350" /><!-- sacredtree amulet -->
+            <item id="7884" chance="10200" /><!-- terra mantle -->
+            <item id="2536" chance="10350" /><!-- medusa shield -->
+            <item id="7885" chance="10750" /><!-- terra legs -->
+            <item id="2476" chance="10000" /><!-- knight armor -->
+            <item id="2476" chance="10000" /><!-- Crown armor -->
+            <item id="2476" chance="10500" /><!-- royal helmet -->
+            <item id="8869" chance="3200" /><!-- greenwood coat -->
+            <item id="8880" chance="3200" /><!-- swamplair -->
+        </inside>
+    </item>
+</loot>
+</monster>

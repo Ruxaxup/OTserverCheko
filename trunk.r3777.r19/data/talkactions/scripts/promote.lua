@@ -8,10 +8,9 @@ function onSay(cid, words, param, channel)
 		return true
 	end
 
-	local t = string.explode(param, ",", 1)
-	local pid = getPlayerByNameWildcard(t[1])
+	local pid = getPlayerByNameWildcard(param)
 	if(not pid) then
-		doPlayerSendTextMessage(cid, MESSAGE_STATUS_CONSOLE_BLUE, "Player " .. t[1] .. " not found.")
+		doPlayerSendTextMessage(cid, MESSAGE_STATUS_CONSOLE_BLUE, "Player " .. param .. " not found.")
 		return true
 	end
 
@@ -20,28 +19,18 @@ function onSay(cid, words, param, channel)
 		return true
 	end
 
-	local g, group = 1, getPlayerGroupId(pid)
+	local g = 1
 	if(words:sub(2, 2) == "d") then
 		g = -1
 	end
 
-	local newGroup = group + g
-	if(t[2] ~= nil) then
-		for i, id in ipairs(getGroupList()) do
-			local tmp = getGroupInfo(id)
-			if(isInArray({tmp.id, tmp.name}, t[2])) then
-				newGroup = id
-				break
-			end
-		end
-	end
-
-	if(newGroup <= 0 or newGroup == group or not setPlayerGroupId(pid, newGroup)) then
+	local newId = getPlayerGroupId(pid) + g
+	if(newId <= 0 or not setPlayerGroupId(pid, newId)) then
 		doPlayerSendTextMessage(cid, MESSAGE_STATUS_CONSOLE_BLUE, "Cannot perform action.")
 		return true
 	end
 
-	local str = "been " .. (group < newGroup and "promoted" or "demoted") .. " to " .. getGroupInfo(newGroup).name .. "."
+	local str = "been " .. (g == 1 and "promoted" or "demoted") .. " to " .. getGroupInfo(newId).name .. "."
 	if(not config.broadcast) then
 		doPlayerSendTextMessage(cid, MESSAGE_STATUS_CONSOLE_BLUE, param .. " has " .. str)
 	else

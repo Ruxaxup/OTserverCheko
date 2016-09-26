@@ -3,8 +3,8 @@
     <look type="151" head="98" body="0" legs="116" feet="115" addons="2"/>
 
     <parameters>
-        <parameter key="message_greet" value="And aew | playername |. There's a little drink?" />
-        <parameter key="message_needmoremoney" value="Spun until tomorrow." />
-        <parameter key="message_decline" value="Costs | TOTALCOST | coins for you too eh?" />
+        <parameter key="message_greet" value="E aew |PLAYERNAME|. Vai uma bebidinha ae?" />
+        <parameter key="message_needmoremoney" value="Fiado so amanha." />
+        <parameter key="message_decline" value="Custa |TOTALCOST| moedas eh muito pra voce?" />
     </parameters>
 </npc>

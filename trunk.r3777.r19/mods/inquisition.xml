@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mod name="Inquisition"
+
+version="1.0" author="Tommy" contact="tommycrusher@gmail.com" enabled="yes">
+
+        <event type="login" name="inquisitionRegister" event="script"><![CDATA[
+        function onLogin(cid)
+    registerCreatureEvent(cid, "Inquisition")
+        return true
+end]]></event>
+
+    <event type="kill" name="Inquisition" event="script"><![CDATA[
+local config = {
+
+    message = "Go into the teleporter in 3 minutes, else it will disappear.",
+
+    timeToRemove = 180, -- seconds
+
+    teleportId = 1387,
+
+    bosses = { -- Monster Name, Teleport To Position, Teleport Position
+
+        ["Ushuriel"] = { { x=997, y=1314, z=11 }, { x=970, y=1420, z=8, stackpos=1 } },
+
+        ["Annihilon"] = { { x=775, y=1469, z=11 }, { x=1001, y=1383, z=8, stackpos=1 } },
+
+        ["Hellgorak"] = { { x=833, y=1403, z=8 }, { x=943, y=1382, z=8, stackpos=1 } },
+
+        ["Madareth"] = { { x=870, y=1425, z=10 }, { x=998, y=1446, z=8, stackpos=1 } },
+
+        ["Zugurosh"] = { { x=1157, y=1382, z=11 }, { x=974, y=1382, z=8, stackpos=1 } },
+
+        ["Latrivan"] = { { x=892, y=1329, z=8 }, { x=967, y=1438, z=8, stackpos=1 } }
+
+    }
+
+}
+
+
+
+local function removal(position)
+
+    if getThingfromPos(position).itemid == config.teleportId then
+
+        doRemoveItem(getThingfromPos(position).uid)
+
+    end
+
+    return TRUE
+
+end
+
+
+
+function onKill(cid, target, lastHit)
+if lastHit == true then
+
+    local position = getCreaturePosition(target)
+
+    for name, pos in pairs(config.bosses) do
+
+        if name == getCreatureName(target) then
+
+            teleport = doCreateTeleport(config.teleportId, pos[1], pos[2])
+
+            doCreatureSay(cid, config.message, TALKTYPE_ORANGE_1)
+
+            addEvent(removal, config.timeToRemove * 1000, pos[2])
+            doSendMagicEffect(pos[2], 10)
+
+        end
+
+    end
+end
+
+    return TRUE
+
+end]]></event>
+
+         <action fromuid="14000" touid="14008" event="script"><![CDATA[
+    local storage = 50301
+    local inquisitionRewards = {
+        [14000] = 8890, --a robe of the underworld
+        [14001] = 8918, --a spellbook of dark mysteries
+        [14002] = 8881, --a fireborn giant armor
+        [14003] = 8888, --a master archer's armor
+        [14004] = 8851, --a royal crossbow
+        [14005] = 8930, --an emerald sword
+        [14006] = 8928, --an obsidian truncheon
+        [14007] = 8924, --a hellforged axe
+        [14008] = 8854, --a warsinger bow
+       
+    }
+    
+    if inquisitionRewards[item.uid] then
+        if getPlayerStorageValue(cid, storage) < 1 then
+            doPlayerSendTextMessage(cid, MESSAGE_INFO_DESCR, "You have found " .. getItemArticleById(inquisitionRewards[item.uid]) .. " " .. getItemNameById(inquisitionRewards[item.uid]) .. ".")
+            doPlayerAddItem(cid, inquisitionRewards[item.uid], 1)
+            setPlayerStorageValue(cid, storage, 1)
+                                addPlayerRep(cid, 5, TEXTCOLOR_LIGHTBLUE)
+        else
+            doPlayerSendTextMessage(cid, MESSAGE_INFO_DESCR, "It is empty.") 
+        end
+    end
+    
+    return true
+]]></action>
+</mod>

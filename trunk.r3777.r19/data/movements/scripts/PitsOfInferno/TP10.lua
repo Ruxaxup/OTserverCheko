@@ -1,13 +1,13 @@
 --function by Armageddom--
 function onStepIn(cid, item, frompos, item2, topos) 
 
-playerpos = getPlayerPosition(cid) 
-novapos = {x=453, y=1340, z=8} 
+ 
+local novapos = {x=939, y=1286, z=9} 
 
 if item.uid == 10235 then
 
-getThingfromPos(playerpos) 
-doSendMagicEffect(playerpos,2) 
+getThingfromPos(getPlayerPosition(cid)) 
+doSendMagicEffect(getPlayerPosition(cid),2) 
 doTeleportThing(cid,novapos) 
 doSendMagicEffect(novapos,10)
 end 

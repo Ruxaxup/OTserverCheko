@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<monster name="Silencer" nameDescription="a silencer" race="blood" experience="5100" speed="320" manacost="0">
+	<health now="5400" max="5400"/>  
+	<strategy attack="100" defense="0"/>  
+	<targetchange speed="0" chance="8"/>  
+	<look type="322" corpse="9923"/>  
+	<flags>    
+		<flag canpushitems="1"/>   
+		<flag canpushcreatures="1"/>    
+		<flag hostile="1"/>    
+		<flag attackable="1"/>    
+		<flag pushable="0"/>    
+		<flag staticattack="90"/>    
+		<flag targetdistance="1"/>  
+	</flags>  
+  <attacks>
+
+		<attack name="melee" interval="2000" skill="80" attack="70" poison="600" />
+
+		<attack name="silencer skill reducer" range="3" interval="2000" chance="50"/>
+
+		<attack name="manadrain" interval="2000" chance="15" radius="4" target="1" min="-40" max="-150">
+>
+
+			<attribute key="areaEffect" value="redshimmer"/>
+
+		</attack>
+			
+		</attacks>
+ 	<defenses armor="50" defense="55">
+		<defense name="healing" interval="1000" chance="12" min="160" max="230">
+			<attribute key="areaEffect" value="blueshimmer"/>
+		</defense>
+	</defenses>
+	<elements>
+		<element physicalPercent="-5"/>
+		<element energyPercent="-15"/>
+		<element firePercent="-30"/>
+		<element earthPercent="99"/>
+		<element deathPercent="80"/>
+		<element icePercent="-5"/>
+		<element holyPercent="-30"/>
+	</elements>
+	<immunities>
+		<immunity paralyze="1"/>
+		<immunity invisible="1"/> 
+	</immunities> 
+	<voices speed="5000" chance="10">    
+		<voice sentence="Your fragile bones are like toothpicks to me."/>    
+		<voice sentence="You little weasel will not live to see another day" />    
+		<voice sentence="I'm just a messenger of what's yet to come" />  
+		<voice sentence="HRAAAAAAAAAAAAAAARRRR" yell="1"/>
+		<voice sentence="I'm taking you down with me"/>
+	</voices>   
+	<loot>
+    <item id="2148" countmax="100" chance="100000" /><!-- gold coin -->
+    <item id="2152" countmax="7" chance="32800" /><!-- platinum coin -->
+    <item id="7591" countmax="4" chance="32800" /><!-- ghp -->
+    <item id="7590" countmax="4" chance="32800" /><!-- gmp -->
+    <item id="7368" countmax="10" chance="15000" /><!-- assassin stars -->
+    <item id="1993" chance="100000"><!-- bag -->
+        <inside>
+            <item id="7454" chance="8000" /><!-- glorious axe -->
+            <item id="7413" chance="8000" /><!-- titan axe -->
+            <item id="2195" chance="1450" /><!-- boots of haste -->
+            <item id="7407" chance="5000" /><!-- haunted blade -->
+            <item id="7885" chance="3000" /><!-- terra legs -->
+            <item id="7886" chance="5000" /><!-- terra boots -->
+            <item id="7387" chance="2000" /><!-- diamond sceptre -->
+            <item id="2521" chance="30000" /><!-- dark shield -->
+        </inside>
+    </item>
+</loot>
+
+  </monster>

@@ -63,13 +63,13 @@
 
 	-- Account manager
 	accountManager = true
-	namelockManager = true
-	newPlayerChooseVoc = false
-	newPlayerSpawnPosX = 95
-	newPlayerSpawnPosY = 117
+	namelockManager = false
+	newPlayerChooseVoc = true
+	newPlayerSpawnPosX = 96
+	newPlayerSpawnPosY = 71
 	newPlayerSpawnPosZ = 7
 	newPlayerTownId = 1
-	newPlayerLevel = 1
+	newPlayerLevel = 8
 	newPlayerMagicLevel = 0
 	generateAccountNumber = false
 
@@ -218,7 +218,7 @@
 
 	-- Map
 	-- NOTE: storeTrash costs more memory, but will perform alot faster cleaning.
-	mapName = "Xedegux.otbm"
+	mapName = "GanGrel.otbm"
 	mapAuthor = "Komic"
 	randomizeTiles = true
 	storeTrash = true
@@ -312,11 +312,11 @@
 	-- NOTE: experienceStages configuration is located in data/XML/stages.xml.
 	-- rateExperienceFromPlayers 0 to disable.
 	experienceStages = false
-	rateExperience = 5.0
+	rateExperience = 500.0
 	rateExperienceFromPlayers = 0
-	rateSkill = 3.0
-	rateMagic = 3.0
-	rateLoot = 2.0
+	rateSkill = 30.0
+	rateMagic = 300.0
+	rateLoot = 4.0
 	rateSpawn = 1
 
 	-- Monster rates

@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<monster name="Angel" nameDescription="an Angel" race="blood" experience="7000" speed="400" manacost="0">
+  <health now="10000" max="10000"/>
+  <look type="133" head="97" body="0" legs="0" feet="0" corpse="6080"/>
+  <targetchange interval="10000" chance="15"/>
+  <strategy attack="100" defense="0"/>
+  <flags>
+    <flag summonable="0"/>
+    <flag attackable="1"/>
+    <flag hostile="1"/>
+    <flag illusionable="0"/>
+    <flag convinceable="0"/>
+    <flag pushable="0"/>
+    <flag canpushitems="1"/>
+    <flag canpushcreatures="1"/>
+    <flag staticattack="90"/>
+    <flag targetdistance="1"/>
+    <flag runonhealth="0"/>
+  </flags>
+	<attacks>
+		<attack name="melee" interval="2000" skill="75" attack="60"/>
+		<attack name="energy" interval="1000" chance="20" range="3" target="1" radius="2" min="-400" max="-600">
+			<attribute key="areaEffect" value="purpleenergy"/>
+		</attack>		
+		<attack name="energy" interval="1000" chance="34" radius="3" min="-500" max="-600">
+			<attribute key="areaEffect" value="purpleenergy"/>
+             </attack>
+	</attacks>
+	<defenses armor="30" defense="30">
+		<defense name="healing" interval="2000" chance="15" min="90" max="150">
+			<attribute key="areaEffect" value="blueshimmer"/>
+		</defense>
+	</defenses>
+<elements>
+		<element energyPercent="100"/>
+		<element earthPercent="-20"/>
+		<element icePercent="-10"/>
+		<element holyPercent="50"/>
+		<element deathPercent="-50"/>
+		<element firePercent="-20"/>
+</elements>
+  <immunities>
+    <immunity physical="0"/>
+    <immunity energy="0"/>
+    <immunity fire="0"/>
+    <immunity poison="0"/>
+    <immunity lifedrain="1"/>
+    <immunity paralyze="1"/>
+    <immunity outfit="1"/>
+    <immunity drunk="1"/>
+    <immunity invisible="1"/>
+    <immunity death="0"/>
+  </immunities>
+  <voices interval="5000" chance="10">
+     <voice sentence="A human!"/>
+    <voice sentence="Only demons would attack Angels!"/>
+    <voice sentence="Arcangels will destroy you!"/>
+  </voices>
+  <voices interval="5000" chance="10">
+	<voice sentence="leave at once!"/>
+  </voices>
+<loot>
+<item id="2152" chance="100000" countmax="50" /> 
+<item id="2152" chance="100000" countmax="50" /> -- 
+<item id="5891" chance="500" countmax="1" /> -- 
+<item id="2160" chance="1000" countmax="1"/> -- 
+<item id="2195" chance="1000" /> -- 
+<item id="2002" chance="100000" > --
+<inside>
+<item id="2114" chance="100000" /> -- 
+<item id="2472" chance="200" /> -- 
+<item id="7436" chance="2000" /> -- 
+<item id="11234" chance="200" /> -- 
+<item id="2123" chance="500" /> -- 
+</inside>
+</item>
+</loot>
+</monster>

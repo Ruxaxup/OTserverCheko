@@ -1,0 +1,13 @@
+function onUse(cid, item, frompos, item2, topos)[/font]
+[font=Comic Sans MS]			 if item.uid == 7000 then[/font]
+[font=Comic Sans MS]queststatus = getPlayerStorageValue(cid,7000)[/font]
+[font=Comic Sans MS]if queststatus == -1 then[/font]
+[font=Comic Sans MS]doPlayerSendTextMessage(cid,22,"You have found golden legs.") [/font]
+[font=Comic Sans MS]doPlayerAddItem(cid,2470,1)[/font]
+[font=Comic Sans MS]setPlayerStorageValue(cid,7000,1)[/font]
+[font=Comic Sans MS]else[/font]
+[font=Comic Sans MS]doPlayerSendTextMessage(cid,22,"It is empty.")[/font]
+[font=Comic Sans MS]end[/font]
+[font=Comic Sans MS]end[/font]
+[font=Comic Sans MS]return 1[/font]
+[font=Comic Sans MS]end

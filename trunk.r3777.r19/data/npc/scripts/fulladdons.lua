@@ -8,7 +8,7 @@ function onCreatureDisappear(cid)             npcHandler:onCreatureDisappear(cid
 function onCreatureSay(cid, type, msg)         npcHandler:onCreatureSay(cid, type, msg)     end
 function onThink()                             npcHandler:onThink()                         end
 
-npcHandler:setMessage(MESSAGE_GREET, "Hello |PLAYERNAME|. Can you help me? If you help me, I will reward you with beautiful addons! Just say {addons} or {help} if you do not know what to do.")
+npcHandler:setMessage(MESSAGE_GREET, "Ola |PLAYERNAME|. Voce pode me ajudar? Se voce me ajudar, vou te recompensar com lindos addons! Basta dizer {addons} ou {help} se voce nao sabe o que fazer.")
 
 function playerBuyAddonNPC(cid, message, keywords, parameters, node)
     if(not npcHandler:isFocused(cid)) then
@@ -16,12 +16,12 @@ function playerBuyAddonNPC(cid, message, keywords, parameters, node)
     end
     if (parameters.confirm ~= true) and (parameters.decline ~= true) then
         if(getPlayerPremiumDays(cid) == 0) and (parameters.premium == true) then
-            npcHandler:say('Sorry, but this addon is only for premium players!', cid)
+            npcHandler:say('Desculpe, mas este addon e apenas para jogadores premium!', cid)
             npcHandler:resetNpc()
             return true
         end
         if (getPlayerStorageValue(cid, parameters.storageID) ~= -1) then
-            npcHandler:say('You already have this addon!', cid)
+            npcHandler:say('Voce ja tem esse addon!', cid)
             npcHandler:resetNpc()
             return true
         end
@@ -44,7 +44,7 @@ function playerBuyAddonNPC(cid, message, keywords, parameters, node)
         elseif table.maxn(parameters.items) then
             text = items_list
         end
-        npcHandler:say('Brought me ' .. text .. ' por ' .. keywords[1] .. '?', cid)
+        npcHandler:say('Trouxeste-me ' .. text .. ' por ' .. keywords[1] .. '?', cid)
         return true
     elseif (parameters.confirm == true) then
         local addonNode = node:getParent()
@@ -69,14 +69,14 @@ function playerBuyAddonNPC(cid, message, keywords, parameters, node)
             doPlayerAddOutfit(cid, addoninfo.outfit_male, addoninfo.addon)
             doPlayerAddOutfit(cid, addoninfo.outfit_female, addoninfo.addon)
             setPlayerStorageValue(cid,addoninfo.storageID,1)
-            npcHandler:say('Here is.', cid)
+            npcHandler:say('Aqui esta.', cid)
         else
-            npcHandler:say('You do not have the necessary items or money!', cid)
+            npcHandler:say('Voce nao tem os items necessarios ou dinheiro!', cid)
         end
         npcHandler:resetNpc()
         return true
     elseif (parameters.decline == true) then
-        npcHandler:say('This does not interest you? Try another!', cid)
+        npcHandler:say('Este nao lhe interessa? Experimente outro!', cid)
         npcHandler:resetNpc()
         return true
     end

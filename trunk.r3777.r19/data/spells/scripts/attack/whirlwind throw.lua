@@ -4,12 +4,16 @@ setCombatParam(combat, COMBAT_PARAM_BLOCKARMOR, true)
 setCombatParam(combat, COMBAT_PARAM_DISTANCEEFFECT, CONST_ANI_WEAPONTYPE)
 setCombatParam(combat, COMBAT_PARAM_USECHARGES, true)
 
-function onGetFormulaValues(cid, level, skill, attack, factor)
-	local skillTotal, levelTotal = skill + attack, level / 5
-	return -(skillTotal / 3 + levelTotal), -(skillTotal + levelTotal)
+function onGetPlayerMinMaxValues(cid, level, skill, attack, factor)
+	local min = skill * attack / 100 + level / 5 + 2	local max = skill * attack / (100/3)  + level / 5 + 7
+	return -min, -max
 end
-
-setCombatCallback(combat, CALLBACK_PARAM_SKILLVALUE, "onGetFormulaValues")
+setCombatCallback(combat, CALLBACK_PARAM_SKILLVALUE, "onGetPlayerMinMaxValues")
 function onCastSpell(cid, var)
 	return doCombat(cid, combat, var)
 end
+
+
+
+
+

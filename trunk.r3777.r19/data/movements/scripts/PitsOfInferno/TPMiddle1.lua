@@ -1,8 +1,8 @@
----function by Armageddom--
+----function by Armageddom--
 function onStepIn(cid, item, frompos, item2, topos) 
 
 playerpos = getPlayerPosition(cid) 
-novapos = {x=449, y=1326, z=9} 
+novapos = {x=935, y=1273, z=10} 
 
 if item.uid == 10251 then
 

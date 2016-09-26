@@ -11,14 +11,14 @@ function onThink() 						npcHandler:onThink() end
 
 
 
-local travelNode = keywordHandler:addKeyword({'Take'}, StdModule.say, {npcHandler = npcHandler, onlyFocus = true, text = 'Are you sure you want to go? .{lvl 250}. If you want you can go {back}.'})
+local travelNode = keywordHandler:addKeyword({'levar'}, StdModule.say, {npcHandler = npcHandler, onlyFocus = true, text = 'Tem certeza que quer ir? .{lvl 250}. Se quiser pode {voltar}.'})
 	travelNode:addChildKeyword({'yes'}, StdModule.travel, {npcHandler = npcHandler, premium = true, level = 250, cost = 0, destination = {x=160, y=53, z=8} })
-	travelNode:addChildKeyword({'no'}, StdModule.say, {npcHandler = npcHandler, onlyFocus = true, reset = true, text = 'Good choice.'})
+	travelNode:addChildKeyword({'no'}, StdModule.say, {npcHandler = npcHandler, onlyFocus = true, reset = true, text = 'Bela escolha.'})
 
 
-local travelNode = keywordHandler:addKeyword({'Back'}, StdModule.say, {npcHandler = npcHandler, onlyFocus = true, text = 'Sure?'})
+local travelNode = keywordHandler:addKeyword({'voltar'}, StdModule.say, {npcHandler = npcHandler, onlyFocus = true, text = 'Certeza?'})
 	travelNode:addChildKeyword({'yes'}, StdModule.travel, {npcHandler = npcHandler, premium = true, level = 2, cost = 0, destination = {x=160, y=55, z=8} })
-	travelNode:addChildKeyword({'no'}, StdModule.say, {npcHandler = npcHandler, onlyFocus = true, reset = true, text = 'Good choice.'})
+	travelNode:addChildKeyword({'no'}, StdModule.say, {npcHandler = npcHandler, onlyFocus = true, reset = true, text = 'Bela escolha.'})
 
 
 npcHandler:addModule(FocusModule:new())

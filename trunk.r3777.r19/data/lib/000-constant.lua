@@ -881,3 +881,62 @@ Storage_meta =
 
 STORAGE = {}
 setmetatable(STORAGE, Storage_meta)
+
+
+
+--Training statues
+OFFLINE_TRAINING 		= 65000
+OFFLINE_TRAINING_TIME 	= 65001
+
+
+--New custom quests
+DEVOVORGA_QUEST = 65002
+
+--Life Steal and Mana Leech
+LIFE_STEAL_PERC = 65003
+MANA_LEECH_PERC = 65004
+
+--Stat points
+REWARD_STAT_ID	=	65008
+STAT_POINTS 	=	65005
+MAX_STATPOINTS 	=	5000
+MAX_LIFESTEAL 	=	0.4 -- 100%, 0.5 = 50%
+MAX_MANALEECH 	=	0.3 -- 100%, 0.5 = 50%
+LS_PER_POINT 	= 0.01	--LS = Life steal
+ML_PER_POINT 	= 0.01	--ML = mana leech
+
+--Chance
+LS_CHANCE	=	65006
+ML_CHANCE 	=	65007
+LS_MAXCHANCE	= 90
+ML_MAXCHANCE	= 90
+LS_CHANCE_P_POINT = 1
+ML_CHANCE_P_POINT = 1
+
+--TASKS
+
+TASKS_INFO = 
+{
+    ["demon"]                       = {s = 3000, r = 2173, count = 6666},
+    ["juggernaut"]                  = {s = 3001, r = 2173, count = 500},
+    ["hellfire fighter"]            = {s = 3002, r = 2173, count = 400},
+    ["fire overlord"]               = {s = 3003, r = 2173, count = 300},
+    ["sea serpent"]                 = {s = 3004, r = 2173, count = 300},
+    ["wyrm"]                        = {s = 3005, r = 2173, count = 200},
+    ["zombie"]                      = {s = 3006, r = 2173, count = 200},
+    ["banshee"]                     = {s = 3007, r = 2173, count = 300},
+    ["medusa"]                      = {s = 3008, r = 2173, count = 400},
+    ["blazing fire elemental"]      = {s = 3009, r = 2173, count = 400},
+    ["giant spider"]                = {s = 3010, r = 2173, count = 300},
+    ["frost dragon"]                = {s = 3011, r = 2173, count = 300},
+    ["massive energy elemental"]    = {s = 3012, r = 2173, count = 400},
+    ["massive water elemental"]     = {s = 3013, r = 2173, count = 400},
+    ["rotworm"]                     = {s = 3014, r = 7430, count = 100},
+    ["mini brigand"]                = {s = 3015, r = 9971, count = 100}
+}
+
+--Special Raid
+brigandArea = {
+	fromPos = {x = 1052, y = 672, z =7},
+	toPos = {x = 1081, y = 694, z =7}
+}

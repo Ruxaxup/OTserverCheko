@@ -1,4 +1,4 @@
 function onStepIn(cid)
 local message = dica
-doPlayerSendTextMessage(cid, MESSAGE_STATUS_DEFAULT, "TIP: In this map there are more than 11 cities, each with different characteristics. You can travel to different cities using a boat one a flying carpet. Inform yourself on the boards throughout the city.")
+doPlayerSendTextMessage(cid, MESSAGE_STATUS_DEFAULT, "DICA: Neste mapa existem mais de 11 cidades, cada uma com caracteristicas diferentes. Você pode viajar para diferentes cidades usando um barco um um tapete voador. Informe-se nas placas espalhadas pela cidade.")
 end

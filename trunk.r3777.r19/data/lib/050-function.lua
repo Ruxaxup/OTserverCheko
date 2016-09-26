@@ -697,3 +697,296 @@ end
 function isUnderWater(cid)
 	return isInArray(underWater, getTileInfo(getCreaturePosition(cid)).itemid)
 end
+
+
+--statSystem
+
+--LIFE_STEAL_PERC = 65003
+--MANA_LEECH_PERC = 65004
+--STAT_POINTS =	65005
+function doPlayerSpendStatPoint(cid)
+	local statPoints = getPlayerStorageValue(cid, STAT_POINTS)
+	statPoints = statPoints - 1
+	if(statPoints < 0) then
+		statPoints = 0
+	end
+	doPlayerSetStorageValue(cid, STAT_POINTS, statPoints)
+	return TRUE
+end
+
+function doPlayerAddStatPoint(cid)
+	local statPoints = getPlayerStorageValue(cid, STAT_POINTS)
+	local pointsPerAdvance = 5
+	if(statPoints == -1) then
+		statPoints = 0
+		doPlayerSetStorageValue(cid, STAT_POINTS, 0)
+	end
+	if( (statPoints + pointsPerAdvance) < MAX_STATPOINTS) then
+		doPlayerSetStorageValue(cid, STAT_POINTS, statPoints + pointsPerAdvance)
+		return TRUE
+	else
+		return FALSE
+	end
+end
+
+function doPlayerSetStatPoint(cid, count)
+	local cantidad = tonumber(count)
+	if (cantidad == nil) then
+		return FALSE
+	end
+	if(cantidad < 0) then
+		return FALSE
+	else
+		doPlayerSetStorageValue(cid, STAT_POINTS, cantidad)
+		return TRUE
+	end
+end
+
+function getPlayerStatPoints(cid)
+	local statPoints = getPlayerStorageValue(cid, STAT_POINTS)
+	if(statPoints == -1) then
+		statPoints = 0
+		doPlayerSetStorageValue(cid, STAT_POINTS, 0)
+	end
+	return statPoints
+end
+
+-- Life Steal
+
+function getPlayerLifeStealPoints(cid)
+	local lifeStealPoints = getPlayerStorageValue(cid, LIFE_STEAL_PERC)
+	if(lifeStealPoints == -1) then
+		lifeStealPoints = 0
+		doPlayerSetStorageValue(cid,LIFE_STEAL_PERC,0)
+	end
+	return lifeStealPoints
+end
+
+function doPlayerDecreaseLifeStealPoint(cid)
+	local lifeStealPoints = tonumber(getPlayerLifeStealPoints(cid))
+	if(lifeStealPoints > 0.0) then
+		doPlayerAddStatPoint(cid)
+		lifeStealPoints = lifeStealPoints - LS_PER_POINT
+		doPlayerSetStorageValue(cid, LIFE_STEAL_PERC, lifeStealPoints)
+		doSendMagicEffect(getCreaturePosition(cid), CONST_ME_YELLOW_RINGS)
+		return TRUE
+	else
+		doPlayerSendCancel(cid, "Minimum Life Steal points reached.")
+		return FALSE
+	end
+end
+
+function doPlayerAddLifeStealPoint(cid)
+	local statPoints = getPlayerStatPoints(cid)
+	if(statPoints == 0) then
+		doPlayerSendTextMessage(cid, MESSAGE_STATUS_CONSOLE_RED, "You don't have enough stat points.")
+		return FALSE
+	else
+		local lifeStealPoints = getPlayerLifeStealPoints(cid)
+		if( (lifeStealPoints + LS_PER_POINT) > MAX_LIFESTEAL) then
+			doPlayerSendTextMessage(cid, MESSAGE_STATUS_CONSOLE_RED, "You have reached max Life Steal.")
+			return FALSE
+		else
+			lifeStealPoints = lifeStealPoints + LS_PER_POINT
+			doPlayerSetStorageValue(cid, LIFE_STEAL_PERC, lifeStealPoints)
+			doPlayerSendTextMessage(cid, MESSAGE_EVENT_ADVANCE,
+				 "You Life Steal is been increased by "..(LS_PER_POINT * 100)..". Now you have "..(getPlayerLifeStealPoints(cid) * 100)..".")
+			doSendMagicEffect(getCreaturePosition(cid), CONST_ME_SOUND_GREEN)
+			doCreatureSay(cid,"Health potions... para que?",MESSAGE_EVENT_ORANGE)
+			return TRUE
+		end
+	end
+end
+
+--Mana Leech
+
+function getPlayerManaLeechPoints(cid)
+	local manaChancePoints = getPlayerStorageValue(cid, MANA_LEECH_PERC)
+	if(manaChancePoints == -1) then
+		manaChancePoints = 0
+		doPlayerSetStorageValue(cid,MANA_LEECH_PERC,0)
+	end
+	return manaChancePoints
+end
+
+function doPlayerDecreaseManaLeechPoint(cid)
+	local manaChancePoints = tonumber(getPlayerManaLeechChancePoints(cid))
+	if(manaChancePoints > 0.0) then
+		doPlayerAddStatPoint(cid)
+		manaChancePoints = manaChancePoints - ML_PER_POINT
+		doPlayerSetStorageValue(cid, MANA_LEECH_PERC, manaChancePoints)
+		doSendMagicEffect(getCreaturePosition(cid), CONST_ME_YELLOW_RINGS)
+		return TRUE
+	else
+		doPlayerSendCancel(cid, "Minimum Mana Leech points reached.")
+		return FALSE
+	end
+end
+
+function doPlayerAddManaLeechPoint(cid)
+	local statPoints = getPlayerStatPoints(cid)
+	if(statPoints == 0) then
+		doPlayerSendTextMessage(cid, MESSAGE_STATUS_CONSOLE_RED, "You don't have enough stat points.")
+		return FALSE
+	else
+		local manaLeechPoints = getPlayerManaLeechPoints(cid)		
+		if( (manaLeechPoints + ML_PER_POINT) > MAX_MANALEECH) then
+			doPlayerSendTextMessage(cid, MESSAGE_STATUS_CONSOLE_RED, "You have reached max Mana Leech.")
+			return FALSE
+		else
+			manaLeechPoints = manaLeechPoints + ML_PER_POINT
+			doPlayerSetStorageValue(cid, MANA_LEECH_PERC, manaLeechPoints)
+			doPlayerSendTextMessage(cid, MESSAGE_EVENT_ADVANCE,
+				 "You Mana Leech is been increased by "..(ML_PER_POINT * 100).."%. Now you have "..(getPlayerManaLeechPoints(cid) * 100).."%.")
+			doSendMagicEffect(getCreaturePosition(cid), CONST_ME_SOUND_BLUE)
+			doCreatureSay(cid,"Mana potions... para que?",MESSAGE_EVENT_ORANGE)
+			return TRUE
+		end
+	end
+end
+
+--Life Steal Chance
+function getPlayerLifeStealChancePoints(cid)
+	local lifeStealChancePoints = getPlayerStorageValue(cid, LS_CHANCE)
+	if(lifeStealChancePoints == -1) then
+		lifeStealChancePoints = 0
+		doPlayerSetStorageValue(cid,LS_CHANCE,0)
+	end
+	return lifeStealChancePoints
+end
+
+function doPlayerDecreaseLifeStealChancePoint(cid)
+	local lifeStealChancePoints = tonumber(getPlayerLifeStealChancePoints(cid))
+	if(lifeStealChancePoints > 0.0) then
+		doPlayerAddStatPoint(cid)
+		lifeStealChancePoints = lifeStealChancePoints - LS_CHANCE_P_POINT
+		doPlayerSetStorageValue(cid, LS_CHANCE, lifeStealChancePoints)
+		doSendMagicEffect(getCreaturePosition(cid), CONST_ME_YELLOW_RINGS)
+		return TRUE
+	else
+		doPlayerSendCancel(cid, "Minimum Life Steal Chance points reached.")
+		return FALSE
+	end
+end
+
+function doPlayerAddLifeStealChancePoint(cid)
+	local statPoints = getPlayerStatPoints(cid)
+	if(statPoints == 0) then
+		doPlayerSendTextMessage(cid, MESSAGE_STATUS_CONSOLE_RED, "You don't have enough stat points.")
+		return FALSE
+	else
+		local lifeStealChancePoints = getPlayerLifeStealChancePoints(cid)
+		if( (lifeStealChancePoints + LS_CHANCE_P_POINT) > LS_MAXCHANCE) then
+			doPlayerSendTextMessage(cid, MESSAGE_STATUS_CONSOLE_RED, "You have reached max Life Steal Chance.")
+			return FALSE
+		else
+			lifeStealChancePoints = lifeStealChancePoints + LS_CHANCE_P_POINT
+			doPlayerSetStorageValue(cid, LS_CHANCE, lifeStealChancePoints)
+			doPlayerSendTextMessage(cid, MESSAGE_EVENT_ADVANCE,
+				 "You Life Steal is been increased by "..LS_CHANCE_P_POINT..". Now you have "..getPlayerLifeStealChancePoints(cid)..".")
+			doSendMagicEffect(getCreaturePosition(cid), CONST_ME_SOUND_PURPLE)
+			doCreatureSay(cid,"Tendre mas Health papu :v",MESSAGE_EVENT_ORANGE)
+			return TRUE
+		end
+	end
+end
+
+
+--Mana Leech Chance
+
+function getPlayerManaLeechChancePoints(cid)
+	local manaLeechChancePoints = getPlayerStorageValue(cid, ML_CHANCE)
+	if(manaLeechChancePoints == -1) then
+		manaLeechChancePoints = 0
+		doPlayerSetStorageValue(cid,ML_CHANCE,0)
+	end
+	return manaLeechChancePoints
+end
+
+function doPlayerDecreaseManaLeechChancePoint(cid)
+	local manaLeechChancePoints = tonumber(getPlayerManaLeechChancePoints(cid))
+	if(manaLeechChancePoints > 0.0) then
+		doPlayerAddStatPoint(cid)
+		manaLeechChancePoints = manaLeechChancePoints - ML_CHANCE_P_POINT
+		doPlayerSetStorageValue(cid, ML_CHANCE, manaLeechChancePoints)
+		doSendMagicEffect(getCreaturePosition(cid), CONST_ME_YELLOW_RINGS)
+		return TRUE
+	else
+		doPlayerSendCancel(cid, "Minimum Mana Leech Chance points reached.")
+		return FALSE
+	end
+end
+
+function doPlayerAddManaLeechChancePoint(cid)
+	local statPoints = getPlayerStatPoints(cid)
+	if(statPoints == 0) then
+		doPlayerSendTextMessage(cid, MESSAGE_STATUS_CONSOLE_RED, "You don't have enough stat points.")
+		return FALSE
+	else
+		local manaLeechChancePoints = getPlayerManaLeechChancePoints(cid)
+		if( (manaLeechChancePoints + ML_CHANCE_P_POINT) > ML_MAXCHANCE) then
+			doPlayerSendTextMessage(cid, MESSAGE_STATUS_CONSOLE_RED, "You have reached max Mana Leech Chance.")
+			return FALSE
+		else
+			manaLeechChancePoints = manaLeechChancePoints + ML_CHANCE_P_POINT
+			doPlayerSetStorageValue(cid, ML_CHANCE, manaLeechChancePoints)
+			doPlayerSendTextMessage(cid, MESSAGE_EVENT_ADVANCE,
+				 "You Mana Leech is been increased by "..ML_CHANCE_P_POINT.."%. Now you have "..getPlayerManaLeechChancePoints(cid).."%.")
+			doSendMagicEffect(getCreaturePosition(cid), CONST_ME_SOUND_YELLOW)
+			doCreatureSay(cid,"Tendre mas Mana papu :v",MESSAGE_EVENT_ORANGE)
+			return TRUE
+		end
+	end
+end
+
+--ResetPoints
+
+function resetAllPoints(cid)
+	doPlayerSetStorageValue(cid, LIFE_STEAL_PERC, 0)
+	doPlayerSetStorageValue(cid, MANA_LEECH_PERC, 0)
+	doPlayerSetStorageValue(cid, ML_CHANCE, 0)
+	doPlayerSetStorageValue(cid, LS_CHANCE, 0)
+	doPlayerSetStorageValue(cid, STAT_POINTS, 0)
+	doPlayerSetStorageValue(cid, REWARD_STAT_ID, 0)
+	return TRUE
+end
+
+--Apply Life Steal or Mana Leech
+function applyLSorML(cid, healthAfter, maxHealth, target)
+	local lifeSteal = getPlayerStorageValue(cid, LIFE_STEAL_PERC)
+	-- chance to heal
+	local chanceHeal = math.random(0, 100)
+	local damage = math.abs((maxHealth - healthAfter))
+	if(chanceHeal > (100 - getPlayerLifeStealChancePoints(cid)) and damage ~= 0 )  then
+		local healing = math.ceil(damage * lifeSteal)
+		doCreatureAddHealth(cid,healing)
+		doPlayerSendTextMessage(cid, MESSAGE_EVENT_ORANGE, "[*]Life Steal: You were healed by " .. healing .. " hitpoints.")
+		doSendMagicEffect(getCreaturePosition(cid), CONST_ME_MAGIC_GREEN)
+		doSendAnimatedText(getCreaturePosition(cid), ""..healing, TEXTCOLOR_LIGHTGREEN)
+	end
+
+	-- chance to manaHeal
+	local chanceMana = math.random(0, 100)
+	local manaLeech = getPlayerStorageValue(cid, MANA_LEECH_PERC)
+	if(chanceMana > (100 - getPlayerManaLeechChancePoints(cid))) then
+		local mana = math.ceil(damage * manaLeech)
+		doCreatureAddMana(cid,mana)
+		doPlayerSendTextMessage(cid, MESSAGE_EVENT_ORANGE, "[*]Mana Leech: You were healed by " .. mana .. " manapoints.")
+		doSendMagicEffect(getCreaturePosition(cid), CONST_ME_MAGIC_BLUE)
+		doSendAnimatedText(getCreaturePosition(cid), ""..mana, TEXTCOLOR_LIGHTBLUE)
+	end
+end
+
+-- Special Raid
+
+function spawnArmy( )
+	for x = brigandArea.fromPos.x, brigandArea.toPos.x do
+        for y = brigandArea.fromPos.y, brigandArea.toPos.y do
+        	local pos = {x = x, y = y, z = brigandArea.fromPos.z}
+          	if(math.random(0,100) > 95) then
+          		doSummonCreature("Mini Brigand", pos)
+          	end            
+        end
+    end
+end
+

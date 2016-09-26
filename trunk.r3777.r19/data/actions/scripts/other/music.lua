@@ -1,22 +1,15 @@
 local HORN = 2079
-local EMPTY_BIRD_CAGE = 2094
 local BIRD_CAGE = 2095
 local WOODEN_WHISTLE = 5786
 local DIDGERIDOO = 3952
-local WAR_DRUM = 3953
 local CORNUCOPIA = 2369
 local PARTY_TRUMPET = 6572
 local USED_PARTY_TRUMPET = 6573
-local GREEN_NOTES = {2070, 2071, 2072, 2073, 2075, 2076, 2078, 2332, 2364, 2367, 2368, 2370, 2372, 2374, 3951, 3953, 3957, 6123, 9561, 10295}
+local GREEN_NOTES = {2070, 2071, 2073, 2075, 2076, 2078, 2367, 2374}
 
 function onUse(cid, item, fromPosition, itemEx, toPosition)
 	local random = math.random(1, 5)
 	if(item.itemid == BIRD_CAGE) then
-		if(random == 3) then
-			doTransformItem(item.uid, EMPTY_BIRD_CAGE)
-			return true
-		end
-
 		doSendMagicEffect(fromPosition, CONST_ME_SOUND_YELLOW)
 	elseif(item.itemid == DIDGERIDOO) then
 		if(random == 1) then
@@ -25,7 +18,7 @@ function onUse(cid, item, fromPosition, itemEx, toPosition)
 		end
 	elseif(item.itemid == PARTY_TRUMPET) then
 		doTransformItem(item.uid, USED_PARTY_TRUMPET)
-		doCreatureSay(cid, "TOOOOOOT!", TALKTYPE_MONSTER)
+		doCreatureSay(cid, "TOOOOOOT!", TALKTYPE_ORANGE_1)
 
 		doSendMagicEffect(fromPosition, CONST_ME_SOUND_BLUE)
 		doDecayItem(item.uid)
@@ -47,13 +40,11 @@ function onUse(cid, item, fromPosition, itemEx, toPosition)
 		position.x = position.x + 1
 
 		doSendMagicEffect(fromPosition, CONST_ME_SOUND_PURPLE)
-		doSummonCreature("Wolf", position)
+		doSummonCreature("Wolf", pos)
 	else
 		local effect = CONST_ME_SOUND_BLUE
 		if(item.itemid == HORN) then
 			effect = CONST_ME_SOUND_PURPLE
-		elseif(item.itemid == WAR_DRUM) then
-			effect = CONST_ME_SOUND_RED
 		elseif(isInArray(GREEN_NOTES, item.itemid)) then
 			effect = CONST_ME_SOUND_GREEN
 		end

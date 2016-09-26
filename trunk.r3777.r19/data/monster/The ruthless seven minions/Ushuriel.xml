@@ -55,7 +55,9 @@
 	<immunity paralyze="1"/>
 	<immunity invisible="1"/>
 </immunities>
-
+<script> 
+	<event name="inquisitionPortals"/> 
+</script>
 <voices interval="5000" chance="10"/>
 
 <loot>

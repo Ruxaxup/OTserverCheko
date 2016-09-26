@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<monster name="Massacre" nameDescription="Massacre" race="blood" experience="14000" speed="390" manacost="0">
-  <health now="30000" max="30000"/>
+<monster name="Massacre" nameDescription="Massacre" race="blood" experience="20000" speed="390" manacost="0">
+  <health now="32000" max="32000"/>
   <look type="244" corpse="6336"/>
   <targetchange interval="10000" chance="8"/>
   <strategy attack="100" defense="0"/>
@@ -19,7 +19,7 @@
   </flags>
   <attacks>
     <attack name="melee" interval="2000" skill="110" attack="210"/>
-    <attack name="physical" interval="2000" chance="20" range="7" min="-380" max="-560">
+    <attack name="physical" interval="2000" chance="20" range="7" min="-380" max="-960">
       <attribute key="shootEffect" value="largerock"/>
     </attack>
   </attacks>
@@ -41,21 +41,21 @@
     <immunity invisible="1"/>
   </immunities>
   <summons maxSummons="1">
-    <summon name="juggernaut" interval="2500" chance="30"/>
+    <summon name="juggernaut" interval="2500" chance="10"/>
   </summons>
   <voices interval="5000" chance="10"/>
   <loot>
 	<item id="2148" chance1="100000" countmax="100" /> --Gold
-	<item id="2152" chance1="70000" countmax="6" /> --Platinum
-	<item id="2666" chance1="40000" countmax="8" /> --Meat
+	<item id="2152" chance1="70000" countmax="100" /> --Platinum
+	<item id="2666" chance1="40000" countmax="15" /> --Meat
 	<item id="2452" chance="7000" /> --Heavy MAce
-	<item id="6500" chance="9429" countmax="1" />
+	<item id="2466" chance="9429" countmax="1" />
 	<item id="1987" chance="100000" >
 		<inside>
-			<item id="2148" chance1="100000" countmax="100"/> --Gold
 			<item id="6540" chance="100000" /> --Shell
-			<item id="2522" chance="3500"/> --Great Shield
-			<item id="5944" chance="17000" countmax="1" /> --Soul Orb
+			<item id="2522" chance="1500"/> --Great Shield
+			<item id="7403" chance="10000"/> --berserker
+			<item id="6104" chance="4700" countmax="1" /> --jewel case
 		</inside>
 	</item>
   </loot>

@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<monster name="Madareth" nameDescription="madareth" race="blood" experience="10000" speed="400" manacost="0">
+  <health now="40000" max="40000"/>
+  <look type="12" head="96" body="97" legs="81" feet="79" corpse="6068"/>
+  <targetchange interval="10000" chance="15"/>
+  <strategy attack="100" defense="0"/>
+  <flags>
+    <flag summonable="0"/>
+    <flag attackable="1"/>
+    <flag hostile="1"/>
+    <flag illusionable="0"/>
+    <flag convinceable="0"/>
+    <flag pushable="0"/>
+    <flag canpushitems="1"/>
+    <flag canpushcreatures="1"/>
+    <flag staticattack="90"/>
+    <flag targetdistance="1"/>
+    <flag runonhealth="0"/>
+  </flags>
+<script>
+<event name="Inquisition"/>
+
+</script>
+
+<attacks>
+	    <attack name="melee" interval="2000" min="-0" max="-2000"/> 
+		<attack name="fire" interval="1000" chance="34" range="7" radius="1" target="1" min="-500" max="-720">
+			<attribute key="shootEffect" value="fire"/>
+			<attribute key="areaEffect" value="firearea"/>
+		</attack>
+		<attack name="death" interval="1000" chance="34" radius="7" min="-660" max="-900">
+			<attribute key="areaEffect" value="groundshaker"/>
+		</attack>
+		<attack name="energy" interval="1000" chance="15" length="8" spread="0" min="-180" max="-819">
+			<attribute key="areaEffect" value="energy"/>
+		</attack>
+</attacks>
+  <defenses armor="65" defense="65">
+    <defense name="healing" interval="3000" chance="20" min="2000" max="2500">
+      <attribute key="areaEffect" value="blueshimmer"/>
+    </defense>
+
+    <defense name="speed" interval="4000" chance="80" speedchange="440" duration="6000">
+      <attribute key="areaEffect" value="redshimmer"/>
+    </defense>
+
+  </defenses>
+<elements>
+		<element energyPercent="30"/>
+		<element earthPercent="80"/>
+		<element icePercent="15"/>
+		<element holyPercent="-10"/>
+		<element deathPercent="20"/>
+		<element firePercent="-10"/>
+</elements>
+  <immunities>
+    <immunity physical="0"/>
+    <immunity energy="0"/>
+    <immunity fire="0"/>
+    <immunity poison="0"/>
+    <immunity lifedrain="1"/>
+    <immunity paralyze="1"/>
+    <immunity outfit="1"/>
+    <immunity drunk="1"/>
+    <immunity invisible="1"/>
+    <immunity death="0"/>
+  </immunities>
+  <voices interval="5000" chance="10">
+     <voice sentence="You will run out of resources soon enough!"/>
+    <voice sentence="One little mistake and your all are mine!"/>
+    <voice sentence="I sense your strength fading!"/>
+  </voices>
+  <voices interval="5000" chance="10">
+	<voice sentence="!I am going to play with yourself!"/>
+  </voices>
+
+	<loot>
+    <item id="2148" countmax="100" chance="45900" /><!-- gold coin -->
+    <item id="2148" countmax="54" chance="45900" /><!-- gold coin -->
+    <item id="9811" chance="42800" /><!-- rusty legs -->
+    <item id="5954" countmax="2" chance="12675" /><!-- demon horn -->
+    <item id="9808" chance="73575" /><!-- rusty armor -->
+    <item id="7443" chance="26900" /><!-- bullseye potion -->
+    <item id="2183" chance="23575" /><!-- hailstorm rod -->
+    <item id="7404" chance="13325" /><!-- assassin dagger -->
+    <item id="2169" chance="6900" /><!-- time ring -->
+    <item id="1988" chance="100000"><!-- bag -->
+        <inside>
+            <item id="7591" chance="32050" /><!-- great health potion -->
+            <item id="2152" countmax="30" chance="16875" /><!-- platinum coin -->
+            <item id="8473" chance="19225" /><!-- ultimate health potion -->
+            <item id="7440" chance="32050" /><!-- mastermind potion -->
+            <item id="2396" chance="17175" /><!-- ice rapier -->
+            <item id="6300" chance="22300" /><!-- death ring -->
+            <item id="6500" chance="8200" /><!-- demonic essence -->
+            <item id="8912" chance="14600" /><!-- springsprout rod -->
+            <item id="8472" chance="30750" /><!-- great spirit potion -->
+            <item id="7439" chance="25625" /><!-- berserk potion -->
+            <item id="2071" chance="14600" /><!-- lyre -->
+            <item id="8910" chance="21000" /><!-- underworld rod -->
+            <item id="2207" chance="9475" /><!-- sword ring -->
+            <item id="2072" chance="9475" /><!-- lute -->
+            <item id="2214" chance="14600" /><!-- ring of healing -->
+            <item id="3953" chance="14600" /><!-- war drum -->
+            <item id="2187" chance="13325" /><!-- wand of inferno -->
+            <item id="2377" chance="18450" /><!-- two handed sword -->
+            <item id="7386" chance="10750" /><!-- mercenary sword -->
+            <item id="2208" chance="9475" /><!-- axe ring -->
+            <item id="7590" chance="17950" /><!-- great mana potion -->
+            <item id="7449" chance="12050" /><!-- crystal sword -->
+            <item id="8920" chance="13325" /><!-- wand of starstorm -->
+            <item id="2168" chance="17175" /><!-- life ring -->
+            <item id="7407" chance="9475" /><!-- haunted blade -->
+            <item id="2213" chance="10750" /><!-- dwarven ring -->
+            <item id="7383" chance="8200" /><!-- relic sword -->
+            <item id="3952" chance="4350" /><!-- didgeridoo -->
+            <item id="7416" chance="13325" /><!-- bloody edge -->
+            <item id="2374" chance="6900" /><!-- wooden flute -->
+            <item id="3957" chance="4350" /><!-- war horn -->
+            <item id="2209" chance="6900" /><!-- club ring -->
+            <item id="8922" chance="8200" /><!-- wand of voodoo -->
+            <item id="7418" chance="1775" /><!-- nightmare blade -->
+        </inside>
+    </item>
+</loot>
+
+</monster>

@@ -1,5 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<npc name="Akrill" script="data/npc/scripts/Akrill.lua" walkinterval="0" lookdir="3">
-    <health now="100" max="100"/>
-    <look type="130" head="0" body="10" legs="10" feet="0" addons="0"/>
+ 
+<npc name="Akrill" script="data/npc/scripts/gesiorbank.lua" access="3" walkinterval="2000" lookdir="2">
+	<mana now="800" max="800"/>
+	<health now="200" max="200"/>
+<look type="129" head="114" body="119" legs="114" feet="114" corpse="2212"/>
 </npc>

@@ -1,0 +1,177 @@
+[26/9/2016 11:7:0] /a 3
+[26/9/2016 11:7:3] /a 3
+[26/9/2016 11:7:4] /a 3
+[26/9/2016 11:7:4] /a 3
+[26/9/2016 11:7:18] /t
+[26/9/2016 11:7:45] /t
+[26/9/2016 11:8:8] /i 2610
+[26/9/2016 11:8:13] /r
+[26/9/2016 11:8:20] /m Demon
+[26/9/2016 11:8:44] /m dragon
+[26/9/2016 11:8:51] /m dragon
+[26/9/2016 11:8:52] /m dragon
+[26/9/2016 11:8:52] /m dragon
+[26/9/2016 11:10:9] /reload
+[26/9/2016 11:10:11] /reload config
+[26/9/2016 11:10:15] /m dragon
+[26/9/2016 11:10:25] /m rat
+[26/9/2016 11:10:34] /t
+[26/9/2016 11:26:16] /goto wyrm
+[26/9/2016 11:26:36] /a 5
+[26/9/2016 11:26:36] /a 5
+[26/9/2016 11:26:37] /a 5
+[26/9/2016 11:26:37] /a 5
+[26/9/2016 11:26:38] /a 5
+[26/9/2016 11:26:38] /a 5
+[26/9/2016 11:28:50] /goto 73,366
+[26/9/2016 11:28:53] /goto 73,36,6
+[26/9/2016 11:28:56] /goto 73,36,6
+[26/9/2016 11:29:9] /goto 307,396,7
+[26/9/2016 11:43:14] /t
+[26/9/2016 11:44:37] /addStats Ruxaxup,100
+[26/9/2016 11:47:12] /addStats Ruxaxup,100
+[26/9/2016 11:47:31] /attr set attackspeed 200
+[26/9/2016 11:47:41] /attr set extraattack 10000
+[26/9/2016 11:47:56] /attr set extraattack 10000
+[26/9/2016 11:47:59] /attr set extraattack 10000
+[26/9/2016 11:53:24] /attr set extrattack 100
+[26/9/2016 11:53:28] /attr set extraattack 100
+[26/9/2016 11:53:41] /attr set attack 1000
+[26/9/2016 11:53:43] /attr set attack 1000
+[26/9/2016 11:53:53] /attr set attack 45
+[26/9/2016 11:59:0] /i 2160
+[26/9/2016 11:59:3] /i 2160
+[26/9/2016 11:59:8] /i backpack of holind
+[26/9/2016 11:59:12] /i backpack of holding
+[26/9/2016 12:23:28] /m lucifer
+[26/9/2016 12:23:47] /r
+[26/9/2016 12:24:3] /attr set attack 40
+[26/9/2016 12:24:9] /i magic sword
+[26/9/2016 12:24:21] /attr aid 100
+[26/9/2016 12:24:31] /attr set extraattack 1000
+[26/9/2016 12:24:40] /attr set extraattack 100
+[26/9/2016 12:24:52] /attr extraattack 1000
+[26/9/2016 12:25:1] /attr set extraattack 1000
+[26/9/2016 12:25:6] /attr set extra
+[26/9/2016 12:25:11] /attr set attack 100
+[26/9/2016 12:25:26] /attr set attack 100
+[26/9/2016 12:25:46] /attr set attackspeed 100
+[26/9/2016 12:30:24] /attr aid 100
+[26/9/2016 12:30:37] /i magic sword
+[26/9/2016 12:30:47] /attr text "hola"
+[26/9/2016 12:30:54] /attr set text "hola"
+[26/9/2016 12:31:9] /attr set attack 1
+[26/9/2016 12:31:13] /attr set attack 1
+[26/9/2016 12:31:17] /attr set attack 1
+[26/9/2016 12:34:40] /addsattack
+[26/9/2016 12:34:49] /addsattack 100
+[26/9/2016 12:36:15] /addsattack 100
+[26/9/2016 12:36:39] /addsattack 100
+[26/9/2016 12:40:7] /addsattack 100
+[26/9/2016 12:40:26] /addsattack 1000
+[26/9/2016 12:40:43] /addskill Ruxaxup, sword, 100
+[26/9/2016 12:41:33] /addskill Ruxaxup, sword
+[26/9/2016 12:41:35] /addskill Ruxaxup, sword
+[26/9/2016 12:41:36] /addskill Ruxaxup, sword
+[26/9/2016 12:41:38] /addskill Ruxaxup, sword
+[26/9/2016 12:41:39] /addskill Ruxaxup, sword
+[26/9/2016 12:41:39] /addskill Ruxaxup, sword
+[26/9/2016 12:41:39] /addskill Ruxaxup, sword
+[26/9/2016 12:41:55] /addskill Ruxaxup,sword
+[26/9/2016 12:41:55] /addskill Ruxaxup,sword
+[26/9/2016 12:41:55] /addskill Ruxaxup,sword
+[26/9/2016 12:41:56] /addskill Ruxaxup,sword
+[26/9/2016 12:41:56] /addskill Ruxaxup,sword
+[26/9/2016 12:41:56] /addskill Ruxaxup,sword
+[26/9/2016 12:41:56] /addskill Ruxaxup,sword
+[26/9/2016 12:41:56] /addskill Ruxaxup,sword
+[26/9/2016 12:41:56] /addskill Ruxaxup,sword
+[26/9/2016 12:41:56] /addskill Ruxaxup,sword
+[26/9/2016 12:41:56] /addskill Ruxaxup,sword
+[26/9/2016 12:41:56] /addskill Ruxaxup,sword
+[26/9/2016 12:41:56] /addskill Ruxaxup,sword
+[26/9/2016 12:41:56] /addskill Ruxaxup,sword
+[26/9/2016 12:41:56] /addskill Ruxaxup,sword
+[26/9/2016 12:41:56] /addskill Ruxaxup,sword
+[26/9/2016 12:41:56] /addskill Ruxaxup,sword
+[26/9/2016 12:41:56] /addskill Ruxaxup,sword
+[26/9/2016 12:41:56] /addskill Ruxaxup,sword
+[26/9/2016 12:41:56] /addskill Ruxaxup,sword
+[26/9/2016 12:41:56] /addskill Ruxaxup,sword
+[26/9/2016 12:41:56] /addskill Ruxaxup,sword
+[26/9/2016 12:41:56] /addskill Ruxaxup,sword
+[26/9/2016 12:41:56] /addskill Ruxaxup,sword
+[26/9/2016 12:41:56] /addskill Ruxaxup,sword
+[26/9/2016 12:41:56] /addskill Ruxaxup,sword
+[26/9/2016 12:41:56] /addskill Ruxaxup,sword
+[26/9/2016 12:41:56] /addskill Ruxaxup,sword
+[26/9/2016 12:41:56] /addskill Ruxaxup,sword
+[26/9/2016 12:41:56] /addskill Ruxaxup,sword
+[26/9/2016 12:41:56] /addskill Ruxaxup,sword
+[26/9/2016 12:41:56] /addskill Ruxaxup,sword
+[26/9/2016 12:41:56] /addskill Ruxaxup,sword
+[26/9/2016 12:41:57] /addskill Ruxaxup,sword
+[26/9/2016 12:41:57] /addskill Ruxaxup,sword
+[26/9/2016 12:41:57] /addskill Ruxaxup,sword
+[26/9/2016 12:41:57] /addskill Ruxaxup,sword
+[26/9/2016 12:41:57] /addskill Ruxaxup,sword
+[26/9/2016 12:41:57] /addskill Ruxaxup,sword
+[26/9/2016 12:41:58] /addskill Ruxaxup,sword
+[26/9/2016 12:41:58] /addskill Ruxaxup,sword
+[26/9/2016 12:41:58] /addskill Ruxaxup,sword
+[26/9/2016 12:41:58] /addskill Ruxaxup,sword
+[26/9/2016 12:41:58] /addskill Ruxaxup,sword
+[26/9/2016 12:41:58] /addskill Ruxaxup,sword
+[26/9/2016 12:41:58] /addskill Ruxaxup,sword
+[26/9/2016 12:41:58] /addskill Ruxaxup,sword
+[26/9/2016 12:41:58] /addskill Ruxaxup,sword
+[26/9/2016 12:41:59] /addskill Ruxaxup,sword
+[26/9/2016 12:41:59] /addskill Ruxaxup,sword
+[26/9/2016 12:41:59] /addskill Ruxaxup,sword
+[26/9/2016 12:41:59] /addskill Ruxaxup,sword
+[26/9/2016 12:41:59] /addskill Ruxaxup,sword
+[26/9/2016 12:41:59] /addskill Ruxaxup,sword
+[26/9/2016 12:41:59] /addskill Ruxaxup,sword
+[26/9/2016 12:41:59] /addskill Ruxaxup,sword
+[26/9/2016 12:41:59] /addskill Ruxaxup,sword
+[26/9/2016 12:41:59] /addskill Ruxaxup,sword
+[26/9/2016 12:41:59] /addskill Ruxaxup,sword
+[26/9/2016 12:41:59] /addskill Ruxaxup,sword
+[26/9/2016 12:41:59] /addskill Ruxaxup,sword
+[26/9/2016 12:41:59] /addskill Ruxaxup,sword
+[26/9/2016 12:41:59] /addskill Ruxaxup,sword
+[26/9/2016 12:42:0] /addskill Ruxaxup,sword
+[26/9/2016 12:42:0] /addskill Ruxaxup,sword
+[26/9/2016 12:42:4] /addskill Ruxaxup,sword
+[26/9/2016 12:42:4] /addskill Ruxaxup,sword
+[26/9/2016 12:42:5] /addskill Ruxaxup,sword
+[26/9/2016 12:42:5] /addskill Ruxaxup,sword
+[26/9/2016 12:42:5] /addskill Ruxaxup,sword
+[26/9/2016 12:42:5] /addskill Ruxaxup,sword
+[26/9/2016 12:42:5] /addskill Ruxaxup,sword
+[26/9/2016 12:42:5] /addskill Ruxaxup,sword
+[26/9/2016 12:42:5] /addskill Ruxaxup,sword
+[26/9/2016 12:42:5] /addskill Ruxaxup,sword
+[26/9/2016 12:42:5] /addskill Ruxaxup,sword
+[26/9/2016 12:42:5] /addskill Ruxaxup,sword
+[26/9/2016 12:42:5] /addskill Ruxaxup,sword
+[26/9/2016 12:42:5] /addskill Ruxaxup,sword
+[26/9/2016 12:42:5] /addskill Ruxaxup,sword
+[26/9/2016 12:42:6] /addskill Ruxaxup,sword
+[26/9/2016 12:42:6] /addskill Ruxaxup,sword
+[26/9/2016 12:42:6] /addskill Ruxaxup,sword
+[26/9/2016 12:42:6] /addskill Ruxaxup,sword
+[26/9/2016 12:42:6] /addskill Ruxaxup,sword
+[26/9/2016 12:42:6] /addskill Ruxaxup,sword
+[26/9/2016 12:42:6] /addskill Ruxaxup,sword
+[26/9/2016 12:42:6] /addskill Ruxaxup,sword
+[26/9/2016 12:42:6] /addskill Ruxaxup,sword
+[26/9/2016 12:43:2] /a 30
+[26/9/2016 12:43:3] /a 30
+[26/9/2016 12:43:3] /a 30
+[26/9/2016 12:43:4] /a 30
+[26/9/2016 12:43:5] /a 30
+[26/9/2016 12:43:6] /a 30
+[26/9/2016 12:43:9] /up
+[26/9/2016 12:44:59] /addsattack 100
+[26/9/2016 12:45:10] /m training monk

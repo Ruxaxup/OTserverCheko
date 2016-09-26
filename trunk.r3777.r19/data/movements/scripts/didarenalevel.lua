@@ -9,7 +9,7 @@ function onStepIn(cid, item, pos, fromPosition)
 		doTeleportThing(cid, arenaKickPosition, TRUE)
 	else
 		doTeleportThing(cid, fromPosition, TRUE)
-		doPlayerSendTextMessage(cid,MESSAGE_STATUS_CONSOLE_ORANGE,'First kill the monster!')
+		doPlayerSendTextMessage(cid,MESSAGE_STATUS_CONSOLE_ORANGE,'Primeiro mate o monstro!')
 	end
 	return TRUE
 end

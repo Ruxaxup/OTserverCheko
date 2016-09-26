@@ -45,7 +45,6 @@
         <item id="2567" chance="33000"/> --Wooden Spoon
         <item id="1681" chance="5500"/> --Blue Pillow
         <item id="2213" chance="1500"/> --Dwarven ring
-        <item id="6107" chance="1500"/> --staff
 		<item id="9808" chance="3500"/> --Rusty Armor
       </inside>
     </item>

@@ -1,0 +1,45 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<monster name="Brigand" nameDescription="a brigand" race="undead" experience="300" speed="350" manacost="100000000">
+  <health now="6000" max="6000"/>
+  <look type="153" head="0" body="79" legs="94" feet="114" addons="3" corpse="0"/>
+  <targetchange interval="5000" chance="8"/>
+  <strategy attack="100" defense="0"/>
+   <flags>
+    <flag summonable="0"/>
+    <flag attackable="1"/>
+    <flag hostile="1"/>
+    <flag illusionable="1"/>
+    <flag convinceable="1"/>
+    <flag pushable="0"/>
+    <flag canpushitems="1"/>
+    <flag canpushcreatures="0"/>
+    <flag targetdistance="4"/>
+    <flag staticattack="90"/>
+    <flag runonhealth="6000"/>
+  </flags>
+  <attacks>
+    <attack name="melee" interval="2000" skill="20" attack="30"/>
+    <attack name="physical" interval="2000" chance="21" range="9" min="-5" max="-10">
+      <attribute key="shootEffect" value="arrow"/>
+    </attack>
+  </attacks>
+  <defenses armor="15" defense="10"/>
+  <immunities>
+    <immunity physical="0"/>
+    <immunity energy="0"/>
+    <immunity fire="0"/>
+    <immunity poison="0"/>
+    <immunity lifedrain="0"/>
+    <immunity paralyze="0"/>
+    <immunity outfit="0"/>
+    <immunity drunk="0"/>
+    <immunity invisible="0"/>
+  </immunities>
+  <voices interval="5000" chance="10">
+    <voice sentence="I might take you to a secret place..."/>
+    <voice sentence="I bet you can't beat me..."/>
+  </voices>
+  <loot>
+    <item id="2148" countmax="200" chance1="100000" chancemax="0"/>
+  </loot>
+</monster>
