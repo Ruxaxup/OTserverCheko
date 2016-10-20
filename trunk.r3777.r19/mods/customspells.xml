@@ -12,5 +12,6 @@
 	<instant name="Apocalypse" words="exevo mas lux" lvl="40" manapercent="60" exhaustion="2000" needlearn="0" event="script" value="customspells/apocalypse.lua">
 		<vocation id="1"/>
 		<vocation id="5"/>
-	</instant>
+	<vocation id="6"/>
+</instant>
 </mod>

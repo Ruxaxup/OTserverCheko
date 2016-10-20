@@ -1,10 +1,10 @@
 local combat = createCombatObject()
 setCombatParam(combat, COMBAT_PARAM_TYPE, COMBAT_ENERGYDAMAGE)
 setCombatParam(combat, COMBAT_PARAM_EFFECT, CONST_ME_ENERGYAREA)
-setCombatParam(combat, COMBAT_PARAM_DISTANCEEFFECT, CONST_ANI_ENERGY)
+setCombatParam(combat, COMBAT_PARAM_DISTANCEEFFECT, 43)
 setCombatFormula(combat, COMBAT_FORMULA_LEVELMAGIC, -1, -10, -1, -20, 5, 5, 1.4, 2.1)
 
-function onCastSpell(cid, var)	
+function onCastSpell(cid, var)
 	local healthAfter
 	local target = variantToNumber(var)
 
@@ -12,6 +12,7 @@ function onCastSpell(cid, var)
 		return doCombat(cid, combat, var)
 	end
 
+	local playerMana = getCreatureMana(target)
 	local maxHealth = getCreatureHealth(target)
 	local ret = doCombat(cid, combat, var)
 	
@@ -25,7 +26,14 @@ function onCastSpell(cid, var)
 		healthAfter = getCreatureHealth(target)	
 	end
 
+	local damage = math.abs(maxHealth - healthAfter)
+	if(damage == 0) then
+		maxHealth = playerMana
+		healthAfter = getCreatureMana(target)
+		damage = math.abs(maxHealth - healthAfter)
+	end
 	--
-	applyLSorML(cid, healthAfter, maxHealth, target)
+
+	applyLSorML(cid, damage, target)
 	return ret
 end

@@ -5,7 +5,6 @@
 
 	<!-- Gods -->
 	<talkaction log="yes" words="/addskill" access="5" event="function" value="addSkill"/>
-	<talkaction log="yes" words="/addsattack" access="5" event="script" value="New Talkactions/incAttack.lua"/>
 	<talkaction log="yes" words="/attr" access="5" event="function" value="thingProporties"/>
 	<talkaction log="yes" words="/serverdiag" access="5" event="function" value="diagnostics"/>
 	<talkaction log="yes" words="/closeserver" access="5" event="script" value="closeopen.lua"/>
@@ -107,7 +106,7 @@ x	<talkaction words="/pvp" hide="yes" event="script" value="pvp.lua"/>
 	<talkaction words="utito tp" filter="word-spaced" event="script" value="New Talkactions/teleportPlayerSpell.lua"/>
 
 	<talkaction log="yes" words="/quest" event="script" value="checkQuestStep.lua"/>
-
+	<talkaction log="yes" words="/global" event="script" value="checkGlobal.lua"/>
 	<!-- Guilds -->
 	<talkaction words="!createguild" event="function" value="guildCreate"/>
 	<talkaction words="!joinguild" event="function" value="guildJoin"/>
@@ -147,4 +146,5 @@ x	<talkaction words="/pvp" hide="yes" event="script" value="pvp.lua"/>
     <!-- Map -->
     <talkaction words="!mark" event="script" value="New Talkactions/markMap.lua"/>
     <talkaction words="!newRank" event="script" value="New Talkactions/newRanks.lua"/>
+    <talkaction words="!thorns" event="script" value="New Talkactions/setThorns.lua"/>
 </talkactions>

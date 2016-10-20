@@ -18,8 +18,7 @@
             doPlayerAddItem(cid, 8819, 1)--Magician Robe
             doPlayerAddItem(cid, 2648, 1)--Chain Legs
             doPlayerAddItem(cid, 2643, 1)--Leather Boots
-            doPlayerAddItem(cid, 1988, 1)--Brown Backpack
-            doPlayerAddItem(cid, 2160, 2)--Money
+            doPlayerAddItem(cid, 1988, 1)--Brown Backpack            
             doPlayerAddItem(cid, 7620, 20)--Mana Potion
 			doPlayerAddItem(cid, 2789, 100)--Food
         doPlayerSendTextMessage(cid,22,""..getPlayerName(cid).." Recoja sus items antes de entrar al portal!!.")
@@ -31,8 +30,7 @@
             doPlayerAddItem(cid, 8819, 1)--Magician Robe
             doPlayerAddItem(cid, 2648, 1)--Chain Legs
             doPlayerAddItem(cid, 2643, 1)--Leather Boots
-            doPlayerAddItem(cid, 1988, 1)--Brown Backpack
-            doPlayerAddItem(cid, 2160, 2)--Money
+            doPlayerAddItem(cid, 1988, 1)--Brown Backpack            
             doPlayerAddItem(cid, 7620, 20)--Mana Potion
 			doPlayerAddItem(cid, 2789, 100)--Food
         doPlayerSendTextMessage(cid,22,""..getPlayerName(cid).." Recoja sus items antes de entrar al portal!!.")
@@ -43,8 +41,7 @@
             doPlayerAddItem(cid, 2660, 1)--Cloak
             doPlayerAddItem(cid, 8923, 1)--Legs
             doPlayerAddItem(cid, 2643, 1)--Leather Boots
-            doPlayerAddItem(cid, 1988, 1)--Brown Backpack
-            doPlayerAddItem(cid, 2160, 2)--Money
+            doPlayerAddItem(cid, 1988, 1)--Brown Backpack            
             doPlayerAddItem(cid, 7618, 20)--HP
 			doPlayerAddItem(cid, 2789, 100)--Food
         doPlayerSendTextMessage(cid,22,""..getPlayerName(cid).." Recoja sus items antes de entrar al portal!!.")
@@ -58,16 +55,38 @@
             doPlayerAddItem(cid, 1988, 1)--Brown Backpack
             doPlayerAddItem(cid, 8602, 1)--Sword
             doPlayerAddItem(cid, 2439, 1)--Club
-            doPlayerAddItem(cid, 8601, 1)--Axe
-            doPlayerAddItem(cid, 2160, 2)--Money
+            doPlayerAddItem(cid, 8601, 1)--Axe            
             doPlayerAddItem(cid, 7618, 20)--HP
 			doPlayerAddItem(cid, 2789, 100)--Food
-        doPlayerSendTextMessage(cid,22,""..getPlayerName(cid).." Recoja sus items antes de entrar al portal!!.")
+
+        doPlayerSendTextMessage(cid,22,""..getPlayerName(cid).." Notice that you don't have a shovel nor a rope!! Just be careful :D and have fun!")
         end
             doPlayerAddMapMark(cid,{x=1055,y=1087,z=7},MAPMARK_SWORD,"Offline Training Statues")
             doPlayerAddMapMark(cid,{x=1016,y=1022,z=7},MAPMARK_STAR,"Potions and Runes shop")
+            doPlayerAddMapMark(cid,{x = 1062, y = 1044, z = 7},MAPMARK_STAR,"Stop and Go shop")
             doPlayerAddMapMark(cid,{x=1030,y=1012,z=7},MAPMARK_BAG,"Rashid")
-            doPlayerAddMapMark(cid,{x=1070,y=1010,z=7},MAPMARK_BAG,"Training monks")
+            doPlayerAddMapMark(cid,{x=1070,y=1010,z=7},MAPMARK_SWORD,"Training monks")
+            doPlayerAddMapMark(cid,{x = 1022, y = 1020, z = 7},MAPMARK_BAG,"Jeweller")
+            doPlayerAddMapMark(cid,{x = 1034, y = 1041, z = 7},MAPMARK_TEMPLE,"Temple")
+            doPlayerAddMapMark(cid,{x = 1028, y = 1037, z = 7},MAPMARK_GREENNORTH,"Teleports")
+            doPlayerAddMapMark(cid,{x = 1040, y = 1046, z = 7},MAPMARK_EXCLAMATION,"Tasker")
+            doPlayerAddMapMark(cid,{x = 1080, y = 1064, z = 6},MAPMARK_FLAG,"Boat")
+            doPlayerAddMapMark(cid,{x = 1061, y = 1063, z = 7},MAPMARK_BAG,"Addon Seller")
+            --Hunt Spots
+            doPlayerAddMapMark(cid,{x = 1024, y = 1057, z = 7},MAPMARK_REDSOUTH,"Rotworms")
+            doPlayerAddMapMark(cid,{x = 1029, y = 1032, z = 7},MAPMARK_REDSOUTH,"Rotworms")
+            doPlayerAddMapMark(cid,{x = 1000, y = 1026, z = 7},MAPMARK_REDSOUTH,"Rotworms")
+            doPlayerAddMapMark(cid,{x = 965, y = 1065, z = 7},MAPMARK_REDSOUTH,"Cyclops")
+            doPlayerAddMapMark(cid,{x = 930, y = 1150, z = 7},MAPMARK_REDSOUTH,"POH")
+            doPlayerAddMapMark(cid,{x = 825, y = 1047, z = 7},MAPMARK_REDSOUTH,"Quaras")
+            doPlayerAddMapMark(cid,{x = 913, y = 1013, z = 7},MAPMARK_REDSOUTH,"Minotaurs")
+            doPlayerAddMapMark(cid,{x = 966, y = 1027, z = 7},MAPMARK_REDSOUTH,"Dwarves")
+            doPlayerAddMapMark(cid,{x = 1179, y = 945, z = 7},MAPMARK_REDSOUTH,"Pirates")
+            doPlayerAddMapMark(cid,{x = 1184, y = 1050, z = 7},MAPMARK_REDSOUTH,"Dragons")
+
+            --Towns
+            doPlayerAddMapMark(cid,{x = 1277, y = 806, z = 7},MAPMARK_TEMPLE,"Evolutions City")
+            --
             setPlayerStorageValue(cid, 30001, 1)
     end
      return TRUE

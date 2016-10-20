@@ -1,0 +1,747 @@
+<?xml version="1.0" encoding="utf-8"?>
+<mod name="CTF" version="1.0" author="Doggynub" contact="otland.net" enabled="yes">
+  <config name="toto"><![CDATA[
+
+--[[ Storage Settings]]--
+
+
+Owner = 1900 -- put empty storage
+
+FLAG2_INn = 4000 -- put empty storage
+
+FLAG_IN = 4001 -- put empty storage
+
+TEAM1_FLAGS = 3030 -- put empty storage
+
+TEAM2_FLAGS = 3031 -- put empty storage
+
+Event_Start = 3032 -- put empty storage
+
+Event_timeend = 3033 -- put empty storage
+
+Event_Tile_Close = 3039 -- put empty storage
+
+joined = 2023 --put empty storage
+
+Timer = 1010 --put empty storage
+
+--------------------------------------
+
+
+--[[ Places setting ]]--
+
+
+BLUE_FLAG = {x = 1325, y = 1173, z = 7} -- Lugar Bandera azul
+
+RED_FLAG = {x = 1316, y = 1097, z = 7} -- Lugar Bandera roja
+
+Tp_Place = {x=1058,y=1027,z=7} -- Lugar donde el telepuerto evento se va a crear.
+
+Wait_Place = {x=1255,y=1134,z=7} -- Los jugadores de posiciones del teleport seran enviado cuando el evento empieze 
+
+frompos = {x=1249,y=1128,z=7} --empezar a metros cuadrados en la sala de espera (1 piso)
+
+topos = {x=1261,y=1140,z=7} -- finales metros cuadrados en la sala de espera (1 piso)
+
+Red_Position = {x=1321,y=1105,z=7} -- Red team temple pos
+
+Blue_Position = {x=1321,y=1167,z=7} -- Blue team temple pos
+
+
+
+---------------------------------------
+
+
+--[[Event setting ]]--
+
+
+Event_WaitTime = 5 -- tiempo para la coleccion de jugador el evento se iniciara (en minutos)
+
+Event_MaxTime = 10 --- en minutos (este es el tiempo maximo para un evento de funcionamiento bb)
+
+Players_Speed = 2000 -- poner el nivel de velocidad de base en el evento (como si desea que la velocidad de lvl 300 entonces Wright 300)
+
+Flag_Holder_Speed = 2000 -- [Old-Style caracteristica] de velocidad para el jugador cuando tienen la bandera mejor no aumentar.
+
+TEAM2_NAME = "Red" -- team 2 name
+
+TEAM1_NAME = "Green" -- team 1 name
+
+FLAG_SCORE = 3 -- anotar cuando el equipo se gana
+
+Teleport_On_Score = false -- este transportara a todos los de su posicion en el equipo principal cuando una veintena uno una bandera, realizar manifestaciones falsas para desactivarlo.
+
+Players_Least_Number = 2 -- esto significa que si hay menos de 2 jugadores se unieron al evento sera cancelado
+
+Min_Join_Level = 50 -- min lvl para un jugador a unirse al evento
+
+rewards_random = {
+                                                [60] = { -- Rewards of 60% , if it is then it will randomly give one of the items in the items verible if there you put more than one item there
+                                                                        items = {9971,9971,9971}
+                                                                },
+
+                                                [30] = { -- Rewards of 30%
+                                                                        items = {9971,9971,9971}
+                                                                },
+
+
+                                                [10] = { -- Rewards of 10%
+                                                                        items = {9971,9971,9971}
+                                                                }
+                                        }
+
+
+]]></config>
+  <lib name="CTF-lib"><![CDATA[
+function isTeamTwo(cid)
+        return (isPlayer(cid) and getPlayerStorageValue(cid,5054) > -1)
+end
+function isTeamOne(cid)
+        return (isPlayer(cid) and getPlayerStorageValue(cid,5055) > -1)
+end
+function resetTheTeams(cid)
+        return (isPlayer(cid) and setPlayerStorageValue(cid,5054,-1) and setPlayerStorageValue(cid,5055,-1))
+end
+function setflagOwner(cid)
+        return setPlayerStorageValue(cid,Owner,1)
+end
+function flagOwner(cid)
+        return (isPlayer(cid) and getPlayerStorageValue(cid,Owner) > 0)
+end
+function releaseBF(cid)
+        setGlobalStorageValue(FLAG_IN,-1)
+        setPlayerStorageValue(cid,103, 0)
+        setPlayerStorageValue(cid,Owner,-1)
+return true
+end
+function releaseRF(cid)
+        setGlobalStorageValue(FLAG2_INn,-1)
+        setPlayerStorageValue(cid,103, 0)
+        setPlayerStorageValue(cid,Owner,-1)
+return true
+end
+function setFirstTeam(cid)
+        return setPlayerStorageValue(cid,5055,1)
+end
+function setSecondTeam(cid)
+        return setPlayerStorageValue(cid,5054,2)
+end
+function addToRed()
+        return setGlobalStorageValue(TEAM2_FLAGS,getGlobalStorageValue(TEAM2_FLAGS)+1)
+end
+function addToBlue()
+        return setGlobalStorageValue(TEAM1_FLAGS,getGlobalStorageValue(TEAM1_FLAGS)+1)
+end
+function getBlueScore()
+        return getGlobalStorageValue(TEAM1_FLAGS)
+end
+function getRedScore()
+        return getGlobalStorageValue(TEAM2_FLAGS)
+end
+function getTheSpeed(level)
+        value = (220 +(2 *(level -1)))
+        return value
+end
+
+function resetTheStorage()
+        setGlobalStorageValue(Event_Start,-1)
+        setGlobalStorageValue(Event_timeend,-1)
+        setGlobalStorageValue(TEAM1_FLAGS,0)
+        setGlobalStorageValue(FLAG2_INn,-1)
+        setGlobalStorageValue(FLAG_IN,-1)
+        setGlobalStorageValue(TEAM2_FLAGS,0)
+return true
+end
+function blueStolen()
+        return getGlobalStorageValue(FLAG_IN)
+end
+function redStolen()
+        return getGlobalStorageValue(FLAG2_INn)
+end
+function giveReward(cid)
+        local t = math.random(1,100)
+        if t <= 10 then
+                local rare = rewards_random[10].items[math.random(1,#rewards_random[10].items)]
+                doPlayerAddItem(cid,rare,1)
+                doPlayerSendTextMessage(cid,25,"Rare rate Reward : you won "..getItemNameById(rare)..".")
+
+        elseif t > 10 and t <= 40 then
+                local semi = rewards_random[30].items[math.random(1,#rewards_random[30].items)]
+                doPlayerAddItem(cid,semi,1)
+                doPlayerSendTextMessage(cid,25,"Semi rate Reward : you won "..getItemNameById(semi)..".")
+
+
+        elseif t > 40 then
+                local aver = rewards_random[60].items[math.random(1,#rewards_random[60].items)]
+                doPlayerAddItem(cid,aver,1)
+                doPlayerSendTextMessage(cid,25,"Averege rate Reward : you won "..getItemNameById(aver)..".")
+        end
+        return true
+end
+]]></lib>
+  <event type="login" name="Tutorial Login" event="script"><![CDATA[
+domodlib('toto')
+domodlib('CTF-lib')
+function onLogin(cid)
+        if getGlobalStorageValue(Event_Start) < 1 then
+                if isTeamOne(cid) or isTeamTwo(cid) then
+                        resetTheTeams(cid)
+                end
+        end
+        registerCreatureEvent(cid, "Attk")
+        registerCreatureEvent(cid, "ctff")
+        registerCreatureEvent(cid, "prepare")
+return true
+end
+]]></event>
+  <event type="combat" name="Attk" event="script"><![CDATA[
+domodlib('toto')
+domodlib('CTF-lib')
+
+function onCombat(cid, target)
+        if isTeamOne(cid) and isTeamOne(target) then
+                return false
+        end
+        if isTeamTwo(cid) and isTeamTwo(target) then
+                return false
+        end
+        return true
+end
+]]></event>
+  <event type="statschange" name="prepare" event="script"><![CDATA[
+domodlib('toto')
+domodlib('CTF-lib')
+
+local corpse_ids = {
+                [0] = 3065, -- female
+                [1] = 3058 -- male
+}
+function onStatsChange(cid, attacker, type, combat, value)
+                if combat == COMBAT_HEALING then
+                        return true
+                end
+                if getCreatureHealth(cid) > value then
+                        return true
+                end
+                if getGlobalStorageValue(Event_Start) > 0 then
+                        if flagOwner(cid) then
+                                if isTeamOne(cid) then
+                                        doItemSetAttribute(doCreateItem(corpse_ids[getPlayerSex(cid)], 1, getThingPos(cid)), "description", "You recognize "..getCreatureName(cid)..". He was killed by "..(isMonster(attacker) and "a "..string.lower(getCreatureName(attacker)) or isCreature(attacker) and getCreatureName(attacker) or "a field item").."[Flag Holder].")
+                                        doTeleportThing(cid,Blue_Position,false)
+                                        doSendMagicEffect(Blue_Position,10)
+                                        doCreatureAddHealth(cid,getCreatureMaxHealth(cid))
+                                        doCreatureAddMana(cid,getCreatureMaxMana(cid))
+                                        releaseRF(cid)
+                                                        for _,cid in ipairs(getPlayersOnline()) do
+                                                                if isTeamOne(cid) or isTeamTwo(cid) then
+                                                                        doPlayerSendTextMessage(cid,22,getCreatureName(cid) .. " has died with the "..TEAM2_NAME.." team flag. The flag is returned back to the "..TEAM1_NAME.." team.")
+                                                                end
+                                                        end
+                                        return false
+                                elseif isTeamTwo(cid) then
+                                        doItemSetAttribute(doCreateItem(corpse_ids[getPlayerSex(cid)], 1, getThingPos(cid)), "description", "You recognize "..getCreatureName(cid)..". He was killed by "..(isMonster(attacker) and "a "..string.lower(getCreatureName(attacker)) or isCreature(attacker) and getCreatureName(attacker) or "a field item").."[Flag Holder].")
+                                        doTeleportThing(cid,Red_Position,false)
+                                        doSendMagicEffect(Red_Position,10)
+                                        doCreatureAddHealth(cid,getCreatureMaxHealth(cid))
+                                        doCreatureAddMana(cid,getCreatureMaxMana(cid))
+                                        releaseBF(cid)
+                                                        for _,cid in ipairs(getPlayersOnline()) do
+                                                                if isTeamOne(cid) or isTeamTwo(cid) then
+                                                                        doPlayerSendTextMessage(cid,22,getCreatureName(cid) .. " has died with the "..TEAM1_NAME.." team flag. The flag is returned back to the "..TEAM1_NAME.." team.")
+                                                                end
+                                                        end
+                                return false
+                                end
+
+                        else
+                                if isTeamOne(cid) or isTeamTwo(cid) then
+                                        doItemSetAttribute(doCreateItem(corpse_ids[getPlayerSex(cid)], 1, getThingPos(cid)), "description", "You recognize "..getCreatureName(cid)..". He was killed by "..(isMonster(attacker) and "a "..string.lower(getCreatureName(attacker)) or isCreature(attacker) and getCreatureName(attacker) or "a field item").."[Normal kill].")
+                                        doTeleportThing(cid,( isTeamTwo(cid) and Red_Position or Blue_Position ),false)
+                                        doSendMagicEffect(Red_Position,10)
+                                        doCreatureAddHealth(cid,getCreatureMaxHealth(cid))
+                                        doCreatureAddMana(cid,getCreatureMaxMana(cid))
+                                        return false
+                                end
+                        end
+
+                end
+return true
+end
+
+]]></event>
+  <movevent type="StepIn" actionid="6000" event="script"><![CDATA[
+domodlib('toto')
+domodlib('CTF-lib')
+
+function eventEnds()
+        doBroadcastMessage('CTF-Event : The '..TEAM2_NAME..' team won and reciaved their reward.')
+                for _,cid in ipairs(getPlayersOnline()) do
+                        if isTeamTwo(cid) then
+                                doTeleportThing(cid,getTownTemplePosition(getPlayerTown(cid)),false)
+                                doSendMagicEffect(getTownTemplePosition(getPlayerTown(cid)),10)
+                                doRemoveConditions(cid,false)
+                                resetTheTeams(cid)
+                                doChangeSpeed(cid, getTheSpeed(getPlayerLevel(cid)) - getCreatureSpeed(cid))
+                                giveReward(cid)
+
+                        elseif isTeamOne(cid) then
+                                doTeleportThing(cid,getTownTemplePosition(getPlayerTown(cid)),false)
+                                doSendMagicEffect(getTownTemplePosition(getPlayerTown(cid)),10)
+                                doRemoveConditions(cid,false)
+                                doPlayerSendTextMessage(cid,22,'Your team have lost.')
+                                resetTheTeams(cid)
+                                doChangeSpeed(cid, getTheSpeed(getPlayerLevel(cid)) - getCreatureSpeed(cid))
+                        end
+                end
+        addEvent(resetTheStorage,5)
+end
+function onStepIn(cid, item, position, fromPosition)
+        if getGlobalStorageValue(Event_Start) > 0 and getGlobalStorageValue(Event_timeend) > 0 then
+                if isTeamTwo(cid) and redStolen() < 0 then
+                        if not flagOwner(cid) then
+                                doTeleportThing(cid, fromPosition,TRUE)
+                                doSendMagicEffect(getThingPos(cid),2)
+                                doPlayerSendTextMessage(cid, 27, "This is your team flag, you cant take it!")
+                        end
+                elseif isTeamTwo(cid) and redStolen() > 0 and blueStolen() < 0 then
+                        doPlayerSendTextMessage(cid, 27, "Your team's Flag has been stolen, go get it back!")
+                        doTeleportThing(cid, fromPosition,TRUE)
+                        doSendMagicEffect(getThingPos(cid),2)
+                  return true
+                end
+                if isTeamTwo(cid) and flagOwner(cid) and blueStolen() > 0 and redStolen() < 0 then
+                        if getRedScore() == FLAG_SCORE -1 then
+                                addEvent(eventEnds,1000)
+                                addToRed()
+                                doTeleportThing(cid, fromPosition,TRUE)
+                                doChangeSpeed(cid, getTheSpeed(Players_Speed) - getCreatureSpeed(cid) )
+                                releaseBF(cid)
+                                        for _,tid in ipairs(getPlayersOnline()) do
+                                                if isTeamOne(tid) or isTeamTwo(tid) then
+                                                        doPlayerSendTextMessage(tid,22,getCreatureName(cid) .. " have captured the last flag and earned match win to the ".. TEAM2_NAME.." team!")
+                                                end
+                                        end
+                        else
+                                releaseBF(cid)
+                                addToRed()
+                                doTeleportThing(cid, fromPosition,TRUE)
+                                doChangeSpeed(cid, getTheSpeed(Players_Speed) - getCreatureSpeed(cid) )
+                                        for _,tid in ipairs(getPlayersOnline()) do
+                                                if isTeamOne(tid) or isTeamTwo(tid) then
+                                                        doPlayerSendTextMessage(tid,22,getCreatureName(cid) .. " have captured the flag and earned 1 point to the ".. TEAM2_NAME.." team!")
+                                                                if Teleport_On_Score == true then
+                                                                        doTeleportThing(tid,( isTeamTwo(tid) and Red_Position or Blue_Position ), false)
+                                                                        doSendMagicEffect(getThingPos(tid),10)
+                                                                end
+                                                end
+                                        end
+                        end
+                end
+                if isTeamOne(cid) then
+                        if blueStolen() < 0 and redStolen() > 0 then
+                                if flagOwner(cid) then
+                                        doPlayerSendTextMessage(cid, 27, "You already holding the flag!")
+                                        doTeleportThing(cid, fromPosition,TRUE)
+                                        doSendMagicEffect(getThingPos(cid),2)
+                                elseif (not flagOwner(cid)) then
+                                        doPlayerSendTextMessage(cid, 27, "Your Team mates already stole the oponent flag, defend him!")
+                                        doTeleportThing(cid, fromPosition,TRUE)
+                                        doSendMagicEffect(getThingPos(cid),2)
+                                end
+                        elseif blueStolen() > 0 and redStolen() < 0 then
+                                doPlayerSendTextMessage(cid, 27, "Your team's flag is taken you can't capture or steel a flag!")
+                                doTeleportThing(cid, fromPosition,TRUE)
+                                doSendMagicEffect(getThingPos(cid),2)
+                        end
+                        if redStolen() < 0 and blueStolen() < 0 then
+                                setGlobalStorageValue(FLAG2_INn,1)
+                                setflagOwner(cid)
+                                setPlayerStorageValue(cid,103, os.time()+300)
+                                doTeleportThing(cid, fromPosition,TRUE)
+                                doChangeSpeed(cid, getTheSpeed(Flag_Holder_Speed)- getCreatureSpeed(cid) )
+                                        for _,tid in ipairs(getPlayersOnline()) do
+                                                if isTeamOne(tid) or isTeamTwo(tid) then
+                                                        doPlayerSendTextMessage(tid,22,getCreatureName(cid) .. " stolen the "..TEAM2_NAME.." team flag!")
+                                                end
+                                        end
+                        end
+                end
+        end
+return true
+end
+]]></movevent>
+  <movevent type="StepIn" actionid="3435" event="script"><![CDATA[
+domodlib('toto')
+domodlib('CTF-lib')
+function onStepIn(cid, item, position, lastPosition, fromPosition, toPosition, actor)
+        if getStorage(Event_Tile_Close) > 0 then
+                if getPlayerLevel(cid) < Min_Join_Level then
+                  doTeleportThing(cid,fromPosition,false)
+                        doSendMagicEffect(fromPosition,10)
+                        doPlayerSendTextMessage(cid,21,"Only players of level "..Min_Join_Level.." are allowed to pass.")
+                else
+                        doTeleportThing(cid,Wait_Place,false)
+                        doSendMagicEffect(Wait_Place,10)
+                end
+        else
+                doTeleportThing(cid,fromPosition,false)
+                doSendMagicEffect(fromPosition,10)
+                doPlayerSendTextMessage(cid,21,"Come back later, event is closed now.")
+        end
+return true
+end
+
+]]></movevent>
+  <movevent type="StepIn" actionid="6001" event="script"><![CDATA[
+domodlib('toto')
+domodlib('CTF-lib')
+
+function eventEnded()
+        if getGlobalStorageValue(Event_Start) > 0 and getGlobalStorageValue(Event_timeend) > 0 then
+                doBroadcastMessage('CTF-Event : The '.. TEAM1_NAME..' team won and reciaved their reward.')
+                        for _,cid in ipairs(getPlayersOnline()) do
+                                if isTeamOne(cid) then
+                                        doTeleportThing(cid,getTownTemplePosition(getPlayerTown(cid)),false)
+                                        doSendMagicEffect(getTownTemplePosition(getPlayerTown(cid)),10)
+                                        doRemoveConditions(cid,false)
+                                        resetTheTeams(cid)
+                                        doChangeSpeed(cid, getTheSpeed(getPlayerLevel(cid)) - getCreatureSpeed(cid))
+                                        giveReward(cid)
+                                elseif isTeamTwo(cid) then
+                                        doTeleportThing(cid,getTownTemplePosition(getPlayerTown(cid)),false)
+                                        doSendMagicEffect(getTownTemplePosition(getPlayerTown(cid)),10)
+                                        doRemoveConditions(cid,false)
+                                        doPlayerSendTextMessage(cid,22,'Your team have lost.')
+                                        resetTheTeams(cid)
+                                        doChangeSpeed(cid, getTheSpeed(getPlayerLevel(cid)) - getCreatureSpeed(cid))
+                                end
+                        end
+        end
+        addEvent(resetTheStorage,5)
+end
+function onStepIn(cid, item, position, fromPosition)
+        if getGlobalStorageValue(Event_Start) > 0 and getGlobalStorageValue(Event_timeend) > 0 then
+                if isTeamOne(cid) and blueStolen() < 0 then
+                        if not flagOwner(cid) then
+                                doTeleportThing(cid, fromPosition,TRUE)
+                                doSendMagicEffect(getThingPos(cid),2)
+                                doPlayerSendTextMessage(cid, 27, "This is your team flag, you cant take it!")
+                        end
+                elseif isTeamOne(cid) and blueStolen() > 0 and redStolen() < 0 then
+                        doPlayerSendTextMessage(cid, 27, "Your team's Flag has been stolen, go get it back!")
+                        doTeleportThing(cid, fromPosition,TRUE)
+                        doSendMagicEffect(getThingPos(cid),2)
+                return true
+                end
+                if isTeamOne(cid) and flagOwner(cid) and redStolen() > 0 and blueStolen() < 0 then
+                        if getBlueScore() == FLAG_SCORE -1 then
+                                addEvent(eventEnded,1000)
+                                addToBlue()
+                                doTeleportThing(cid, fromPosition,TRUE)
+                                doChangeSpeed(cid, getTheSpeed(Players_Speed) - getCreatureSpeed(cid) )
+                                releaseRF(cid)
+                                        for _,tid in ipairs(getPlayersOnline()) do
+                                                if isTeamOne(tid) or isTeamTwo(tid) then
+                                                        doPlayerSendTextMessage(tid,22,getCreatureName(cid) .. " have captured the last flag and earned match win to the ".. TEAM1_NAME.." team!")
+                                                end
+                                        end
+                        else
+                                releaseRF(cid)
+                                addToBlue()
+                                doTeleportThing(cid, fromPosition,TRUE)
+                                doChangeSpeed(cid, getTheSpeed(Players_Speed) - getCreatureSpeed(cid) )
+                                        for _,tid in ipairs(getPlayersOnline()) do
+                                                if isTeamOne(tid) or isTeamTwo(tid) then
+                                                        doPlayerSendTextMessage(tid,22,getCreatureName(cid) .. " have captured the flag and earned 1 point to the ".. TEAM1_NAME.." team!")
+                                                                if Teleport_On_Score == true then
+                                                                        doTeleportThing(tid,( isTeamTwo(tid) and Red_Position or Blue_Position ), false)
+                                                                        doSendMagicEffect(getThingPos(tid),10)
+                                                                end
+                                                end
+                                        end
+                        end
+                end
+                if isTeamTwo(cid) then
+                        if blueStolen() > 0 and redStolen() < 0 then
+                                if flagOwner(cid) then
+                                        doPlayerSendTextMessage(cid, 27, "You already holding the flag!")
+                                        doTeleportThing(cid, fromPosition,TRUE)
+                                        doSendMagicEffect(getThingPos(cid),2)
+                                elseif (not flagOwner(cid)) then
+                                        doPlayerSendTextMessage(cid, 27, "Your Team mates already stole the oponent flag, defend him!")
+                                        doTeleportThing(cid, fromPosition,TRUE)
+                                        doSendMagicEffect(getThingPos(cid),2)
+                                end
+                        elseif redStolen() > 0 and blueStolen() < 0 then
+                                doPlayerSendTextMessage(cid, 27, "Your team's flag is taken you can't capture or steel a flag!")
+                                doTeleportThing(cid, fromPosition,TRUE)
+                                doSendMagicEffect(getThingPos(cid),2)
+                        end
+                        if blueStolen() < 0 and redStolen() < 0 then
+                                setGlobalStorageValue(FLAG_IN,1)
+                                setflagOwner(cid)
+                                setPlayerStorageValue(cid,103, os.time()+300)
+                                doTeleportThing(cid, fromPosition,TRUE)
+                                doChangeSpeed(cid, getTheSpeed(Flag_Holder_Speed)- getCreatureSpeed(cid) )
+                                        for _,tid in ipairs(getPlayersOnline()) do
+                                                if isTeamOne(tid) or isTeamTwo(tid) then
+                                                        doPlayerSendTextMessage(tid,22,getCreatureName(cid) .. " stolen the "..TEAM1_NAME.." team flag!")
+                                                end
+                                        end
+                        end
+                end
+        end
+return true
+end
+]]></movevent>
+  <globalevent name="ctf" interval="1800000" event="script"><![CDATA[
+domodlib('toto')
+domodlib('CTF-lib')
+local players = {}
+local bmale = createConditionObject(CONDITION_OUTFIT)
+                setConditionParam(bmale, CONDITION_PARAM_TICKS, -1)
+                addOutfitCondition(bmale, {lookType = math.random(128,134), lookHead = 115, lookBody =114, lookLegs = 81, lookFeet = 81, lookTypeEx = 0, lookAddons = 3})
+
+        local bfemale = createConditionObject(CONDITION_OUTFIT)
+                setConditionParam(bfemale, CONDITION_PARAM_TICKS, -1)
+                addOutfitCondition(bfemale, {lookType = math.random(136,142), lookHead = 115, lookBody =114, lookLegs = 81, lookFeet = 81, lookTypeEx = 0, lookAddons = 3})
+
+        local rmale = createConditionObject(CONDITION_OUTFIT)
+                setConditionParam(rmale, CONDITION_PARAM_TICKS, -1)
+                addOutfitCondition(rmale, {lookType = math.random(128,134), lookHead = 94, lookBody = 94, lookLegs = 94, lookFeet = 94, lookTypeEx = 0, lookAddons = 3})
+
+        local rfemale = createConditionObject(CONDITION_OUTFIT)
+                setConditionParam(rfemale, CONDITION_PARAM_TICKS, -1)
+                addOutfitCondition(rfemale, {lookType = math.random(136,142),lookHead = 94, lookBody = 94, lookLegs = 94, lookFeet = 94, lookTypeEx = 0, lookAddons = 3})
+        local fight = createConditionObject(CONDITION_INFIGHT)
+                setConditionParam(fight, CONDITION_PARAM_TICKS, -1)
+function eventEnd()
+        if getGlobalStorageValue(Event_Start) > 0 and getGlobalStorageValue(Event_timeend) > 0 then
+                if getRedScore() > getBlueScore() then
+                        doBroadcastMessage('CTF-Event : The '.. TEAM2_NAME..' team won and recieved their reward.')
+                                for _,cid in ipairs(getPlayersOnline()) do
+                                        if isTeamTwo(cid) then
+                                                doTeleportThing(cid,getTownTemplePosition(getPlayerTown(cid)),false)
+                                                doSendMagicEffect(getTownTemplePosition(getPlayerTown(cid)),10)
+                                                doRemoveConditions(cid,false)
+                                                resetTheTeams(cid)
+                                                doChangeSpeed(cid, getTheSpeed(getPlayerLevel(cid)) - getCreatureSpeed(cid))
+                                                giveReward(cid)
+                                        elseif isTeamOne(cid) then
+                                                doTeleportThing(cid,getTownTemplePosition(getPlayerTown(cid)),false)
+                                                doSendMagicEffect(getTownTemplePosition(getPlayerTown(cid)),10)
+                                                doRemoveConditions(cid,false)
+                                                doPlayerSendTextMessage(cid,22,'Your team have lost.')
+                                                resetTheTeams(cid)
+                                                doChangeSpeed(cid, getTheSpeed(getPlayerLevel(cid)) - getCreatureSpeed(cid))
+                                        end
+                                end
+
+                elseif getRedScore() < getBlueScore() then
+                        doBroadcastMessage('CTF-Event : The '.. TEAM1_NAME..' team won and recieved their reward.')
+                                for _,cid in ipairs(getPlayersOnline()) do
+                                        if isTeamOne(cid) then
+                                                doTeleportThing(cid,getTownTemplePosition(getPlayerTown(cid)),false)
+                                                doSendMagicEffect(getTownTemplePosition(getPlayerTown(cid)),10)
+                                                doRemoveConditions(cid,false)
+                                                resetTheTeams(cid)
+                                                doChangeSpeed(cid, getTheSpeed(getPlayerLevel(cid)) - getCreatureSpeed(cid))
+                                                giveReward(cid)
+                                        elseif isTeamTwo(cid) then
+                                                doTeleportThing(cid,getTownTemplePosition(getPlayerTown(cid)),false)
+                                                doSendMagicEffect(getTownTemplePosition(getPlayerTown(cid)),10)
+                                                doRemoveConditions(cid,false)
+                                                doPlayerSendTextMessage(cid,22,'Your team have lost.')
+                                                resetTheTeams(cid)
+                                                doChangeSpeed(cid, getTheSpeed(getPlayerLevel(cid)) - getCreatureSpeed(cid))
+                                        end
+                                end
+                elseif getRedScore() == getBlueScore() then
+                        doBroadcastMessage('CTF-Event : The Event ended with a draw between both teams.')
+                                for _,cid in ipairs(getPlayersOnline()) do
+                                        if isTeamTwo(cid) or isTeamOne(cid) then
+                                                doTeleportThing(cid,getTownTemplePosition(getPlayerTown(cid)),false)
+                                                doSendMagicEffect(getTownTemplePosition(getPlayerTown(cid)),10)
+                                                doRemoveConditions(cid,false)
+                                                doPlayerSendTextMessage(cid,22,'It was a draw between both teams.')
+                                                resetTheTeams(cid)
+                                                doChangeSpeed(cid, getTheSpeed(getPlayerLevel(cid)) - getCreatureSpeed(cid))
+                                        end
+                                end
+
+                end
+                addEvent(resetTheStorage,1000)
+        end
+end
+
+function eventStart()
+        doSetStorage(Event_Tile_Close,-1)
+        setGlobalStorageValue(Event_timeend,1)
+        setGlobalStorageValue(Timer, os.time() + Event_MaxTime*60)
+        addEvent(eventEnd,Event_MaxTime*60*1000)
+
+
+
+                        for v = frompos.x , topos.x do
+                                for k = frompos.y , topos.y do
+                                        for i = 1, 200 do
+                                                position = {x = v, y = k, z = 7, stackpos = i}
+                                                pid = getThingfromPos(position).uid
+                                                        if(pid ~= nil and isPlayer(pid)) then
+                                                                table.insert(players, pid)
+                                                        end
+                                        end
+                                end
+                        end
+                        if math.mod(#players, 2) ~= 0 then
+                                doTeleportThing(players[#players],getTownTemplePosition(getPlayerTown(players[#players])),false)
+                                doSendMagicEffect(getThingPosition(players[#players]),10)
+                                doPlayerSendTextMessage(players[#players], 19, "Sorry, you have been kicked from event to balance teams.")
+                                table.remove(players)
+                        end
+                        if #players < Players_Least_Number then
+                                doBroadcastMessage("CTF event was cancelled because less than "..Players_Least_Number.." players joined")
+                                resetTheStorage()
+                                        if #players > 0 then
+                                                for i = 1,#players do
+                                                        doTeleportThing(players[i],getTownTemplePosition(getPlayerTown(players[i])),false)
+                                                        doSendMagicEffect(getThingPos(players[i]), 10)
+                                                end
+                                        end
+                        else
+                                        doBroadcastMessage("CTF started")
+                                                for i = 1, math.floor(#players/2) do
+                                                        setFirstTeam(players[i])
+                                                end
+                                                for i = math.floor(#players/2)+1 , #players do
+                                                        setSecondTeam(players[i])
+                                                end
+                                                for _,cid in ipairs(getPlayersOnline()) do
+                                                        if isTeamOne(cid) then
+                                                                if getPlayerSex(cid) == 1 then
+                                                                        doAddCondition(cid, bmale)
+                                                                elseif getPlayerSex(cid) ~= 1 then
+                                                                        doAddCondition(cid, bfemale)
+                                                                end
+                                                                doAddCondition(cid, fight)
+                                                                doTeleportThing(cid,Blue_Position,false)
+                                                                doSendMagicEffect(Blue_Position, 10)
+                                                                doChangeSpeed(cid, getTheSpeed(Players_Speed) - getCreatureSpeed(cid))
+                                                        elseif  isTeamTwo(cid) then
+                                                                if getPlayerSex(cid) == 1 then
+                                                                        doAddCondition(cid, rmale)
+                                                                elseif getPlayerSex(cid) ~= 1 then
+                                                                        doAddCondition(cid, rfemale)
+                                                                end
+                                                                doAddCondition(cid, fight)
+                                                                doTeleportThing(cid,Red_Position,false)
+                                                                doSendMagicEffect(Red_Position, 10)
+                                                                doChangeSpeed(cid, getTheSpeed(Players_Speed) - getCreatureSpeed(cid))
+                                                        end
+                                                end
+                                                players = {}
+
+                        end
+end
+function onThink(interval)
+  if getGlobalStorageValue(Event_Start) < 0 then
+                setGlobalStorageValue(Event_Start,1)
+                doSetStorage(Event_Tile_Close,1)
+                doBroadcastMessage("CTF event is opened and teleport is created. It will start in "..Event_WaitTime.." minutes.")
+                players = {}
+                if getTileItemById(Tp_Place, 1387).uid < 1 then
+                        doItemSetAttribute(doCreateItem(1387,1, Tp_Place), "aid", 3435)
+                end
+
+                f= Event_WaitTime - 1
+                        for i = 1,Event_WaitTime-1 do
+                                addEvent(doBroadcastMessage,i*60*1000,"CTF event is opened and teleport is created. It will start in "..f.." minutes.")
+                                f= f-1
+                        end
+                addEvent(eventStart,Event_WaitTime*60*1000)
+        end
+return true
+end
+]]></globalevent>
+  <event type="think" name="ctff" event="script"><![CDATA[
+domodlib('toto')
+domodlib('CTF-lib')
+
+local bl = BLUE_FLAG
+local re = RED_FLAG
+function onThink(interval)
+        if getGlobalStorageValue(Event_Start) > 0 and getGlobalStorageValue(Event_timeend) > 0 then
+                if redStolen() < 0 then
+                        doSendAnimatedText(re,"FLAG!",TEXTCOLOR_DARKRED)
+                        doSendMagicEffect(re, CONST_ME_SOUND_RED)
+                end
+                if blueStolen() < 0 then
+                        doSendAnimatedText(bl,"FLAG!",TEXTCOLOR_GREEN)
+                        doSendMagicEffect(bl, CONST_ME_SOUND_GREEN)
+                end
+                for _, cid in ipairs(getPlayersOnline()) do
+                        if flagOwner(cid) then
+                                if isTeamOne(cid) or isTeamTwo(cid) then
+                                        if hasCondition(cid,CONDITION_HASTE) then
+                                                doRemoveCondition(cid,CONDITION_HASTE)
+                                        end
+                                end
+                                pl = getThingPos(cid)
+                                        if isTeamTwo(cid) then
+                                                if getPlayerStorageValue(cid,103) < os.time() then
+                                                        releaseBF(cid)
+                                                                for _,cid in ipairs(getPlayersOnline()) do
+                                                                        if isTeamOne(cid) or isTeamTwo(cid) then
+                                                                                doPlayerSendTextMessage(cid,22,getCreatureName(cid) .. " wasted 5 minutes with FLAG."..TEAM2_NAME.." flag is again on spawn!")
+                                                                        end
+                                                                end
+                                                else
+                                                        doSendAnimatedText(pl,"FLAG!",TEXTCOLOR_GREEN)
+                                                        doSendMagicEffect(pl, CONST_ME_SOUND_GREEN)
+                                                end
+                                        elseif isTeamOne(cid) then
+                                                if getPlayerStorageValue(cid,103) < os.time() then
+                                                        releaseRF(cid)
+                                                                for _,cid in ipairs(getPlayersOnline()) do
+                                                                        if isTeamOne(cid) or isTeamTwo(cid) then
+                                                                                doPlayerSendTextMessage(cid,22,getCreatureName(cid) .. " wasted 5 minutes with FLAG."..TEAM1_NAME.." flag is again on spawn!")
+                                                                        end
+                                                                end
+                                                else
+                                                        doSendAnimatedText(pl,"FLAG!",COLOR_RED)
+                                                        doSendMagicEffect(pl, CONST_ME_SOUND_RED)
+                                                end
+                                        end
+                        end
+                end
+        end
+  return true
+end
+]]></event>
+  <globalevent name="timer" interval="0.4" event="script"><![CDATA[
+domodlib('toto')
+domodlib('CTF-lib')
+
+function onThink(interval)
+        for _,cid in ipairs(getPlayersOnline()) do
+                if isTeamOne(cid) or isTeamTwo(cid) then
+                        if getGlobalStorageValue(Event_Start) > 0 and getGlobalStorageValue(Event_timeend) > 0 then
+                                if getGlobalStorageValue(Timer)- os.time() >= 0 then
+                                        doPlayerSendCancel(cid, "Time -> ".. os.date("%M:%S ",getGlobalStorageValue(Timer)- os.time()) .. "  |  ".. TEAM1_NAME.." Score : "..getBlueScore(cid).."/"..FLAG_SCORE.." captures  |  ".. TEAM2_NAME.." Score : "..getRedScore(cid).."/"..FLAG_SCORE.." captures")
+                                end
+                        end
+                end
+        end
+return true
+end
+]]></globalevent>
+  <globalevent name="starting" type="startup" event="script"><![CDATA[
+domodlib('toto')
+domodlib('CTF-lib')
+function onStartup()
+        resetTheStorage()
+
+return true
+end
+]]></globalevent>
+</mod>

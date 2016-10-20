@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <monster name="Midnight Asura" nameDescription="a midnight asura" race="blood" experience="4100" speed="410" manacost="0">
   <health now="3100" max="3100"/>
-  <look type="150" head="38" body="95" legs="90" feet="90" addons="1" corpse="6081"/>
+  <look type="150" head="38" body="95" legs="90" feet="90" addons="1" corpse="12752"/>
   <targetchange interval="5000" chance="8"/>
   <strategy attack="100" defense="0"/>
   <flags>

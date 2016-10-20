@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <monster name="dwarf geomancer" nameDescription="a dwarf geomancer" race="blood" experience="245" speed="200" manacost="0">
   <health now="380" max="380"/>
   <look type="66" head="20" body="30" legs="40" feet="50" corpse="6015"/>
@@ -29,7 +29,7 @@
     <attack name="manadrain" interval="1000" chance="25" range="7" min="-50" max="-80"/>
   </attacks>
   <defenses armor="15" defense="15">
-    <defense name="healing" interval="1000" chance="50" min="75" max="325">
+    <defense name="healing" interval="3000" chance="50" min="75" max="200">
       <attribute key="areaEffect" value="blueshimmer"/>
     </defense>
   </defenses>

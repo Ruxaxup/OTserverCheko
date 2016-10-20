@@ -1,0 +1,937 @@
+[12/10/2016 12:31:53] /a 3
+[12/10/2016 12:32:6] /up
+[12/10/2016 12:32:7] /up
+[12/10/2016 12:33:22] /up
+[12/10/2016 12:33:25] /up
+[12/10/2016 12:33:26] /up
+[12/10/2016 12:33:28] /up
+[12/10/2016 12:33:37] /i zaoan chess box
+[12/10/2016 12:33:39] /i zaoan chess box
+[12/10/2016 12:33:51] /i umbral masterblade
+[12/10/2016 12:34:5] /goto 1257,951,7
+[12/10/2016 12:34:21] /i umbral blade
+[12/10/2016 12:34:40] /i crude umbral blade
+[12/10/2016 12:34:52] /i sword
+[12/10/2016 12:35:0] /attr set attack 100000
+[12/10/2016 12:36:11] /i 1058,1027,7
+[12/10/2016 12:36:18] /goto 1058,1027,7
+[12/10/2016 12:36:24] /goto 1058,1028,7
+[12/10/2016 12:37:37] /addskill Solido, level, 100
+[12/10/2016 12:37:50] /t
+[12/10/2016 12:52:32] /i umbral crossbow
+[12/10/2016 12:52:44] /i prismatic bolt
+[12/10/2016 12:53:2] /addskill Solido, distance
+[12/10/2016 12:53:4] /addskill Solido, distance
+[12/10/2016 12:53:4] /addskill Solido, distance
+[12/10/2016 12:53:5] /addskill Solido, distance
+[12/10/2016 12:53:5] /addskill Solido, distance
+[12/10/2016 12:53:6] /addskill Solido, distance
+[12/10/2016 12:53:6] /addskill Solido, distance
+[12/10/2016 12:53:6] /addskill Solido, distance
+[12/10/2016 12:53:7] /addskill Solido, distance
+[12/10/2016 12:53:7] /addskill Solido, distance
+[12/10/2016 12:55:10] /goto elder wyrm
+[12/10/2016 12:55:33] /addskill Solido, distance
+[12/10/2016 12:55:34] /addskill Solido, distance
+[12/10/2016 12:55:34] /addskill Solido, distance
+[12/10/2016 12:55:34] /addskill Solido, distance
+[12/10/2016 12:55:34] /addskill Solido, distance
+[12/10/2016 12:55:34] /addskill Solido, distance
+[12/10/2016 12:55:34] /addskill Solido, distance
+[12/10/2016 12:55:34] /addskill Solido, distance
+[12/10/2016 12:55:34] /addskill Solido, distance
+[12/10/2016 12:55:34] /addskill Solido, distance
+[12/10/2016 12:55:34] /addskill Solido, distance
+[12/10/2016 12:55:34] /addskill Solido, distance
+[12/10/2016 12:55:34] /addskill Solido, distance
+[12/10/2016 12:55:34] /addskill Solido, distance
+[12/10/2016 12:55:34] /addskill Solido, distance
+[12/10/2016 12:55:34] /addskill Solido, distance
+[12/10/2016 12:55:34] /addskill Solido, distance
+[12/10/2016 12:55:34] /addskill Solido, distance
+[12/10/2016 12:55:34] /addskill Solido, distance
+[12/10/2016 12:55:34] /addskill Solido, distance
+[12/10/2016 12:55:34] /addskill Solido, distance
+[12/10/2016 12:55:34] /addskill Solido, distance
+[12/10/2016 12:55:34] /addskill Solido, distance
+[12/10/2016 12:55:34] /addskill Solido, distance
+[12/10/2016 12:55:38] /addskill Solido, distance
+[12/10/2016 12:55:38] /addskill Solido, distance
+[12/10/2016 12:55:38] /addskill Solido, distance
+[12/10/2016 12:55:38] /addskill Solido, distance
+[12/10/2016 12:55:38] /addskill Solido, distance
+[12/10/2016 12:55:38] /addskill Solido, distance
+[12/10/2016 12:55:38] /addskill Solido, distance
+[12/10/2016 12:55:39] /addskill Solido, distance
+[12/10/2016 12:55:39] /addskill Solido, distance
+[12/10/2016 12:55:39] /addskill Solido, distance
+[12/10/2016 12:55:39] /addskill Solido, distance
+[12/10/2016 12:55:39] /addskill Solido, distance
+[12/10/2016 12:55:39] /addskill Solido, distance
+[12/10/2016 12:55:39] /addskill Solido, distance
+[12/10/2016 12:55:39] /addskill Solido, distance
+[12/10/2016 12:55:39] /addskill Solido, distance
+[12/10/2016 12:55:39] /addskill Solido, distance
+[12/10/2016 12:55:39] /addskill Solido, distance
+[12/10/2016 12:55:39] /addskill Solido, distance
+[12/10/2016 12:55:39] /addskill Solido, distance
+[12/10/2016 12:55:40] /addskill Solido, distance
+[12/10/2016 12:55:41] /addskill Solido, distance
+[12/10/2016 12:55:41] /addskill Solido, distance
+[12/10/2016 12:55:42] /addskill Solido, distance
+[12/10/2016 12:55:42] /addskill Solido, distance
+[12/10/2016 12:56:3] /i 8310
+[12/10/2016 12:58:3] /t
+[12/10/2016 12:59:14] /a 3
+[12/10/2016 12:59:18] /a 1
+[12/10/2016 12:59:24] /a 5
+[12/10/2016 13:48:37] /goto eldery wyrm
+[12/10/2016 13:48:41] /goto elder wyrm
+[12/10/2016 13:48:59] /addskill Solido, level, 100
+[12/10/2016 13:49:22] /addskill Solido, distance
+[12/10/2016 13:49:24] /addskill Solido, distance
+[12/10/2016 13:49:25] /addskill Solido, distance
+[12/10/2016 13:49:47] /addStats 100
+[12/10/2016 13:49:54] /addStats Solido,100
+[12/10/2016 13:50:19] /i prismatic bolt
+[12/10/2016 22:7:41] /t
+[12/10/2016 22:9:58] /attr group 6
+[12/10/2016 22:10:9] /attr group 5
+[12/10/2016 22:10:31] /attr group 5
+[12/10/2016 22:12:13] /goto martel
+[12/10/2016 22:13:4] /m exp bug
+[12/10/2016 22:13:5] /m exp bug
+[12/10/2016 22:15:53] /t
+[12/10/2016 22:16:11] /addskill Zekra, magic
+[12/10/2016 22:16:26] /addskill Zekra, magic
+[12/10/2016 22:16:27] /addskill Zekra, magic
+[12/10/2016 22:16:27] /addskill Zekra, magic
+[12/10/2016 22:16:27] /addskill Zekra, magic
+[12/10/2016 22:16:27] /addskill Zekra, magic
+[12/10/2016 22:16:27] /addskill Zekra, magic
+[12/10/2016 22:16:27] /addskill Zekra, magic
+[12/10/2016 22:16:27] /addskill Zekra, magic
+[12/10/2016 22:16:27] /addskill Zekra, magic
+[12/10/2016 22:16:27] /addskill Zekra, magic
+[12/10/2016 22:16:27] /addskill Zekra, magic
+[12/10/2016 22:16:27] /addskill Zekra, magic
+[12/10/2016 22:16:27] /addskill Zekra, magic
+[12/10/2016 22:16:27] /addskill Zekra, magic
+[12/10/2016 22:16:27] /addskill Zekra, magic
+[12/10/2016 22:16:27] /addskill Zekra, magic
+[12/10/2016 22:16:27] /addskill Zekra, magic
+[12/10/2016 22:16:27] /addskill Zekra, magic
+[12/10/2016 22:16:27] /addskill Zekra, magic
+[12/10/2016 22:16:27] /addskill Zekra, magic
+[12/10/2016 22:16:27] /addskill Zekra, magic
+[12/10/2016 22:16:31] /addskill Zekra, magic
+[12/10/2016 22:16:31] /addskill Zekra, magic
+[12/10/2016 22:16:31] /addskill Zekra, magic
+[12/10/2016 22:16:31] /addskill Zekra, magic
+[12/10/2016 22:16:31] /addskill Zekra, magic
+[12/10/2016 22:16:31] /addskill Zekra, magic
+[12/10/2016 22:16:31] /addskill Zekra, magic
+[12/10/2016 22:16:31] /addskill Zekra, magic
+[12/10/2016 22:16:31] /addskill Zekra, magic
+[12/10/2016 22:16:31] /addskill Zekra, magic
+[12/10/2016 22:16:31] /addskill Zekra, magic
+[12/10/2016 22:16:31] /addskill Zekra, magic
+[12/10/2016 22:16:31] /addskill Zekra, magic
+[12/10/2016 22:16:31] /addskill Zekra, magic
+[12/10/2016 22:16:31] /addskill Zekra, magic
+[12/10/2016 22:16:31] /addskill Zekra, magic
+[12/10/2016 22:16:31] /addskill Zekra, magic
+[12/10/2016 22:16:31] /addskill Zekra, magic
+[12/10/2016 22:16:31] /addskill Zekra, magic
+[12/10/2016 22:16:31] /addskill Zekra, magic
+[12/10/2016 22:16:32] /addskill Zekra, magic
+[12/10/2016 22:16:32] /addskill Zekra, magic
+[12/10/2016 22:16:32] /addskill Zekra, magic
+[12/10/2016 22:16:32] /addskill Zekra, magic
+[12/10/2016 22:16:32] /addskill Zekra, magic
+[12/10/2016 22:16:32] /addskill Zekra, magic
+[12/10/2016 22:16:34] /addskill Zekra, magic
+[12/10/2016 22:16:35] /addskill Zekra, magic
+[12/10/2016 22:16:35] /addskill Zekra, magic
+[12/10/2016 22:16:35] /addskill Zekra, magic
+[12/10/2016 22:16:35] /addskill Zekra, magic
+[12/10/2016 22:16:35] /addskill Zekra, magic
+[12/10/2016 22:16:35] /addskill Zekra, magic
+[12/10/2016 22:16:35] /addskill Zekra, magic
+[12/10/2016 22:16:35] /addskill Zekra, magic
+[12/10/2016 22:16:35] /addskill Zekra, magic
+[12/10/2016 22:16:35] /addskill Zekra, magic
+[12/10/2016 22:16:35] /addskill Zekra, magic
+[12/10/2016 22:16:35] /addskill Zekra, magic
+[12/10/2016 22:16:35] /addskill Zekra, magic
+[12/10/2016 22:16:35] /addskill Zekra, magic
+[12/10/2016 22:16:35] /addskill Zekra, magic
+[12/10/2016 22:16:35] /addskill Zekra, magic
+[12/10/2016 22:16:35] /addskill Zekra, magic
+[12/10/2016 22:16:35] /addskill Zekra, magic
+[12/10/2016 22:16:35] /addskill Zekra, magic
+[12/10/2016 22:16:38] /addskill Zekra, magic
+[12/10/2016 22:16:38] /addskill Zekra, magic
+[12/10/2016 22:16:39] /addskill Zekra, magic
+[12/10/2016 22:16:39] /addskill Zekra, magic
+[12/10/2016 22:16:39] /addskill Zekra, magic
+[12/10/2016 22:16:50] /addStats Zekra,200
+[12/10/2016 22:17:49] /i 12707
+[12/10/2016 22:17:50] /i 12707
+[12/10/2016 22:17:51] /i 12707
+[12/10/2016 22:18:7] /i magic plate armor
+[12/10/2016 22:20:33] /i 12707
+[12/10/2016 22:20:34] /i 12707
+[12/10/2016 22:20:35] /i 12707
+[12/10/2016 22:20:43] /i magic plate armor
+[12/10/2016 22:20:51] /i zaoan legs
+[12/10/2016 22:21:5] /i zaoan helmet
+[12/10/2016 22:21:37] /i 12704
+[12/10/2016 22:21:56] /i 12674
+[12/10/2016 22:21:59] /i 12674
+[12/10/2016 22:22:16] /i 12662
+[12/10/2016 22:22:24] /i 12661
+[12/10/2016 22:22:41] /i 12646
+[12/10/2016 22:22:48] /i 12647
+[12/10/2016 22:23:8] /i platinum amulet
+[12/10/2016 22:23:16] /i ornate boots
+[12/10/2016 22:23:21] /i guardian boots
+[12/10/2016 22:23:27] /i soft boots
+[12/10/2016 22:23:40] /i 2640
+[12/10/2016 22:24:2] /i rope
+[12/10/2016 22:24:8] /i shovel
+[12/10/2016 22:24:16] /i 2610
+[12/10/2016 22:24:21] /r
+[12/10/2016 22:24:29] /i 2160
+[12/10/2016 22:24:38] /i 2160
+[12/10/2016 22:48:13] /a 50
+[12/10/2016 22:48:14] /a 50
+[12/10/2016 22:48:15] /a 50
+[12/10/2016 22:48:16] /a 50
+[12/10/2016 22:50:40] /i 5074
+[12/10/2016 22:50:41] /i 5074
+[12/10/2016 22:50:42] /i 5074
+[12/10/2016 22:50:44] /a 2
+[12/10/2016 22:50:45] /i 5074
+[12/10/2016 22:51:3] /c zekra
+[12/10/2016 23:11:10] /c zekra
+[12/10/2016 23:22:16] /goto zekra
+[12/10/2016 23:22:22] /t
+[12/10/2016 23:22:38] /goto zekra
+[12/10/2016 23:22:39] /goto zekra
+[12/10/2016 23:22:43] /goto martel
+[12/10/2016 23:22:48] /goto martel
+[12/10/2016 23:22:52] /goto martel
+[12/10/2016 23:22:54] /goto martel
+[12/10/2016 23:22:55] /goto martel
+[12/10/2016 23:23:4] /goto martel
+[12/10/2016 23:23:22] /goto martel
+[12/10/2016 23:23:32] /goto martel
+[12/10/2016 23:23:34] /goto martel
+[12/10/2016 23:23:35] /goto martel
+[12/10/2016 23:23:38] /goto martel
+[12/10/2016 23:23:39] /goto martel
+[12/10/2016 23:23:40] /goto martel
+[12/10/2016 23:23:43] /goto martel
+[12/10/2016 23:23:45] /goto martel
+[12/10/2016 23:23:46] /goto martel
+[12/10/2016 23:23:47] /goto martel
+[12/10/2016 23:23:48] /goto martel
+[12/10/2016 23:23:50] /goto martel
+[12/10/2016 23:23:53] /goto martel
+[12/10/2016 23:23:54] /goto martel
+[12/10/2016 23:23:57] /goto martel
+[12/10/2016 23:23:58] /goto martel
+[12/10/2016 23:24:0] /goto martel
+[12/10/2016 23:24:0] /goto martel
+[12/10/2016 23:24:3] /goto martel
+[12/10/2016 23:24:6] /goto martel
+[12/10/2016 23:24:8] /goto martel
+[12/10/2016 23:25:13] /goto martel
+[12/10/2016 23:25:16] /goto martel
+[12/10/2016 23:25:17] /goto martel
+[12/10/2016 23:25:18] /goto martel
+[12/10/2016 23:25:25] /goto martel
+[12/10/2016 23:25:26] /goto martel
+[12/10/2016 23:25:27] /goto martel
+[12/10/2016 23:25:28] /goto martel
+[12/10/2016 23:25:29] /goto martel
+[12/10/2016 23:25:32] /goto martel
+[12/10/2016 23:25:35] /goto martel
+[12/10/2016 23:25:36] /goto martel
+[12/10/2016 23:25:36] /goto martel
+[12/10/2016 23:26:16] /goto martel
+[12/10/2016 23:26:17] /goto martel
+[12/10/2016 23:26:22] /goto martel
+[12/10/2016 23:26:23] /goto martel
+[12/10/2016 23:26:24] /goto martel
+[12/10/2016 23:26:25] /goto martel
+[12/10/2016 23:26:37] /goto martel
+[12/10/2016 23:26:38] /goto martel
+[12/10/2016 23:27:9] /goto martel
+[12/10/2016 23:27:12] /goto martel
+[12/10/2016 23:27:13] /goto martel
+[12/10/2016 23:27:14] /goto martel
+[12/10/2016 23:27:15] /goto martel
+[12/10/2016 23:27:16] /goto martel
+[12/10/2016 23:27:30] /goto martel
+[12/10/2016 23:27:43] /i zaoan chess box
+[12/10/2016 23:28:35] /goto martel
+[12/10/2016 23:28:47] /goto martel
+[12/10/2016 23:28:48] /goto martel
+[12/10/2016 23:28:49] /goto martel
+[12/10/2016 23:28:49] /goto martel
+[12/10/2016 23:28:50] /goto martel
+[12/10/2016 23:28:51] /goto martel
+[12/10/2016 23:28:52] /goto martel
+[12/10/2016 23:28:52] /goto martel
+[12/10/2016 23:28:53] /goto martel
+[12/10/2016 23:28:54] /goto martel
+[12/10/2016 23:28:55] /goto martel
+[12/10/2016 23:28:55] /goto martel
+[12/10/2016 23:28:56] /goto martel
+[12/10/2016 23:28:58] /goto martel
+[12/10/2016 23:28:58] /goto martel
+[12/10/2016 23:28:59] /goto martel
+[12/10/2016 23:29:0] /goto martel
+[12/10/2016 23:29:1] /goto martel
+[12/10/2016 23:29:3] /goto martel
+[12/10/2016 23:29:6] /goto martel
+[12/10/2016 23:29:22] /goto martel
+[12/10/2016 23:29:24] /goto martel
+[12/10/2016 23:29:26] /goto martel
+[12/10/2016 23:29:27] /goto martel
+[12/10/2016 23:29:29] /goto martel
+[12/10/2016 23:30:34] /c zekra
+[12/10/2016 23:39:57] /reload mods
+[12/10/2016 23:40:13] /reload mods
+[12/10/2016 23:40:18] /m ushuriel
+[12/10/2016 23:40:58] /m ushuriel
+[12/10/2016 23:42:4] /reload mods
+[12/10/2016 23:42:7] /m ushuriel
+[12/10/2016 23:43:3] /reload mods
+[12/10/2016 23:46:46] /goto martel
+[12/10/2016 23:46:48] /goto martel
+[12/10/2016 23:46:49] /goto martel
+[12/10/2016 23:46:49] /goto martel
+[12/10/2016 23:46:50] /goto martel
+[12/10/2016 23:46:51] /goto martel
+[12/10/2016 23:46:52] /goto martel
+[12/10/2016 23:46:53] /goto martel
+[12/10/2016 23:46:55] /goto martel
+[12/10/2016 23:46:57] /goto martel
+[12/10/2016 23:46:59] /goto martel
+[12/10/2016 23:47:4] /goto martel
+[12/10/2016 23:47:7] /goto martel
+[12/10/2016 23:47:14] /goto martel
+[12/10/2016 23:47:15] /goto martel
+[12/10/2016 23:47:17] /goto martel
+[12/10/2016 23:47:18] /goto martel
+[12/10/2016 23:47:19] /goto martel
+[12/10/2016 23:47:20] /goto martel
+[12/10/2016 23:47:20] /goto martel
+[12/10/2016 23:47:22] /goto martel
+[12/10/2016 23:47:23] /goto martel
+[12/10/2016 23:47:24] /goto martel
+[12/10/2016 23:47:37] /goto martel
+[12/10/2016 23:47:39] /goto martel
+[12/10/2016 23:47:44] /goto martel
+[12/10/2016 23:47:45] /goto martel
+[12/10/2016 23:47:46] /goto martel
+[12/10/2016 23:47:47] /goto martel
+[12/10/2016 23:47:48] /goto martel
+[12/10/2016 23:47:56] /goto martel
+[12/10/2016 23:47:56] /goto martel
+[12/10/2016 23:47:57] /goto martel
+[12/10/2016 23:47:58] /goto martel
+[12/10/2016 23:48:0] /goto martel
+[12/10/2016 23:48:8] /goto martel
+[12/10/2016 23:48:9] /goto martel
+[12/10/2016 23:48:20] /goto martel
+[12/10/2016 23:48:23] /goto martel
+[12/10/2016 23:48:24] /goto martel
+[12/10/2016 23:48:26] /goto martel
+[12/10/2016 23:48:26] /goto martel
+[12/10/2016 23:48:35] /goto martel
+[12/10/2016 23:48:36] /goto martel
+[12/10/2016 23:48:38] /goto martel
+[12/10/2016 23:48:38] /goto martel
+[12/10/2016 23:48:39] /goto martel
+[12/10/2016 23:48:40] /goto martel
+[12/10/2016 23:48:41] /goto martel
+[12/10/2016 23:48:42] /goto martel
+[12/10/2016 23:48:50] /goto martel
+[12/10/2016 23:49:1] /goto martel
+[12/10/2016 23:49:7] /goto martel
+[12/10/2016 23:49:11] /goto martel
+[12/10/2016 23:49:13] /goto martel
+[12/10/2016 23:49:14] /goto martel
+[12/10/2016 23:49:15] /goto martel
+[12/10/2016 23:49:18] /goto martel
+[12/10/2016 23:49:19] /goto martel
+[12/10/2016 23:49:20] /goto martel
+[12/10/2016 23:49:21] /goto martel
+[12/10/2016 23:49:22] /goto martel
+[12/10/2016 23:49:24] /goto martel
+[12/10/2016 23:49:25] /goto martel
+[12/10/2016 23:49:27] /goto martel
+[12/10/2016 23:49:28] /goto martel
+[12/10/2016 23:49:29] /goto martel
+[12/10/2016 23:49:29] /goto martel
+[12/10/2016 23:49:31] /goto martel
+[12/10/2016 23:49:31] /goto martel
+[12/10/2016 23:49:32] /goto martel
+[12/10/2016 23:49:33] /goto martel
+[12/10/2016 23:49:34] /goto martel
+[12/10/2016 23:49:34] /goto martel
+[12/10/2016 23:49:36] /goto martel
+[12/10/2016 23:49:37] /goto martel
+[12/10/2016 23:49:44] /goto martel
+[12/10/2016 23:49:49] /goto martel
+[12/10/2016 23:49:50] /goto martel
+[12/10/2016 23:49:50] /goto martel
+[12/10/2016 23:50:26] /goto 969,1420,8
+[12/10/2016 23:50:31] /goto martel
+[12/10/2016 23:50:34] /goto martel
+[12/10/2016 23:50:34] /goto martel
+[12/10/2016 23:50:35] /goto martel
+[12/10/2016 23:50:36] /goto martel
+[12/10/2016 23:50:36] /goto martel
+[12/10/2016 23:50:37] /goto martel
+[12/10/2016 23:50:41] /goto martel
+[12/10/2016 23:51:8] /addskill Martel,level,100
+[12/10/2016 23:51:28] /ghost
+[12/10/2016 23:51:31] /goto martel
+[12/10/2016 23:51:38] /goto martel
+[12/10/2016 23:51:40] /goto martel
+[12/10/2016 23:51:46] /goto martel
+[12/10/2016 23:51:59] /goto martel
+[12/10/2016 23:52:10] /goto martel
+[12/10/2016 23:52:11] /goto martel
+[12/10/2016 23:52:14] /goto martel
+[12/10/2016 23:52:16] /goto martel
+[12/10/2016 23:52:18] /goto martel
+[12/10/2016 23:52:20] /goto martel
+[12/10/2016 23:52:26] /goto martel
+[12/10/2016 23:52:55] /goto martel
+[12/10/2016 23:52:56] /goto martel
+[12/10/2016 23:52:58] /goto martel
+[12/10/2016 23:52:59] /goto martel
+[12/10/2016 23:53:1] /goto martel
+[12/10/2016 23:53:3] /goto martel
+[12/10/2016 23:53:5] /goto martel
+[12/10/2016 23:53:6] /goto martel
+[12/10/2016 23:53:11] /goto martel
+[12/10/2016 23:55:49] /t
+[12/10/2016 23:55:52] /m brigand
+[12/10/2016 23:56:21] /goto euryale
+[12/10/2016 23:56:34] /down
+[12/10/2016 23:56:35] /down
+[12/10/2016 23:56:39] /a
+[12/10/2016 23:56:41] /a
+[12/10/2016 23:56:49] /up
+[12/10/2016 23:57:17] /quest 65002
+[12/10/2016 23:58:35] /reload movements
+[12/10/2016 23:59:6] /storage Solido,65002
+[12/10/2016 23:59:12] /storage Solido,65002,5
+[13/10/2016 0:0:3] /storage Solido,65002
+[13/10/2016 0:0:35] /a
+[13/10/2016 0:0:47] /a
+[13/10/2016 0:0:51] /a
+[13/10/2016 0:1:4] /a
+[13/10/2016 0:1:6] /a
+[13/10/2016 0:1:12] /up
+[13/10/2016 0:1:14] /up
+[13/10/2016 0:1:17] /a
+[13/10/2016 0:3:3] /a
+[13/10/2016 0:3:5] /a
+[13/10/2016 0:3:6] /a
+[13/10/2016 0:3:10] /i teleport rune
+[13/10/2016 0:4:30] /t
+[13/10/2016 0:4:40] /goto martel
+[13/10/2016 0:6:10] /t
+[13/10/2016 0:7:18] /goto 836,1425,8
+[13/10/2016 0:8:9] /goto 836,1425,8
+[13/10/2016 0:9:27] /goto 836,1425,8
+[13/10/2016 12:11:59] /t
+[13/10/2016 12:12:14] /m undead dragon
+[13/10/2016 12:12:17] /ghost
+[13/10/2016 12:12:21] /s demon
+[13/10/2016 12:16:45] /i 12716
+[13/10/2016 12:16:47] /i 12717
+[13/10/2016 12:16:55] /i 12718
+[13/10/2016 12:17:5] /i 12719
+[13/10/2016 12:18:55] /i 12718
+[13/10/2016 12:18:59] /i 12719
+[13/10/2016 12:19:0] /i 12720
+[13/10/2016 12:19:1] /i 12721
+[13/10/2016 12:19:2] /i 12722
+[13/10/2016 12:19:3] /i 12723
+[13/10/2016 12:19:4] /i 12724
+[13/10/2016 12:19:5] /i 12725
+[13/10/2016 12:19:5] /i 12726
+[13/10/2016 12:19:6] /i 12727
+[13/10/2016 12:19:8] /i 12728
+[13/10/2016 12:19:9] /i 12729
+[13/10/2016 12:19:11] /i 12730
+[13/10/2016 12:19:12] /i 127331
+[13/10/2016 12:19:15] /i 12731
+[13/10/2016 12:19:16] /i 12732
+[13/10/2016 12:19:17] /i 12733
+[13/10/2016 12:19:18] /i 12734
+[13/10/2016 12:19:20] /i 12735
+[13/10/2016 12:19:26] /i 12736
+[13/10/2016 12:19:27] /i 12737
+[13/10/2016 12:19:29] /i 12738
+[13/10/2016 12:19:33] /i 12739
+[13/10/2016 12:19:35] /i 12740
+[13/10/2016 12:19:36] /i 12741
+[13/10/2016 12:19:37] /i 12742
+[13/10/2016 12:19:38] /i 12743
+[13/10/2016 12:19:39] /i 12744
+[13/10/2016 12:19:40] /i 12745
+[13/10/2016 12:19:41] /i 12746
+[13/10/2016 12:19:49] /i 12747
+[13/10/2016 12:19:51] /i 12748
+[13/10/2016 12:19:56] /i 12749
+[13/10/2016 12:20:0] /i 12750
+[13/10/2016 12:20:2] /i 12751
+[13/10/2016 12:20:4] /i 12752
+[13/10/2016 12:20:6] /i 12753
+[13/10/2016 12:20:7] /i 12754
+[13/10/2016 12:20:10] /i 12755
+[13/10/2016 12:20:12] /i 12756
+[13/10/2016 12:20:13] /i 12757
+[13/10/2016 12:20:15] /i 12758
+[13/10/2016 12:20:17] /i 12759
+[13/10/2016 12:20:19] /i 12760
+[13/10/2016 14:40:43] /m gaz'garoth
+[13/10/2016 14:41:5] /m Gaz'haragoth
+[13/10/2016 14:41:9] /s Gaz'haragoth
+[13/10/2016 14:41:30] /r
+[13/10/2016 14:41:31] /r
+[13/10/2016 14:41:32] /r
+[13/10/2016 14:41:38] /m Gaz'haragoth
+[13/10/2016 14:41:44] /m guzzlemaw
+[13/10/2016 14:41:56] /m frazzlemaw
+[13/10/2016 14:42:8] /m silencer
+[13/10/2016 14:42:17] /m elder wyrm
+[13/10/2016 14:43:52] /i 12749
+[13/10/2016 14:43:59] /i 12752
+[13/10/2016 14:44:3] /i 12755
+[13/10/2016 14:44:7] /i 12758
+[13/10/2016 14:44:15] /i 12761
+[13/10/2016 14:44:31] /i 12746
+[13/10/2016 14:45:7] /i 12713
+[13/10/2016 14:47:28] /i zaoan chess box
+[13/10/2016 14:48:52] /i 2160
+[13/10/2016 14:48:53] /i 2160
+[13/10/2016 15:44:0] /i boots of homecoming
+[13/10/2016 15:46:14] /i boots of homecoming
+[13/10/2016 15:46:20] /i zaoan chess box
+[13/10/2016 15:46:27] /i oriental boots
+[13/10/2016 15:46:58] /i oriental shoes
+[13/10/2016 15:47:32] /i gearwheel chain
+[13/10/2016 15:48:7] /i scroll of heroic deeds
+[13/10/2016 15:48:23] /goto usuriel
+[13/10/2016 15:48:26] /goto ushuriel
+[13/10/2016 15:53:51] /t
+[13/10/2016 15:54:2] /i magic plate armor
+[13/10/2016 15:59:2] /m juggernault
+[13/10/2016 15:59:4] /m juggernaut
+[13/10/2016 15:59:5] /m juggernaut
+[13/10/2016 16:3:45] /addStats Solido,200
+[13/10/2016 16:4:23] /i umbral masterblade
+[13/10/2016 16:4:34] /addskill Solido,level,100
+[13/10/2016 16:6:55] /i 7839
+[13/10/2016 16:7:20] /i umbral master crossbow
+[13/10/2016 16:9:10] /i magic plate armor
+[13/10/2016 16:15:32] /i glacial rod
+[13/10/2016 16:16:16] /i magic plate armor
+[13/10/2016 16:23:12] /i magic plate armor
+[13/10/2016 16:27:41] /i magic plate armor
+[13/10/2016 16:30:11] /i magic plate armor
+[13/10/2016 16:34:14] /t
+[13/10/2016 16:37:29] /i brown piece of cloth
+[13/10/2016 16:42:10] /reload npcs
+[13/10/2016 16:45:35] /reload npc
+[13/10/2016 16:46:49] /i 5913
+[13/10/2016 16:46:57] /i 5913
+[13/10/2016 16:47:27] /i acorn
+[13/10/2016 16:48:17] /i 7636
+[13/10/2016 16:55:20] /reload npc
+[13/10/2016 16:57:5] /reload npc
+[13/10/2016 17:7:56] /reload npc
+[13/10/2016 17:8:9] /a
+[13/10/2016 17:8:14] /n yasir
+[13/10/2016 17:14:14] /reload npc
+[13/10/2016 17:15:0] /reload npc
+[13/10/2016 17:15:14] /reload npc
+[13/10/2016 17:15:23] /n yasir
+[13/10/2016 17:15:52] /reload npc
+[13/10/2016 17:15:53] /n yasir
+[13/10/2016 17:16:43] /i 13877
+[13/10/2016 17:16:48] /i 13877
+[13/10/2016 17:19:19] /reload npc
+[13/10/2016 17:19:21] /n yasir
+[13/10/2016 17:20:15] /reload npc
+[13/10/2016 17:20:16] /n yasir
+[13/10/2016 17:20:43] /reload npc
+[13/10/2016 17:20:44] /n yasir
+[13/10/2016 17:21:25] /reload npc
+[13/10/2016 17:21:26] /n yasir
+[13/10/2016 17:22:14] /reload npc
+[13/10/2016 17:22:15] /n yasir
+[13/10/2016 17:23:34] /reload npc
+[13/10/2016 17:23:36] /n yasir
+[13/10/2016 17:24:24] /reload npc
+[13/10/2016 17:24:25] /n yasir
+[13/10/2016 17:25:1] /reload npc
+[13/10/2016 17:25:2] /n yasir
+[13/10/2016 17:25:27] /reload npc
+[13/10/2016 17:25:28] /n yasir
+[13/10/2016 17:26:16] /a
+[13/10/2016 17:43:9] /reload npc
+[13/10/2016 17:52:42] /i 11360
+[13/10/2016 18:0:18] /reload npc
+[13/10/2016 18:2:4] /reload npc
+[13/10/2016 18:4:11] /reload npc
+[13/10/2016 18:6:43] /reload npc
+[13/10/2016 18:10:1] /reload npc
+[13/10/2016 18:11:50] /reload npc
+[13/10/2016 18:13:41] /reload npc
+[13/10/2016 18:15:40] /reload npc
+[13/10/2016 18:18:5] /reload npc
+[13/10/2016 18:20:47] /reload npc
+[13/10/2016 18:42:18] /up
+[13/10/2016 18:45:29] /t
+[16/10/2016 14:16:53] /t
+[16/10/2016 16:35:31] /t
+[16/10/2016 21:29:37] /t
+[17/10/2016 11:29:9] /a 2
+[17/10/2016 11:29:12] /a 2
+[17/10/2016 11:29:14] /a 2
+[17/10/2016 11:30:11] /s giant spider
+[17/10/2016 11:30:22] /m the old widow
+[17/10/2016 11:30:34] /s giant spider
+[17/10/2016 11:31:30] /i sudden death rune
+[17/10/2016 15:48:21] /s Golden knight
+[17/10/2016 15:48:34] /s druid
+[17/10/2016 15:48:44] /s sorcerer
+[17/10/2016 15:48:59] /s pally
+[17/10/2016 15:49:1] /s paladin
+[17/10/2016 15:50:26] /r
+[17/10/2016 15:50:35] /a
+[17/10/2016 15:50:43] /i 10445
+[17/10/2016 15:50:53] /r
+[17/10/2016 15:51:3] /i 1396
+[17/10/2016 15:51:7] /r
+[17/10/2016 15:51:8] /r
+[17/10/2016 15:51:10] /i 1396
+[17/10/2016 15:51:47] /s druid
+[17/10/2016 15:51:49] /s paladin
+[17/10/2016 15:52:0] /s druid
+[17/10/2016 15:52:2] /s sorcerer
+[17/10/2016 15:52:6] /s golden knight
+[17/10/2016 15:52:14] /s druid
+[17/10/2016 15:53:5] /s golden knight
+[17/10/2016 15:53:25] /s golden knight
+[17/10/2016 15:53:57] /s sorcerer
+[17/10/2016 15:54:50] /i ultimate healing rune
+[17/10/2016 16:5:17] /t
+[17/10/2016 16:6:41] /up
+[17/10/2016 16:16:33] /goto 1263,972,10
+[17/10/2016 16:16:41] /up
+[17/10/2016 16:16:43] /down
+[17/10/2016 16:16:45] /up
+[17/10/2016 16:16:46] /up
+[17/10/2016 16:16:47] /up
+[17/10/2016 16:16:48] /up
+[17/10/2016 16:16:49] /up
+[17/10/2016 16:16:51] /up
+[17/10/2016 16:16:52] /up
+[17/10/2016 16:16:53] /up
+[17/10/2016 16:16:54] /up
+[17/10/2016 16:16:54] /up
+[17/10/2016 16:17:8] /down
+[17/10/2016 16:17:9] /a
+[17/10/2016 16:17:16] /up
+[17/10/2016 16:17:20] /down
+[17/10/2016 16:17:21] /a
+[17/10/2016 16:17:23] /a
+[17/10/2016 16:17:23] /a
+[17/10/2016 16:17:25] /up
+[17/10/2016 16:17:36] /down
+[17/10/2016 16:17:37] /down
+[17/10/2016 16:19:11] /t
+[17/10/2016 17:15:24] /goto tu gfa en bici
+[17/10/2016 17:15:30] /ghost
+[17/10/2016 17:15:33] /ghost
+[17/10/2016 17:15:41] /a
+[17/10/2016 17:15:43] /a
+[17/10/2016 17:16:29] /goto tu gfa en bici
+[17/10/2016 17:16:49] /t
+[17/10/2016 17:16:57] /c tu gfa en bici
+[17/10/2016 17:17:18] /m silencer
+[17/10/2016 17:18:13] /n rashid
+[17/10/2016 17:18:33] /r
+[17/10/2016 17:18:36] /n alesar
+[17/10/2016 17:18:49] /t
+[17/10/2016 17:19:12] /r
+[17/10/2016 17:19:14] /n Nah'Bob
+[17/10/2016 17:19:39] /m guzzlemaw
+[17/10/2016 17:21:9] /n alesar
+[17/10/2016 17:21:22] /reload npc
+[17/10/2016 17:21:46] /m gaz'haragoth
+[17/10/2016 17:22:0] /r
+[17/10/2016 17:22:1] /r
+[17/10/2016 17:23:46] /s lucifer
+[17/10/2016 17:24:25] /s lucifer
+[17/10/2016 17:24:39] /s lucifer
+[17/10/2016 17:25:32] /r
+[17/10/2016 17:25:41] /r
+[17/10/2016 17:25:43] /r
+[17/10/2016 17:25:47] /r
+[17/10/2016 17:25:47] /r
+[17/10/2016 17:26:16] /m gaz'haragoth
+[17/10/2016 17:27:2] /r
+[17/10/2016 17:27:9] /s gaz'haragoth
+[17/10/2016 17:27:20] /s bimbo
+[17/10/2016 17:27:29] /s zekra
+[17/10/2016 17:27:35] /s myriad
+[17/10/2016 17:27:40] /s titan
+[17/10/2016 22:5:24] /t
+[17/10/2016 22:5:49] /goto Martel
+[17/10/2016 22:28:7] /t
+[17/10/2016 22:28:17] /c zekra
+[17/10/2016 22:52:45] /goto zekra
+[17/10/2016 22:52:50] /c tu gfa en bici
+[17/10/2016 22:53:1] /goto zekra
+[17/10/2016 22:53:15] /n edyn
+[17/10/2016 22:53:19] /n eryn
+[18/10/2016 20:33:57] /t
+[18/10/2016 20:34:17] /c tu gfa en bici
+[18/10/2016 20:34:28] /t
+[18/10/2016 20:34:30] /c tu gfa en bici
+[18/10/2016 20:47:39] /i mastermind shield
+[18/10/2016 20:49:36] /goto 1321,1105,7
+[18/10/2016 22:29:15] /t
+[18/10/2016 22:29:29] /addskill Soma Cruz, level, 100
+[18/10/2016 22:30:19] /addskill Soma Cruz, magic
+[18/10/2016 22:30:21] /addskill Soma Cruz, magic
+[18/10/2016 22:30:22] /addskill Soma Cruz, magic
+[18/10/2016 22:30:45] /addskill Soma Cruz, magic
+[18/10/2016 22:30:47] /addskill Soma Cruz, magic
+[18/10/2016 22:30:47] /addskill Soma Cruz, magic
+[18/10/2016 22:30:48] /addskill Soma Cruz, magic
+[18/10/2016 22:30:48] /addskill Soma Cruz, magic
+[18/10/2016 22:30:48] /addskill Soma Cruz, magic
+[18/10/2016 22:30:48] /addskill Soma Cruz, magic
+[18/10/2016 22:30:48] /addskill Soma Cruz, magic
+[18/10/2016 22:30:48] /addskill Soma Cruz, magic
+[18/10/2016 22:30:48] /addskill Soma Cruz, magic
+[18/10/2016 22:30:48] /addskill Soma Cruz, magic
+[18/10/2016 22:30:48] /addskill Soma Cruz, magic
+[18/10/2016 22:30:48] /addskill Soma Cruz, magic
+[18/10/2016 22:30:48] /addskill Soma Cruz, magic
+[18/10/2016 22:30:48] /addskill Soma Cruz, magic
+[18/10/2016 22:30:48] /addskill Soma Cruz, magic
+[18/10/2016 22:30:48] /addskill Soma Cruz, magic
+[18/10/2016 22:30:48] /addskill Soma Cruz, magic
+[18/10/2016 22:30:48] /addskill Soma Cruz, magic
+[18/10/2016 22:30:48] /addskill Soma Cruz, magic
+[18/10/2016 22:30:49] /addskill Soma Cruz, magic
+[18/10/2016 22:30:49] /addskill Soma Cruz, magic
+[18/10/2016 22:30:49] /addskill Soma Cruz, magic
+[18/10/2016 22:30:49] /addskill Soma Cruz, magic
+[18/10/2016 22:30:49] /addskill Soma Cruz, magic
+[18/10/2016 22:30:49] /addskill Soma Cruz, magic
+[18/10/2016 22:30:49] /addskill Soma Cruz, magic
+[18/10/2016 22:30:49] /addskill Soma Cruz, magic
+[18/10/2016 22:30:55] /addskill Soma Cruz, magic
+[18/10/2016 22:30:55] /addskill Soma Cruz, magic
+[18/10/2016 22:30:56] /addskill Soma Cruz, magic
+[18/10/2016 22:30:56] /addskill Soma Cruz, magic
+[18/10/2016 22:30:56] /addskill Soma Cruz, magic
+[18/10/2016 22:30:56] /addskill Soma Cruz, magic
+[18/10/2016 22:30:56] /addskill Soma Cruz, magic
+[18/10/2016 22:30:56] /addskill Soma Cruz, magic
+[18/10/2016 22:30:56] /addskill Soma Cruz, magic
+[18/10/2016 22:30:56] /addskill Soma Cruz, magic
+[18/10/2016 22:30:58] /addskill Soma Cruz, magic
+[18/10/2016 22:30:58] /addskill Soma Cruz, magic
+[18/10/2016 22:30:58] /addskill Soma Cruz, magic
+[18/10/2016 22:30:58] /addskill Soma Cruz, magic
+[18/10/2016 22:30:59] /addskill Soma Cruz, magic
+[18/10/2016 22:30:59] /addskill Soma Cruz, magic
+[18/10/2016 22:30:59] /addskill Soma Cruz, magic
+[18/10/2016 22:30:59] /addskill Soma Cruz, magic
+[18/10/2016 22:30:59] /addskill Soma Cruz, magic
+[18/10/2016 22:31:0] /addskill Soma Cruz, magic
+[18/10/2016 22:31:0] /addskill Soma Cruz, magic
+[18/10/2016 22:31:0] /addskill Soma Cruz, magic
+[18/10/2016 22:31:0] /addskill Soma Cruz, magic
+[18/10/2016 22:31:1] /addskill Soma Cruz, magic
+[18/10/2016 22:31:1] /addskill Soma Cruz, magic
+[18/10/2016 22:31:1] /addskill Soma Cruz, magic
+[18/10/2016 22:31:1] /addskill Soma Cruz, magic
+[18/10/2016 22:31:1] /addskill Soma Cruz, magic
+[18/10/2016 22:31:1] /addskill Soma Cruz, magic
+[18/10/2016 22:31:1] /addskill Soma Cruz, magic
+[18/10/2016 22:31:1] /addskill Soma Cruz, magic
+[18/10/2016 22:31:2] /addskill Soma Cruz, magic
+[18/10/2016 22:31:2] /addskill Soma Cruz, magic
+[18/10/2016 22:31:2] /addskill Soma Cruz, magic
+[18/10/2016 22:31:2] /addskill Soma Cruz, magic
+[18/10/2016 22:31:2] /addskill Soma Cruz, magic
+[18/10/2016 22:31:3] /addskill Soma Cruz, magic
+[18/10/2016 22:31:3] /addskill Soma Cruz, magic
+[18/10/2016 22:31:3] /addskill Soma Cruz, magic
+[18/10/2016 22:31:3] /addskill Soma Cruz, magic
+[18/10/2016 22:31:3] /addskill Soma Cruz, magic
+[18/10/2016 22:31:3] /addskill Soma Cruz, magic
+[18/10/2016 22:31:3] /addskill Soma Cruz, magic
+[18/10/2016 22:31:7] /addskill Soma Cruz, magic
+[18/10/2016 22:31:7] /addskill Soma Cruz, magic
+[18/10/2016 22:31:7] /addskill Soma Cruz, magic
+[18/10/2016 22:31:7] /addskill Soma Cruz, magic
+[18/10/2016 22:31:8] /addskill Soma Cruz, magic
+[18/10/2016 22:31:8] /addskill Soma Cruz, magic
+[18/10/2016 22:31:8] /addskill Soma Cruz, magic
+[18/10/2016 22:31:8] /addskill Soma Cruz, magic
+[18/10/2016 22:31:8] /addskill Soma Cruz, magic
+[18/10/2016 22:31:8] /addskill Soma Cruz, magic
+[18/10/2016 22:31:11] /addskill Soma Cruz, magic
+[18/10/2016 22:31:11] /addskill Soma Cruz, magic
+[18/10/2016 22:31:11] /addskill Soma Cruz, magic
+[18/10/2016 22:31:11] /addskill Soma Cruz, magic
+[18/10/2016 22:31:11] /addskill Soma Cruz, magic
+[18/10/2016 22:31:57] /addStats Soma Cruz, 100
+[18/10/2016 22:32:23] /i 2160
+[18/10/2016 22:36:18] /c soma cruz
+[18/10/2016 22:36:23] /c tu gfa en bici
+[18/10/2016 22:36:30] /i firebomb rune
+[18/10/2016 22:36:52] /r
+[18/10/2016 22:40:9] /goto tu gfa en bici
+[18/10/2016 22:40:15] /a 3
+[18/10/2016 22:40:16] /a 3
+[18/10/2016 22:40:27] /a 3
+[18/10/2016 22:40:29] /a 3
+[18/10/2016 22:40:39] /a 3
+[18/10/2016 22:40:40] /a 3
+[18/10/2016 22:42:18] /c soma cruz
+[18/10/2016 22:46:6] /goto tu gfa en bici
+[18/10/2016 22:46:13] /a 5
+[18/10/2016 22:46:44] /t
+[18/10/2016 22:48:27] /goto tu gfa en bici
+[18/10/2016 22:48:30] /c soma cruz
+[18/10/2016 22:56:1] /goto tu fga en bicvi
+[18/10/2016 22:56:4] /goto tu fga en bici
+[18/10/2016 22:56:9] /goto tu gfa en bici
+[18/10/2016 22:56:17] /c soma cruz
+[18/10/2016 23:28:42] /t
+[18/10/2016 23:28:50] /up
+[18/10/2016 23:37:25] /down
+[18/10/2016 23:37:26] /down
+[18/10/2016 23:37:27] /down
+[18/10/2016 23:37:28] /down
+[18/10/2016 23:37:34] /up
+[18/10/2016 23:38:59] /i 10311
+[18/10/2016 23:39:18] /a
+[18/10/2016 23:39:19] /a
+[18/10/2016 23:39:21] /a
+[18/10/2016 23:39:38] /a
+[18/10/2016 23:39:44] /m frazzlemaw
+[18/10/2016 23:39:52] /a
+[18/10/2016 23:39:58] /m Guzzlemaw
+[18/10/2016 23:40:11] /m Guzzlemaw
+[18/10/2016 23:40:22] /m Guzzlemaw
+[18/10/2016 23:40:26] /m Guzzlemaw
+[18/10/2016 23:40:42] /a
+[18/10/2016 23:40:47] /s training pig
+[18/10/2016 23:40:49] /a
+[18/10/2016 23:42:12] /a
+[18/10/2016 23:42:13] /a
+[18/10/2016 23:42:13] /a
+[18/10/2016 23:43:52] /a
+[18/10/2016 23:43:55] /a
+[18/10/2016 23:43:57] /down
+[18/10/2016 23:43:58] /down
+[18/10/2016 23:44:1] /a
+[18/10/2016 23:44:2] /down
+[18/10/2016 23:44:5] /down
+[18/10/2016 23:44:6] /a
+[18/10/2016 23:44:9] /up
+[18/10/2016 23:51:38] /t
+[18/10/2016 23:51:42] /i manapotion
+[19/10/2016 11:2:31] /t
+[19/10/2016 11:2:44] /goto elder wyrm
+[19/10/2016 11:3:22] /goto draken abomination
+[19/10/2016 11:3:28] /a
+[19/10/2016 11:3:31] /down
+[19/10/2016 11:3:32] /a
+[19/10/2016 11:3:59] /down
+[19/10/2016 11:4:1] /down
+[19/10/2016 11:4:2] /down
+[19/10/2016 11:4:5] /a 5
+[19/10/2016 11:4:6] /a 5
+[19/10/2016 11:4:26] /t
+[19/10/2016 11:4:41] /t
+[19/10/2016 11:4:52] /m gaz'haragoth
+[19/10/2016 14:50:34] /t
+[19/10/2016 14:51:10] /i great healing potion
+[19/10/2016 14:51:21] /i amulet of loss
+[19/10/2016 14:52:3] /i manapotion
+[19/10/2016 14:52:20] /i rune explosion rune
+[19/10/2016 14:52:28] /i explosion rune
+[19/10/2016 14:53:1] /i 1621
+[19/10/2016 14:53:3] /r
+[19/10/2016 14:53:32] /i 4542
+[19/10/2016 14:53:37] /r
+[19/10/2016 14:54:28] /i 7620
+[19/10/2016 15:5:44] /t
+[19/10/2016 15:12:26] /t
+[19/10/2016 15:14:30] /i 2315
+[19/10/2016 15:17:3] /i 2286
+[19/10/2016 15:18:37] /t
+[19/10/2016 15:59:7] /clean
+[19/10/2016 20:48:53] /t
+[19/10/2016 20:49:19] /m frazzlemaw
+[19/10/2016 20:49:22] /s training monk
+[19/10/2016 22:33:32] /i greatfireball rune
+[19/10/2016 22:33:38] /i great fireball rune
+[19/10/2016 22:33:55] /m dragon
+[19/10/2016 22:33:57] /s dragon
+[19/10/2016 22:36:1] /goto silencer
+[19/10/2016 23:2:41] /t
+[19/10/2016 23:2:47] /up
+[19/10/2016 23:2:48] /up
+[19/10/2016 23:3:4] /i 12892
+[19/10/2016 23:3:13] /i 12846
+[19/10/2016 23:3:20] /i 12845
+[19/10/2016 23:7:11] /i 1209
+[19/10/2016 23:7:35] /i 1224
+[19/10/2016 23:7:44] /r
+[19/10/2016 23:7:47] /i 1211
+[19/10/2016 23:7:57] /r
+[19/10/2016 23:8:1] /i 1214
+[19/10/2016 23:8:4] /r
+[19/10/2016 23:8:11] /i 2086
+[19/10/2016 23:8:19] /i 10091
+[19/10/2016 23:8:30] /i 1223
+[19/10/2016 23:8:34] /r
+[19/10/2016 23:9:0] /i 12159
+[19/10/2016 23:9:6] /r
+[19/10/2016 23:9:9] /i 12157
+[19/10/2016 23:9:13] /r
+[19/10/2016 23:9:17] /i 12156
+[19/10/2016 23:9:23] /r
+[19/10/2016 23:9:30] /i 12160
+[19/10/2016 23:17:31] /i 1212
+[19/10/2016 23:17:35] /r
+[19/10/2016 23:18:29] /i 12158
+[19/10/2016 23:18:38] /r
+[19/10/2016 23:19:1] /i 12160
+[19/10/2016 23:19:6] /r
+[19/10/2016 23:19:21] /i 1209
+[19/10/2016 23:19:29] /r

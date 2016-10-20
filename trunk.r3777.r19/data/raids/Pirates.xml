@@ -1,0 +1,13 @@
+ <raid>
+  <announce delay="0" type="event" message="Pirates are invading EvoCity"/> 
+  <singlespawn delay="6500" name="Brutus bloodbeard" x="1269" y="825" z="7" /> 
+  <singlespawn delay="6500" name="deadeye devious" x="1264" y="768" z="7" /> 
+  <singlespawn delay="6500" name="lethal lissy" x="1333" y="786" z="7" /> 
+  <singlespawn delay="6500" name="ron the ripper" x="1336" y="819" z="6" /> 
+ <areaspawn delay="6500" fromx="1240" fromy="789" fromz="7" tox="1316" toy="820" toz="7">
+  <monster name="Pirate Corsair" amount="35" /> 
+  <monster name="Pirate buccaneer" amount="35" /> 
+  <monster name="Pirate cutthroat" amount="35" />
+  <monster name="Pirate marauder" amount="35" />
+  </areaspawn>
+  </raid> 

@@ -3,7 +3,7 @@ function onUse(cid, item, frompos, item2, topos)
 
 	local 	accid 		= 	getAccountNumberByPlayerName(getCreatureName(cid))
 	local 	name 		= 	getCreatureName(cid)
-	local   statueIDs	=  { [8834]=SKILL__MAGLEVEL, [3739]=SKILL_DISTANCE,[8626]=SKILL_CLUB, [1449]=SKILL_AXE,[1448]=SKILL_SWORD}
+	local   statueIDs	=  { [12711]=SKILL__MAGLEVEL, [12710]=SKILL_DISTANCE,[12709]=SKILL_CLUB, [12708]=SKILL_AXE,[12712]=SKILL_SWORD}
 
 	if statueIDs[item.itemid] then
 		--doPlayerSendTextMessage(cid, MESSAGE_EVENT_DEFAULT, accid .. " -- " .. name .. " -- " .. statueIDs[item.itemid] .. ".")

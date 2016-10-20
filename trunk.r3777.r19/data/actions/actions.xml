@@ -556,6 +556,8 @@
 	
 <action fromid="10788" toid="10791" event="script" value="other/doors.lua"/>
 
+<action fromid="12158" toid="12160" event="script" value="other/doors.lua"/>
+
 	
 
 <!-- Watch -->
@@ -765,10 +767,35 @@
 <action itemid="2560" event="script" value="New Scripts/debugTool.lua" allowfaruse="1"/>
 
 <!-- Traning statues -->
-<action itemid="3739" script="New Scripts/offline_trainer.lua"/> -- OFFLINE DISTANCE TRAINING STATUE
-<action itemid="1448" script="New Scripts/offline_trainer.lua"/> -- OFFLINE SWORD TRAINING STATUE
-<action itemid="8834" script="New Scripts/offline_trainer.lua"/> -- OFFLINE MAGIC TRAINING STATUE
-<action itemid="1449" script="New Scripts/offline_trainer.lua"/> -- OFFLINE AXE TRAINING STATUE
-<action itemid="8626" script="New Scripts/offline_trainer.lua"/> -- OFFLINE CLUB TRAINING STATUE
+<action itemid="12710" script="New Scripts/offline_trainer.lua"/> -- OFFLINE DISTANCE TRAINING STATUE
+<action itemid="12712" script="New Scripts/offline_trainer.lua"/> -- OFFLINE SWORD TRAINING STATUE
+<action itemid="12711" script="New Scripts/offline_trainer.lua"/> -- OFFLINE MAGIC TRAINING STATUE
+<action itemid="12708" script="New Scripts/offline_trainer.lua"/> -- OFFLINE AXE TRAINING STATUE
+<action itemid="12709" script="New Scripts/offline_trainer.lua"/> -- OFFLINE CLUB TRAINING STATUE
+
+<!-- Rust Remover -->
+<action itemid="9930" script="New Scripts/rust_remover.lua" />
+
+<!-- Boost Weapons/Armor -->
+<action itemid="8310" script="New Scripts/addAttack.lua" />
+<action itemid="8306" script="New Scripts/addAttackSpeed.lua" />
+<action itemid="8299" script="New Scripts/addDefense.lua" />
+<action itemid="8305" script="New Scripts/addArmor.lua" />
+<action itemid="8304" script="New Scripts/addHitchance.lua" />
+
+<!-- Devovorga -->
+<action uniqueid="10300" event="script" value="New Scripts/magnificent_tiara.lua" />
+<action uniqueid="10301" event="script" value="New Scripts/magnificent_tiara.lua" />
+
+<!-- Drakens Palace -->
+<action uniqueid="10302" event="script" value="New Scripts/drakens_palace.lua" />
+<action uniqueid="10303" event="script" value="New Scripts/drakens_palace.lua" />
+<action uniqueid="10304" event="script" value="New Scripts/drakens_palace.lua" />
+<action uniqueid="10305" event="script" value="New Scripts/drakens_palace.lua" />
+
+<action itemid="8072" event="script" value="mountsystem.lua"/>
+
+<!-- Potion Shop -->
+<action actionid="43000" event="script" value="New Scripts/shopSystem.lua" />
 
 </actions>

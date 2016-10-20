@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <monster name="Dawnfire Asura" nameDescription="a dawnfire asura" race="blood" experience="4100" speed="410" manacost="0">
   <health now="2900" max="2900"/>
-  <look type="150" head="114" body="94" legs="21" feet="79" addons="1" corpse="6081"/>
+  <look type="150" head="114" body="94" legs="21" feet="79" addons="1" corpse="12749"/>
   <targetchange interval="5000" chance="8"/>
   <strategy attack="100" defense="0"/>
   <flags>

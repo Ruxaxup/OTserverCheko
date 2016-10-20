@@ -46,10 +46,12 @@
         <monster name="Guzzlemaw" file="Zekras Custom/Guzzlemaw.xml"/>
         <monster name="Midnight Asura" file="Zekras Custom/Midnight Asura.xml"/>
         <monster name="Silencer" file="Zekras Custom/Silencer.xml"/>
+        <monster name="Frazzlemaw" file="Zekras Custom/frazzlemaw.xml"/>
 	<monster name="Lucifer" file="Zekras Custom/Lucifer.xml"/>
 	<monster name="Stheno" file="Zekras Custom/Stheno.xml"/>
 	<monster name="Orc Master" file="Zekras Custom/Orc Master.xml"/>
 	<monster name="Loyal Minion" file="Zekras Custom/Loyal Minion.xml"/>
+	<monster name="Gaz'haragoth" file="Zekras Custom/gazharagoth.lua" />
 
         <!--8.5-->
 	<monster name="Medusa" file="8.5/Medusa.xml"/>
@@ -264,6 +266,7 @@
 	<!-- Dragons -->
 	<monster name="Frost Dragon" file="dragons/Frost Dragon.xml"/>
 	<monster name="Wyrm" file="dragons/Wyrm.xml"/>
+	<monster name="Elder Wyrm" file="dragons/Elder Wyrm.xml"/>
 	<monster name="Sea Serpent" file="dragons/Sea Serpent.xml"/>
 	<monster name="Leviathan" file="dragons/Leviathan.xml"/>
 	<monster name="Dragon Lord" file="dragons/dragon lord.xml"/>

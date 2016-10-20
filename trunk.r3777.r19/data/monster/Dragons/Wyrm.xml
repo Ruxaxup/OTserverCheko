@@ -69,16 +69,16 @@
     <item id="7589" chance="15300" /><!-- strong mana potion -->
     <item id="2455" chance="6350" /><!-- crossbow -->
     <item id="8873" chance="775" /><!-- hibiscus dress -->
-    <item id="8871" chance="2500" /><!-- focus cape -->
-    <item id="8921" chance="3000" /><!-- wand of draconia -->
+    <item id="8871" chance="1100" /><!-- focus cape -->
+    <item id="8921" chance="1200" /><!-- wand of draconia -->
     <item id="1987" chance="100000"><!-- bag -->
         <inside>
-            <item id="8920" chance="1925" /><!-- wand of starstorm -->
+            <item id="8920" chance="1000" /><!-- wand of starstorm -->
             <item id="7889" chance="2300" /><!-- lightning pendant -->
             <item id="2145" countmax="3" chance="1025" /><!-- small diamond -->
-            <item id="7430" chance="2600" /><!-- dragonbone staff -->
+            <item id="7430" chance="1000" /><!-- dragonbone staff -->
             <item id="10221" chance="1625" /><!-- shockwave amulet -->
-            <item id="8855" chance="2550" /><!-- composite hornbow -->
+            <item id="8855" chance="100" /><!-- composite hornbow -->
         </inside>
     </item>
 </loot>

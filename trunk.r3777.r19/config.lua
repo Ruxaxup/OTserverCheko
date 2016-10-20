@@ -63,11 +63,11 @@
 
 	-- Account manager
 	accountManager = true
-	namelockManager = false
+	namelockManager = true
 	newPlayerChooseVoc = true
-	newPlayerSpawnPosX = 96
-	newPlayerSpawnPosY = 71
-	newPlayerSpawnPosZ = 7
+	newPlayerSpawnPosX = 1060
+	newPlayerSpawnPosY = 1036
+	newPlayerSpawnPosZ = 8
 	newPlayerTownId = 1
 	newPlayerLevel = 8
 	newPlayerMagicLevel = 0
@@ -119,7 +119,7 @@
 	worldType = "open"
 	protectionLevel = 1
 	pvpTileIgnoreLevelAndVocationProtection = true
-	pzLocked = 60 * 1000
+	pzLocked = 20 * 1000
 	huntingDuration = 60 * 1000
 	criticalHitChance = 7
 	criticalHitMultiplier = 1
@@ -135,7 +135,7 @@
 	stopAttackingAtExit = false
 	loginProtectionPeriod = 10 * 1000
 	deathLostPercent = 10
-	stairhopDelay = 2 * 1000
+	stairhopDelay = 1 * 500
 	pushCreatureDelay = 2 * 1000
 	deathContainerId = 1987
 	gainExperienceColor = 215
@@ -146,7 +146,7 @@
 
 	-- Connection config
 	worldId = 0
-	ip = "127.0.0.1"
+	ip = "189.209.129.201"
 	loginPort = 7171
 	gamePort = 7172
 	loginTries = 10
@@ -296,7 +296,7 @@
 	houseTileLimit = 0
 
 	-- Premium-related
-	freePremium = false
+	freePremium = true
 	premiumForPromotion = true
 
 	-- Blessings
@@ -311,12 +311,12 @@
 	-- Rates
 	-- NOTE: experienceStages configuration is located in data/XML/stages.xml.
 	-- rateExperienceFromPlayers 0 to disable.
-	experienceStages = false
-	rateExperience = 500.0
+	experienceStages = true
+	rateExperience = 1.0
 	rateExperienceFromPlayers = 0
-	rateSkill = 30.0
-	rateMagic = 300.0
-	rateLoot = 4.0
+	rateSkill = 20.0
+	rateMagic = 10.0
+	rateLoot = 2.0
 	rateSpawn = 1
 
 	-- Monster rates

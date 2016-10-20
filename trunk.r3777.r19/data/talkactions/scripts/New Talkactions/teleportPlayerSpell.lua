@@ -69,7 +69,7 @@ function onSay(cid, words, param, channel)
 		--doPlayerSendTextMessage(cid, MESSAGE_STATUS_CONSOLE_ORANGE, "ManaSpent: " .. manaSpent)
 		doSendMagicEffect(tmp, CONST_ME_MAGIC_BLUE)
 		doSendMagicEffect(pos, CONST_ME_TELEPORT)
-		doCreatureAddMana(cid, -manaSpent)
+		--doCreatureAddMana(cid, -manaSpent)
 	end
 
 	return true

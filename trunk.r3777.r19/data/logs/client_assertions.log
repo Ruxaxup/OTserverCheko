@@ -1,0 +1,20 @@
+----- 18/10/2016 23:11:2 - Ruxaxup (192.168.0.1) -----
+Comment: 
+Graphic Engine: DirectX9 (2)
+Operating System: Windows Vista Family in ESP
+Processor: Intel Core i5 -2500 @ 3
+Video Card: NVIDIA GeForce GTX 970
+Last Packet Types: 131 131 131 131 132 131 106 108 140 140
+Last Packet: 140 223 067 000 064 100 140 223 067 000 064 100 108 033 004 253
+Player Position: [1051,1020,7]
+Player Name: Ruxaxup (Level: 92 Voc: EK)
+Player Action: 049 056 057 046 050 048 057 046 049 050 057 046 050 048 049 058 055 049 055 050
+Player.cpp 361: exception occurred, reason:
+Network.cpp 946: exception occurred (ErrorCode = 0), reason:
+Control.cpp 1331: exception occurred (Type = -1) (MainWindow = 10322184), reason:
+Network.cpp 445: exception occurred, reason:
+Network.cpp 432: exception occurred, reason:
+Network.cpp 398: packet size does not fit to symmetric encryption (PacketSize = 16365)
+Tue Oct 18 23:10:46 2016
+Debug Assertion 8.60 Network.cpp 398
+

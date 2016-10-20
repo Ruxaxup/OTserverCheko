@@ -26,6 +26,16 @@
 		<vocation id="2"/>
 	</wand>
 
+	<wand id="12669" level="65" mana="13" min="125" max="150" type="death" event="script" value="wands/glacial.lua"> <!-- Glacial Rod -->
+		<vocation id="2"/>
+		<vocation id="6"/>
+	</wand>
+
+	<wand id="12668" level="65" mana="13" min="125" max="150" type="death" event="script" value="wands/muck.lua"> <!-- Muck Rod -->
+		<vocation id="2"/>
+		<vocation id="6"/>
+	</wand>
+
 	<!-- Wands -->
 	<wand id="2190" level="7" mana="2" min="10" max="25" type="energy" event="script" value="wands/vortex.lua"> <!-- Wand of Vortex -->
 		<vocation id="1"/>
@@ -51,10 +61,19 @@
 	<wand id="8922" level="42" mana="13" min="125" max="150" type="death" event="script" value="wands/vodoo.lua"> <!-- Wand of Voodoo -->
 		<vocation id="1"/>
 	</wand>
-<wand id="7424" level="7" mana="50" min="300" max="500" type="death" event="script" value="wands/midron.lua"> <!-- Midron Staff -->
+	<wand id="7424" level="70" mana="50" min="300" max="500" type="death" event="script" value="wands/midron.lua"> <!-- Midron Staff -->
 		<vocation id="5"/>
 		<vocation id="6" showInDescription="0"/>
-</wand>
+	</wand>
+	<wand id="12675" level="65" mana="17" min="75" max="95" type="death" event="script" value="wands/defiance.lua"> <!-- Wand of Defiance -->
+		<vocation id="5"/>
+		<vocation id="6" showInDescription="0"/>
+	</wand>
+	<wand id="12671" level="65" mana="17" min="75" max="95" type="death" event="script" value="wands/everblazing.lua"> <!-- Wand of Everblazing -->
+		<vocation id="5"/>
+		<vocation id="6" showInDescription="0"/>
+	</wand>
+
 	<!-- Swords -->
 	<melee id="2413" unproperly="1" event="script" value="lifesteal_manaleech.lua">
 		<vocation id="4"/>
@@ -156,6 +175,50 @@
 		<vocation id="4"/>
 	</melee>
 
+	<!-- Umbral blade -->
+	<melee id="12676" level="75" unproperly="1" event="script" value="lifesteal_manaleech.lua"> 
+		<vocation id="4"/>
+		<vocation id="8" showInDescription="0"/>
+	</melee>
+	<melee id="12677" level="120" unproperly="1" event="script" value="lifesteal_manaleech.lua">
+		<vocation id="4"/>
+		<vocation id="8" showInDescription="0"/>
+	</melee>
+	<melee id="12678" level="250" unproperly="1" event="script" value="lifesteal_manaleech.lua">
+		<vocation id="4"/>
+		<vocation id="8" showInDescription="0"/>
+	</melee>
+
+	<!-- Umbral Slayer -->
+	<melee id="12679" level="75" unproperly="1" event="script" value="lifesteal_manaleech.lua"> 
+		<vocation id="4"/>
+		<vocation id="8" showInDescription="0"/>
+	</melee>
+	<melee id="12680" level="120" unproperly="1" event="script" value="lifesteal_manaleech.lua">
+		<vocation id="4"/>
+		<vocation id="8" showInDescription="0"/>
+	</melee>
+	<melee id="12681" level="250" unproperly="1" event="script" value="lifesteal_manaleech.lua">
+		<vocation id="4"/>
+		<vocation id="8" showInDescription="0"/>
+	</melee>
+
+	<melee id="12705" level="120" unproperly="1" event="script" value="lifesteal_manaleech.lua">
+		<vocation id="4"/>
+		<vocation id="8" showInDescription="0"/>
+	</melee>
+	
+	<melee id="12628" level="62" unproperly="1" event="script" value="lifesteal_manaleech.lua">
+		<vocation id="4"/>
+		<vocation id="8" showInDescription="0"/>
+	</melee>
+
+	<melee id="12744" level="150" unproperly="1" event="script" value="lifesteal_manaleech.lua">
+		<vocation id="4"/>
+		<vocation id="8" showInDescription="0"/>
+	</melee>
+
+
 	<!-- Axes -->
 	<melee id="2429" level="20" unproperly="1" event="script" value="lifesteal_manaleech.lua"/>
 	<melee id="2435" level="20" unproperly="1" event="script" value="lifesteal_manaleech.lua"/>
@@ -247,6 +310,65 @@
 	</melee>
 	<melee id="7878" level="65" unproperly="1" event="script" value="lifesteal_manaleech.lua">
 		<vocation id="4"/>
+	</melee>
+
+	<!-- Umbral -->
+	<!-- Umbral Chopper -->
+	<melee id="12685" level="75" unproperly="1" event="script" value="lifesteal_manaleech.lua"> 
+		<vocation id="4"/>
+		<vocation id="8" showInDescription="0"/>
+	</melee>
+	<melee id="12686" level="120" unproperly="1" event="script" value="lifesteal_manaleech.lua">
+		<vocation id="4"/>
+		<vocation id="8" showInDescription="0"/>
+	</melee>
+	<melee id="12687" level="250" unproperly="1" event="script" value="lifesteal_manaleech.lua">
+		<vocation id="4"/>
+		<vocation id="8" showInDescription="0"/>
+	</melee>
+
+	<!-- Umbral axe -->
+	<melee id="12682" level="75" unproperly="1" event="script" value="lifesteal_manaleech.lua"> 
+		<vocation id="4"/>
+		<vocation id="8" showInDescription="0"/>
+	</melee>
+	<melee id="12683" level="120" unproperly="1" event="script" value="lifesteal_manaleech.lua">
+		<vocation id="4"/>
+		<vocation id="8" showInDescription="0"/>
+	</melee>
+	<melee id="12684" level="250" unproperly="1" event="script" value="lifesteal_manaleech.lua">
+		<vocation id="4"/>
+		<vocation id="8" showInDescription="0"/>
+	</melee>
+
+	<melee id="12655" level="70" unproperly="1" event="script" value="lifesteal_manaleech.lua">
+		<vocation id="4"/>
+		<vocation id="8" showInDescription="0"/>
+	</melee>
+
+	<melee id="12651" level="50" unproperly="1" event="script" value="lifesteal_manaleech.lua">
+		<vocation id="4"/>
+		<vocation id="8" showInDescription="0"/>
+	</melee>
+
+	<melee id="12649" level="40" unproperly="1" event="script" value="lifesteal_manaleech.lua">
+		<vocation id="4"/>
+		<vocation id="8" showInDescription="0"/>
+	</melee>
+
+	<melee id="12639" level="80" unproperly="1" event="script" value="lifesteal_manaleech.lua">
+		<vocation id="4"/>
+		<vocation id="8" showInDescription="0"/>
+	</melee>
+
+	<melee id="12629" level="120" unproperly="1" event="script" value="lifesteal_manaleech.lua">
+		<vocation id="4"/>
+		<vocation id="8" showInDescription="0"/>
+	</melee>
+
+	<melee id="12743" level="150" unproperly="1" event="script" value="lifesteal_manaleech.lua">
+		<vocation id="4"/>
+		<vocation id="8" showInDescription="0"/>
 	</melee>
 
 	<!-- Clubs -->
@@ -345,6 +467,50 @@
 		<vocation id="8" showInDescription="0"/>
 	</melee>
 
+	<!-- Umbral Hammer -->
+	<melee id="12691" level="75" unproperly="1" event="script" value="lifesteal_manaleech.lua"> 
+		<vocation id="4"/>
+		<vocation id="8" showInDescription="0"/>
+	</melee>
+	<melee id="12692" level="120" unproperly="1" event="script" value="lifesteal_manaleech.lua">
+		<vocation id="4"/>
+		<vocation id="8" showInDescription="0"/>
+	</melee>
+	<melee id="12693" level="250" unproperly="1" event="script" value="lifesteal_manaleech.lua">
+		<vocation id="4"/>
+		<vocation id="8" showInDescription="0"/>
+	</melee>
+
+	<!-- Umbral Mace -->
+	<melee id="12688" level="75" unproperly="1" event="script" value="lifesteal_manaleech.lua"> 
+		<vocation id="4"/>
+		<vocation id="8" showInDescription="0"/>
+	</melee>
+	<melee id="12689" level="120" unproperly="1" event="script" value="lifesteal_manaleech.lua">
+		<vocation id="4"/>
+		<vocation id="8" showInDescription="0"/>
+	</melee>
+	<melee id="12690" level="250" unproperly="1" event="script" value="lifesteal_manaleech.lua">
+		<vocation id="4"/>
+		<vocation id="8" showInDescription="0"/>
+	</melee>
+
+	<melee id="12648" level="90" unproperly="1" event="script" value="lifesteal_manaleech.lua">
+		<vocation id="4"/>
+		<vocation id="8" showInDescription="0"/>
+	</melee>
+
+	<melee id="12636" level="48" unproperly="1" event="script" value="lifesteal_manaleech.lua"/>
+
+	<melee id="12633" level="38" unproperly="1" event="script" value="lifesteal_manaleech.lua"/>
+
+	<melee id="12630" level="120" unproperly="1" event="script" value="lifesteal_manaleech.lua"/>
+
+	<melee id="12745" level="90" unproperly="1" event="script" value="lifesteal_manaleech.lua">
+		<vocation id="4"/>
+		<vocation id="8" showInDescription="0"/>
+	</melee>
+
 	<!-- Bows and Crossbows -->
 	<distance id="8849" level="45" unproperly="1" event="function" value="default"> <!-- Modified Crossbow -->
 		<vocation id="3"/>
@@ -387,6 +553,70 @@
 		<vocation id="7" showInDescription="0"/>
 	</distance>
 
+	<!-- Umbral Crossbow -->
+	<distance id="12697" level="75" unproperly="1" event="function" value="default"> 
+		<vocation id="3"/>
+		<vocation id="7" showInDescription="0"/>
+	</distance>
+	<distance id="12698" level="120" unproperly="1" event="function" value="default">
+		<vocation id="3"/>
+		<vocation id="7" showInDescription="0"/>
+	</distance>
+	<distance id="12699" level="250" unproperly="1" event="function" value="default">
+		<vocation id="3"/>
+		<vocation id="7" showInDescription="0"/>
+	</distance>
+
+	<!-- Umbral Bow -->
+	<distance id="12694" level="75" unproperly="1" event="function" value="default"> 
+		<vocation id="3"/>
+		<vocation id="7" showInDescription="0"/>
+	</distance>
+	<distance id="12695" level="120" unproperly="1" event="function" value="default">
+		<vocation id="3"/>
+		<vocation id="7" showInDescription="0"/>
+	</distance>
+	<distance id="12696" level="250" unproperly="1" event="function" value="default">
+		<vocation id="3"/>
+		<vocation id="7" showInDescription="0"/>
+	</distance>
+
+	<!-- Icicle Bow -->
+	<distance id="12703" level="100" unproperly="1" event="function" value="default">
+		<vocation id="3"/>
+		<vocation id="7" showInDescription="0"/>
+	</distance>
+
+	<!-- Ornate Crossbow -->
+	<distance id="12635" level="50" unproperly="1" event="function" value="default">
+		<vocation id="3"/>
+		<vocation id="7" showInDescription="0"/>
+	</distance>
+
+	<!-- Crystal Crossbow -->
+	<distance id="12631" level="90" unproperly="1" event="function" value="default">
+		<vocation id="3"/>
+		<vocation id="7" showInDescription="0"/>
+	</distance>
+
+	<!-- Hive Bow -->
+	<distance id="12634" level="85" unproperly="1" event="function" value="default">
+		<vocation id="3"/>
+		<vocation id="7" showInDescription="0"/>
+	</distance>
+
+	<!-- Mycologycal Bow -->
+	<distance id="12632" level="105" unproperly="1" event="function" value="default">
+		<vocation id="3"/>
+		<vocation id="7" showInDescription="0"/>
+	</distance>
+
+	<distance id="12717" level="150" unproperly="1" event="function" value="default">
+		<vocation id="3"/>
+		<vocation id="7" showInDescription="0"/>
+	</distance>
+
+
  	<!-- Ammunition -->
 	<distance id="2545" event="script" value="poison_arrow.lua"/>
 	<distance id="2546" event="script" value="burst_arrow.lua"/>
@@ -405,6 +635,8 @@
 	<distance id="7363" level="30" event="script" value="ammunition/Piercing.lua"/> <!-- Piercing Bolt -->
 	<distance id="2547" level="55" event="script" value="ammunition/Power.lua"/> <!-- Power Bolt -->
 	<distance id="6529" level="70" event="script" value="ammunition/Infernal.lua"/> <!-- Infernal Bolt -->
+	<distance id="12627" level="90" event="script" value="ammunition/Crystal.lua"/> <!-- Infernal Bolt -->
+	<distance id="12673" level="90" event="script" value="ammunition/Prismatic.lua"/> <!-- Infernal Bolt -->
 
 	<!-- New for Life Steal -->
 	<melee id="2403" event="script" value="lifesteal_manaleech.lua"/>	

@@ -698,7 +698,6 @@ function isUnderWater(cid)
 	return isInArray(underWater, getTileInfo(getCreaturePosition(cid)).itemid)
 end
 
-
 --statSystem
 
 --LIFE_STEAL_PERC = 65003
@@ -952,11 +951,10 @@ function resetAllPoints(cid)
 end
 
 --Apply Life Steal or Mana Leech
-function applyLSorML(cid, healthAfter, maxHealth, target)
+function applyLSorML(cid, damage, target)
 	local lifeSteal = getPlayerStorageValue(cid, LIFE_STEAL_PERC)
 	-- chance to heal
 	local chanceHeal = math.random(0, 100)
-	local damage = math.abs((maxHealth - healthAfter))
 	if(chanceHeal > (100 - getPlayerLifeStealChancePoints(cid)) and damage ~= 0 )  then
 		local healing = math.ceil(damage * lifeSteal)
 		doCreatureAddHealth(cid,healing)
@@ -968,10 +966,10 @@ function applyLSorML(cid, healthAfter, maxHealth, target)
 	-- chance to manaHeal
 	local chanceMana = math.random(0, 100)
 	local manaLeech = getPlayerStorageValue(cid, MANA_LEECH_PERC)
-	if(chanceMana > (100 - getPlayerManaLeechChancePoints(cid))) then
+	if(chanceMana > (100 - getPlayerManaLeechChancePoints(cid)) and damage ~= 0) then
 		local mana = math.ceil(damage * manaLeech)
 		doCreatureAddMana(cid,mana)
-		doPlayerSendTextMessage(cid, MESSAGE_EVENT_ORANGE, "[*]Mana Leech: You were healed by " .. mana .. " manapoints.")
+		doPlayerSendTextMessage(cid, MESSAGE_STATUS_CONSOLE_BLUE, "[*]Mana Leech: You were healed by " .. mana .. " manapoints.")
 		doSendMagicEffect(getCreaturePosition(cid), CONST_ME_MAGIC_BLUE)
 		doSendAnimatedText(getCreaturePosition(cid), ""..mana, TEXTCOLOR_LIGHTBLUE)
 	end
@@ -990,3 +988,106 @@ function spawnArmy( )
     end
 end
 
+-- Boost Weapons
+
+function addAttack(cid, weapon, attack)
+	if(isInArray(WEAPONS,getItemWeaponType(weapon.uid))) then
+		local diff
+		local baseAttack = getItemInfo(weapon.itemid).attack
+		local newAttack = tonumber(getItemAttribute(weapon.uid, "attack"))
+		if(newAttack == nil) then
+			newAttack = baseAttack
+		end
+		newAttack = newAttack + 1
+		diff = newAttack - baseAttack
+		doSendMagicEffect(getCreaturePosition(cid),CONST_ME_YALAHARIGHOST)
+		doItemSetAttribute(weapon.uid,"attack",newAttack)
+		local baseDescription = getItemInfo(weapon.itemid).description
+		addDescription(weapon.uid, baseDescription .." Attack increased by "..diff..".")
+		return true
+	else
+		doCreatureSay(cid, "Can only be used on weapons.",MESSAGE_EVENT_ORANGE)
+		return false
+	end	
+end
+
+function addAttackSpeed(uid, attackSpeed)
+	return doItemSetAttribute(uid,"attackSpeed",attackSpeed)
+end
+
+function addDefense(uid, defense)
+	return doItemSetAttribute(uid,"defense",defense)
+end
+
+function addArmor(uid, armor)
+	return doItemSetAttribute(uid,"armor",armor)
+end
+
+function addHitchance(uid, hitchance)
+	return doItemSetAttribute(uid,"hitchance",hitchance)
+end
+
+function addDescription(uid, text)	
+	return doItemSetAttribute(uid,"description",text)
+end
+
+
+-- Mark map
+
+function markMap(cid)
+	doPlayerAddMapMark(cid,{x=1055,y=1087,z=7},MAPMARK_SWORD,"Offline Training Statues")
+    doPlayerAddMapMark(cid,{x=1016,y=1022,z=7},MAPMARK_STAR,"Potions and Runes shop")
+    doPlayerAddMapMark(cid,{x = 1062, y = 1044, z = 7},MAPMARK_STAR,"Stop and Go shop")
+    doPlayerAddMapMark(cid,{x=1030,y=1012,z=7},MAPMARK_BAG,"Rashid")
+    doPlayerAddMapMark(cid,{x=1070,y=1010,z=7},MAPMARK_SWORD,"Training monks")
+    doPlayerAddMapMark(cid,{x = 1022, y = 1020, z = 7},MAPMARK_BAG,"Jeweller")
+    doPlayerAddMapMark(cid,{x = 1034, y = 1041, z = 7},MAPMARK_TEMPLE,"Temple")
+    doPlayerAddMapMark(cid,{x = 1028, y = 1037, z = 7},MAPMARK_GREENNORTH,"Teleports")
+    doPlayerAddMapMark(cid,{x = 1040, y = 1046, z = 7},MAPMARK_EXCLAMATION,"Tasker")
+    doPlayerAddMapMark(cid,{x = 1080, y = 1064, z = 6},MAPMARK_FLAG,"Boat")
+    doPlayerAddMapMark(cid,{x = 1061, y = 1063, z = 7},MAPMARK_BAG,"Addon Seller")
+    doPlayerAddMapMark(cid,{x = 1087, y = 955, z = 7},MAPMARK_GREENNORTH,"Story Teller")
+    --Hunt Spots
+    doPlayerAddMapMark(cid,{x = 1024, y = 1057, z = 7},MAPMARK_REDSOUTH,"Rotworms")
+    doPlayerAddMapMark(cid,{x = 1029, y = 1032, z = 7},MAPMARK_REDSOUTH,"Rotworms")
+    doPlayerAddMapMark(cid,{x = 1000, y = 1026, z = 7},MAPMARK_REDSOUTH,"Rotworms")
+    doPlayerAddMapMark(cid,{x = 965, y = 1065, z = 7},MAPMARK_REDSOUTH,"Cyclops")
+    doPlayerAddMapMark(cid,{x = 930, y = 1150, z = 7},MAPMARK_REDSOUTH,"POH")
+    doPlayerAddMapMark(cid,{x = 825, y = 1047, z = 7},MAPMARK_REDSOUTH,"Quaras")
+    doPlayerAddMapMark(cid,{x = 913, y = 1013, z = 7},MAPMARK_REDSOUTH,"Minotaurs")
+    doPlayerAddMapMark(cid,{x = 966, y = 1027, z = 7},MAPMARK_REDSOUTH,"Dwarves")
+    doPlayerAddMapMark(cid,{x = 1179, y = 945, z = 7},MAPMARK_REDSOUTH,"Pirates")
+    doPlayerAddMapMark(cid,{x = 1184, y = 1050, z = 7},MAPMARK_REDSOUTH,"Dragons")
+
+    --Towns
+    doPlayerAddMapMark(cid,{x = 1277, y = 806, z = 7},MAPMARK_TEMPLE,"Evolutions City")
+    doPlayerSendTextMessage(cid, MESSAGE_INFO_DESCR, "Your map is been marked!")
+    doSendMagicEffect(getCreaturePosition(cid),CONST_ME_FIREWORK_BLUE)
+end
+
+--Thorn System
+function getThornDamage(cid)
+	local thornDamage = getPlayerStorageValue(cid, THORNS_ID)
+	if(thornDamage < 0) then
+		thornDamage = 0
+	end
+	return thornDamage
+end
+
+function addThornsDamage(cid, damage)
+	local thornDamage = getThornDamage(cid)
+	doPlayerSetStorageValue(cid, THORNS_ID, (thornDamage + damage))
+end
+
+function setThornArmorCondition(cid, activate) -- activate es booleano
+	if(activate) then -- activamos condicion
+		doPlayerSetStorageValue(cid, THORNS_ARMOR_CONDITION, 1)
+	else
+		doPlayerSetStorageValue(cid, THORNS_ARMOR_CONDITION, -1)
+	end
+end
+
+function getSpecialCondition( cid, specialCondition )
+	local condition = getPlayerStorageValue(cid, specialCondition)
+	return condition
+end

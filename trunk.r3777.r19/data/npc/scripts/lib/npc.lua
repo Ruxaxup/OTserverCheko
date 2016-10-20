@@ -129,6 +129,7 @@ end
 -- sell an item
 function sell(cid, itemid, count, cost)
 	cost = count*cost
+	print("count: "..count..", itemid: "..itemid)
 	if doPlayerRemoveItem(cid, itemid, count) == 1 then
 		doPlayerAddMoney(cid, cost)
 		

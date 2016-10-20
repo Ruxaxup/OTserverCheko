@@ -1,0 +1,11 @@
+<raid>
+<announce delay="0" type="event" message="Orshabaal's minions are working on his return to the World. LEAVE the Smallville now, mortals."/>
+<announce delay="300000" type="event" message="Orshabaal is about to make his way into the mortal realm. Run for your lives!"/>
+<announce delay="600000" type="event" message="Orshabaal has been summoned from hell to plague the lands of mortals again."/>
+<singlespawn delay="600000" name="Orshabaal" x="1296" y="764" z="7" />
+<singlespawn delay="600000" name="Demon" x="1296" y="767" z="7" />
+<singlespawn delay="600000" name="Demon" x="1296" y="760" z="7" />
+<singlespawn delay="600000" name="Demon" x="1291" y="764" z="7" />
+<singlespawn delay="600000" name="Demon" x="1300" y="764" z="7" />
+<singlespawn delay="600000" name="Demon" x="1300" y="767" z="7" />
+</raid>

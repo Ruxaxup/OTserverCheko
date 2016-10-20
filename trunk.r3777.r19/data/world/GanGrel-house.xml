@@ -275,7 +275,7 @@
 	<house name="Unnamed House #2049" houseid="2049" entryx="1009" entryy="998" entryz="6" rent="0" townid="1" size="10" />
 	<house name="Unnamed House #2050" houseid="2050" entryx="1009" entryy="1001" entryz="6" rent="0" townid="1" size="14" />
 	<house name="Unnamed House #2051" houseid="2051" entryx="848" entryy="1182" entryz="7" rent="0" townid="1" size="0" />
-	<house name="Unnamed House #2052" houseid="2052" entryx="993" entryy="1031" entryz="7" rent="0" townid="1" size="160" />
+	<house name="Unnamed House #2052" houseid="2052" entryx="993" entryy="1031" entryz="7" rent="0" townid="1" size="163" />
 	<house name="Unnamed House #2053" houseid="2053" entryx="1055" entryy="1001" entryz="6" rent="0" townid="1" size="15" />
 	<house name="Unnamed House #2054" houseid="2054" entryx="1007" entryy="989" entryz="7" rent="0" townid="1" size="18" />
 	<house name="Unnamed House #2055" houseid="2055" entryx="1010" entryy="987" entryz="7" rent="0" townid="1" size="12" />
@@ -351,7 +351,7 @@
 	<house name="Yalahar House #6" houseid="2128" entryx="2087" entryy="1127" entryz="7" rent="0" townid="7" size="152" />
 	<house name="Yalahar House #7" houseid="2129" entryx="2072" entryy="1118" entryz="7" rent="0" townid="7" size="123" />
 	<house name="Yalahar House #8" houseid="2130" entryx="2078" entryy="1115" entryz="7" rent="0" townid="7" size="144" />
-	<house name="Forbidden Castle of Gods" houseid="2131" entryx="1048" entryy="939" entryz="6" rent="10000000" townid="1" size="980" />
+	<house name="Forbidden Castle of Gods" houseid="2131" entryx="1049" entryy="939" entryz="6" rent="10000000" townid="1" size="980" />
 	<house name="Yalahar House #9" houseid="2133" entryx="2082" entryy="1093" entryz="7" rent="0" townid="7" size="321" />
 	<house name="Yalahar House #10" houseid="2134" entryx="2082" entryy="1071" entryz="7" rent="0" townid="7" size="237" />
 	<house name="Yalahar House #11" houseid="2135" entryx="2063" entryy="1070" entryz="7" rent="0" townid="7" size="130" />

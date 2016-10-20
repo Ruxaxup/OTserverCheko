@@ -6,5 +6,4 @@
 	<monster name="Hero Hacker" file="Custom/hero hacker.xml"/>
 
 	<!-- Training Monk -->
-	<monster name="Training Monk" file="Custom/training monk.xml"/>
 </mod>

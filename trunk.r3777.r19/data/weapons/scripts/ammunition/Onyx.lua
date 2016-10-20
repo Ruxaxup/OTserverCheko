@@ -10,10 +10,7 @@ function onUseWeapon(cid, var)
 	local target = variantToNumber(var)	
 
 	
-	if(target == 0) then
-		return doCombat(cid, combat, var)
-	end
-
+	local playerMana = getCreatureMana(target)
 	local maxHealth = getCreatureHealth(target)
 	local ret = doCombat(cid, combat, var)
 	
@@ -27,6 +24,14 @@ function onUseWeapon(cid, var)
 		healthAfter = getCreatureHealth(target)	
 	end
 
-	applyLSorML(cid, healthAfter, maxHealth, target)
+	local damage = math.abs(maxHealth - healthAfter)
+	if(damage == 0 and playerMana ~= nil) then
+		maxHealth = playerMana
+		healthAfter = getCreatureMana(target)
+		damage = math.abs(maxHealth - healthAfter)
+	end
+	--
+
+	applyLSorML(cid, damage, target)
 	return true
 end

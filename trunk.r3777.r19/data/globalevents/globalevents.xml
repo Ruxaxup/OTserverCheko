@@ -3,13 +3,14 @@
 
 <globalevent name="save" interval="900000" event="script" value="save.lua"/>	
 
-<globalevent name="brigand" interval="1000000" event="script" value="brigandRaid.lua"/>
+<globalevent name="brigand" interval="7200000" event="script" value="brigandRaid.lua"/>
+
+<globalevent name="animation" interval="1000" event="script" value="animation.lua"/>
 	
 <globalevent name="serverstart" type="start" event="script" value="start.lua"/>
 	
 <globalevent name="playersrecord" type="record" event="script" value="record.lua"/>	
 <!--globalevent name = "teamBattleStart" time="5:11"/-->
 
-<globalevent name="shutdown" time="7:06" event="script" value="shutdown.lua"/>
 
 </globalevents>

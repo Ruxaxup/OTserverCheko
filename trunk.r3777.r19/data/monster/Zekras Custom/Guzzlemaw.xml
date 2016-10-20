@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
   <monster name="Guzzlemaw" nameDescription="a guzzlemaw" race="blood" experience="5500" speed="270" manacost="0">
 	<health now="6400" max="6400"/>
-	<look type="295" corpse="8947"/>
+	<look type="371" corpse="12746"/>
 	<targetchange interval="60000" chance="0"/>
 	<strategy attack="100" defense="0"/>
 	<flags>

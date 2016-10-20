@@ -49,6 +49,7 @@ shopModule:addBuyableItem({'animate dead'}, 2316, 375, 1, 'animate dead rune')
 shopModule:addBuyableItem({'convince creature'}, 2290, 80, 1, 'convince creature rune')
 shopModule:addBuyableItem({'chameleon'}, 2291, 210, 1, 'chameleon rune')
 shopModule:addBuyableItem({'desintegrate'}, 2310, 80,  3, 'desintegreate rune')
+shopModule:addBuyableItem({'thunderstorm'}, 2315, 37,  3, 'thunderstorm rune')
 shopModule:addBuyableItem({'blank rune'}, 2260, 10,  1, 'blank rune')
 
 shopModule:addBuyableItemContainer({'bp slhp'}, 2000, 8704, 400, 1, 'backpack of small health potions')

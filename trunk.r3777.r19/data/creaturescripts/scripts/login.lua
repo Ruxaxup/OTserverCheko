@@ -57,7 +57,12 @@ registerCreatureEvent(cid, "Daily quests killing")
 registerCreatureEvent(cid, "CombatTactics")
 registerCreatureEvent(cid, "AdvanceStats")
 registerCreatureEvent(cid, "BrigandQuest")
+registerCreatureEvent(cid, "DevovorgaKill")
+registerCreatureEvent(cid, "SthenoKill")
+registerCreatureEvent(cid, "ThornSystem")
+registerCreatureEvent(cid, "DeathPlayer")
 
+setPlayerStorageValue(cid, RECOVERY_ID,-1)
    
  if (InitArenaScript ~= 0) then
     InitArenaScript = 1

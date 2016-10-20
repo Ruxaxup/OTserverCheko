@@ -12,4 +12,29 @@
 			<missionstate id="6" description="You got a reward from Ruly, he was very thankful with that you helped him to take his revenge."/>
 		</mission>
 	</quest>
+
+	<quest name="Helmet of The Ancients" startstorageid="65010" startstoragevalue="1">
+		<mission name="Piece 1" storageid="65010" startvalue="2" endvalue="3">
+			<missionstate id="0" description="The first piece of the ancient helmet is located in the cathedral of a powerful and dark magician, if you want to reach it, just travel from boat to 'Stigma'."/>
+		</mission>
+		<mission name="Piece 2" storageid="65010" startvalue="2" endvalue="3">
+			<missionstate id="0" description="The second piece is located in a cave full of dark and powerful dragons and fire dogs. The cave is located in Forbbiden island, west of the city, crossing the great mountain."/>
+		</mission>
+		<mission name="Piece 3" storageid="65010" startvalue="2" endvalue="3">
+			<missionstate id="0" description="The third piece is located west in the city 'Kroten', in the lowest level of the abandoned mines."/>
+		</mission>
+		<mission name="Piece 4" storageid="65010" startvalue="2" endvalue="3">
+			<missionstate id="0" description="The fourth piece is 'forbidden' at the deepest of banuta."/>
+		</mission>
+		<mission name="Piece 5" storageid="65010" startvalue="2" endvalue="3">
+			<missionstate id="0" description="The fifth piece is located in a cave north from 'Lost Island'."/>
+		</mission>
+		<mission name="Piece 6" storageid="65010" startvalue="2" endvalue="3">
+			<missionstate id="0" description="For the sixth piece you need to talk to the lost asura, maybe she can take you there."/>
+		</mission>
+		<mission name="Piece 7" storageid="65010" startvalue="2" endvalue="3">
+			<missionstate id="0" description="The seventh piece is located far from here in a sacred place deep in the woods protected by strong juggernauts."/>
+		</mission>
+	</quest>	
+
 </quests>

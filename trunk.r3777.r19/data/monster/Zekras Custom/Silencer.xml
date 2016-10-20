@@ -3,7 +3,7 @@
 	<health now="5400" max="5400"/>  
 	<strategy attack="100" defense="0"/>  
 	<targetchange speed="0" chance="8"/>  
-	<look type="322" corpse="9923"/>  
+	<look type="369" corpse="12713"/>  
 	<flags>    
 		<flag canpushitems="1"/>   
 		<flag canpushcreatures="1"/>    

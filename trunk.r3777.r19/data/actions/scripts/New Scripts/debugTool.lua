@@ -8,7 +8,8 @@ end
 
 function onUse(cid, item, fromPosition, itemEx, toPosition)
 	local info = getTileInfo(toPosition)	
-
+	toPosition.stackpos = 1
+	print(getThingFromPos(toPosition).uid)
 	if info ~= nil then
 		if info ~= true and info ~= false then
 			doPlayerSendTextMessage(cid, MESSAGE_STATUS_CONSOLE_ORANGE,

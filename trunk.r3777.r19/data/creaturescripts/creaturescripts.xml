@@ -31,5 +31,11 @@
 <event type="combat" name="CombatTactics" event="script" value="combatTactics.lua" />
 
 <event type="kill" name="BrigandQuest" event="script" value="brigand.lua"/>
+<event type="kill" name="DevovorgaKill" event="script" value="killDevovorga.lua"/>
+<event type="kill" name="SthenoKill" event="script" value="killStheno.lua"/>
+
+<event type="statschange" name="ThornSystem" event="script" value="thornSystem.lua"/>
+
+<event type="death" name="DeathPlayer" event="script" value="deathPlayer.lua"/>
 
 </creaturescripts>

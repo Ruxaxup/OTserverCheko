@@ -21,17 +21,17 @@
     <attack name="melee" interval="2000" skill="10" attack="2"/>
   </attacks>
   <defenses armor="15" defense="10">
-    <defense name="speed" interval="2000" chance="5" speedchange="360" duration="20000">
+    <defense name="speed" interval="2000" chance="5" speedchange="360" duration="2000">
       <attribute key="areaEffect" value="redshimmer"/>
     </defense>
   </defenses>
   <elements>
-    <element physicalPercent="20"/>
-    <element earthpercent="20"/>
-    <element energyPercent="20"/>
-    <element deathPercent="20"/>
-    <element icePercent="20"/>
-    <element holyPercent="20"/>
+    <element physicalPercent="-20"/>
+    <element earthpercent="-20"/>
+    <element energyPercent="-20"/>
+    <element deathPercent="-20"/>
+    <element icePercent="-20"/>
+    <element holyPercent="-20"/>
   </elements>
   <immunities>
     <immunity physical="0"/>
@@ -50,9 +50,8 @@
     <voice sentence="An intrudeeeeeeeeeeer!!!!"/>
   </voices>
   <loot>
+    <item id="2152" countmax="20" chance1="30000" chancemax="0"/>
     <item id="2152" countmax="10" chance1="10000" chancemax="0"/>
-    <item id="2152" countmax="5" chance1="30000" chancemax="0"/>
-    <item id="2152" countmax="1" chance1="10000" chancemax="0"/>
-    <item id="2160" countmax="1" chance1="100" chancemax="0"/>
+    <item id="2160" countmax="1" chance1="5000" chancemax="0"/>
   </loot>
 </monster>

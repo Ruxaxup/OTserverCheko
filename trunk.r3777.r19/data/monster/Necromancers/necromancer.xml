@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <monster name="necromancer" nameDescription="a necromancer" race="blood" experience="580" speed="200" manacost="0">
   <health now="580" max="580"/>
-  <look type="9" head="20" body="30" legs="40" feet="50" corpse="6080"/>
+  <look type="9" head="20" body="30" legs="40" feet="50" corpse="12758"/>
   <targetchange interval="5000" chance="8"/>
   <strategy attack="100" defense="0"/>
   <flags>

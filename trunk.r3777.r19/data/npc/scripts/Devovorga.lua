@@ -5,12 +5,12 @@ NpcSystem.parseParameters(npcHandler)
 local itemsCount = {
     [5954] = 200,    --demon horn
     [5925] = 500,    --hardened bone
-    [6551] = 100,    --vampire dust
+    [5905] = 100,    --vampire dust
     [5898] = 10,     --beholder eyes
     [6558] = 20,     --concentrated demonic blood
     [6500] = 1000,   --demonic essence
     [9969] = 20,     --black skull
-    [11360] = 100    --ghastly dragon head
+    [11360] = 50    --ghastly dragon head
 }
 
 function onCreatureAppear(cid)                npcHandler:onCreatureAppear(cid)             end 
@@ -20,9 +20,10 @@ function onThink()                             npcHandler:onThink()             
 
 npcHandler:setMessage(MESSAGE_GREET, "Greetings |PLAYERNAME|. What do you want? If you want to be helpful just say {mission}, if not, just go away!! Freaking noob...") 
 
-local islandPosition = {x = 765, y = 962, z = 2}
+local devovorgaSpawn = {x = 1568, y = 995, z = 11}
+local spawnBoss = {x = 1570, y = 961, z = 11}
 
-function teleportParty(cid)
+local function teleportParty(cid)
     local pos, memberlist = getCreaturePosition(cid), getPartyMembers(cid)
     if(memberlist == nil or type(memberlist) ~= 'table' or table.maxn(memberlist) <= 1) then
         doPlayerSendDefaultCancel(cid, RETURNVALUE_NOPARTYMEMBERSINRANGE)
@@ -45,9 +46,14 @@ function teleportParty(cid)
     else
         for _, pid in ipairs(affectedList) do
             doCreatureSetNoMove(pid, true)
-            doTeleportThing(pid, getClosestFreeTile(cid, islandPosition, true, false))
-            doSendMagicEffect(islandPosition, CONST_ME_HOLYDAMAGE)
+            local tmpPos = getClosestFreeTile(cid, devovorgaSpawn, true, false)
+            doTeleportThing(pid, tmpPos)
+            doSendMagicEffect(tmpPos, CONST_ME_HOLYDAMAGE)
             doCreatureSetNoMove(pid, false)
+        end
+        if(getGlobalStorageValue(DEVOVORGA_SPAWN) == -1) then
+            setGlobalStorageValue(DEVOVORGA_SPAWN,1)
+            doSummonCreature("Devovorga",spawnBoss)
         end
     end
 end
@@ -56,12 +62,7 @@ function devovorgaQuest(cid, message, keywords, parameters, node)
     if(not npcHandler:isFocused(cid)) then 
         return false 
     end 
-    if (parameters.confirm ~= true) and (parameters.decline ~= true) then 
-        if(getPlayerPremiumDays(cid) == 0) and (parameters.premium == true) then 
-            npcHandler:say('Sorry, but this quest is only for premium players!', cid) 
-            npcHandler:resetNpc() 
-            return true 
-        end
+    if (parameters.confirm ~= true) and (parameters.decline ~= true) then         
         if(getPlayerLevel(cid) < 200) then
             npcHandler:say('You are still a little noob! Come back at level 200 at least!! Muahahaha!',cid)
             npcHandler:resetNpc() 
@@ -84,9 +85,9 @@ function devovorgaQuest(cid, message, keywords, parameters, node)
         elseif (getPlayerStorageValue(cid, DEVOVORGA_QUEST) == 4) then
             npcHandler:say('Before I start my ritual I need one last favor.', cid)
             npcHandler:say('I need that you enter in my old mansion and look for my magnificent tiara. Can you bring it to me?', cid)
-        elseif (getPlayerStorageValue(cid, DEVOVORGA_QUEST) == 5) then
+        elseif (getPlayerStorageValue(cid, DEVOVORGA_QUEST) == 5 or getPlayerStorageValue(cid, DEVOVORGA_QUEST) == 6) then
             npcHandler:say('Did you retrieve my magnificent tiara?',cid)        
-        elseif (getPlayerStorageValue(cid, DEVOVORGA_QUEST) == 6) then
+        elseif (getPlayerStorageValue(cid, DEVOVORGA_QUEST) == 7) then
             npcHandler:say('...',cid)            
             npcHandler:releaseFocus(cid)
             npcHandler:resetNpc()
@@ -98,7 +99,8 @@ function devovorgaQuest(cid, message, keywords, parameters, node)
         --Verificar cada uno de los objetos
         if(getPlayerStorageValue(cid, DEVOVORGA_QUEST) == 3) then
             for k,v in pairs(itemsCount) do                
-                if(getPlayerItemCount(cid,k) < v) then                    
+                if(getPlayerItemCount(cid,k) < v) then  
+                print(k..",".. v..": got == "..getPlayerItemCount(cid,k))                  
                     allItems = false
                     break;                  
                 end
@@ -120,11 +122,17 @@ function devovorgaQuest(cid, message, keywords, parameters, node)
             npcHandler:say('Great! you can ask my loyal minion to take you there. I do recomend you not to go alone, he can take your entire party there if you request him to.',cid)
             doPlayerSetStorageValue(cid, DEVOVORGA_QUEST, 5)
 
-        elseif (getPlayerStorageValue(cid, DEVOVORGA_QUEST) == 5) then
+        elseif (getPlayerStorageValue(cid, DEVOVORGA_QUEST) == 5 or getPlayerStorageValue(cid, DEVOVORGA_QUEST) == 6) then
             if(getPlayerItemCount(cid,2139) > 0) then
                 if(isInParty(cid))then
-                    npcHandler:say('Oh... my magnificent tiara... You don\'t know what you have done!!!',cid)
-                    teleportParty(cid)
+                    if(getGlobalStorageValue(DEVOVORGA_START) == -1) then
+                        npcHandler:say('Oh... my magnificent tiara... You don\'t know what you have done!!!',cid)
+                        setGlobalStorageValue(DEVOVORGA_START,cid)
+                        teleportParty(cid)
+                    else
+                        npcHandler:say('Another team came here first... you must have to wait!!!',cid)
+                        npcHandler:releaseFocus(cid)
+                    end
                 else
                     npcHandler:say('I demand that all your party be here right NOW. Bring them, and then give me my tiara!!',cid)
                     npcHandler:releaseFocus(cid)
@@ -159,7 +167,7 @@ end
 function itemStage(cid, message, keywords, parameters, node)
     if(getPlayerStorageValue(cid, DEVOVORGA_QUEST) == 2 or getPlayerStorageValue(cid, DEVOVORGA_QUEST) == 3) then
         npcHandler:say('Thank you! Take note because I will need the following:',cid)
-        npcHandler:say('200 Demon horns, 500 Hardened bones, 100 Vampire dusts, 10 Beholder eyes, 20 Vials of blood, 1000 Demonic essences, 20 Black skulls, 10 Ghastly dragon head',cid)
+        npcHandler:say('200 Demon horns, 500 Hardened bones, 100 Vampire dusts, 10 Beholder eyes, 20 concentrated demonic blood, 1000 Demonic essences, 20 Black skulls, 100 Ghastly dragon head',cid)
         npcHandler:say('When you got everything, come back and say {mission}.',cid)
         doPlayerSetStorageValue(cid, DEVOVORGA_QUEST, 3)
         npcHandler:resetNpc() 

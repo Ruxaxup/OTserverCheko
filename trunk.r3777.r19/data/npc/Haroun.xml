@@ -27,9 +27,9 @@ Stealth ring,2165,5000;
 Sword ring,2207,500;
 Sword ring,2213,500;
 Bronze amulet,2172,100;
-Garlic necklace,2199,100;
+Garlic necklace,2199,100, 150;
 stone skin amulet,2164,5000,20;
-elven amulet,2198,500;
+elven amulet,2198,500, 50;
 stone skin amulet,2197,5000,5;
 life ring,2168,1000,1;
 magic light wand,2162,120"/>

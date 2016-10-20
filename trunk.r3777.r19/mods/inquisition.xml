@@ -53,10 +53,7 @@ end
 
 
 function onKill(cid, target, lastHit)
-if lastHit == true then
-
     local position = getCreaturePosition(target)
-
     for name, pos in pairs(config.bosses) do
 
         if name == getCreatureName(target) then
@@ -71,7 +68,6 @@ if lastHit == true then
         end
 
     end
-end
 
     return TRUE
 

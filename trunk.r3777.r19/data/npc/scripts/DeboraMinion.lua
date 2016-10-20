@@ -46,7 +46,7 @@ function needInfo(cid, message, keywords, parameters, node)
     return false 
 end 
 
-function teleportParty(cid)
+local function teleportParty(cid)
     local pos, memberlist = getCreaturePosition(cid), getPartyMembers(cid)
     if(memberlist == nil or type(memberlist) ~= 'table' or table.maxn(memberlist) <= 1) then
         doPlayerSendDefaultCancel(cid, RETURNVALUE_NOPARTYMEMBERSINRANGE)
@@ -69,6 +69,7 @@ function teleportParty(cid)
     else
         for _, pid in ipairs(affectedList) do
             doCreatureSetNoMove(pid, true)
+            print("x:"..islandPosition.x..",y:"..islandPosition.y)
             doTeleportThing(pid, getClosestFreeTile(cid, islandPosition, true, false))
             doSendMagicEffect(islandPosition, CONST_ME_HOLYDAMAGE)
             doCreatureSetNoMove(pid, false)
@@ -84,10 +85,23 @@ function teleportNode(cid, message, keywords, parameters, node)
     if (parameters.confirm ~= true) and (parameters.decline ~= true) then 
         if(getPlayerStorageValue(cid, DEVOVORGA_QUEST) == 5) then
             npcHandler:say('Are you ready to travel theeeeeere? I warn you!!!! Strong monsters now inhabit my former hooooome.',cid)
+        elseif(getPlayerStorageValue(cid, DEVOVORGA_QUEST) > 5) then
+            npcHandler:say('Oooh! It seeeems that you foooound a way to geeet out. I miiight take you agaaaain for 100k of preciooous gold. Want to goooo?',cid)
         end
         return true 
     elseif (parameters.confirm == true) then
-        --DoTeleportThing        
+        --DoTeleportThing 
+        if(getPlayerStorageValue(cid, DEVOVORGA_QUEST) > 5) then
+            local money = getPlayerMoney(cid)
+            if(money < 100000) then
+                npcHandler:say('You don\'t have enough moneeey. Come back lateeeer.',cid)
+                npcHandler:resetNpc() 
+                return true
+            else
+                doPlayerRemoveMoney(cid,100000)
+            end
+        end       
+
         if (isInParty(cid)) then
             npcHandler:say('Watch your baaack warrior!!.',cid)
             teleportParty(cid)
@@ -95,8 +109,9 @@ function teleportNode(cid, message, keywords, parameters, node)
             npcHandler:say('A Sooolo MACHO UH? Waaanna see thaaat...',cid)
             doTeleportThing(cid, islandPosition)
             doSendMagicEffect(islandPosition, CONST_ME_HOLYDAMAGE)
-        end        
+        end                
         npcHandler:resetNpc() 
+        npcHandler:releaseFocus(cid)
         return true 
     elseif (parameters.decline == true) then 
         npcHandler:say('Seeeee you sooon...', cid) 

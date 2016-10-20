@@ -142,6 +142,8 @@ g,2133,2000;g,2135,200;
 g,2134,150;g,7887,1500;
 g,2110,200;g,5710,300;
 g,5810,500;g,3955,400;
+Brown Piece of Cloth,5913,100;
+Haunted Blade, 7407, 8000;
 g,6300,1000" />
 
         <parameter key="message_greet" value="Ah, a customer! Be greeted, |PLAYERNAME|!"/>

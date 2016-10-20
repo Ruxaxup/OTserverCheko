@@ -8,6 +8,8 @@ function onUseWeapon(cid, var)
 	local healthAfter
 	local target = variantToNumber(var)
 	local maxHealth = getCreatureHealth(target)
+	local playerMana = getCreatureMana(target)
+	
 	local ret = doCombat(cid, combat, var)
 	
 	if(ret == false) then
@@ -19,9 +21,16 @@ function onUseWeapon(cid, var)
 	else
 		healthAfter = getCreatureHealth(target)	
 	end
-	
-	--Apply Life Steal or Mana Leech
-	applyLSorML(cid, healthAfter, maxHealth, target)
+
+	local damage = math.abs(maxHealth - healthAfter)
+	if(damage == 0 and playerMana ~= nil) then
+		maxHealth = playerMana
+		healthAfter = getCreatureMana(target)
+		damage = math.abs(maxHealth - healthAfter)
+	end
+	--
+
+	applyLSorML(cid, damage, target)
 
 	return true
 end

@@ -64,8 +64,9 @@ function onLogin(cid)
 		local horas = math.floor((secondsTrained / 3600))
 		local minu = math.floor( (secondsTrained - (horas * 3600)) /60 )
 		local segundos = secondsTrained - ((horas * 3600)+(minu * 60))
-
+		print("horas: " .. horas .. ", minutos: "..minu)
 		if(horas ~= 0 and minu ~= 0) then
+			print("horas: " .. horas .. ", minutos: "..minu)
 			doPlayerSendTextMessage(cid, MESSAGE_EVENT_DEFAULT, "You have trained for "..horas.." hours, "..minu.." minutes")
 		end
 

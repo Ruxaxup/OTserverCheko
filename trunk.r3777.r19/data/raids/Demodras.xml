@@ -1,0 +1,8 @@
+ <raid>
+  <announce delay="0" type="event" message="The feared demodras is making his way through Hell"/> 
+  <singlespawn delay="6500" name="Demodras" x="1269" y="825" z="7" /> 
+ <areaspawn delay="6500" fromx="1240" fromy="789" fromz="7" tox="1316" toy="820" toz="7">
+  <monster name="Dragon Lord" amount="100" /> 
+  <monster name="Dragon" amount="100" /> 
+  </areaspawn>
+  </raid> 

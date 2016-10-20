@@ -8,6 +8,8 @@ function onCreatureDisappear(cid)			npcHandler:onCreatureDisappear(cid)			end
 function onCreatureSay(cid, type, msg)			npcHandler:onCreatureSay(cid, type, msg)		end
 function onThink()					npcHandler:onThink()					end
 
+--9934 worn
+--9932 good
 function creatureSayCallback(cid, type, msg)
 	if(not npcHandler:isFocused(cid)) then
 		return false
@@ -15,8 +17,8 @@ function creatureSayCallback(cid, type, msg)
 
 	local talkUser = NPCHANDLER_CONVBEHAVIOR == CONVERSATION_DEFAULT and 0 or cid
 
-	if(msgcontains(msg, 'soft') or msgcontains(msg, 'boots')) then
-		selfSay('Do you want to repair your worn soft boots for 10000 gold coins?', cid)
+	if(msgcontains(msg, 'soft') or msgcontains(msg, 'fire') or msgcontains(msg, 'boots')) then
+		selfSay('Do you want to repair your worn boots for 10000 gold coins?', cid)
 		talkState[talkUser] = 1
 	elseif(msgcontains(msg, 'yes') and talkState[talkUser] == 1) then
 		if(getPlayerItemCount(cid, 6530) >= 1) then
@@ -31,6 +33,14 @@ function creatureSayCallback(cid, type, msg)
 			if(doPlayerRemoveMoney(cid, 10000)) then
 				local item = getPlayerItemById(cid, true, 10021)
 				doTransformItem(item.uid, 6132)
+				selfSay('Here you are.', cid)
+			else
+				selfSay('Sorry, you don\'t have enough gold.', cid)
+			end
+		elseif(getPlayerItemCount(cid, 10022) >= 1) then
+			if(doPlayerRemoveMoney(cid, 10000)) then
+				local item = getPlayerItemById(cid, true, 10022)
+				doTransformItem(item.uid, 9932)
 				selfSay('Here you are.', cid)
 			else
 				selfSay('Sorry, you don\'t have enough gold.', cid)
