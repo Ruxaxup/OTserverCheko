@@ -64,4 +64,7 @@
 		<item id="8872" chance="590" /><!-- belted cape -->
 		<item id="8891" chance="110"/> <!--paladin armor-->
 		</loot>
+	<script>
+		<event name="NoMonstersDamage"/>
+	</script>
 </monster>

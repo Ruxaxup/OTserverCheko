@@ -58,4 +58,7 @@
 	<loot>
 		<item id="2152" countmax="7" chance="40000"/><!-- platinum coin -->
 	</loot>
+	<script>
+		<event name="NoMonstersDamage"/>
+	</script>
 </monster>

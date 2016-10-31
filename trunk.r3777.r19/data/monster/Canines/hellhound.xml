@@ -180,4 +180,7 @@
 	        <item id="7590" countmax="3" chance="15150"/><!-- great mana potion -->
 	</loot>
 
+	<script>
+		<event name="NoMonstersDamage"/>
+	</script>
 </monster>

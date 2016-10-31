@@ -42,4 +42,7 @@
 	<loot>
 		<item id="6540" chance="100000"/><!-- massacre's shell piece -->
 	</loot>
+	<script>
+		<event name="NoMonstersDamage"/>
+	</script>
 </monster>

@@ -53,4 +53,7 @@
     <voice sentence="DEATH, DESTRUCTION!"/>
     <voice sentence="I will eat your soul!"/>
   </voices>
+	<script>
+		<event name="NoMonstersDamage"/>
+	</script>
 </monster>

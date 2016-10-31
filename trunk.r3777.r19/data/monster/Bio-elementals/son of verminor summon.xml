@@ -53,4 +53,7 @@
 		<voice sentence="Blub! Blub!" yell="1"/>
 		<voice sentence="Come'on Daddy! Help me" yell="1"/>
 	</voices>
+	<script>
+		<event name="NoMonstersDamage"/>
+	</script>
 </monster>

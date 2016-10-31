@@ -37,5 +37,8 @@
 <event type="statschange" name="ThornSystem" event="script" value="thornSystem.lua"/>
 
 <event type="death" name="DeathPlayer" event="script" value="deathPlayer.lua"/>
+<event type="death" name="BossReward" event="script" value="bossReward.lua"/>
+<event type="preparedeath" name="NoDrop" event="script" value="setNoDrop.lua"/>
+<event type="combat" name="NoMonstersDamage" event="script" value="noMonstersDamage.lua"/>
 
 </creaturescripts>

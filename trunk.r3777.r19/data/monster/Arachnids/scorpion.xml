@@ -29,4 +29,7 @@
 	<element firePercent="-10"/>
 	<element energyPercent="20"/>
   </elements>
+	<script>
+		<event name="NoMonstersDamage"/>
+	</script>
 </monster>

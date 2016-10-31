@@ -43,5 +43,7 @@
   <loot>
 	<item id="9967" countmax="1" chance1="28000" chancemax="0"/> --Glob of acid
   </loot>
+	<script>
+		<event name="NoMonstersDamage"/>
+	</script>
 </monster>
-

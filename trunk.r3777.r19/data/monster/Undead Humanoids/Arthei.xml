@@ -49,4 +49,7 @@
     <item id="7419" chance="2300"/>				-- dreaded cleaver
     <item id="2534" chance="5300"/>				-- vamp shield
  </loot>
+	<script>
+		<event name="NoMonstersDamage"/>
+	</script>
 </monster>

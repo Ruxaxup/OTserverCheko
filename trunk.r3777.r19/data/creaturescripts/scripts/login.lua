@@ -61,6 +61,9 @@ registerCreatureEvent(cid, "DevovorgaKill")
 registerCreatureEvent(cid, "SthenoKill")
 registerCreatureEvent(cid, "ThornSystem")
 registerCreatureEvent(cid, "DeathPlayer")
+registerCreatureEvent(cid, "NoMonstersDamage")
+registerCreatureEvent(cid, "BossReward")
+registerCreatureEvent(cid, "NoDrop")
 
 setPlayerStorageValue(cid, RECOVERY_ID,-1)
    

@@ -43,4 +43,7 @@
 	</voices>
 	<loot capacity="500">
 	</loot>
+	<script>
+		<event name="NoMonstersDamage"/>
+	</script>
 </monster>

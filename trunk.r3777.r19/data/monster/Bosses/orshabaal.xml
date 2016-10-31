@@ -127,4 +127,7 @@
 		<item id="2185" countmax="1" chance="3500"/><!-- necrotic rod -->
 		<item id="2143" countmax="15" chance="12500"/><!-- white pearl -->
 	</loot>
+	<script>
+		<event name="NoMonstersDamage"/>
+	</script>
 </monster>

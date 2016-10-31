@@ -22,4 +22,7 @@
 	<voices interval="2000" chance="5">
 		<voice sentence="Death where are you?"/>
 	</voices>
+	<script>
+		<event name="NoMonstersDamage"/>
+	</script>
 </monster>

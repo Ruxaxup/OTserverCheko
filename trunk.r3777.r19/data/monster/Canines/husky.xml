@@ -26,4 +26,7 @@
 		<voice sentence="Grrrrrrr"/>
 		<voice sentence="Ruff, ruff!"/>
 	</voices>
+	<script>
+		<event name="NoMonstersDamage"/>
+	</script>
 </monster>

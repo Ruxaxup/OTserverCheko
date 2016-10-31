@@ -12570,7 +12570,13 @@
         <attribute key="duration" value="600" />
         <attribute key="corpseType" value="blood" />
     </item>
-    <item fromid="7632" toid="7633" />
+    
+    <item id="7632" article="a" name="giant shimmering pearl">
+        <attribute key="weight" value="80" />
+    </item>
+    <item id="7633" article="a" name="giant shimmering pearl">
+        <attribute key="weight" value="80" />
+    </item>
     <item id="7634" article="an" name="empty potion flask">
         <attribute key="weight" value="200" />
         <attribute key="description" value="Return it to a magic store for deposit." />
@@ -17312,6 +17318,10 @@
         <attribute key="weight" value="150" />
         <attribute key="slotType" value="necklace" />
     </item>
+    <item id="11394" article="a" name="reward bag">
+        <attribute key="description" value="It contains a very nice reward from a boss. Use it in a safe place." />
+        <attribute key="weight" value="150" />
+    </item>
     <item id="20001" name="water" />
     <item id="20002" name="blood" />
     <item id="20003" name="beer" />
@@ -19296,171 +19306,180 @@
         <attribute key="defense" value="36"/>
         <attribute key="weaponType" value="shield"/>
     </item>
-    <item id="12774" article="a" name="brick floor">
-    </item>
-    <item id="12775" article="a" name="brick floor">
-    </item>
-    <item id="12776" article="a" name="brick floor">
-    </item>
-    <item id="12777" article="a" name="brick floor">
-    </item>
-    <item id="12778" article="a" name="brick floor">
-    </item>
-    <item id="12779" article="a" name="brick floor">
-    </item>
-    <item id="12780" article="a" name="brick floor">
-    </item>
-    <item id="12781" article="a" name="brick floor">
-    </item>
-    <item id="12782" article="a" name="brick floor">
-    </item>
-    <item id="12783" article="a" name="brick floor">
-    </item>
-    <item id="12784" article="a" name="brick floor">
-    </item>
-    <item id="12785" article="a" name="brick floor">
-    </item>
-    <item id="12786" article="a" name="brick floor">
-    </item>
-    <item id="12787" article="a" name="brick floor">
-    </item>
-    <item id="12788" article="a" name="brick floor">
-    </item>
-    <item id="12789" article="a" name="brick floor">
-    </item>
-    <item id="12790" article="a" name="brick wall">
-    </item>
-    <item id="12791" article="a" name="brick wall">
-    </item>
-    <item id="12792" article="a" name="brick wall">
-    </item>
-    <item id="12793" article="a" name="brick wall">
-    </item>
-    <item id="12794" article="a" name="brick wall">
-    </item>
-    <item id="12795" article="a" name="brick wall">
-    </item>
-    <item id="12796" article="a" name="brick wall">
-    </item>
-    <item id="12797" article="a" name="brick wall">
-    </item>
-    <item id="12798" article="a" name="mud">
-    </item>
-    <item id="12799" article="a" name="mud">
-    </item>
-    <item id="12800" article="a" name="mud">
-    </item>
-    <item id="12801" article="a" name="mud">
-    </item>
-    <item id="12802" article="a" name="mud">
-    </item>
-    <item id="12803" article="a" name="mud">
-    </item>
-    <item id="12804" article="a" name="mud">
-    </item>
-    <item id="12805" article="a" name="mud">
-    </item>
-    <item id="12806" article="a" name="mud">
-    </item>
-    <item id="12807" article="a" name="mud">
-    </item>
-    <item id="12808" article="a" name="mud">
-    </item>
-    <item id="12809" article="a" name="mud">
-    </item>
-    <item id="12810" article="a" name="mud">
-    </item>
-    <item id="12811" article="a" name="mud">
-    </item>
-    <item id="12812" article="a" name="mud">
-    </item>
-    <item id="12813" article="a" name="mud">
-    </item>
-    <item id="12814" article="a" name="mud">
-    </item>
-    <item id="12815" article="a" name="mud">
-    </item>
-    <item id="12816" article="a" name="mud">
-    </item>
-    <item id="12817" article="a" name="mud">
-    </item>
-    <item id="12818" article="a" name="cobbled pavement">
-    </item>
-    <item id="12819" article="a" name="cobbled pavement">
-    </item>
-    <item id="12820" article="a" name="cobbled pavement">
-    </item>
-    <item id="12821" article="a" name="cobbled pavement">
-    </item>
-    <item id="12822" article="a" name="cobbled pavement">
-    </item>
-    <item id="12823" article="a" name="cobbled pavement">
-    </item>
-    <item id="12824" article="a" name="cobbled pavement">
-    </item>
-    <item id="12825" article="a" name="cobbled pavement">
-    </item>
-    <item id="12826" article="a" name="cobbled pavement">
-    </item>
-    <item id="12827" article="a" name="cobbled pavement">
-    </item>
-    <item id="12828" article="a" name="cobbled pavement">
-    </item>
-    <item id="12829" article="a" name="cobbled pavement">
-    </item>
-    <item id="12830" article="a" name="cobbled pavement">
-    </item>
-    <item id="12831" article="a" name="cobbled pavement">
-    </item>
-    <item id="12832" article="a" name="cobbled pavement">
-    </item>
-    <item id="12833" article="a" name="cobbled pavement">
-    </item>
-    <item id="12834" article="a" name="cobbled pavement">
-    </item>
-    <item id="12835" article="a" name="cobbled pavement">
-    </item>
-    <item id="12836" article="a" name="cobbled pavement">
-    </item>
-    <item id="12837" article="a" name="cobbled pavement">
-    </item>
-    <item id="12838" article="a" name="tall dusky crypress">
-    </item>
-    <item id="12839" article="a" name="tall dusky crypress">
-    </item>
-    <item id="12840" article="a" name="tall dusky crypress">
-    </item>
-    <item id="12841" article="a" name="dead crypress">
-    </item>
-    <item id="12842" article="a" name="dead crypress">
-    </item>
-    <item id="12843" article="a" name="brick stairs (broken)">
-    </item>
-    <item id="12844" article="a" name="brick stairs (broken)">
-    </item>
+    <item id="12774" article="a" name="brick floor"/>
+    
+    <item id="12775" article="a" name="brick floor"/>
+    
+    <item id="12776" article="a" name="brick floor"/>
+    
+    <item id="12777" article="a" name="brick floor"/>
+    
+    <item id="12778" article="a" name="brick floor"/>
+    
+    <item id="12779" article="a" name="brick floor"/>
+    
+    <item id="12780" article="a" name="brick floor"/>
+    
+    <item id="12781" article="a" name="brick floor"/>
+    
+    <item id="12782" article="a" name="brick floor"/>
+    
+    <item id="12783" article="a" name="brick floor"/>
+    
+    <item id="12784" article="a" name="brick floor"/>
+    
+    <item id="12785" article="a" name="brick floor"/>
+    
+    <item id="12786" article="a" name="brick floor"/>
+    
+    <item id="12787" article="a" name="brick floor"/>
+    
+    <item id="12788" article="a" name="brick floor"/>
+    
+    <item id="12789" article="a" name="brick floor"/>
+    
+    <item id="12790" article="a" name="brick wall"/>
+    
+    <item id="12791" article="a" name="brick wall"/>
+    
+    <item id="12792" article="a" name="brick wall"/>
+    
+    <item id="12793" article="a" name="brick wall"/>
+    
+    <item id="12794" article="a" name="brick wall"/>
+    
+    <item id="12795" article="a" name="brick wall"/>
+    
+    <item id="12796" article="a" name="brick wall"/>
+    
+    <item id="12797" article="a" name="brick wall"/>
+    
+    <item id="12798" article="a" name="mud"/>
+    
+    <item id="12799" article="a" name="mud"/>
+    
+    <item id="12800" article="a" name="mud"/>
+    
+    <item id="12801" article="a" name="mud"/>
+    
+    <item id="12802" article="a" name="mud"/>
+    
+    <item id="12803" article="a" name="mud"/>
+    
+    <item id="12804" article="a" name="mud"/>
+    
+    <item id="12805" article="a" name="mud"/>
+    
+    <item id="12806" article="a" name="mud"/>
+    
+    <item id="12807" article="a" name="mud"/>
+    
+    <item id="12808" article="a" name="mud"/>
+    
+    <item id="12809" article="a" name="mud"/>
+    
+    <item id="12810" article="a" name="mud"/>
+    
+    <item id="12811" article="a" name="mud"/>
+    
+    <item id="12812" article="a" name="mud"/>
+    
+    <item id="12813" article="a" name="mud"/>
+    
+    <item id="12814" article="a" name="mud"/>
+    
+    <item id="12815" article="a" name="mud"/>
+    
+    <item id="12816" article="a" name="mud"/>
+    
+    <item id="12817" article="a" name="mud"/>
+    
+    <item id="12818" article="a" name="cobbled pavement"/>
+    
+    <item id="12819" article="a" name="cobbled pavement"/>
+    
+    <item id="12820" article="a" name="cobbled pavement"/>
+    
+    <item id="12821" article="a" name="cobbled pavement"/>
+    
+    <item id="12822" article="a" name="cobbled pavement"/>
+    
+    <item id="12823" article="a" name="cobbled pavement"/>
+    
+    <item id="12824" article="a" name="cobbled pavement"/>
+    
+    <item id="12825" article="a" name="cobbled pavement"/>
+    
+    <item id="12826" article="a" name="cobbled pavement"/>
+    
+    <item id="12827" article="a" name="cobbled pavement"/>
+    
+    <item id="12828" article="a" name="cobbled pavement"/>
+    
+    <item id="12829" article="a" name="cobbled pavement"/>
+    
+    <item id="12830" article="a" name="cobbled pavement"/>
+    
+    <item id="12831" article="a" name="cobbled pavement"/>
+    
+    <item id="12832" article="a" name="cobbled pavement"/>
+    
+    <item id="12833" article="a" name="cobbled pavement"/>
+    
+    <item id="12834" article="a" name="cobbled pavement"/>
+    
+    <item id="12835" article="a" name="cobbled pavement"/>
+    
+    <item id="12836" article="a" name="cobbled pavement"/>
+    
+    <item id="12837" article="a" name="cobbled pavement"/>
+    
+    <item id="12838" article="a" name="tall dusky crypress"/>
+    
+    <item id="12839" article="a" name="tall dusky crypress"/>
+    
+    <item id="12840" article="a" name="tall dusky crypress"/>
+    
+    <item id="12841" article="a" name="dead crypress"/>
+    
+    <item id="12842" article="a" name="dead crypress"/>
+    
+    <item id="12843" article="a" name="brick stairs (broken)"/>
+    
+    <item id="12844" article="a" name="brick stairs (broken)"/>
+    
     <item id="12845" article="a" name="cluster of solace">
         <attribute key="weight" value="280" />
     </item>
     <item id="12846" article="a" name="dream matter">
         <attribute key="weight" value="390" />
     </item>
-    <item id="12847" article="a" name="cobbled stone pavement">
+    <item id="12847"  name="brick stairs">
+        <attribute key="floorchange" value="north" />
     </item>
-    <item id="12848" article="a" name="cobbled stone pavement">
+    <item id="12848"  name="brick stairs">
+        <attribute key="floorchange" value="west" />
     </item>
-    <item id="12849" article="a" name="cobbled stone pavement">
+    <item id="12849"  name="brick stairs">
+        <attribute key="floorchange" value="east" />
     </item>
-    <item id="12850" article="a" name="cobbled stone pavement">
+    <item id="12850"  name="brick stairs">
+        <attribute key="floorchange" value="south" />
     </item>
-    <item id="12851" article="a" name="cobbled stone pavement">
+    <item id="12851"  name="stairs">
+        <attribute key="floorchange" value="down" />
     </item>
-    <item id="12852" article="a" name="cobbled stone pavement">
+    <item id="12852" name="stairs">
+        <attribute key="floorchange" value="down" />
     </item>
-    <item id="12853" article="a" name="cobbled stone pavement">
+    <item id="12853" name="stairs">
+        <attribute key="floorchange" value="down" />
     </item>
-    <item id="12854" article="a" name="cobbled stone pavement">
+    <item id="12854" name="stairs">
+        <attribute key="floorchange" value="down" />
     </item>
-    <item id="12855" article="a" name="cobbled stone pavement">
+    <item id="12855" name="stairs">
+        <attribute key="floorchange" value="down" />
     </item>
     <item id="12856" article="a" name="cobbled stone pavement">
     </item>
@@ -19543,10 +19562,154 @@
     <item id="12894" article="a" name="golden token">
         <attribute key="weight" value="20" />
     </item>
-    <item id="12895" article="a" name="silver token">
+    <item id="12895" article="a" name="iron token">
         <attribute key="weight" value="20" />
     </item>
     <item id="12896" article="a" name="titanium token">
         <attribute key="weight" value="20" />
+    </item>
+    <item id="12897" article="a" name="silver token">
+        <attribute key="weight" value="20" />
+    </item>
+    <item id="12898" name="blue crystal shard">
+        <attribute key="weight" value="20" />
+    </item>
+    <item id="12899" name="violet crystal shard">
+        <attribute key="weight" value="20" />
+    </item>
+    <item id="12900" name="green crystal shard">
+        <attribute key="weight" value="20" />
+    </item>
+    <item id="12901" name="green crystal splinter">
+        <attribute key="weight" value="10" />
+    </item>
+    <item id="12902" name="brown crystal splinter">
+        <attribute key="weight" value="10" />
+    </item>
+    <item id="12903" name="blue crystal splinter">
+        <attribute key="weight" value="10" />
+    </item>
+    <item id="12904" name="cyan crystal fragment">
+        <attribute key="weight" value="15" />
+    </item>
+    <item id="12905" name="red crystal fragment">
+        <attribute key="weight" value="15" />
+    </item>
+    <item id="12906" name="green crystal fragment">
+        <attribute key="weight" value="15" />
+    </item>
+    <item id="12907" name="minor crystalline token">
+        <attribute key="weight" value="250" />
+    </item>
+    <item id="12908" name="major crystalline token">
+        <attribute key="weight" value="350" />
+    </item>
+    <item id="12909" name="broken ring of ending">
+        <attribute key="weight" value="0" />
+    </item>
+    <item id="12910" name="ring of ending">
+        <attribute key="weight" value="0" />
+    </item>
+    <item id="12911" name="sight of surrender's eye">
+        <attribute key="weight" value="550" />
+    </item>
+    <item id="12912" name="broken visor">
+        <attribute key="weight" value="1400" />
+        <attribute key="armor" value="1" />
+        <attribute key="slotType" value="head" />
+    </item>
+    <item id="12913" name="string of mending">
+        <attribute key="weight" value="0" />
+        <attribute key="description" value="This extraordinary smooth string feels quite cool to the touch."/>
+    </item>
+    <item id="12914" name="goosebump leather">
+        <attribute key="weight" value="280" />
+    </item>
+    <item id="12915" name="pool of chitinous glue">
+        <attribute key="weight" value="270" />
+    </item>
+    <item id="12916" article="an" name="anniversary backpack">
+        <attribute key="weight" value="1500" />
+        <attribute key="containerSize" value="15" />
+        <attribute key="slotType" value="backpack" />
+    </item>
+    <item id="12917" article="a" name="cake backpack">
+        <attribute key="weight" value="1800" />
+        <attribute key="containerSize" value="20" />
+        <attribute key="slotType" value="backpack" />
+    </item>
+    <item id="12918" article="a" name="crystal backpack">
+        <attribute key="weight" value="1800" />
+        <attribute key="containerSize" value="20" />
+        <attribute key="slotType" value="backpack" />
+    </item>
+    <item id="12919" article="a" name="deepling backpack">
+        <attribute key="weight" value="1800" />
+        <attribute key="containerSize" value="20" />
+        <attribute key="slotType" value="backpack" />
+    </item>
+    <item id="12920" article="a" name="buggy backpack">
+        <attribute key="weight" value="1800" />
+        <attribute key="containerSize" value="20" />
+        <attribute key="slotType" value="backpack" />
+    </item>
+    <item id="12921" article="a" name="feedbag">
+        <attribute key="weight" value="1800" />
+        <attribute key="containerSize" value="20" />
+        <attribute key="slotType" value="backpack" />
+    </item>
+    <item id="12922" article="a" name="glooth backpack">
+        <attribute key="weight" value="1800" />
+        <attribute key="containerSize" value="20" />
+        <attribute key="slotType" value="backpack" />
+    </item>
+    <item id="12923" article="a" name="mushroom backpack">
+        <attribute key="weight" value="1800" />
+        <attribute key="containerSize" value="20" />
+        <attribute key="slotType" value="backpack" />
+    </item>
+    <item id="12924" article="a" name="pannier backpack">
+        <attribute key="weight" value="1800" />
+        <attribute key="containerSize" value="20" />
+        <attribute key="slotType" value="backpack" />
+    </item>
+    <item id="12925" article="a" name="wolf backpack">
+        <attribute key="weight" value="1800" />
+        <attribute key="containerSize" value="25" />
+        <attribute key="slotType" value="backpack" />
+    </item>
+    <item id="12926" article="a" name="reward container">
+        <attribute key="description" value="It contains a very nice reward from a boss. Use it in a safe place." />
+        <attribute key="weight" value="1" />
+    </item>
+    <item id="12927" article="a" name="">
+    </item>
+    <item id="12928" article="a" name="">
+    </item>
+    <item id="12929" article="a" name="">
+    </item>
+    <item id="12930" article="a" name="">
+    </item>
+    <item id="12931" article="a" name="">
+    </item>
+    <item id="12932" article="a" name="">
+    </item>
+    <item id="12933" article="a" name="">
+    </item>
+    <item id="12934" article="a" name="">
+    </item>
+    <item id="12935" article="a" name="">
+    </item>
+    <item id="12936" article="a" name="">
+    </item>
+    <item id="12937" article="a" name="">
+    </item>
+    <item id="12938" article="a" name="">
+    </item>
+    <item id="12939" article="a" name="">
+    </item>
+    <item id="12940" article="a" name="">
+    </item>
+    <item id="12941" article="a" name="">
     </item>
 </items>

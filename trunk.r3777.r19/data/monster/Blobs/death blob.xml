@@ -34,4 +34,7 @@
 	<loot>
 		<item id="9968" chance="18000"/><!-- glob of tar -->
 	</loot>
+	<script>
+		<event name="NoMonstersDamage"/>
+	</script>
 </monster>

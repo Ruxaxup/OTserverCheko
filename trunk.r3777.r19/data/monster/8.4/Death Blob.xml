@@ -36,6 +36,8 @@
   <loot>
 	<item id="9968" countmax="1" chance="18000" chancemax="0"/> --Glob of Tar
   </loot>
+	<script>
+		<event name="NoMonstersDamage"/>
+	</script>
 </monster>
-
 

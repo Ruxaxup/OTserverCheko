@@ -36,4 +36,7 @@
 		<immunity invisible="1"/>
 		<immunity fire="1"/>
 	</immunities>
+	<script>
+		<event name="NoMonstersDamage"/>
+	</script>
 </monster>

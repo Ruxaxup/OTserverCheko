@@ -157,4 +157,7 @@
 
 
 
+	<script>
+		<event name="NoMonstersDamage"/>
+	</script>
 </monster>

@@ -36,4 +36,7 @@
     <item id="2666" countmax="4" chance1="33333" chancemax="0"/>
     <item id="2671" countmax="3" chance1="10000" chancemax="0"/>
   </loot>
+	<script>
+		<event name="NoMonstersDamage"/>
+	</script>
 </monster>

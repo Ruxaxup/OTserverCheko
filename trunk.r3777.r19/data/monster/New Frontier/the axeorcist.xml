@@ -32,4 +32,7 @@
 		<voice sentence="FIGHT!" yell="1"/>
 	</voices>
 
+	<script>
+		<event name="NoMonstersDamage"/>
+	</script>
 </monster>

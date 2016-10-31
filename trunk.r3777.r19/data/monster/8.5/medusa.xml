@@ -70,4 +70,7 @@
 		<item id="2476" chance="1840" /><!-- knight armor -->
 		<item id="9810" chance="500" /><!-- rusty armor -->
 	</loot>
+	<script>
+		<event name="NoMonstersDamage"/>
+	</script>
 </monster>

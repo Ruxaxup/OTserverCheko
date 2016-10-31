@@ -36,4 +36,7 @@
     <item id="2362" countmax="1" chance1="65000" chancemax="0"/> --Carrot
     <item id="2666" countmax="2" chance1="65000" chancemax="0"/> --Meat
   </loot>
+	<script>
+		<event name="NoMonstersDamage"/>
+	</script>
 </monster>

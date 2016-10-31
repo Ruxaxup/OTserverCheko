@@ -59,4 +59,7 @@
  <loot>
     <item id="2152" countmax="7" chance1="70000" chancemax="0"/>	-- Platinum coin
  </loot>
+	<script>
+		<event name="NoMonstersDamage"/>
+	</script>
 </monster>

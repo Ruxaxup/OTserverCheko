@@ -80,4 +80,7 @@
 			<item id="3961" chance="1000"/> --liche staff
 		</item>
 	</loot>
+	<script>
+		<event name="NoMonstersDamage"/>
+	</script>
 </monster>

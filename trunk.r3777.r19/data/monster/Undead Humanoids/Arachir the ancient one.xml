@@ -64,4 +64,7 @@
     <item id="2534" chance="6300"/>	-- vampire shield
 	<item id="2144" countmax="2" chance1="8980"/> -- black pearl
  </loot>
+	<script>
+		<event name="NoMonstersDamage"/>
+	</script>
 </monster>

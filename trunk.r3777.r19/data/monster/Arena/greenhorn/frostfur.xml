@@ -11,4 +11,7 @@
 		<attack name="melee" interval="2000" min="-1" max="-25"/>
 	</attacks>
 	<defenses armor="2" defense="3"/>
+	<script>
+		<event name="NoMonstersDamage"/>
+	</script>
 </monster>

@@ -46,4 +46,7 @@
 		<item id="5926" chance="4000"/><!-- pirate backpack -->
 		<item id="2666" chance="100000"/><!-- meat -->
 	</loot>
+	<script>
+		<event name="NoMonstersDamage"/>
+	</script>
 </monster>

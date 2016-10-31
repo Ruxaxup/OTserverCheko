@@ -54,4 +54,7 @@
    <item id="8877" chance="900"/> --Lavos Armor
    <item id="7899" chance="1210"/> --Magma Coat
    </loot>
+	<script>
+		<event name="NoMonstersDamage"/>
+	</script>
 </monster>

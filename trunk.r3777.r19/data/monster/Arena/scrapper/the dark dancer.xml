@@ -45,4 +45,7 @@
 	<summons maxSummons="3">
 		<summon name="Ghoul" interval="2000" chance="20"/>
 	</summons>
+	<script>
+		<event name="NoMonstersDamage"/>
+	</script>
 </monster>

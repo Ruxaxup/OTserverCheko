@@ -49,4 +49,7 @@
     <voice sentence="Far too hot."/>
 	<voice sentence="Revenge is sweetest when served cold."/>
   </voices>
+	<script>
+		<event name="NoMonstersDamage"/>
+	</script>
 </monster>

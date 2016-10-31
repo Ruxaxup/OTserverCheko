@@ -36,4 +36,7 @@
 	<loot>
 		<item id="6537" chance="100000"/><!-- mr punish's handcuffs -->
 	</loot>
+	<script>
+		<event name="NoMonstersDamage"/>
+	</script>
 </monster>

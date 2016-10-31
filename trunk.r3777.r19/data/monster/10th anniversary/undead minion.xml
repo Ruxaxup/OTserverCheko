@@ -44,4 +44,7 @@
     <item id="6571" chance="1538" /> --Red Surprise Bag
     <item id="2515" chance="5000"/> --Guardian Shield
   </loot>
+	<script>
+		<event name="NoMonstersDamage"/>
+	</script>
 </monster>

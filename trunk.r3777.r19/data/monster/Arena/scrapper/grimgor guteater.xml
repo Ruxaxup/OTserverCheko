@@ -40,5 +40,7 @@
     <voice sentence="Renat Ulderek."/>
     <voice sentence="Ikem Rambo Zambo."/>
   </voices>
+	<script>
+		<event name="NoMonstersDamage"/>
+	</script>
 </monster>
-

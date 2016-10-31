@@ -48,4 +48,7 @@
     <item id="8752" chance="100000"/>	-- The ring of the count
     <item id="2391" chance="2300"/>				-- war hammer
  </loot>
+	<script>
+		<event name="NoMonstersDamage"/>
+	</script>
 </monster>

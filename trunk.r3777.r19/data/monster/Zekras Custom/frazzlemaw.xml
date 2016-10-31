@@ -82,7 +82,7 @@
 
   <elements>
 			
-<element physicalPercent="10"/>
+		<element physicalPercent="10"/>
 	
 		<element deathPercent="15"/>
 	
@@ -102,6 +102,8 @@
     <immunity paralyze="1"/>
 
     <immunity invisible="1"/>
+
+    <immunity drown="1"/>
 
   </immunities>
 
@@ -157,5 +159,9 @@
 	<item id="12765"  chance="16000"/> <!-- frazzle skin -->
 
 </loot>
+
+<script>
+	<event name="NoMonstersDamage"/>
+</script>
 
 </monster>

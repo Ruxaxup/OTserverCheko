@@ -4,6 +4,8 @@
 	<!--<talkaction log="yes" words="!rain" access="5" event="script" value="rain.lua"/>-->
 
 	<!-- Gods -->
+	<talkaction log="yes" words="/minfo" access="5" event="script" value="New Talkactions/checkDrop.lua"/>
+
 	<talkaction log="yes" words="/addskill" access="5" event="function" value="addSkill"/>
 	<talkaction log="yes" words="/attr" access="5" event="function" value="thingProporties"/>
 	<talkaction log="yes" words="/serverdiag" access="5" event="function" value="diagnostics"/>

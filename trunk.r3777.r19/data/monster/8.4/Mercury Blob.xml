@@ -48,5 +48,7 @@
   <loot>
 	<item id="9966" countmax="1" chance="35000" chancemax="0"/> --Glob of Mercury
   </loot>
+	<script>
+		<event name="NoMonstersDamage"/>
+	</script>
 </monster>
-

@@ -53,4 +53,7 @@
 	<loot>
 		<item id="6539" chance="35000"/><!-- handmaiden's protector -->
 	</loot>
+	<script>
+		<event name="NoMonstersDamage"/>
+	</script>
 </monster>

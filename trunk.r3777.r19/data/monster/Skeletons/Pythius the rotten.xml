@@ -67,4 +67,7 @@
 	<voice sentence="YOU WILL REGRET THAT YOU ARE BORN!"/>
 	<voice sentence="YOU MADE A HUGE WASTE!"/>
   </voices>
+	<script>
+		<event name="NoMonstersDamage"/>
+	</script>
 </monster>

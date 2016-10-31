@@ -37,4 +37,7 @@
   <voices interval="2000" chance="50">
     <voice sentence="NO mommy NO. Leave me alone!" yell="1"/> 
   </voices>
+	<script>
+		<event name="NoMonstersDamage"/>
+	</script>
 </monster>

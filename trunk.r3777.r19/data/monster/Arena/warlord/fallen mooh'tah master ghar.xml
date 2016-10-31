@@ -41,4 +41,7 @@
 		<voice sentence="I will finish you!"/>
 		<voice sentence="You are no match for a master of the Mooh'Tha!"/>
 	</voices>
+	<script>
+		<event name="NoMonstersDamage"/>
+	</script>
 </monster>

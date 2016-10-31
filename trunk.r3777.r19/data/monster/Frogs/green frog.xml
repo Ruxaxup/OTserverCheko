@@ -35,4 +35,7 @@
   <voices interval="5000" chance="10">
     <voice sentence="Ribbit!"/>
   </voices>
+	<script>
+		<event name="NoMonstersDamage"/>
+	</script>
 </monster>

@@ -798,4 +798,7 @@
 <!-- Potion Shop -->
 <action actionid="43000" event="script" value="New Scripts/shopSystem.lua" />
 
+<!-- Reward Bag -->
+<action itemid = "11394" event="script" value="New Scripts/rewardBag.lua" />
+
 </actions>

@@ -38,4 +38,7 @@
 		<voice sentence="Let me teach you a few things youngster!"/>
 		<voice sentence="I'll teach you respect for the old!"/>
 	</voices>
+	<script>
+		<event name="NoMonstersDamage"/>
+	</script>
 </monster>

@@ -48,5 +48,7 @@
 		<item id="5741" chance="3000"/> -- Skull Helmet
 		<item id="7383" chance="1200"/> -- Relic Sword
 	</loot>
+	<script>
+		<event name="NoMonstersDamage"/>
+	</script>
 </monster>
-

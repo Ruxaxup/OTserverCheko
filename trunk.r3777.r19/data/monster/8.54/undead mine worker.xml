@@ -34,4 +34,7 @@
 		<item id="2398" chance="25000"/><!-- mace -->
 		<item id="2376" chance="1500"/><!-- sword -->
 	</loot>
+	<script>
+		<event name="NoMonstersDamage"/>
+	</script>
 </monster>

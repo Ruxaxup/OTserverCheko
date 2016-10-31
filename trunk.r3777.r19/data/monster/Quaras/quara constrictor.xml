@@ -48,4 +48,7 @@
 <item id="2465" chance="2857" /> -- brass armor
 <item id="5895" chance="2000" countmax="1" /> -- fish fin
 </loot>
+	<script>
+		<event name="NoMonstersDamage"/>
+	</script>
 </monster>

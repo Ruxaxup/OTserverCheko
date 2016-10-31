@@ -41,4 +41,7 @@
 		<item id="2145" chance="100000"/><!-- small diamond -->
 		<item id="2320" countmax="1" chance="100000"/><!-- skull -->
 	</loot>
+	<script>
+		<event name="NoMonstersDamage"/>
+	</script>
 </monster>

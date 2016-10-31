@@ -39,4 +39,7 @@
     <voice sentence="Didn't you leave your house door open?"/>
     <voice sentence="Oops, your shoelaces are open!"/>
   </voices>
+	<script>
+		<event name="NoMonstersDamage"/>
+	</script>
 </monster>

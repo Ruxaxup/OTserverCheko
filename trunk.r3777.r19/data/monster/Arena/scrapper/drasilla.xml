@@ -47,4 +47,7 @@
     <voice sentence="FCHHHHHHHH!"/>
     <voice sentence="GROOOOAAAAAAAAR!"/>
   </voices>
+	<script>
+		<event name="NoMonstersDamage"/>
+	</script>
 </monster>

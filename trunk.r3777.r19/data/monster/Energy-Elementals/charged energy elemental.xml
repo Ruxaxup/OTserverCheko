@@ -46,4 +46,7 @@
 		<item id="8303" countmax="2" chance="1500"/><!-- energy soil -->
 		<item id="7838" countmax="3" chance="3200"/><!-- flash arrow -->
 	</loot>
+	<script>
+		<event name="NoMonstersDamage"/>
+	</script>
 </monster>

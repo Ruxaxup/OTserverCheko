@@ -58,4 +58,7 @@
 		<item id="6500" countmax="1" chance="2857"/><!-- demonic essence -->
 		<item id="5944" chance="2500"/><!-- soul orb -->
 	</loot>
+	<script>
+		<event name="NoMonstersDamage"/>
+	</script>
 </monster>

@@ -59,4 +59,7 @@
 	<item id="2144" countmax="2" chance1="8980"/> -- black pearl
 	<item id="8903" chance="7777"/> --Spellbook of lost souls
  </loot>
+	<script>
+		<event name="NoMonstersDamage"/>
+	</script>
 </monster>

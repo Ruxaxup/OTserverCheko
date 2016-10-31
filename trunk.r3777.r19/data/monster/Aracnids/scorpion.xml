@@ -27,4 +27,7 @@
 		<element firePercent="-10"/>
 		<element icePercent="-5"/>
 	</elements>
+	<script>
+		<event name="NoMonstersDamage"/>
+	</script>
 </monster>

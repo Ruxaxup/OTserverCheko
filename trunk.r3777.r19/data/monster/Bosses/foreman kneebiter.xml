@@ -29,4 +29,7 @@
 		<item id="2148" countmax="100" chance="90000"/><!-- gold coin -->
 		<item id="2513" chance="6666"/><!-- battle shield -->
 	</loot>
+	<script>
+		<event name="NoMonstersDamage"/>
+	</script>
 </monster>

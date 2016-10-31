@@ -45,4 +45,7 @@
 <item id="11364" chance="5000"/><!-- terramite eggs -->
 <item id="11363" chance="1000"/><!-- terramite shell -->
 </loot>
+	<script>
+		<event name="NoMonstersDamage"/>
+	</script>
 </monster>

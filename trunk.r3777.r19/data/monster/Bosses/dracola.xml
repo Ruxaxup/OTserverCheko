@@ -63,4 +63,7 @@
 		<item id="6500" countmax="4" chance="1000"/><!-- demonic essence -->
 		<item id="6546" chance="100000"/><!-- dracola's eye -->
 	</loot>
+	<script>
+		<event name="NoMonstersDamage"/>
+	</script>
 </monster>

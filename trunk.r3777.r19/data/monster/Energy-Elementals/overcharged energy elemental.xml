@@ -51,4 +51,7 @@
 		<item id="2150" countmax="3" chance="4500"/><!-- small amethyst -->
 		<item id="8920" chance="1000"/><!-- wand of starstorm -->
 	</loot>
+	<script>
+		<event name="NoMonstersDamage"/>
+	</script>
 </monster>

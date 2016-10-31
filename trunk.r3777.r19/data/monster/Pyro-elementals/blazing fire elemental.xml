@@ -41,4 +41,7 @@
    <item id="2148" countmax="40" chance1="100000" chancemax="0"/> --Gold Coin
    <item id="8299" chance="2000"/> --Glimmering Soil
  </loot>
+	<script>
+		<event name="NoMonstersDamage"/>
+	</script>
 </monster>

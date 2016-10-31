@@ -53,4 +53,7 @@
 		<voice sentence="I am like the merciless northwind"/>
 		<voice sentence="Snow will be your death shroud."/>
     </voices>
+	<script>
+		<event name="NoMonstersDamage"/>
+	</script>
 </monster>

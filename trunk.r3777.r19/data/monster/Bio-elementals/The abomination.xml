@@ -61,4 +61,7 @@
    <item id="5944" chance="2500"/> --Soul Orb
 
  </loot>
+	<script>
+		<event name="NoMonstersDamage"/>
+	</script>
 </monster>

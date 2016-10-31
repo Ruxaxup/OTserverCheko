@@ -32,4 +32,7 @@
     <immunity drunk="1"/>
     <immunity invisible="0"/>
   </immunities>
+	<script>
+		<event name="NoMonstersDamage"/>
+	</script>
 </monster>

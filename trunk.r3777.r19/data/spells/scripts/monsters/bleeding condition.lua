@@ -22,5 +22,9 @@ for i = 30, 50 do
 end
 
 function onCastSpell(creature, var)
+	local target = variantToNumber(var)
+	if(isPlayer(target)) then
+		print("Is a human!")
+	end
 	return doCombat(cid, combat[math.random(30,50)], var)
 end

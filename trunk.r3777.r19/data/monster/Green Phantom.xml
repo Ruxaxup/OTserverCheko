@@ -54,4 +54,7 @@
 	<item id="2216" chance="17111"/> --Ring of healing
 	<item id="7598" chance="16800"/> --Shp
  </loot>
+	<script>
+		<event name="NoMonstersDamage"/>
+	</script>
 </monster>

@@ -44,4 +44,7 @@
     <voice sentence="I won't let you escape!"/>
 	<voice sentence="I'll crush you beneath my feet!"/>
  </voices>
+	<script>
+		<event name="NoMonstersDamage"/>
+	</script>
 </monster>

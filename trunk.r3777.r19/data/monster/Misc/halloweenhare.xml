@@ -87,4 +87,7 @@
 		<immunity name="drunk"/>
 		<immunity name="invisible"/>
 	</immunities>
+	<script>
+		<event name="NoMonstersDamage"/>
+	</script>
 </monster>

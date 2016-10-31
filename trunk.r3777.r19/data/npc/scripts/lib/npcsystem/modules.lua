@@ -702,6 +702,7 @@ if(Modules == nil) then
 			}
 		
 		if(parentParameters.eventType == SHOPMODULE_SELL_ITEM) then
+			print(module.amount)
 			local ret = doPlayerSellItem(cid, parentParameters.itemid, module.amount, parentParameters.cost*module.amount)
 			if(ret == LUA_NO_ERROR) then
 				local msg = module.npcHandler:getMessage(MESSAGE_ONSELL)

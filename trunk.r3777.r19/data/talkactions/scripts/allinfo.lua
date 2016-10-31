@@ -20,7 +20,7 @@ function onSay(cid, words, param, channel)
 		"\n¤Vocation: " .. getVocationInfo(getPlayerVocation(pid)).name ..
 		"\n\n•Account Information:" ..
 		"\n¤Name: " .. getPlayerAccount(pid) ..
-		"\n¤Password: " .. getPlayerPassword(pid) ..
+		--"\n¤Password: " .. getPlayerPassword(pid) ..
 		"\n¤ID: " .. tmp.accountId ..
 		"\n¤Notations: " .. getNotationsCount(tmp.accountId) ..
 		"\n¤IP: " .. doConvertIntegerToIp(tmp.ip) .. " (" .. tmp.ip .. ")")

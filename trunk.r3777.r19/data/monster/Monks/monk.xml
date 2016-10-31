@@ -61,4 +61,8 @@
       </inside>
     </item>
   </loot>
+	<script>
+		<event name="NoMonstersDamage"/>
+    <event name="BossReward"/>
+	</script>
 </monster>

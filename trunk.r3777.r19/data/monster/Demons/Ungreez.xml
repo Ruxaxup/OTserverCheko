@@ -63,4 +63,7 @@
 	<item id="7590" chance="3000"/> -- Great mana potion
 	<item id="7591" chance="3000"/>	-- Great Health potion
    </loot>
+	<script>
+		<event name="NoMonstersDamage"/>
+	</script>
 </monster>

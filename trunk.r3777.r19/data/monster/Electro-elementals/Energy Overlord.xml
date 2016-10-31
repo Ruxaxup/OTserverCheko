@@ -52,4 +52,7 @@
 		<loot id="8306" chance="12000"/> -- Pure Energy
 		<loot id="8879" chance="3500"/> -- Voltage Armor
 	</loot>
+	<script>
+		<event name="NoMonstersDamage"/>
+	</script>
 </monster>

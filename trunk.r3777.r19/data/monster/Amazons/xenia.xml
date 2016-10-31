@@ -48,4 +48,7 @@
 		<item id="2420" chance="25000"/> --Sabre
 		<item id="2463" chance="29000"/> --Plate Armor
 	</loot>
+	<script>
+		<event name="NoMonstersDamage"/>
+	</script>
 </monster>

@@ -15,4 +15,7 @@
 	<voices interval="2000" chance="5">
 		<voice sentence="Hugah!"/>
 	</voices>
+	<script>
+		<event name="NoMonstersDamage"/>
+	</script>
 </monster>

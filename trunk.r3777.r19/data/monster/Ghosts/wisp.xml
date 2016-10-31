@@ -45,4 +45,7 @@
       <immunity paralyze="1"/>
       <immunity drunk="1"/>
     </immunities>
+	<script>
+		<event name="NoMonstersDamage"/>
+	</script>
 </monster>

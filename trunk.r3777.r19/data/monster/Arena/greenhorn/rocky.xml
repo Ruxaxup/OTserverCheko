@@ -22,5 +22,7 @@
 		<immunity name="fire"/>
 		<immunity name="poison"/>
 	</immunities>
+	<script>
+		<event name="NoMonstersDamage"/>
+	</script>
 </monster>
-

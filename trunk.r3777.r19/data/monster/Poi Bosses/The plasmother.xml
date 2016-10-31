@@ -56,4 +56,7 @@
 	<item id="5944" chance="2500"/> --Soul Orb
 	<item id="6535" chance="100000"/> --The plasmother's remains
  </loot>
+	<script>
+		<event name="NoMonstersDamage"/>
+	</script>
 </monster>

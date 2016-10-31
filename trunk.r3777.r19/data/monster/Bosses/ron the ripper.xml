@@ -31,4 +31,7 @@
 		<item id="2379" chance="8500"/><!-- dagger -->
 		<item id="2320" countmax="2" chance="100000"/><!-- skull -->
 	</loot>
+	<script>
+		<event name="NoMonstersDamage"/>
+	</script>
 </monster>

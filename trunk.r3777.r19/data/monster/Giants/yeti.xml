@@ -53,4 +53,7 @@
 		<item id="2448" chance="10000"/><!-- studded club -->
 		<item id="2688" countmax="4" chance="2500"/><!-- candy cane -->
 	</loot>
+	<script>
+		<event name="NoMonstersDamage"/>
+	</script>
 </monster>

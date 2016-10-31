@@ -39,4 +39,7 @@
     <voice sentence="You are lost!"/>
     <voice sentence="Come my little morsel."/>
   </voices>
+	<script>
+		<event name="NoMonstersDamage"/>
+	</script>
 </monster>

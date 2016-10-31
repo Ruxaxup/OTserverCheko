@@ -71,4 +71,7 @@
 			<item id="10219" chance="4000"/><!-- sacred tree amulet -->
 		</item>
 	</loot>
+	<script>
+		<event name="NoMonstersDamage"/>
+	</script>
 </monster>

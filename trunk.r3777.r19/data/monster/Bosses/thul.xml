@@ -43,4 +43,7 @@
 		<item id="2148" countmax="90" chance="100000"/><!-- gold coin -->
 		<item id="5895" countmax="1" chance="100000"/><!-- fish fin -->
 	</loot>
+	<script>
+		<event name="NoMonstersDamage"/>
+	</script>
 </monster>

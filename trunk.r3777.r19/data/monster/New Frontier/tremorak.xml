@@ -50,4 +50,7 @@
 	<voices interval="5000" chance="10">
 		<voice sentence="STOMP STOMP!"/>
 	</voices>
+	<script>
+		<event name="NoMonstersDamage"/>
+	</script>
 </monster>

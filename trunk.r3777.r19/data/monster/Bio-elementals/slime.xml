@@ -32,4 +32,7 @@
   <summons maxSummons="3">
     <summon name="slime2" interval="1000" chance="10" max="3"/>
   </summons>
+	<script>
+		<event name="NoMonstersDamage"/>
+	</script>
 </monster>

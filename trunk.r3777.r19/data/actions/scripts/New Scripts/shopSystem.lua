@@ -35,7 +35,8 @@ function onUse(cid, item, fromPosition, itemEx, toPosition)
 		--Verifica si le alcanza con lo de la bolsa
 		if(pMoney >= precio) then
 			--Compra
-			if(not doPlayerAddItem(cid, thing.itemid, articulo.count, false)) then
+			local compra = doCreateItemEx(thing.itemid, articulo.count)
+			if(doPlayerAddItemEx(cid, compra, false) == RETURNVALUE_NOERROR) then
 				doCreatureSay(cid,"I have no capacity... NOOB",MESSAGE_EVENT_ORANGE)
 			else
 				--Cobramos
@@ -50,7 +51,8 @@ function onUse(cid, item, fromPosition, itemEx, toPosition)
 				diff = precio
 			end
 			--Quitamos del banco la diferencia
-			if(not doPlayerAddItem(cid, thing.itemid, articulo.count, false)) then
+			local compra = doCreateItemEx(thing.itemid, articulo.count)
+			if(doPlayerAddItemEx(cid, compra, false) == RETURNVALUE_NOERROR) then
 				doCreatureSay(cid,"I have no capacity... NOOB",MESSAGE_EVENT_ORANGE)
 			else
 				--Cobramos
@@ -58,6 +60,8 @@ function onUse(cid, item, fromPosition, itemEx, toPosition)
 				doPlayerDepositMoney(cid, -diff)
 				doPlayerSendTextMessage(cid, MESSAGE_INFO_DESCR, "You paid "..diff.." from your bank. You now have "..getPlayerBalance(cid).." from "..bankMoney..".")
 			end
+		else
+			doPlayerSendTextMessage(cid, MESSAGE_INFO_DESCR, "You have no money... You are poor.")
 		end
 		--doPlayerRemoveMoney(cid, money)
 	end

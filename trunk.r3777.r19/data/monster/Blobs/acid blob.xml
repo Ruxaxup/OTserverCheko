@@ -43,4 +43,7 @@
 	<loot>
 		<item id="9967" chance="28000"/><!-- glob of acid -->
 	</loot>
+	<script>
+		<event name="NoMonstersDamage"/>
+	</script>
 </monster>

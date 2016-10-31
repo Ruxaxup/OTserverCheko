@@ -52,4 +52,7 @@
 		<item id="6570" chance="5538"/><!-- blue surprise bag -->
 		<item id="6571" chance="1538"/><!-- red surprise bag -->
 	</loot>
+	<script>
+		<event name="NoMonstersDamage"/>
+	</script>
 </monster>

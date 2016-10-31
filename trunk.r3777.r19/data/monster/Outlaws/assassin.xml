@@ -61,4 +61,7 @@
 		<item id="2509" countmax="1" chance="1000"/><!-- steel shield -->
 		<item id="2050" countmax="2" chance="30000"/><!-- torch -->
 	</loot>
+	<script>
+		<event name="NoMonstersDamage"/>
+	</script>
 </monster>

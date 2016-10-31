@@ -51,7 +51,7 @@
 	<monster name="Stheno" file="Zekras Custom/Stheno.xml"/>
 	<monster name="Orc Master" file="Zekras Custom/Orc Master.xml"/>
 	<monster name="Loyal Minion" file="Zekras Custom/Loyal Minion.xml"/>
-	<monster name="Gaz'haragoth" file="Zekras Custom/gazharagoth.lua" />
+	<monster name="Gaz'haragoth" file="Zekras Custom/gazharagoth.xml" />
 
         <!--8.5-->
 	<monster name="Medusa" file="8.5/Medusa.xml"/>
@@ -591,6 +591,7 @@
     <!-- Special -->
     <monster name="Brigand" file="Special/Brigand.xml" />
     <monster name="Mini Brigand" file="Special/Mini Brigand.xml" />
+    <monster name="Test Hyper" file="Hyper Bosses/Test Hyper.xml"/>
 
 </monsters>
 

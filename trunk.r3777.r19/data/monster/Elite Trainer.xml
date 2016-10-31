@@ -51,4 +51,7 @@
 <voice sentence="Shut up and train!"/>
 <voice sentence="You're no match for me!"/>
 </voices>
+	<script>
+		<event name="NoMonstersDamage"/>
+	</script>
 </monster>

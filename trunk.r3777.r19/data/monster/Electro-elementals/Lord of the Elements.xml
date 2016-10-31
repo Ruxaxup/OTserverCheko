@@ -83,4 +83,7 @@
   </immunities>
   <loot>  
 </loot>
+	<script>
+		<event name="NoMonstersDamage"/>
+	</script>
 </monster>

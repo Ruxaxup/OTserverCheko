@@ -48,4 +48,7 @@
 	<loot>
 		<item id="9966" chance="35000"/><!-- glob of mercury -->
 	</loot>
+	<script>
+		<event name="NoMonstersDamage"/>
+	</script>
 </monster>

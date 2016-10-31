@@ -1282,7 +1282,7 @@ if(Modules == nil) then
 	end
 
 	-- onConfirm keyword callback function. Sells/buys the actual item.
-	function ShopModule.onConfirm(cid, message, keywords, parameters, node)
+	function ShopModule.onConfirm(cid, message, keywords, parameters, node)		
 		local module = parameters.module
 		if(not module.npcHandler:isFocused(cid)) then
 			return false

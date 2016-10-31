@@ -44,4 +44,7 @@
     <item id="2398" chance="10000"/> --Mace
     <item id="2666" countmax="3" chance1="20000" chancemax="0"/> --Meat
   </loot>
+	<script>
+		<event name="NoMonstersDamage"/>
+	</script>
 </monster>

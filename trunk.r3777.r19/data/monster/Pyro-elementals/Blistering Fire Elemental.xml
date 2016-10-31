@@ -40,4 +40,7 @@
    <item id="8299" chance="1100"/> --Glimmering Soil
    <item id="8921" chance="1800"/> -- Wand of DRaconia
    </loot>
+	<script>
+		<event name="NoMonstersDamage"/>
+	</script>
 </monster>

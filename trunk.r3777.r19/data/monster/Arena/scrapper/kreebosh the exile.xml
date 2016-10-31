@@ -41,4 +41,7 @@
 	<summons maxSummons="2">
 		<summon name="Green Djinn" interval="5000" chance="20"/>
 	</summons>
+	<script>
+		<event name="NoMonstersDamage"/>
+	</script>
 </monster>

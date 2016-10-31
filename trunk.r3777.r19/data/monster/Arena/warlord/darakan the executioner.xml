@@ -42,4 +42,7 @@
     <voice sentence="I AM your father!"/>
     <voice sentence="To be the man you have to beat the man!"/>
   </voices>
+	<script>
+		<event name="NoMonstersDamage"/>
+	</script>
 </monster>

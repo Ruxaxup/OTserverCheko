@@ -78,4 +78,7 @@
 	<item id="12605" chance="50" /><!-- shield of corruption -->
 	<item id="12610" chance="100" /><!-- blade of corruption -->
 </loot>
+	<script>
+		<event name="NoMonstersDamage"/>
+	</script>
 </monster>

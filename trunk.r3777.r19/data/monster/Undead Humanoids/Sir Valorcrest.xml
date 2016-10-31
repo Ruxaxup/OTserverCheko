@@ -56,4 +56,7 @@
 	<item id="7598" chance="16800"/> --Shp
     <item id="2534" chance="6300"/>	-- vampire shield
  </loot>
+	<script>
+		<event name="NoMonstersDamage"/>
+	</script>
 </monster>

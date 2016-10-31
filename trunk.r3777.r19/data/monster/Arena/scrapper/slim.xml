@@ -42,4 +42,7 @@
   <voices interval="2000" chance="5">
     <voice sentence="Knooorrr!"/>
   </voices>
+	<script>
+		<event name="NoMonstersDamage"/>
+	</script>
 </monster>
